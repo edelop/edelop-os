@@ -16,8 +16,10 @@ Rytuał prowadzi Claude, gdy osoba mówi "Przegląd tygodnia":
    za jej zgodą.
 4. Przy "## Plan na przyszly tydzien" pomóż wybrać maksymalnie 3 rzeczy - jeśli
    osoba wymienia więcej, dopytaj, które naprawdę są najważniejsze.
-5. Na koniec dopisz wpis do log.md (np. ## [YYYY-MM-DD] przeglad-tygodnia | YYYY-MM-DD)
-   i zaproponuj "Odśwież dashboard", żeby dashboard odzwierciedlał nowy plan.
+5. Na koniec dopisz wpis do log.md (np. ## [YYYY-MM-DD] przeglad-tygodnia | YYYY-MM-DD).
+   Jeśli dashboard.md już istnieje (powstaje dopiero w Etapie 5), zaproponuj
+   "Odśwież dashboard", żeby odzwierciedlał nowy plan; jeśli jeszcze nie istnieje -
+   pomiń ten krok bez komentarza.
 -->
 
 # Przegląd tygodnia - YYYY-MM-DD

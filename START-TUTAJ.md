@@ -47,7 +47,7 @@ Jeśli zobaczysz numer wersji - działa. Jeśli komputer mówi, że nie zna taki
 ## Krok 2: Zaloguj się
 
 1. W tym samym oknie terminala wpisz `claude` i naciśnij Enter.
-2. Przy pierwszym uruchomieniu Claude poprosi o zalogowanie - otworzy się przeglądarka. Zaloguj się na swoje konto claude.ai (to z planem Pro lub Max) i potwierdź.
+2. Przy pierwszym uruchomieniu Claude może najpierw zapytać o motyw kolorystyczny (wybierz dowolny i zatwierdź Enterem) i o zaufanie do bieżącego folderu (zatwierdź). Potem poprosi o zalogowanie - otworzy się przeglądarka. Zaloguj się na swoje konto claude.ai (to z planem Pro lub Max) i potwierdź.
 3. Gotowe. Możesz na razie zamknąć Claude (wpisz `exit` albo naciśnij `Ctrl+C`) - zaraz uruchomimy go we właściwym miejscu.
 
 ## Krok 3: Pobierz ten folder
@@ -59,6 +59,8 @@ Jeśli zobaczysz numer wersji - działa. Jeśli komputer mówi, że nie zna taki
 ## Krok 4: Otwórz terminal W TYM folderze
 
 Ważny krok: Claude musi wystartować w środku rozpakowanego folderu, żeby widzieć jego pliki.
+
+Zanim otworzysz terminal, upewnij się, że jesteś we właściwym folderze: powinny być w nim widoczne pliki **README.md** i **START-TUTAJ.md**. Jeśli widzisz tylko jeden folder w środku (tak bywa po rozpakowaniu ZIP-a, zwłaszcza na Windowsie) - wejdź do niego i dopiero tam otwórz terminal.
 
 ### Na Macu
 
@@ -87,5 +89,6 @@ Jeszcze jedno: Claude będzie pytał o zgodę, zanim cokolwiek zmieni w plikach 
 ## Problemy?
 
 - **"Komenda nie znaleziona" / "claude is not recognized" zaraz po instalacji** - zamknij okno terminala i otwórz je na nowo. Terminal wczytuje nowe programy dopiero przy starcie. Potem znów wpisz `claude --version`.
+- **Napisałaś/eś "zaczynajmy", a Claude nie zaczyna onboardingu** - najpewniej terminal jest otwarty o jeden folder za wysoko (patrz uwaga w Kroku 4). Wpisz `exit`, wejdź do folderu, w którym widać README.md i START-TUTAJ.md, i powtórz Krok 4 i 5.
 - **Claude Code mówi, że potrzebujesz planu** - Twoje konto claude.ai jest na planie darmowym. Wejdź na [claude.ai/upgrade](https://claude.ai/upgrade) i wybierz Pro albo Max, potem zaloguj się jeszcze raz.
 - **Coś innego nie gra** - uruchom `claude` w dowolnym folderze i po prostu opisz problem po polsku. Claude zwykle sam podpowie, co poprawić.

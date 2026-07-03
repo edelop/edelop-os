@@ -42,3 +42,5 @@ Nic strasznego się nie stanie. To tylko pliki tekstowe, Claude pyta o zgodę pr
 ---
 
 Metoda, na której stoi ten system, to **LLM Wiki** Andreja Karpathy'ego: Ty myślisz i decydujesz, a Claude przejmuje całą "księgowość" bazy wiedzy - indeksy, linki, spójność. Oryginalny opis: [gist Karpathy'ego](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f).
+
+Adres tego repozytorium (podaj go znajomym): https://github.com/edelop/edelop-os

@@ -196,3 +196,6 @@ Zaktualizuj `.onboarding/postep.md`:
 Zaktualizuj też `.onboarding/profil.md`: dopisz wybrane moduły do sekcji "Mapa wdrożenia"
 (wraz z umówioną porą przeglądu tygodnia, jeśli był wybrany) i ewentualne nowe preferencje
 do "Notatek o preferencjach". Etap 5 będzie z tego korzystał przy budowie dashboardu.
+
+Jeśli migawki gita są włączone (sprawdź notatkę w `postep.md`) - zrób na koniec etapu
+migawkę (commit) z opisem "Etap 4 ukończony - moduły specjalne".

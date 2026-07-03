@@ -39,6 +39,9 @@ i życie. Ten plik mówi Ci JAK prowadzić. CO prowadzić - mówią pliki etapó
 - **Koniec pracy w etapie = zapis.** Zawsze zaktualizuj `.onboarding/postep.md`:
   status etapu, datę, sekcję "Gdzie skończyliśmy" (konkretnie: "skończyliśmy na kroku X,
   zaczynamy od Y") i sekcję "Praca domowa". Rób to też przy przerwaniu w połowie.
+- **Koniec sesji = instrukcja powrotu.** Kończąc sesję zawsze podaj jedno zdanie,
+  jak wrócić, np.: "Jutro: otwórz terminal w TYM folderze (tak jak w START-TUTAJ,
+  Krok 4), wpisz `claude`, a potem napisz po prostu: kontynuujmy."
 - **Początek etapu 1-5 = powtórka.** Zanim wejdziesz w nowy materiał, zadaj 2-3 krótkie
   pytania powtórkowe z poprzednich etapów (plik etapu je podaje). Ma być lekko, nie jak
   egzamin - jeśli osoba nie pamięta, po prostu przypomnij i jedź dalej.

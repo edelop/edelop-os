@@ -49,7 +49,7 @@ Tabela istnieje po to, żeby osoba wiedziała, CO system potrafi na jedno zdanie
 | "Nowy projekt: X" | tworzy `projekty/<slug>.md` z szablonu + wpis do index.md i log.md |
 | "Dopisz do projektu X: ..." | Ingest: aktualizuje kartę, index, log |
 | "Wchłoń materiały z zrodla/X" | Ingest pełny: czyta źródła → strony wiki |
-| "Dodaj taska do X: ..." | dopisuje checkbox w `## Nastepne kroki` karty X |
+| "Dodaj taska do X: ..." | dopisuje checkbox w `## Nastepne kroki` karty projektu X (dla obszaru: w `## Aktualne taski`) |
 | "Co mam dziś do zrobienia?" | Query: zbiera nieodhaczone checkboxy ze wszystkich kart |
 | "Jaki jest status X?" / "Co się dzieje?" | Query: czyta index + karty, odpowiada z [[cytatami]] |
 | "Zapisz decyzję: ..." | tworzy stronę decyzji |
@@ -57,7 +57,7 @@ Tabela istnieje po to, żeby osoba wiedziała, CO system potrafi na jedno zdanie
 | "Dodaj cel: ..." | tworzy stronę celu |
 | "Odśwież dashboard" | przebudowuje dashboard.md z aktualnych danych |
 | "Przegląd tygodnia" | rytuał tygodniowy (workflow z szablonu przeglad-tygodnia) |
-| "Sprawdź spójność" | Lint |
+| "Sprawdź spójność" | Lint - przegląd porządków w systemie (poznasz go w Etapie 5) |
 
 Dodaj jedno zdanie kontekstu: frazy o dashboardzie i przeglądzie tygodnia zaczną działać
 w pełni po Etapie 5 (wtedy powstaje dashboard) - cała reszta działa już dziś.
@@ -94,13 +94,21 @@ w tym etapie wykonujesz Ty sam - i tylko za wyraźną zgodą osoby.
 2. Zapytaj wprost: "Chcesz, żebym włączył taką kopię zapasową dla Twojego systemu?
    Zajmie mi to chwilę i niczego nie zmienia w Twoich plikach."
 3. Jeśli osoba się zgadza:
-   - Sprawdź, czy git jest dostępny (`git --version`). Jeśli nie jest zainstalowany,
-     powiedz, że to opcjonalne i można je włączyć później - zanotuj to w notatce etapu
-     w `postep.md` i przejdź do Ćwiczenia.
+   - Sprawdź, czy git jest dostępny. UWAGA na Macu: nie odpalaj w ciemno `git --version` -
+     na świeżym Macu bez narzędzi deweloperskich ta komenda wywołuje systemowe okno Apple
+     z propozycją dużej instalacji. Bezpieczniej: `xcode-select -p` (jeśli zwraca ścieżkę,
+     git jest). Jeśli gita nie ma: uprzedz osobę, że system zaproponuje instalację
+     "narzędzi deweloperskich" (kilka-kilkanaście minut) - może zainstalować teraz albo
+     odłożyć migawki na później (zanotuj w `postep.md` i przejdź do Ćwiczenia).
+     Na Windowsie po prostu `git --version`.
    - Sprawdź, czy folder już jest repozytorium (istnieje katalog `.git` - tak będzie,
      jeśli osoba pobrała starter przez `git clone` zamiast ZIP-a). Jeśli tak: NIE rób
      `git init`; odepnij cudzy adres zdalny (`git remote remove origin`, jeśli istnieje)
      i przejdź od razu do commita.
+   - Przed pierwszym commitem sprawdź `git config user.name` i `git config user.email`.
+     Jeśli puste: zapytaj osobę o imię i adres e-mail i ustaw je LOKALNIE dla tego
+     folderu (`git config user.name "..."`, `git config user.email "..."`, bez --global),
+     wyjaśniając jednym zdaniem: "to tylko podpis migawek, nigdzie się nie wysyła".
    - Wykonaj w folderze systemu: `git init` (tylko jeśli repozytorium nie istniało),
      potem dodaj wszystkie pliki i zrób pierwszy commit z opisem w stylu
      "Pierwsza migawka systemu".

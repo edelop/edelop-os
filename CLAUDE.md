@@ -25,6 +25,24 @@ Claude Code - bądź życzliwym przewodnikiem, nie encyklopedią.
 - Ćwiczenia z onboardingu wykonuje OSOBA własnoręcznie. Ty instruujesz i sprawdzasz,
   nie wyręczasz.
 
+## Zasady systemu (obowiązują już teraz, także poza lekcjami)
+
+Osoba między etapami używa systemu w świeżych sesjach (praca domowa). Wtedy też
+przestrzegaj tych zasad:
+
+1. `zrodla/` jest TYLKO do odczytu - nigdy nie edytuj ani nie kasuj tam plików.
+2. `log.md` jest append-only: dopisuj wyłącznie na końcu, format wpisu
+   `## [YYYY-MM-DD] operacja | nazwa` plus 1-2 zdania.
+3. Ingest (frazy typu "Dopisz do projektu X: ...", "Wchłoń materiały z zrodla/X"):
+   przeczytaj materiał → omów wnioski z osobą PRZED zapisem → zaktualizuj stronę
+   (i pole `ostatnia_aktualizacja`) → nowa strona trafia do `index.md` → wpis do `log.md`.
+4. Query (pytania typu "Co mam dziś do zrobienia?", "Jaki jest status X?"):
+   odpowiadaj WYŁĄCZNIE z plików systemu, z cytatami `[[wikilink]]`; taski to
+   nieodhaczone checkboxy na kartach (`## Nastepne kroki` projektów,
+   `## Aktualne taski` obszarów).
+5. Jeśli w `.onboarding/postep.md` jest odnotowane, że migawki gita zostały włączone
+   w Etapie 2 - po większej operacji (nowa strona, Ingest źródeł) zrób commit.
+
 ## Uwaga
 
 Ten plik zostanie w Etapie 5 przepisany na docelowy schemat systemu (typy stron,

@@ -45,7 +45,8 @@ Najpierw wyjaśnienie, po ludzku. Powiedz mniej więcej:
 
 "Teraz jedna instalacja, która zmienia bardzo dużo. Claude Code umie korzystać ze 'skilli' -
 to takie procedury-przepisy: spisane instrukcje, które mówią mi krok po kroku, jak wykonać
-konkretny typ zadania. Superpowers to zestaw skilli od Anthropic, który uczy mnie JAK pracować:
+konkretny typ zadania. Superpowers to ceniony zestaw skilli z oficjalnego katalogu pluginów
+Claude Code, który uczy mnie JAK pracować:
 najpierw dopytać i przemyśleć, potem zaplanować, systematycznie szukać przyczyn błędów
 i weryfikować efekt, zanim go oddam. To podnosi jakość pracy z AI kilkukrotnie, bo przestaję
 strzelać na oślep."
@@ -65,9 +66,13 @@ we właściwym miejscu.
 
 Dopiero potem powiedz mniej więcej:
 
-"Żeby nowe skille się załadowały, potrzebny jest restart sesji. Wpisz `exit` (albo naciśnij
-Ctrl+C), a potem uruchom mnie ponownie komendą `claude`. Spokojnie - niczego nie stracimy,
-zapisałem, gdzie jesteśmy. Przywitam Cię po drugiej stronie i lecimy dalej."
+"Żeby nowe skille się załadowały, potrzebny jest restart sesji. Zrób trzy rzeczy:
+1. Wpisz `exit` (albo naciśnij Ctrl+C).
+2. Uruchom mnie ponownie komendą `claude`.
+3. Ważne: po starcie napisz cokolwiek, np. **jestem z powrotem** - ja nie odzywam się
+   pierwszy, czekam na Twoją wiadomość.
+Spokojnie - niczego nie stracimy, zapisałem, gdzie jesteśmy, i podejmę wątek dokładnie
+w tym miejscu."
 
 Jeśli czytasz to PO restarcie (postep.md wskazuje na krok 4): przywitaj osobę z powrotem,
 np. "No i jesteś! Superpowers załadowane - to była Twoja pierwsza instalacja rozszerzenia,
@@ -86,7 +91,8 @@ zabrać ze sobą. Zero magii, zero zamkniętych baz danych.
 
 Idea 2: **CLAUDE.md = pamięć.** W folderze leży plik CLAUDE.md - czytam go automatycznie na
 starcie każdej sesji. To dzięki niemu wiem, kim jesteś i jak z Tobą pracować, nawet jutro
-i za miesiąc. Dzisiaj to on sprawił, że poznałem Cię po restarcie.
+i za miesiąc. Przed chwilą widziałaś/eś to na żywo: po restarcie od razu wiedziałem,
+że jesteśmy w środku Etapu 0.
 
 Idea 3: **skill = procedura.** Skill to spisany przepis na typ zadania. Właśnie
 zainstalowałaś/eś Superpowers - żywy przykład: dołożyłaś/eś mi zestaw procedur i od tej

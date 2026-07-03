@@ -97,7 +97,7 @@ To skróty myślowe, nie komendy - rozpoznawaj intencję, nie dosłowne brzmieni
 | "Nowy projekt: X" | tworzy `projekty/<slug>.md` z szablonu + wpis do index.md i log.md |
 | "Dopisz do projektu X: ..." | Ingest: aktualizuje kartę, index, log |
 | "Wchłoń materiały z zrodla/X" | Ingest pełny: czyta źródła → strony wiki |
-| "Dodaj taska do X: ..." | dopisuje checkbox w `## Nastepne kroki` karty X |
+| "Dodaj taska do X: ..." | dopisuje checkbox w `## Nastepne kroki` karty projektu X (dla obszaru: w `## Aktualne taski`) |
 | "Co mam dziś do zrobienia?" | Query: zbiera nieodhaczone checkboxy ze wszystkich kart |
 | "Jaki jest status X?" / "Co się dzieje?" | Query: czyta index + karty, odpowiada z [[cytatami]] |
 | "Zapisz decyzję: ..." | tworzy stronę decyzji |

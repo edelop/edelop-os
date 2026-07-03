@@ -13,7 +13,9 @@ PERSONALIZACJA (instrukcja dla Claude'a w Etapie 5 - wykonaj ją i USUŃ ten kom
    umówioną porę; jeśli jej nie ma, usuń nawias.
 5. W "Co jeszcze możesz" możesz podmienić przykłady na branżę i życie osoby - ma czuć,
    że to ściąga o niej, nie ulotka.
-6. <LINK-REPO> podmień na adres publicznego repozytorium edelop-os.
+6. W "Twój system w 60 sekund" ścieżkę folderu ZAWSZE ujmij w cudzysłów
+   (np. cd "C:\Users\Jan Kowalski\Documents\moj-system") - ścieżki ze spacjami bez
+   cudzysłowów nie działają.
 7. Usuń wszystkie komentarze HTML i zapisz plik jako `INSTRUKCJA.md` w korzeniu folderu.
 -->
 
@@ -25,7 +27,10 @@ jak coś się robiło, po prostu ją otwórz. Albo zapytaj Claude'a, on też zna
 ## Twój system w 60 sekund
 
 1. Otwórz terminal (Mac: aplikacja Terminal, Windows: PowerShell).
-2. Przejdź do folderu systemu: wpisz `cd <SCIEZKA-DO-FOLDERU>` i wciśnij Enter.
+2. Przejdź do folderu systemu: wpisz `cd "<SCIEZKA-DO-FOLDERU>"` i wciśnij Enter
+   (cudzysłów jest ważny, gdy ścieżka ma spacje). Albo prościej - otwórz terminal
+   od razu w folderze, tak jak przy instalacji: przeciągnięciem folderu na Terminal (Mac)
+   lub wpisując `cmd` w pasku adresu Eksploratora (Windows).
 3. Wpisz `claude` i wciśnij Enter.
 4. Powiedz normalnym zdaniem, czego potrzebujesz - np. "co mam dziś do zrobienia?"
    albo "dopisz do projektu X, że...". Resztę (pliki, indeks, dziennik) ogarnia Claude.
@@ -40,7 +45,7 @@ do X" zadziała tak samo jak "Dodaj taska do X", bo Claude rozumie intencję.
 | "Nowy projekt: X" | powstaje karta projektu, od razu wpisana do indeksu i dziennika |
 | "Dopisz do projektu X: ..." | karta projektu się aktualizuje, a dziennik zapamiętuje zmianę |
 | "Wchłoń materiały z zrodla/X" | Claude czyta surowe materiały i zamienia je w strony wiki |
-| "Dodaj taska do X: ..." | nowe zadanie ląduje na liście następnych kroków projektu X |
+| "Dodaj taska do X: ..." | nowe zadanie ląduje na liście kroków projektu X (albo tasków obszaru X) |
 | "Co mam dziś do zrobienia?" | dostajesz listę wszystkich niezrobionych zadań ze wszystkich kart |
 | "Jaki jest status X?" / "Co się dzieje?" | dostajesz streszczenie z odnośnikami do konkretnych stron |
 | "Zapisz decyzję: ..." | powstaje strona decyzji: kontekst, opcje, wybór - do sprawdzenia po czasie |
@@ -95,7 +100,7 @@ System to nie tylko taski. Kilka pomysłów - każdy zaczynasz zwykłym zdaniem:
 
 ## Jak dać to znajomemu
 
-Twój system wyrósł z publicznego pakietu startowego. Znajomy wchodzi tutaj: <LINK-REPO>,
-pobiera repo jako ZIP, rozpakowuje, otwiera folder w terminalu i wpisuje `claude`.
-Claude poprowadzi go przez ten sam onboarding, po którym powstał Twój system -
-tylko że o jego życiu, nie Twoim.
+Twój system wyrósł z publicznego pakietu startowego. Znajomy wchodzi tutaj:
+https://github.com/edelop/edelop-os - pobiera repo jako ZIP, rozpakowuje,
+otwiera folder w terminalu i wpisuje `claude`. Claude poprowadzi go przez ten sam
+onboarding, po którym powstał Twój system - tylko że o jego życiu, nie Twoim.

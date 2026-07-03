@@ -117,7 +117,7 @@ tagi: []
 
 ## Notatki
 
-- YYYY-MM-DD: <notatka z rozmowy>
+**YYYY-MM-DD** - <notatka z rozmowy>
 ```
 
 Powtórz dla drugiego obszaru, jeśli osoba go wybrała. Przypomnij przy okazji: "Fraza
@@ -155,7 +155,7 @@ powiazane_projekty: []
 
 ## Ostatni update
 
-- YYYY-MM-DD: cel założony
+**YYYY-MM-DD** - cel założony
 ```
 
 Kontakt (`kontakty/<slug>.md`) - dopytaj kim jest ta osoba i co warto pamiętać:
@@ -178,7 +178,7 @@ projekty: []
 
 ## Notatki
 
-- YYYY-MM-DD: <ustalenie / obserwacja>
+**YYYY-MM-DD** - <ustalenie / obserwacja>
 ```
 
 Jeśli ani cel, ani kontakt nie pasują, a w rozmowie wypłynęła świeża decyzja - możesz
@@ -262,3 +262,6 @@ Zaktualizuj też `.onboarding/profil.md`: jeśli w rozmowie wypłynęły obszary
 ma w polu `obszary` - dopisz je; do "Notatek o preferencjach" dodaj krótką obserwację
 z lekcji (np. "kontakty nietrafione, żyje z produktu nie z relacji" albo "zapala się
 do celów z liczbami").
+
+Jeśli migawki gita są włączone (sprawdź notatkę w `postep.md`) - zrób na koniec etapu
+migawkę (commit) z opisem "Etap 3 ukończony - obszary życia".

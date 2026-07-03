@@ -15,8 +15,9 @@ przypomnij i jedź dalej.
 1. **"Jakie trzy workflowy napędzają Twoją wiki?"**
    Odpowiedź: Ingest (wchłanianie materiału: przeczytaj, omów, zaktualizuj strony, index
    i log), Query (pytanie do bazy: znajdź strony, odpowiedz z cytatami [[wikilink]]),
-   Lint (przegląd spójności). Lint jeszcze nie był użyty w praktyce - zapowiedz, że dziś
-   będzie premiera.
+   Lint (przegląd spójności). Jeśli osoba robiła już przegląd tygodnia z mini-lintem
+   (Etap 4) - przypomnij go i zapowiedz, że dziś pełna wersja Linta; w przeciwnym razie
+   zapowiedz, że dziś będzie premiera.
 2. **"Gdzie w tym folderze Claude'owi NIE wolno nic zmieniać?"**
    Odpowiedź: w `zrodla/`. To surowe materiały - Claude je czyta, ale nigdy nie edytuje.
    Dzięki temu zawsze można wrócić do oryginału.
@@ -43,11 +44,11 @@ przebudowuje. Dlatego nie edytujesz go ręcznie - mówisz 'Odśwież dashboard' 
 
 **Krok B - dlaczego na koniec przepisujemy CLAUDE.md.** Wyjaśnij warstwę schematu: "Pamiętasz
 trzy warstwy: źródła, wiki, schemat. Schemat to CLAUDE.md - plik, który Claude czyta
-automatycznie na starcie każdej sesji. Do tej pory był w nim jeden komunikat: 'prowadź
-onboarding'. Onboarding się kończy, więc dziś przepiszemy go na docelowy: opis TWOJEGO
-systemu - jakie masz typy stron, jakie workflowy, jakie frazy. Od jutra każda sesja Claude'a
-zacznie się od wczytania tego schematu i Claude od pierwszej sekundy będzie wiedział, jak
-działa Twój system."
+automatycznie na starcie każdej sesji. Do tej pory mówił głównie jedno: 'prowadź
+onboarding' (plus podstawowe zasady systemu). Onboarding się kończy, więc dziś przepiszemy
+go na docelowy: pełny opis TWOJEGO systemu - jakie masz typy stron, jakie workflowy, jakie
+frazy. Od jutra każda sesja Claude'a zacznie się od wczytania tego schematu i Claude od
+pierwszej sekundy będzie wiedział, jak działa Twój system."
 
 **Krok C - INSTRUKCJA.md, czyli ściąga dla człowieka.** Krótko: "CLAUDE.md to instrukcja
 dla Claude'a. INSTRUKCJA.md to instrukcja dla Ciebie: Twoje frazy, Twój rytm, co robić gdy
@@ -59,12 +60,15 @@ coś nie działa. Jak wrócisz do systemu po dwóch tygodniach przerwy, zaczynas
 
 - Weź szablon `.claude/skills/onboarding/szablony/dashboard.md` i utwórz z niego
   `dashboard.md` w korzeniu folderu.
-- Wypełnij go REALNYMI danymi osoby, nie przykładami:
+- Wypełnij go REALNYMI danymi osoby, nie przykładami (dokładnie wg instrukcji przebudowy
+  z szablonu):
   - wszystkie nieodhaczone checkboxy z `## Nastepne kroki` kart w `projekty/` i z
     `## Aktualne taski` w `obszary/`, pogrupowane per strona, z wikilinkami do kart,
-  - projekty pogrupowane wg statusu (aktywny / wstrzymany / zakonczony),
-  - cele z `cele/` ze statusem i terminem (jeśli osoba ma cele),
-  - 3-5 ostatnich wpisów z `log.md`,
+  - projekty: najpierw aktywne (wysoki priorytet na górze), potem wstrzymane;
+    zakończone pomiń,
+  - cele z `cele/` tylko o statusie w-trakcie lub zagrozony, z miarą i terminem
+    (jeśli osoba ma cele),
+  - 5 ostatnich wpisów z `log.md`,
   - data wygenerowania.
 - Uwzględnij TYLKO moduły, które osoba faktycznie ma. Jeśli pominęła np. cele, sekcja celów
   nie istnieje w jej dashboardzie.
@@ -141,10 +145,11 @@ Po zgodzie:
   etapy mają być teraz `ukonczony` lub `pominiety`.
 - Dopisz na końcu `log.md` wpis: `## [YYYY-MM-DD] onboarding | ukonczony` z jednym zdaniem
   podsumowania (np. ile stron ma system na dziś).
-- Jeśli folder jest repozytorium gita (sprawdź, czy istnieje katalog `.git`), zaproponuj
-  commit, czyli zapisanie migawki wszystkich zmian: np.
-  `git add -A && git commit -m "Onboarding ukonczony - system gotowy"`. Osoba zatwierdza,
-  Ty wykonujesz. Jeśli gita nie ma - pomiń bez komentarza.
+- Jeśli migawki gita są włączone (sprawdź najpierw notatkę o gicie w
+  `.onboarding/postep.md` - jeśli osoba w Etapie 2 odmówiła, NIE proponuj, nawet gdy
+  katalog `.git` istnieje), zaproponuj commit, czyli zapisanie migawki wszystkich zmian:
+  np. `git add -A && git commit -m "Onboarding ukonczony - system gotowy"`. Osoba
+  zatwierdza, Ty wykonujesz. Jeśli gita nie ma - pomiń bez komentarza.
 - CELEBRACJA. Policz konkretne liczby z systemu (strony w `projekty/`, `obszary/`, `cele/`,
   `kontakty/`, `decyzje/`; nieodhaczone taski; wpisy w `log.md`) i powiedz mniej więcej:
   "Zobacz, co zbudowałeś(-aś) przez ten tydzień: [N] stron wiki, [M] tasków na radarze,

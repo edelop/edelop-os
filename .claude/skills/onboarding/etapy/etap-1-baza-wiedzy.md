@@ -19,9 +19,9 @@ odpowiedź w jednym zdaniu i jedź dalej, bez egzaminowania.
    na typ zadania, jak Superpowers. Jeśli osoba odpowie innymi słowami, ale sensownie - uznaj.
 
 2. **"Po co zainstalowaliśmy Superpowers?"**
-   Odpowiedź: to paczka dodatkowych umiejętności (skilli) od Anthropic, dzięki którym Claude
-   pracuje według sprawdzonych sposobów - np. porządnie planuje i robi burze mózgów zamiast
-   rzucać się od razu do roboty.
+   Odpowiedź: to ceniona paczka dodatkowych umiejętności (skilli) z oficjalnego katalogu
+   pluginów Claude Code, dzięki której Claude pracuje według sprawdzonych sposobów -
+   np. porządnie planuje i robi burze mózgów zamiast rzucać się od razu do roboty.
 
 3. **"Co robi komenda /model?"**
    Odpowiedź: pokazuje listę modeli dostępnych w Twoim planie i pozwala się przełączyć.
@@ -36,9 +36,11 @@ podstawiaj prawdziwą nazwę.
 
 ### Krok 1: trzy warstwy systemu
 
-Wyjaśnij warstwy NA PRZYKŁADZIE projektu osoby. Powiedz mniej więcej:
+Wyjaśnij warstwy NA PRZYKŁADZIE projektu osoby - nawiąż do zajawki z Etapu 0, żeby osoba
+czuła ciągłość, a nie powtórkę. Powiedz mniej więcej:
 
-"Twój system ma trzy warstwy. Pokażę Ci je na przykładzie <projekt osoby>.
+"Wczoraj wspomniałem o trzech warstwach systemu - dziś zobaczysz je w praktyce,
+na przykładzie <projekt osoby>.
 
 Warstwa 1: **źródła** - folder `zrodla/`. Tu wrzucasz surowe materiały: notatki, pliki,
 maile, PDF-y dotyczące <projekt osoby>. Ja mam ZAKAZ ich edytowania. Czytam je, ale
@@ -148,7 +150,10 @@ Pokaż osobie trzy rzeczy po kolei i wyjaśnij po jednym zdaniu na każdą:
 
 Zamknij klamrą: "I to jest ta księgowość, którą przejmuję ja. Ty opowiedziałeś o projekcie,
 a karta, indeks i log zaktualizowały się same. W prowadzeniu bazy wiedzy męczące nie jest
-czytanie ani myślenie, tylko właśnie ta księgowość."
+czytanie ani myślenie, tylko właśnie ta księgowość. A, i jeszcze jedno: to, co właśnie
+zrobiliśmy z Twoimi materiałami, ma swoją nazwę - **Ingest**, czyli wchłanianie. Za chwilę
+poznasz drugi workflow: **Query**, czyli pytanie do bazy. Te dwie nazwy warto zapamiętać,
+bo to silnik całego systemu."
 
 ## Ćwiczenie
 
@@ -164,9 +169,10 @@ z własnych danych.
    czyli odnośnika do strony w podwójnych nawiasach, np. "najbliższy krok to X [[<slug>]]".
    Odpowiadaj WYŁĄCZNIE z plików systemu - jeśli czegoś w nich nie ma, powiedz to wprost.
 3. Po odpowiedzi pokaż, co się właśnie stało. Powiedz mniej więcej: "Zauważ jedno:
-   odpowiedziałem z TWOICH plików, nie z internetu i nie z ogólnej wiedzy. Każdy
-   [[nawias]] to strona w Twoim folderze - możesz kliknąć, otworzyć i sprawdzić. Im więcej
-   tu wrzucisz, tym mądrzejsze będą odpowiedzi."
+   odpowiedziałem z TWOICH plików, nie z internetu i nie z ogólnej wiedzy. To był workflow
+   Query - pytanie do bazy. Każdy [[nawias]] to strona w Twoim folderze - możesz poprosić:
+   'pokaż mi tę stronę', albo otworzyć plik o tej nazwie. Im więcej tu wrzucisz, tym
+   mądrzejsze będą odpowiedzi."
 4. Weryfikacja: odpowiedź zawierała co najmniej jeden wikilink, zgadzała się z treścią
    karty, a osoba potwierdziła, że odpowiedź jest zgodna z rzeczywistością. Jeśli osoba
    wskaże błąd - potraktuj to jako mini-Ingest: popraw kartę, dopisz wpis do `log.md`
