@@ -17,7 +17,8 @@ Przywitaj się ciepło i krótko. Pokaż mapę całego procesu, żeby osoba wied
 i co z tego będzie miała. Powiedz mniej więcej:
 
 "Cześć! Fajnie, że jesteś. Przez najbliższe dni będę Twoim przewodnikiem - przejdziemy razem
-6 etapów, po jednym lub dwa dziennie, każdy zajmuje jakieś 20-40 minut. W sumie około 5 dni.
+6 etapów, po jednym lub dwa dziennie, każdy zajmuje jakieś 20-40 minut. W sumie około
+5 dni (a na koniec czeka jeszcze mały bonus dla chętnych).
 Na końcu będziesz mieć dwie rzeczy: własny system na pracę i życie, który pamięta za Ciebie,
 oraz umiejętność korzystania z niego na co dzień. Dziś etap zerowy: poznamy się, ustawimy
 narzędzia i ułożę plan wdrożenia specjalnie pod Ciebie. Gotowa/gotowy?"
@@ -57,7 +58,19 @@ Potem instalacja - osoba wpisuje SAMA. Powiedz mniej więcej:
 (Jeśli wolisz klikać: wpisz `/plugin`, wejdź w zakładkę Discover, znajdź 'superpowers'
 i zainstaluj - to ta sama droga.)"
 
-Po potwierdzeniu instalacji przygotuj restart. WAŻNE - zanim powiesz osobie o restarcie,
+Po potwierdzeniu instalacji przygotuj restart. Najpierw jednak jedna ważna lekcja przy
+okazji: za chwilę pierwszy raz coś zapiszesz w plikach osoby (postęp poniżej) i osoba
+pierwszy raz zobaczy okienko zgody. Uprzedź ją, mniej więcej tak:
+
+"Zanim zrestartujemy, zapiszę nasz postęp do pliku - i tu ważna rzecz. Zobaczysz za chwilę
+okienko z pytaniem o zgodę. Tak wygląda KAŻDA moja zmiana w Twoich plikach i każda komenda,
+którą chcę uruchomić: w okienku widzisz, co dokładnie chcę zrobić i gdzie, a Ty zatwierdzasz
+Enterem albo odmawiasz. Nic nie dzieje się bez Twojego 'tak'. Jedna rada na przyszłość:
+opcje w stylu 'always allow' / 'nie pytaj ponownie' zaznaczaj tylko wtedy, gdy rozumiesz,
+na co się zgadzasz - na początku najbezpieczniej zatwierdzać pojedynczo. To Twój pas
+bezpieczeństwa, nie biurokracja."
+
+Dopiero teraz - WAŻNE - zanim powiesz osobie o restarcie,
 zaktualizuj `.onboarding/postep.md`: Etap 0 na `w-trakcie` z dzisiejszą datą, a w sekcji
 "Gdzie skończyliśmy" wpisz dokładnie: "Etap 0, po instalacji Superpowers - po restarcie
 zaczynamy od kroku 4 (trzy idee)". To dzięki temu (plus `CLAUDE.md`, który ładuje się
@@ -66,7 +79,8 @@ we właściwym miejscu.
 
 Dopiero potem powiedz mniej więcej:
 
-"Żeby nowe skille się załadowały, potrzebny jest restart sesji. Zrób trzy rzeczy:
+"Żeby nowe skille się załadowały, potrzebny jest restart sesji - a sesja to po prostu
+jedna ciągła rozmowa ze mną, od uruchomienia do zamknięcia. Zrób trzy rzeczy:
 1. Wpisz `exit` (albo naciśnij Ctrl+C).
 2. Uruchom mnie ponownie komendą `claude`.
 3. Ważne: po starcie napisz cokolwiek, np. **jestem z powrotem** - ja nie odzywam się

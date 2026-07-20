@@ -54,19 +54,39 @@ do X" zadziała tak samo jak "Dodaj taska do X", bo Claude rozumie intencję.
 | "Odśwież dashboard" | dashboard przebudowuje się ze świeżych danych całego systemu |
 | "Przegląd tygodnia" | cotygodniowy rytuał: co zrobione, co się wydarzyło, plan na nowy tydzień |
 | "Sprawdź spójność" | Claude robi porządki: szuka sprzeczności, starych danych i zgubionych linków |
+| "Podsumuj dzień" | wieczorne domknięcie: odhaczone taski, nowe sprawy, czysty plan na jutro |
+| "Zapisz gdzie skończyliśmy" | stan pracy ląduje na kartach i w dzienniku - możesz bezpiecznie przerwać albo zacząć świeżą sesję |
 
 ## Rytm
 
-Trzy nawyki utrzymują system przy życiu:
+Cztery nawyki utrzymują system przy życiu:
 
-- **Codziennie, 2 minuty.** Zaczynając pracę zapytaj: "Co mam dziś do zrobienia?".
+- **Rano, 2 minuty.** Zaczynając pracę zapytaj: "Co mam dziś do zrobienia?".
   W ciągu dnia dorzucaj rzeczy na bieżąco - jedno zdanie do Claude'a zamiast notatki
   w telefonie.
+- **Wieczorem, 2 minuty.** Powiedz: "Podsumuj dzień" i opowiedz w paru zdaniach, co
+  zrobione, co zostało, co doszło w trakcie dnia. Claude odhaczy, dopisze i domknie
+  dzień wpisem w dzienniku - a rano zastaniesz system aktualny.
 - **Raz w tygodniu, 10-15 minut.** Powiedz: "Przegląd tygodnia" (u Ciebie: <PORA-PRZEGLADU>).
   To najważniejszy nawyk z całego wdrożenia - dzięki niemu system żyje latami,
   a nie umiera po miesiącu.
 - **Raz na miesiąc, 5 minut.** Powiedz: "Sprawdź spójność". Claude posprząta to,
   co się rozjechało: stare daty, zgubione linki, sprzeczności.
+
+## Sesje - kiedy zacząć od czystej kartki
+
+Rozmowa z Claude to blat biurka, Twoje pliki to szafka. Blat się zapełnia, szafka nigdy -
+wszystko ważne i tak ląduje w plikach.
+
+- **Jedna sprawa = jedna sesja.** Kończysz temat, zaczynasz następny? Wpisz `/clear` -
+  rozmowa startuje od zera, a Claude i tak zna Twój system, bo na starcie każdej sesji
+  czyta jego schemat. Niczego nie tracisz.
+- **Przerywasz w środku pracy?** Powiedz najpierw: "Zapisz gdzie skończyliśmy". W nowej
+  sesji wystarczy: "kontynuujmy [temat]".
+- **Claude po długiej rozmowie "zgłupiał"?** To nie awaria, tylko zawalony blat: "Zapisz
+  gdzie skończyliśmy", potem `/clear`, potem "kontynuujmy". Trzy ruchy, zero strat.
+- **Terminal zamknął się w środku rozmowy?** Wpisz `claude --continue` - wróci ostatnia
+  rozmowa w tym folderze, dokładnie tam, gdzie się urwała.
 
 ## Co jeszcze możesz
 
@@ -96,7 +116,13 @@ System to nie tylko taski. Kilka pomysłów - każdy zaczynasz zwykłym zdaniem:
 - **Limity.** Jeśli Claude wspomina o limicie planu, wpisz `/usage` - zobaczysz,
   ile limitu już zużywasz.
 - **Sesja dziwnie się zachowuje?** Wyjdź (wpisz `exit` albo wciśnij Ctrl+C) i uruchom
-  `claude` jeszcze raz. Nowa sesja sama wczyta schemat Twojego systemu - niczego nie tracisz.
+  `claude` jeszcze raz. Nowa sesja sama wczyta schemat Twojego systemu - niczego nie
+  tracisz. A jeśli po prostu długo rozmawialiście, to nie awaria - zajrzyj do sekcji
+  "Sesje" wyżej.
+- **Okienko zgody.** Zanim Claude zmieni cokolwiek w plikach albo uruchomi komendę, pyta
+  Cię o zgodę - w okienku widzisz, co dokładnie i gdzie. Czytasz, zatwierdzasz Enterem
+  albo odmawiasz. Opcje "always allow" / "nie pytaj ponownie" zaznaczaj tylko wtedy,
+  gdy rozumiesz, na co się zgadzasz.
 
 ## Jak dać to znajomemu
 

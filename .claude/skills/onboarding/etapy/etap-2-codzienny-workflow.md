@@ -58,9 +58,11 @@ Tabela istnieje po to, żeby osoba wiedziała, CO system potrafi na jedno zdanie
 | "Odśwież dashboard" | przebudowuje dashboard.md z aktualnych danych |
 | "Przegląd tygodnia" | rytuał tygodniowy (workflow z szablonu przeglad-tygodnia) |
 | "Sprawdź spójność" | Lint - przegląd porządków w systemie (poznasz go w Etapie 5) |
+| "Zapisz gdzie skończyliśmy" | zapisuje bieżący stan pracy na karty i do logu - przed przerwą albo świeżą sesją (poznasz za chwilę, w Kroku 5) |
+| "Podsumuj dzień" | wieczorne domknięcie dnia: odhaczone taski, nowe sprawy, plan na jutro (poznasz w Etapie 5) |
 
-Dodaj jedno zdanie kontekstu: frazy o dashboardzie i przeglądzie tygodnia zaczną działać
-w pełni po Etapie 5 (wtedy powstaje dashboard) - cała reszta działa już dziś.
+Dodaj jedno zdanie kontekstu: frazy o dashboardzie, przeglądzie tygodnia i podsumowaniu
+dnia zaczną działać w pełni po Etapie 5 - cała reszta działa już dziś.
 
 ### Krok 3: taski to checkboxy na kartach
 
@@ -81,6 +83,36 @@ zapytać 'co się działo w systemie w zeszłym tygodniu' i dostać odpowiedź."
 "append-only" jako ciekawostkę: tak się nazywa pliki, do których wolno tylko dopisywać.
 Kluczowe rozróżnienie, które osoba ma wynieść: **karta pokazuje aktualny stan, log pokazuje
 historię operacji**.
+
+### Krok 5: sesje - czysta kartka, pamięć w plikach
+
+To najważniejsza lekcja o samym Claude Code w całym kursie - poświęć jej pełną uwagę.
+Wyjaśnij obrazowo, mniej więcej tak:
+
+"Jeszcze jedna rzecz, która odróżnia ludzi, którym Claude 'działa świetnie', od tych,
+którym 'jakoś zgłupiał'. Nasza rozmowa to blat biurka: wszystko, o czym rozmawiamy,
+rozkładam na blacie. Blat jest duży, ale nie nieskończony - gdy rozmowa ciągnie się
+godzinami, robi się na nim ciasno: myślę wolniej i łatwiej mi coś umknąć. Twoje pliki to
+szafka: co zapiszemy na kartach, w indeksie i w logu, zostaje tam na zawsze, niezależnie
+od rozmowy. Stąd złota zasada: **jedna sprawa = jedna sesja**. Skończyliśmy temat?
+Następny zaczynasz na czystym blacie - i nic nie tracisz, bo wszystko ważne leży w szafce."
+
+Potem trzy konkrety, jeden na raz, z krótkim potwierdzeniem po każdym:
+
+1. **Czysta kartka to `/clear`.** "Nie musisz zamykać terminala. Komenda `/clear` czyści
+   rozmowę i zaczyna świeżą - a ja na starcie każdej sesji czytam CLAUDE.md, więc od
+   pierwszej sekundy znam Twój system. To przetarcie blatu; szafka nietknięta."
+2. **Przed przerwą: "Zapisz gdzie skończyliśmy".** "Jeśli przerywasz w środku czegoś,
+   powiedz tę frazę - dopiszę stan do właściwej karty i do logu. W nowej sesji mówisz
+   'kontynuujmy [temat]' i jedziemy dalej, jakby nic się nie stało. Ten onboarding działa
+   dokładnie tak samo: po każdej lekcji zapisuję postęp do pliku i dlatego po każdej
+   przerwie witam Cię we właściwym miejscu."
+3. **Po czym poznać zmęczoną sesję.** "Odpowiedzi przychodzą wolniej, dopytuję o rzeczy,
+   które już padły, gubię wątek - to znak, że blat jest zawalony. Wtedy trzy ruchy:
+   'Zapisz gdzie skończyliśmy', potem `/clear`, potem 'kontynuujmy'. Zero strat."
+
+Na koniec podkreśl: to nie jest wiedza awaryjna, tylko codzienna higiena - jak zamykanie
+zbędnych kart w przeglądarce. Narzędzie jest to samo, różnica siedzi w czystym blacie.
 
 ## Działanie
 
@@ -137,6 +169,17 @@ Używaj nazwy jej realnego projektu z Etapu 1 (z pola `pierwszy_projekt` w profi
    np. "Co mam dziś do zrobienia?". Wykonaj Query: zbierz nieodhaczone checkboxy ze
    wszystkich kart i podaj listę. Poproś osobę, żeby sprawdziła, czy task z kroku 1
    jest na liście - to jej moment "aha, to naprawdę działa".
+4. **Test czystej kartki.** Najpierw przygotuj grunt: zaktualizuj `.onboarding/postep.md` -
+   Etap 2 na `w-trakcie`, a w "Gdzie skończyliśmy" wpisz dokładnie: "Etap 2, ćwiczenie,
+   krok 4 - osoba właśnie testuje /clear; po jej powrocie potwierdź, że pamięć przetrwała,
+   pokaż stan z postep.md i kart, i dokończ etap (pytanie kontrolne + kryterium ukończenia)".
+   Dopiero potem powiedz mniej więcej: "Na deser najlepszy trik tego etapu - sprawdzimy
+   Krok 5 w praktyce. Wpisz `/clear`. Nasza rozmowa zniknie CAŁA. A potem napisz po prostu:
+   kontynuujmy - i patrz, co się stanie." Po powrocie osoby: przywitaj się, powiedz
+   dokładnie, gdzie jesteście (z `postep.md`), przywołaj jej task i update z ćwiczenia
+   (z kart i logu) i nazwij rzecz wprost: "Rozmowa zniknęła, system pamięta. To jest
+   różnica między blatem a szafką - i dokładnie tak samo przenosisz każdą pracę do
+   świeżej sesji."
 
 Na koniec zadaj pytanie kontrolne: "Powiedz mi własnymi słowami: czym różni się to,
 co zrobiłem z kartą projektu, od tego, co dopisałem do log.md?" Dobra odpowiedź kręci się
@@ -150,6 +193,8 @@ nie kasuje. Jeśli osoba miesza pojęcia - wróć na chwilę do obrazu mapy i dz
 - [ ] Update z ćwiczenia jest widoczny na karcie, `ostatnia_aktualizacja` odświeżona,
       a w `log.md` jest wpis o tej operacji.
 - [ ] Odpowiedź na "Co mam dziś do zrobienia?" zawierała task z kroku 1 i osoba to potwierdziła.
+- [ ] Test czystej kartki: osoba wpisała `/clear`, wróciła słowem "kontynuujmy" i zobaczyła,
+      że system pamięta stan (postęp, taski, log) mimo zniknięcia rozmowy.
 - [ ] Osoba własnymi słowami wyjaśniła różnicę między dopisaniem do karty a wpisem do logu.
 - [ ] Git: repozytorium zainicjowane i pierwszy commit zrobiony ALBO osoba świadomie
       odmówiła (decyzja zanotowana w `postep.md`).
@@ -160,7 +205,8 @@ Przekaż osobie dwa zadania na najbliższe 2 dni, na jej realnych sprawach:
 
 1. **Używaj systemu naprawdę.** Codziennie minimum jeden update ("Dopisz do projektu...")
    i jedno pytanie ("Co mam dziś do zrobienia?", "Jaki jest status...?"). Nie na niby -
-   na prawdziwych rzeczach z pracy i życia.
+   na prawdziwych rzeczach z pracy i życia. I każdą nową sprawę zaczynaj od czystej
+   kartki (`/clear`) - niech nawyk z Kroku 5 wejdzie w krew od pierwszego dnia.
 2. **Kartka obserwacji.** Zapisz na kartce (albo w notatkach w telefonie) JEDNĄ rzecz,
    która Cię w systemie wkurza albo której Ci brakuje. Nie naprawiaj jej - tylko zapisz.
    Omówimy ją na początku Etapu 3 i wtedy zdecydujemy, co z nią zrobić.

@@ -7,13 +7,16 @@ Claude Code - bądź życzliwym przewodnikiem, nie encyklopedią.
 ## Na starcie KAŻDEJ sesji
 
 1. Przeczytaj `.onboarding/postep.md`.
-2. Jeśli NIE wszystkie etapy mają status `ukonczony` lub `pominiety`:
+2. Jeśli NIE wszystkie etapy 0-5 mają status `ukonczony` lub `pominiety`:
    - Przeczytaj też `.onboarding/profil.md`. Jeśli jest tam imię - przywitaj się nim.
    - W jednym zdaniu przypomnij, gdzie skończyliście (sekcja "Gdzie skończyliśmy").
    - Zaproponuj dwie opcje: kontynuować onboarding ALBO pomóc w czymś innym.
+     (Wyjątek: jeśli "Gdzie skończyliśmy" zawiera konkretną instrukcję na powrót -
+     np. po teście `/clear` w Etapie 2 - wykonaj ją od razu, bez pytania o opcje.)
    - Do prowadzenia onboardingu użyj skilla `onboarding` (on wie, który etap wczytać).
-3. Jeśli wszystkie etapy są ukończone, a ten plik nadal wygląda tak jak teraz - coś poszło
-   nie tak w Etapie 5 (ten plik miał zostać przepisany). Zaproponuj dokończenie Etapu 5.
+3. Jeśli wszystkie etapy 0-5 są ukończone, a ten plik nadal wygląda tak jak teraz - coś
+   poszło nie tak w Etapie 5 (ten plik miał zostać przepisany). Zaproponuj dokończenie
+   Etapu 5. (Etap 6 to opcjonalny bonus - jego status nie ma tu znaczenia.)
 
 ## Zasady rozmowy
 
@@ -42,6 +45,9 @@ przestrzegaj tych zasad:
    `## Aktualne taski` obszarów).
 5. Jeśli w `.onboarding/postep.md` jest odnotowane, że migawki gita zostały włączone
    w Etapie 2 - po większej operacji (nowa strona, Ingest źródeł) zrób commit.
+6. Fraza "Zapisz gdzie skończyliśmy" (uczona w Etapie 2): dopisz bieżący stan pracy
+   do właściwej karty i do `log.md`, po czym potwierdź jednym zdaniem, że można
+   bezpiecznie przerwać albo zacząć świeżą sesję.
 
 ## Uwaga
 

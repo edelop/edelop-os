@@ -1,6 +1,6 @@
 # Twój system na pracę i życie. Budowany rozmową.
 
-To jest folder-starter, z którego zbudujesz WŁASNY system do ogarniania projektów, celów i codziennych spraw - nie klikając w żadnej aplikacji, tylko rozmawiając z AI. Claude poprowadzi Cię przez onboarding krok po kroku: Ty mówisz, co masz na głowie, a system rośnie razem z Tobą.
+To jest folder-starter, z którego zbudujesz WŁASNY system do ogarniania projektów, celów i codziennych spraw - nie klikając w żadnej aplikacji, tylko rozmawiając z AI. Claude poprowadzi Cię przez onboarding krok po kroku: Ty mówisz, co masz na głowie, a system rośnie razem z Tobą. Na końcu masz własne **centrum zarządzania życiem x20**: jeden widok na projekty, cele i codzienne sprawy - i system, który pamięta za Ciebie (x20, bo działa jak dźwignia: Ty myślisz o jednej rzeczy naraz, a system pilnuje dwudziestu).
 
 ## Dla kogo
 
@@ -24,6 +24,7 @@ Onboarding to około 5 dni po 20-40 minut dziennie. Nie musisz robić wszystkieg
 - **Etap 3 - Obszary życia.** Do systemu wchodzą sprawy bez deadline'u (zdrowie, finanse, dom) oraz cele, kontakty i decyzje - to, co pasuje do Twojego życia.
 - **Etap 4 - Moduły specjalne (opcjonalny).** Rozszerzenia pod Ciebie: P&L / budżet, kalendarz treści, mini-CRM, przegląd tygodnia.
 - **Etap 5 - Dashboard i samodzielność.** Jeden widok na wszystko i pełna instrukcja - od tego dnia system jest Twój.
+- **Etap 6 - Bonus: kokpit w przeglądarce (opcjonalny).** Twój system jako kolorowa, klikalna strona otwierana dwuklikiem - centrum dowodzenia bez instalowania czegokolwiek.
 
 ## FAQ
 

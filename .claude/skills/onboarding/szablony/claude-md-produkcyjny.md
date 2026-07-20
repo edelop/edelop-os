@@ -8,7 +8,9 @@ PERSONALIZACJA (instrukcja dla Claude'a w Etapie 5 - wykonaj ją i USUŃ ten kom
      (dla kontaktów także wiersz "Kogo dawno nie zagadałem?"),
    - podsekcje oznaczone komentarzem "MODUŁ" (P&L, kalendarz treści) zostaw tylko wtedy,
      gdy moduł został wdrożony w Etapie 4 - wraz z ich wierszami w tabeli magicznych fraz,
-   - sekcję "Migawki (git)" zostaw tylko, jeśli git został włączony w Etapie 2.
+   - sekcję "Migawki (git)" zostaw tylko, jeśli git został włączony w Etapie 2,
+   - sekcję "Bonus do odebrania" zostaw ZAWSZE (w chwili personalizacji Etap 6 jest
+     jeszcze przed osobą) - usuwasz tylko jej komentarz HTML, jak wszystkie inne.
 3. Użyj słownictwa osoby z profilu (np. jeśli mówi "klienci", pisz o klientach, nie
    o "projektach zewnętrznych"). Przykłady w nawiasach dopasuj do jej branży.
 4. Usuń wszystkie komentarze HTML (łącznie z tym). W gotowym pliku nie może zostać
@@ -70,6 +72,16 @@ Uruchamiają go frazy typu "Nowy projekt: ...", "Dopisz do...", "Wchłoń materi
 3. Zgłoś znaleziska listą - osoba decyduje, co poprawiać.
 4. Wprowadź zaakceptowane poprawki i dopisz wpis do `log.md`.
 
+### Podsumowanie dnia - rytuał wieczorny
+
+Uruchamia je fraza "Podsumuj dzień".
+
+1. Zapytaj jednym pytaniem: co dziś zrobione, co zostało, co doszło w trakcie dnia.
+2. Odhacz zrobione taski, dopisz nowe, zaktualizuj karty, których dotyczą zmiany
+   (zwykły Ingest, z odświeżeniem `ostatnia_aktualizacja`).
+3. Dopisz do `log.md` jeden wpis: `## [YYYY-MM-DD] dzien | podsumowanie` z 1-2 zdaniami.
+4. Pokaż krótko: co odhaczone, co czeka jutro, co nowego. Bez lania wody.
+
 ### Przegląd tygodnia - rytuał
 
 1. Utwórz `przeglady/YYYY-MM-DD.md` (frontmatter: `type: przeglad`, `data: YYYY-MM-DD`;
@@ -86,6 +98,19 @@ Uruchamiają go frazy typu "Nowy projekt: ...", "Dopisz do...", "Wchłoń materi
 O dashboardzie: `dashboard.md` to wygenerowany widok, nie źródło prawdy. Prawda mieszka
 w kartach - na frazę "Odśwież dashboard" przebudowujesz go z nich w całości, nigdy nie
 łatasz pojedynczych fragmentów ręcznie.
+
+## Sesje i pamięć
+
+Rozmowa jest ulotna, pliki są trwałe. Nic, co warto zachować, nie może zostać tylko
+w rozmowie.
+
+1. Fraza "Zapisz gdzie skończyliśmy" = mini-Ingest stanu: dopisz bieżący stan pracy do
+   właściwych kart i do `log.md`, po czym potwierdź jednym zdaniem, że można bezpiecznie
+   przerwać albo zacząć świeżą sesję (`/clear`).
+2. Po domknięciu większego bloku pracy (Ingest źródeł, przegląd, dłuższa rozmowa robocza)
+   SAM zaproponuj zapis stanu i świeżą sesję na kolejny temat. Jedna sprawa = jedna sesja.
+3. Nigdy nie zakładaj, że następna sesja "będzie pamiętać" tę rozmowę. Co ma przetrwać,
+   zapisuj na kartach i w logu, ZANIM rozmowa się skończy.
 
 ## Magiczne frazy
 
@@ -106,6 +131,8 @@ To skróty myślowe, nie komendy - rozpoznawaj intencję, nie dosłowne brzmieni
 | "Odśwież dashboard" | przebudowuje dashboard.md z aktualnych danych |
 | "Przegląd tygodnia" | rytuał tygodniowy (workflow "Przegląd tygodnia" wyżej) |
 | "Sprawdź spójność" | Lint |
+| "Podsumuj dzień" | rytuał wieczorny (workflow "Podsumowanie dnia" wyżej) |
+| "Zapisz gdzie skończyliśmy" | mini-Ingest stanu pracy przed przerwą lub świeżą sesją (sekcja "Sesje i pamięć") |
 | "Kogo dawno nie zagadałem?" | Query po polu `ostatni_kontakt` kart w `kontakty/`, lista od najdłużej zaniedbanych |
 | "Dopisz do P&L: ..." | Ingest do `finanse/pnl-YYYY-MM.md` (patrz moduł P&L niżej) |
 | "Dopisz do kalendarza treści: ..." / "Co mam opublikować w tym tygodniu?" | Ingest / Query po `kalendarz-tresci.md` (patrz moduł niżej) |
@@ -240,3 +267,12 @@ nie przebudowa wszystkiego. Gdy osoba mówi, że czegoś jej brakuje
    i jedną magiczną frazę do obsługi. Pokaż propozycję, zanim cokolwiek utworzysz.
 3. Po akceptacji: utwórz stronę, dopisz schemat nowego typu do TEGO pliku
    (do sekcji "Schematy typów stron"), zaktualizuj `index.md` i dopisz wpis do `log.md`.
+
+<!-- MODUŁ (bonus - Etap 6): zostaw tę sekcję tylko, jeśli Etap 6 w .onboarding/postep.md
+ma nadal status do-zrobienia. Gdy osoba przejdzie Etap 6, ta sekcja zostanie zastąpiona
+sekcją "Kokpit w przeglądarce" dopisywaną w trakcie tego etapu. -->
+## Bonus do odebrania
+
+W `.onboarding/postep.md` czeka bonusowy Etap 6: kokpit w przeglądarce (dashboard jako
+kolorowa, klikalna strona HTML). Gdy osoba wspomni o kokpicie, poprosi o dashboard
+w przeglądarce albo zapyta "co dalej w nauce" - uruchom skill `onboarding`, on poprowadzi.

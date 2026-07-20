@@ -20,6 +20,7 @@ i życie. Ten plik mówi Ci JAK prowadzić. CO prowadzić - mówią pliki etapó
    - Etap 3: `etapy/etap-3-obszary-zycia.md`
    - Etap 4: `etapy/etap-4-moduly-specjalne.md`
    - Etap 5: `etapy/etap-5-dashboard-final.md`
+   - Etap 6 (bonus, po Etapie 5): `etapy/etap-6-kokpit.md`
    Nigdy nie wczytuj kilku etapów naraz "na zapas".
 4. Prowadź lekcję według pliku etapu, od miejsca wskazanego w "Gdzie skończyliśmy".
 
@@ -39,6 +40,10 @@ i życie. Ten plik mówi Ci JAK prowadzić. CO prowadzić - mówią pliki etapó
 - **Koniec pracy w etapie = zapis.** Zawsze zaktualizuj `.onboarding/postep.md`:
   status etapu, datę, sekcję "Gdzie skończyliśmy" (konkretnie: "skończyliśmy na kroku X,
   zaczynamy od Y") i sekcję "Praca domowa". Rób to też przy przerwaniu w połowie.
+- **Checkpoint także W TRAKCIE etapu.** Po każdym ukończonym kroku Działania odśwież
+  jednym zdaniem "Gdzie skończyliśmy" w `postep.md`. Sesja może się urwać w każdej chwili
+  (zamknięty laptop, przerwa, wyczyszczona rozmowa) - a Ty masz podjąć wątek dokładnie
+  w tym miejscu, nie od początku etapu.
 - **Koniec sesji = instrukcja powrotu.** Kończąc sesję zawsze podaj jedno zdanie,
   jak wrócić, np.: "Jutro: otwórz terminal w TYM folderze (tak jak w START-TUTAJ,
   Krok 4), wpisz `claude`, a potem napisz po prostu: kontynuujmy."
@@ -54,10 +59,16 @@ gdzie skończyliście. Wrócicie, kiedy osoba będzie chciała.
 
 ## Pomijanie etapów
 
-Osoba może pominąć etap (status `pominiety` + notatka dlaczego). Etap 4 jest w całości
-opcjonalny. Odradzaj pomijanie etapów 0-2 - to fundament - ale decyzja należy do osoby.
+Osoba może pominąć etap (status `pominiety` + notatka dlaczego). Etapy 4 i 6 są w całości
+opcjonalne. Odradzaj pomijanie etapów 0-2 - to fundament - ale decyzja należy do osoby.
 
-## Po ukończeniu wszystkich etapów
+## Po ukończeniu etapów 0-5
 
-Skill przestaje prowadzić lekcje. Jeśli osoba go wywoła - pogratuluj, pokaż gdzie jest
-`INSTRUKCJA.md` i zaproponuj przegląd tygodnia albo rozbudowę systemu o nowy moduł.
+Jeśli Etap 6 (bonus - kokpit w przeglądarce) ma nadal status `do-zrobienia`, przy
+wywołaniu skilla pogratuluj i zaproponuj go JEDNYM zdaniem, np. "Jest jeszcze bonus:
+Twój system jako kolorowy kokpit w przeglądarce - chcesz?". Bez naciskania; "nie, dzięki"
+= ustaw status `pominiety` i nie wracaj do tematu.
+
+Gdy wszystkie etapy (łącznie z 6) są `ukonczony` lub `pominiety`: skill przestaje
+prowadzić lekcje. Jeśli osoba go wywoła - pogratuluj, pokaż gdzie jest `INSTRUKCJA.md`
+i zaproponuj przegląd tygodnia albo rozbudowę systemu o nowy moduł.

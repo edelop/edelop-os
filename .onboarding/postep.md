@@ -10,6 +10,7 @@ Ten plik prowadzi Claude przez proces wdrożenia. Statusy: `do-zrobienia` / `w-t
 | 3 | Obszary życia | do-zrobienia | - | - |
 | 4 | Moduły specjalne (opcjonalny) | do-zrobienia | - | - |
 | 5 | Dashboard i samodzielność | do-zrobienia | - | - |
+| 6 | Bonus: kokpit w przeglądarce (opcjonalny, po Etapie 5) | do-zrobienia | - | - |
 
 ## Gdzie skończyliśmy
 

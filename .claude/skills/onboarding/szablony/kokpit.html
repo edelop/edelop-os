@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="pl">
+<!--
+════════════════════════════════════════════════════════════════════════════
+SZABLON KOKPITU - instrukcja regeneracji (dla Claude'a, fraza "Odśwież kokpit")
+════════════════════════════════════════════════════════════════════════════
+Ten plik to WIDOK generowany z systemu - nigdy nie jest źródłem prawdy.
+Przy każdej regeneracji:
+
+1. NIE zmieniaj CSS ani struktury HTML - podmieniasz WYŁĄCZNIE zawartość
+   między znacznikami <!- - SLOT:NAZWA - -> ... <!- - /SLOT:NAZWA - -> oraz
+   liczby/teksty wyraźnie oznaczone w komentarzach slotów.
+2. Dane bierzesz z tych samych miejsc co dashboard.md: nieodhaczone checkboxy
+   z kart (## Nastepne kroki projektów, ## Aktualne taski obszarów), statusy
+   i priorytety z frontmattera, 5 ostatnich wpisów z log.md, dzisiejsza data.
+3. Sekcje-duchy (class="ghost", z etykietą MODUŁ ŚPI) to moduły, których osoba
+   NIE prowadzi. Zostawiasz je jako duchy - NIE usuwaj ich, to celowa wystawa
+   możliwości. Gdy osoba wdroży moduł (np. cele): usuń class="ghost" i cały
+   blok .ghost-hint tej sekcji, wypełnij ją realnymi danymi, a w nawigacji
+   usuń class="nav-ghost" z jej linku. Zawartość .ghost-body przebudowujesz
+   wtedy w całości na wzór sekcji żywych (kafle .tile, wiersze .log-row) -
+   treść demo w duchach to tylko poglądowy wzorzec. Pasek postępu celu:
+   procent oszacuj z sekcji "Ostatni update" i miary celu (to przybliżenie;
+   gdy nie da się go oszacować - pomiń pasek).
+4. Taski: checkboxy w kokpicie odhaczają się "na niby" (czysty CSS, bez zapisu).
+   Prawdziwe odhaczenie robi osoba w rozmowie - po regeneracji kokpit pokazuje
+   stan z kart.
+5. Sidebar-karta "tydzień próbny": w trakcie tygodnia próbnego pokazuj
+   "dzień N z 7" i procent; po nim podmień na liczbę stron wiki (komentarz
+   w slocie SIDEBAR-KARTA).
+════════════════════════════════════════════════════════════════════════════
+-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='5' fill='%234ADE80'/%3E%3C/svg%3E">
+<title>Kokpit - Twój system</title>
+<style>
+  :root{
+    --ink:#0A0C10; --ink-2:#0F1216; --ink-3:#12161C; --ink-4:#161B22;
+    --t-hi:rgba(255,255,255,.92); --t-mid:rgba(255,255,255,.74); --t-lo:rgba(255,255,255,.58);
+    --slate:#8A93A1; --slate-2:#5B6675;
+    --blue:#2563EB; --blue-tint:#6F9BFF; --green:#4ADE80; --amber:#E0A63B;
+    --red:#F2687A; --lavender:#B57BFF;
+    --line:rgba(255,255,255,.085); --line-soft:rgba(255,255,255,.06); --line-strong:rgba(255,255,255,.14);
+    --surface:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.014));
+    --r:16px; --r-sm:12px; --r-pill:999px;
+    --pad:clamp(20px,2.6vw,36px); --gap:18px;
+    --font:"Satoshi","Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ink); color:var(--t-mid);
+    font:400 15px/1.55 var(--font);
+    min-height:100vh; display:grid; grid-template-columns:236px 1fr;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:""; position:fixed; inset:0; pointer-events:none; z-index:0;
+    background:
+      radial-gradient(560px 320px at 12% -4%, rgba(37,99,235,.10), transparent 70%),
+      radial-gradient(640px 420px at 104% 104%, rgba(181,123,255,.06), transparent 70%);
+  }
+
+  /* ── Sidebar ─────────────────────────────────────────── */
+  aside{
+    background:var(--ink-2); border-right:1px solid var(--line);
+    padding:22px 14px 18px; display:flex; flex-direction:column; gap:22px;
+    position:sticky; top:0; height:100vh; z-index:2;
+  }
+  .logo{display:flex; align-items:center; gap:9px; padding:0 10px}
+  .logo-dot{width:7px;height:7px;border-radius:50%;background:var(--green);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.14),0 0 0 3px rgba(74,222,128,.14)}
+  .logo b{font-size:.78rem; letter-spacing:.14em; color:var(--t-hi); font-weight:700}
+  .logo b i{font-style:italic; color:var(--lavender)}
+  nav{display:flex; flex-direction:column; gap:18px}
+  .nav-label{font-size:.6rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--slate-2); padding:0 10px; margin-bottom:6px}
+  .nav-item{display:flex; align-items:center; gap:9px; padding:7px 10px; border-radius:10px;
+    color:var(--t-lo); text-decoration:none; font-size:.86rem; font-weight:500;
+    border-left:2px solid transparent; transition:background .15s var(--ease), color .15s var(--ease)}
+  .nav-item:hover{background:rgba(255,255,255,.05); color:var(--t-hi)}
+  .nav-item.on{background:rgba(37,99,235,.12); border-left-color:var(--blue); color:#fff}
+  .nav-dot{width:6px;height:6px;border-radius:50%;background:var(--c,var(--slate-2));flex:none}
+  .nav-ghost{opacity:.42}
+  .nav-ghost .nav-dot{background:transparent; box-shadow:inset 0 0 0 1.4px var(--slate-2)}
+  .side-card{margin-top:auto; border:1px solid var(--line); border-radius:var(--r-sm);
+    background:var(--surface); padding:13px 14px}
+  .side-card .k{font-size:.58rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--slate)}
+  .side-card .v{font-size:.86rem; color:var(--t-hi); margin:5px 0 9px}
+
+  /* ── Topbar + main ───────────────────────────────────── */
+  main{position:relative; z-index:1; min-width:0}
+  header{
+    position:sticky; top:0; z-index:3; height:56px; padding:0 var(--pad);
+    display:flex; align-items:center; gap:14px;
+    background:linear-gradient(180deg,rgba(10,12,16,.86),rgba(10,12,16,.62));
+    backdrop-filter:blur(14px) saturate(1.2); border-bottom:1px solid var(--line-soft);
+  }
+  .crumb{font-size:.84rem; color:var(--t-lo)}
+  .crumb b{color:var(--t-hi); font-weight:500}
+  .head-date{margin-left:auto; font:500 .74rem var(--mono); color:var(--slate); letter-spacing:.04em}
+  .head-pill{font-size:.68rem; font-weight:700; letter-spacing:.08em; color:var(--t-mid);
+    border:1px solid var(--line-strong); border-radius:var(--r-pill); padding:6px 12px; white-space:nowrap}
+  .head-pill i{font-style:normal; color:var(--blue-tint)}
+
+  .wrap{max-width:1200px; margin:0 auto; padding:6px var(--pad) 72px}
+
+  /* ── Sekcje ──────────────────────────────────────────── */
+  section{margin-top:38px; scroll-margin-top:72px}
+  .sec-head{display:flex; align-items:center; gap:10px; margin-bottom:14px}
+  .kdot{width:7px;height:7px;border-radius:50%;background:var(--c,var(--blue));flex:none}
+  .sec-head h2{font-size:.98rem; font-weight:700; color:var(--t-hi); letter-spacing:.01em}
+  .sec-line{flex:1; height:1px; background:var(--line-soft)}
+  .sec-meta{font-size:.72rem; color:var(--slate); white-space:nowrap}
+
+  .grid{display:grid; gap:var(--gap)}
+  .g2{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)}
+
+  .tile{background:var(--ink-2); border:1px solid var(--line); border-radius:var(--r);
+    padding:18px 19px; position:relative; overflow:hidden;
+    transition:transform .2s var(--ease), border-color .2s var(--ease), box-shadow .2s var(--ease)}
+  .tile:hover{transform:translateY(-3px); border-color:var(--line-strong); box-shadow:0 24px 60px -18px rgba(0,0,0,.55)}
+  .tile.glow::before{content:""; position:absolute; inset:0; pointer-events:none;
+    background:radial-gradient(220px 130px at 88% -12%, color-mix(in srgb, var(--c,var(--blue)) 14%, transparent), transparent 70%)}
+
+  .stat .k{font-size:.6rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--slate)}
+  .stat .n{font-size:clamp(1.9rem,3.4vw,2.4rem); font-weight:500; letter-spacing:-.03em;
+    color:#fff; line-height:1.15; margin-top:6px; font-variant-numeric:tabular-nums}
+  .stat .s{font-size:.76rem; color:var(--t-lo); margin-top:3px}
+  .n-green{color:var(--green)!important} .n-amber{color:var(--amber)!important}
+
+  /* chip statusu */
+  .chip{display:inline-flex; align-items:center; gap:6px; padding:3px 9px; border-radius:var(--r-pill);
+    font-size:.62rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--c,var(--slate));
+    background:color-mix(in srgb, var(--c,var(--slate)) 12%, transparent);
+    border:1px solid color-mix(in srgb, var(--c,var(--slate)) 34%, transparent)}
+  .chip::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--c,var(--slate))}
+
+  /* pasek postępu */
+  .bar{height:6px; border-radius:var(--r-pill); background:rgba(255,255,255,.07); overflow:hidden}
+  .bar b{display:block; height:100%; border-radius:var(--r-pill);
+    background:linear-gradient(90deg,var(--blue),var(--blue-tint))}
+  .bar.green b{background:linear-gradient(90deg,#22B45F,var(--green))}
+
+  /* ── Taski ───────────────────────────────────────────── */
+  .tasks{background:var(--ink-2); border:1px solid var(--line); border-radius:var(--r); overflow:hidden}
+  .task{display:flex; gap:13px; align-items:flex-start; padding:14px 18px; cursor:pointer;
+    border-bottom:1px solid var(--line-soft); transition:background .15s var(--ease)}
+  .task:last-child{border-bottom:none}
+  .task:hover{background:rgba(255,255,255,.028)}
+  .task input{position:absolute; opacity:0; pointer-events:none}
+  .box{width:19px; height:19px; border-radius:6px; border:1.6px solid var(--line-strong);
+    flex:none; margin-top:1px; position:relative; transition:all .18s var(--ease)}
+  .task input:checked ~ .box{background:var(--green); border-color:var(--green)}
+  .task input:checked ~ .box::after{content:""; position:absolute; left:5px; top:1.5px;
+    width:5px; height:10px; border:solid #0A0C10; border-width:0 2.2px 2.2px 0; transform:rotate(43deg)}
+  .task-body{min-width:0}
+  .task-title{color:var(--t-hi); font-size:.92rem; transition:color .18s var(--ease)}
+  .task input:checked ~ .task-body .task-title{color:var(--t-lo); text-decoration:line-through}
+  .task-meta{display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:6px}
+  .badge{font-size:.6rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--slate)}
+  .badge.pilne{color:var(--amber); border:1px solid color-mix(in srgb, var(--amber) 40%, transparent);
+    border-radius:var(--r-pill); padding:2px 8px}
+  .task-date{font:500 .68rem var(--mono); color:var(--slate-2)}
+  .tasks-note{font-size:.74rem; color:var(--slate-2); margin-top:9px}
+
+  /* ── Karty projektów / obszarów ──────────────────────── */
+  .card-top{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:9px}
+  .card-type{font-size:.58rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--slate-2)}
+  .card-name{font-size:1.02rem; font-weight:700; color:var(--t-hi); margin-bottom:4px}
+  .card-desc{font-size:.8rem; color:var(--t-lo)}
+  .card-foot{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:14px}
+  .card-stat{font-size:.74rem; color:var(--t-lo)}
+  .card-stat b{color:var(--t-hi); font-weight:700; font-variant-numeric:tabular-nums}
+  .card-date{font:500 .66rem var(--mono); color:var(--slate-2)}
+
+  /* ── Sekcje-duchy (moduły nieaktywne) ────────────────── */
+  .ghost .ghost-body{opacity:.30; filter:grayscale(.55) saturate(.6); pointer-events:none; user-select:none}
+  .ghost{position:relative}
+  .ghost-hint{position:absolute; inset:0; z-index:2; display:grid; place-items:center; padding:18px}
+  .ghost-pill{background:rgba(15,18,22,.92); border:1px dashed var(--line-strong); border-radius:14px;
+    padding:13px 20px; text-align:center; max-width:420px; backdrop-filter:blur(3px)}
+  .ghost-pill .gk{font-size:.58rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--lavender)}
+  .ghost-pill .gt{font-size:.84rem; color:var(--t-mid); margin-top:5px}
+  .ghost-pill .gt code{font-family:var(--mono); font-size:.78rem; color:var(--blue-tint); background:rgba(37,99,235,.1);
+    border-radius:6px; padding:1px 6px}
+
+  /* ── Dziennik ────────────────────────────────────────── */
+  .log{background:var(--ink-2); border:1px solid var(--line); border-radius:var(--r); padding:6px 0}
+  .log-row{display:flex; gap:16px; padding:11px 18px; border-bottom:1px solid var(--line-soft); font-size:.86rem}
+  .log-row:last-child{border-bottom:none}
+  .log-date{font:500 .72rem var(--mono); color:var(--slate); flex:none; padding-top:2px}
+  .log-op{color:var(--t-lo)} .log-op b{color:var(--t-hi); font-weight:500}
+
+  footer{margin-top:52px; padding-top:18px; border-top:1px solid var(--line-soft);
+    display:flex; flex-wrap:wrap; gap:8px 18px; align-items:center; font-size:.72rem; color:var(--slate-2)}
+  footer code{font-family:var(--mono); color:var(--slate)}
+  .foot-brand{margin-left:auto; letter-spacing:.12em; text-transform:uppercase; font-weight:700; font-size:.6rem}
+
+  /* ── Reveal on load ──────────────────────────────────── */
+  .rv{opacity:0; transform:translateY(14px); animation:rv .6s cubic-bezier(.16,.84,.44,1) forwards}
+  .d1{animation-delay:.05s}.d2{animation-delay:.11s}.d3{animation-delay:.17s}.d4{animation-delay:.23s}.d5{animation-delay:.3s}
+  @keyframes rv{to{opacity:1; transform:none}}
+  @media (prefers-reduced-motion:reduce){.rv{animation:none; opacity:1; transform:none} .tile:hover{transform:none} html{scroll-behavior:auto}}
+
+  /* ── Mobile ──────────────────────────────────────────── */
+  @media (max-width:900px){
+    body{grid-template-columns:1fr}
+    aside{position:static; height:auto; flex-direction:column; gap:12px; padding:16px var(--pad); border-right:none; border-bottom:1px solid var(--line)}
+    nav{flex-direction:row; flex-wrap:wrap; gap:6px}
+    .nav-group, .nav-group > div{display:contents}
+    .nav-label{display:none}
+    .nav-item{white-space:nowrap; border-left:none; border:1px solid var(--line); border-radius:var(--r-pill); padding:6px 12px}
+    .nav-item.on{border-color:color-mix(in srgb, var(--blue) 45%, transparent)}
+    .side-card{display:none}
+    .g4,.g3{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:560px){ .g4,.g3,.g2{grid-template-columns:1fr} .head-pill{display:none} }
+</style>
+</head>
+<body>
+
+<aside>
+  <div class="logo">
+    <span class="logo-dot"></span>
+    <!-- SLOT:LOGO - podmień na "KOKPIT · <IMIĘ OSOBY>" (uppercase) -->
+    <b>KOKPIT <i>·</i> DEMO</b>
+    <!-- /SLOT:LOGO -->
+  </div>
+  <nav>
+    <div class="nav-group">
+      <div><div class="nav-label">Kokpit</div>
+        <a class="nav-item on" href="#dzis" style="--c:var(--blue)"><span class="nav-dot"></span>Dziś</a>
+        <a class="nav-item" href="#taski" style="--c:var(--amber)"><span class="nav-dot"></span>Taski</a>
+        <a class="nav-item" href="#projekty" style="--c:var(--green)"><span class="nav-dot"></span>Projekty</a>
+        <a class="nav-item" href="#obszary" style="--c:var(--lavender)"><span class="nav-dot"></span>Obszary</a>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div><div class="nav-label">Moduły</div>
+        <!-- Nawigacja modułów: link modułu-ducha ma class "nav-ghost"; po wdrożeniu modułu usuń tę klasę -->
+        <a class="nav-item nav-ghost" href="#cele" style="--c:var(--amber)"><span class="nav-dot"></span>Cele</a>
+        <a class="nav-item nav-ghost" href="#finanse" style="--c:var(--green)"><span class="nav-dot"></span>Finanse</a>
+        <a class="nav-item nav-ghost" href="#kalendarz" style="--c:var(--lavender)"><span class="nav-dot"></span>Kalendarz treści</a>
+        <a class="nav-item nav-ghost" href="#kontakty" style="--c:var(--blue)"><span class="nav-dot"></span>Kontakty</a>
+      </div>
+    </div>
+    <div class="nav-group">
+      <div><div class="nav-label">Historia</div>
+        <a class="nav-item" href="#dziennik" style="--c:var(--slate)"><span class="nav-dot"></span>Dziennik</a>
+      </div>
+    </div>
+  </nav>
+  <div class="side-card">
+    <!-- SLOT:SIDEBAR-KARTA - w trakcie tygodnia próbnego: "TYDZIEŃ PRÓBNY", "Dzień N z 7", pasek N/7.
+         Po tygodniu próbnym: "TWÓJ SYSTEM", "N stron wiki", pasek ukryty lub 100%. -->
+    <div class="k">Tydzień próbny</div>
+    <div class="v">Dzień 3 z 7</div>
+    <div class="bar green"><b style="width:43%"></b></div>
+    <!-- /SLOT:SIDEBAR-KARTA -->
+  </div>
+</aside>
+
+<main>
+  <header>
+    <span class="crumb">Twój system <b>/ kokpit</b></span>
+    <!-- SLOT:DATA-NAGLOWEK - dzisiejsza data ISO -->
+    <span class="head-date">2026-01-01</span>
+    <!-- /SLOT:DATA-NAGLOWEK -->
+    <span class="head-pill">Odśwież: powiedz <i>"Odśwież kokpit"</i></span>
+  </header>
+
+  <div class="wrap">
+
+    <!-- ═══════════ DZIŚ - statystyki ═══════════ -->
+    <section id="dzis">
+      <div class="sec-head rv d1" style="--c:var(--blue)">
+        <span class="kdot"></span><h2>Dziś</h2><span class="sec-line"></span>
+        <!-- SLOT:DZIS-META - dzisiejsza data słownie -->
+        <span class="sec-meta">środa, 1 stycznia</span>
+        <!-- /SLOT:DZIS-META -->
+      </div>
+      <!-- SLOT:STATY - przelicz: taski = nieodhaczone checkboxy ze wszystkich kart;
+           projekty aktywne = karty ze status: aktywny; strony wiki = wszystkie strony
+           systemu; wpisy = liczba wpisów w log.md -->
+      <div class="grid g4">
+        <div class="tile glow stat rv d1" style="--c:var(--amber)">
+          <div class="k">Taski na radarze</div><div class="n n-amber">7</div><div class="s">nieodhaczone, wszystkie karty</div>
+        </div>
+        <div class="tile glow stat rv d2" style="--c:var(--blue)">
+          <div class="k">Projekty aktywne</div><div class="n">2</div><div class="s">plus 1 wstrzymany</div>
+        </div>
+        <div class="tile glow stat rv d3" style="--c:var(--lavender)">
+          <div class="k">Strony wiki</div><div class="n">12</div><div class="s">projekty, obszary i reszta</div>
+        </div>
+        <div class="tile glow stat rv d4" style="--c:var(--green)">
+          <div class="k">Wpisy w dzienniku</div><div class="n n-green">14</div><div class="s">append-only, od startu</div>
+        </div>
+      </div>
+      <!-- /SLOT:STATY -->
+    </section>
+
+    <!-- ═══════════ TASKI ═══════════ -->
+    <section id="taski">
+      <div class="sec-head rv d2" style="--c:var(--amber)">
+        <span class="kdot"></span><h2>Taski</h2><span class="sec-line"></span>
+        <!-- SLOT:TASKI-META - liczba nieodhaczonych -->
+        <span class="sec-meta">7 otwartych</span>
+        <!-- /SLOT:TASKI-META -->
+      </div>
+      <div class="tasks rv d3">
+        <!-- SLOT:TASKI - jeden label.task na każdy nieodhaczony checkbox z kart.
+             badge = nazwa karty (uppercase); badge.pilne tylko przy oznaczeniu PILNE;
+             task-date = ostatnia_aktualizacja karty. Kolejność: najpierw PILNE, potem wg kart. -->
+        <label class="task"><input type="checkbox"><span class="box"></span>
+          <span class="task-body"><span class="task-title">Zadzwonić do wykonawcy w sprawie terminu glazurnika</span>
+          <span class="task-meta"><span class="badge pilne">Pilne</span><span class="badge">Remont łazienki</span><span class="task-date">2026-01-01</span></span></span>
+        </label>
+        <label class="task"><input type="checkbox"><span class="box"></span>
+          <span class="task-body"><span class="task-title">Porównać oferty płytek i wybrać dwie do decyzji</span>
+          <span class="task-meta"><span class="badge">Remont łazienki</span><span class="task-date">2025-12-30</span></span></span>
+        </label>
+        <label class="task"><input type="checkbox"><span class="box"></span>
+          <span class="task-body"><span class="task-title">Wysłać ofertę po rozmowie z panią Anną</span>
+          <span class="task-meta"><span class="badge">Klient: pracownia</span><span class="task-date">2025-12-30</span></span></span>
+        </label>
+        <label class="task"><input type="checkbox"><span class="box"></span>
+          <span class="task-body"><span class="task-title">Umówić przegląd auta przed zimą</span>
+          <span class="task-meta"><span class="badge">Dom i auto</span><span class="task-date">2025-12-28</span></span></span>
+        </label>
+        <label class="task"><input type="checkbox"><span class="box"></span>
+          <span class="task-body"><span class="task-title">Trzy treningi w tym tygodniu - zaplanować w kalendarzu</span>
+          <span class="task-meta"><span class="badge">Zdrowie</span><span class="task-date">2025-12-27</span></span></span>
+        </label>
+        <!-- /SLOT:TASKI -->
+      </div>
+      <p class="tasks-note rv d3">Ptaszki tutaj są "na niby" - naprawdę odhaczasz, mówiąc do Claude'a
+      ("zrobione: X"). Po następnym "Odśwież kokpit" zobaczysz stan z kart.</p>
+    </section>
+
+    <!-- ═══════════ PROJEKTY ═══════════ -->
+    <section id="projekty">
+      <div class="sec-head rv d3" style="--c:var(--green)">
+        <span class="kdot"></span><h2>Projekty</h2><span class="sec-line"></span>
+        <span class="sec-meta">z kart w projekty/</span>
+      </div>
+      <div class="grid g3">
+        <!-- SLOT:PROJEKTY - jeden tile na projekt (bez zakończonych). Chipy statusu:
+             aktywny=var(- -green), wstrzymany=var(- -amber), wysoki priorytet=var(- -red) drugi chip.
+             card-stat: liczba otwartych tasków; card-date: ostatnia_aktualizacja;
+             card-desc: jednozdaniowe streszczenie sekcji "Status" karty (piszesz je sam). -->
+        <div class="tile rv d3">
+          <div class="card-top"><span class="card-type">Projekt</span><span class="chip" style="--c:var(--green)">Aktywny</span></div>
+          <div class="card-name">Remont łazienki</div>
+          <div class="card-desc">Ekipa wybrana, czekamy na termin. Budżet spięty w 80%.</div>
+          <div class="card-foot"><span class="card-stat"><b>2</b> otwarte taski</span><span class="card-date">2026-01-01</span></div>
+        </div>
+        <div class="tile rv d4">
+          <div class="card-top"><span class="card-type">Projekt</span><span class="chip" style="--c:var(--green)">Aktywny</span></div>
+          <div class="card-name">Klient: pracownia</div>
+          <div class="card-desc">Po dobrej rozmowie - oferta do wysłania w tym tygodniu.</div>
+          <div class="card-foot"><span class="card-stat"><b>1</b> otwarty task</span><span class="card-date">2025-12-30</span></div>
+        </div>
+        <div class="tile rv d5">
+          <div class="card-top"><span class="card-type">Projekt</span><span class="chip" style="--c:var(--amber)">Wstrzymany</span></div>
+          <div class="card-name">Kurs online</div>
+          <div class="card-desc">Wraca po remoncie - notatki czekają na karcie.</div>
+          <div class="card-foot"><span class="card-stat"><b>0</b> otwartych tasków</span><span class="card-date">2025-12-12</span></div>
+        </div>
+        <!-- /SLOT:PROJEKTY -->
+      </div>
+    </section>
+
+    <!-- ═══════════ OBSZARY ═══════════ -->
+    <section id="obszary">
+      <div class="sec-head rv d4" style="--c:var(--lavender)">
+        <span class="kdot"></span><h2>Obszary życia</h2><span class="sec-line"></span>
+        <span class="sec-meta">bez deadline'u, zawsze żywe</span>
+      </div>
+      <div class="grid g2">
+        <!-- SLOT:OBSZARY - jeden tile na obszar; card-stat = otwarte taski,
+             card-date = ostatni_przeglad; card-desc = jedno zdanie ze stanu obszaru
+             (streszczenie sekcji "Notatki", piszesz je sam) -->
+        <div class="tile rv d4">
+          <div class="card-top"><span class="card-type">Obszar</span><span class="chip" style="--c:var(--lavender)">Prowadzony</span></div>
+          <div class="card-name">Zdrowie</div>
+          <div class="card-desc">Treningi wróciły do rytmu; sen do poprawy.</div>
+          <div class="card-foot"><span class="card-stat"><b>1</b> otwarty task</span><span class="card-date">przegląd: 2025-12-27</span></div>
+        </div>
+        <div class="tile rv d5">
+          <div class="card-top"><span class="card-type">Obszar</span><span class="chip" style="--c:var(--lavender)">Prowadzony</span></div>
+          <div class="card-name">Dom i auto</div>
+          <div class="card-desc">Sezonowe przeglądy i drobne naprawy w jednym miejscu.</div>
+          <div class="card-foot"><span class="card-stat"><b>1</b> otwarty task</span><span class="card-date">przegląd: 2025-12-28</span></div>
+        </div>
+        <!-- /SLOT:OBSZARY -->
+      </div>
+    </section>
+
+    <!-- ═══════════ MODUŁ-DUCH: CELE ═══════════ -->
+    <section id="cele" class="ghost">
+      <div class="sec-head" style="--c:var(--amber)">
+        <span class="kdot"></span><h2>Cele</h2><span class="sec-line"></span><span class="sec-meta">moduł nieaktywny</span>
+      </div>
+      <div class="ghost-body">
+        <div class="grid g2">
+          <div class="tile">
+            <div class="card-top"><span class="card-type">Cel · kwartał</span><span class="chip" style="--c:var(--green)">W trakcie</span></div>
+            <div class="card-name">Przykładowy cel z miarą</div>
+            <div class="card-desc">Tak wygląda cel: miara, termin i pasek postępu.</div>
+            <div style="display:flex;align-items:center;gap:10px;margin-top:14px">
+              <div class="bar" style="flex:1"><b style="width:64%"></b></div><span class="card-stat"><b>64%</b></span>
+            </div>
+          </div>
+          <div class="tile">
+            <div class="card-top"><span class="card-type">Cel · rok</span><span class="chip" style="--c:var(--amber)">Zagrożony</span></div>
+            <div class="card-name">Drugi cel, inny horyzont</div>
+            <div class="card-desc">System sam przypomina, gdy cel zaczyna się sypać.</div>
+            <div style="display:flex;align-items:center;gap:10px;margin-top:14px">
+              <div class="bar" style="flex:1"><b style="width:31%"></b></div><span class="card-stat"><b>31%</b></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ghost-hint"><div class="ghost-pill">
+        <div class="gk">Moduł śpi</div>
+        <div class="gt">Obudź go jednym zdaniem do Claude'a: <code>Dodaj cel: ...</code> - sekcja ożyje przy następnym odświeżeniu.</div>
+      </div></div>
+    </section>
+
+    <!-- ═══════════ MODUŁ-DUCH: FINANSE ═══════════ -->
+    <section id="finanse" class="ghost">
+      <div class="sec-head" style="--c:var(--green)">
+        <span class="kdot"></span><h2>Finanse / P&amp;L</h2><span class="sec-line"></span><span class="sec-meta">moduł nieaktywny</span>
+      </div>
+      <div class="ghost-body">
+        <div class="grid g3">
+          <div class="tile stat"><div class="k">Przychody · miesiąc</div><div class="n n-green">12 400</div><div class="s">z tabeli P&amp;L</div></div>
+          <div class="tile stat"><div class="k">Koszty · miesiąc</div><div class="n">7 150</div><div class="s">liczone na bieżąco</div></div>
+          <div class="tile stat"><div class="k">Wynik</div><div class="n n-green">+5 250</div><div class="s">jedna fraza dziennie wystarcza</div></div>
+        </div>
+      </div>
+      <div class="ghost-hint"><div class="ghost-pill">
+        <div class="gk">Moduł śpi</div>
+        <div class="gt">Moduł z Etapu 4. Obudź go: <code>Dopisz do P&amp;L: ...</code> - a tu pojawi się Twój wynik miesiąca.</div>
+      </div></div>
+    </section>
+
+    <!-- ═══════════ MODUŁ-DUCH: KALENDARZ TREŚCI ═══════════ -->
+    <section id="kalendarz" class="ghost">
+      <div class="sec-head" style="--c:var(--lavender)">
+        <span class="kdot"></span><h2>Kalendarz treści</h2><span class="sec-line"></span><span class="sec-meta">moduł nieaktywny</span>
+      </div>
+      <div class="ghost-body">
+        <div class="log">
+          <div class="log-row"><span class="log-date">2026-01-06</span><span class="log-op"><b>Post: kulisy projektu</b> · Instagram · szkic</span></div>
+          <div class="log-row"><span class="log-date">2026-01-09</span><span class="log-op"><b>Newsletter #12</b> · e-mail · pomysł</span></div>
+          <div class="log-row"><span class="log-date">2026-01-13</span><span class="log-op"><b>Artykuł na bloga</b> · www · pomysł</span></div>
+        </div>
+      </div>
+      <div class="ghost-hint"><div class="ghost-pill">
+        <div class="gk">Moduł śpi</div>
+        <div class="gt">Moduł z Etapu 4. Obudź go: <code>Dopisz do kalendarza treści: ...</code> - i pytaj: co mam opublikować w tym tygodniu?</div>
+      </div></div>
+    </section>
+
+    <!-- ═══════════ MODUŁ-DUCH: KONTAKTY ═══════════ -->
+    <section id="kontakty" class="ghost">
+      <div class="sec-head" style="--c:var(--blue)">
+        <span class="kdot"></span><h2>Kontakty</h2><span class="sec-line"></span><span class="sec-meta">moduł nieaktywny</span>
+      </div>
+      <div class="ghost-body">
+        <div class="log">
+          <div class="log-row"><span class="log-date">2025-12-30</span><span class="log-op"><b>Anna K.</b> · pracownia · ostatnia rozmowa: oferta</span></div>
+          <div class="log-row"><span class="log-date">2025-12-18</span><span class="log-op"><b>Marek W.</b> · wykonawca · czeka na termin</span></div>
+          <div class="log-row"><span class="log-date">2025-11-29</span><span class="log-op"><b>Ola P.</b> · księgowa · dawno bez kontaktu</span></div>
+        </div>
+      </div>
+      <div class="ghost-hint"><div class="ghost-pill">
+        <div class="gk">Moduł śpi</div>
+        <div class="gt">Obudź go: <code>Dodaj kontakt: ...</code> - a potem pytaj: <code>Kogo dawno nie zagadałem?</code></div>
+      </div></div>
+    </section>
+
+    <!-- ═══════════ DZIENNIK ═══════════ -->
+    <section id="dziennik">
+      <div class="sec-head rv d5" style="--c:var(--slate)">
+        <span class="kdot"></span><h2>Dziennik</h2><span class="sec-line"></span>
+        <span class="sec-meta">5 ostatnich wpisów z log.md</span>
+      </div>
+      <div class="log rv d5">
+        <!-- SLOT:DZIENNIK - 5 ostatnich wpisów z log.md, najnowszy na górze -->
+        <div class="log-row"><span class="log-date">2026-01-01</span><span class="log-op"><b>ingest</b> · Remont łazienki - termin glazurnika, nowy task pilny</span></div>
+        <div class="log-row"><span class="log-date">2025-12-31</span><span class="log-op"><b>dzien</b> · podsumowanie - odhaczone 2 taski, doszła oferta</span></div>
+        <div class="log-row"><span class="log-date">2025-12-30</span><span class="log-op"><b>ingest</b> · Klient: pracownia - notatka po rozmowie z Anną</span></div>
+        <div class="log-row"><span class="log-date">2025-12-28</span><span class="log-op"><b>przeglad</b> · przegląd tygodnia - plan na nowy tydzień</span></div>
+        <div class="log-row"><span class="log-date">2025-12-27</span><span class="log-op"><b>nowa-strona</b> · obszar Zdrowie dołączył do systemu</span></div>
+        <!-- /SLOT:DZIENNIK -->
+      </div>
+    </section>
+
+    <footer class="rv d5">
+      <!-- SLOT:STOPKA-DATA - data i godzina wygenerowania -->
+      <span>Wygenerowano <code>2026-01-01 09:00</code></span>
+      <!-- /SLOT:STOPKA-DATA -->
+      <span>To widok, nie źródło prawdy - prawda mieszka w kartach.</span>
+      <span class="foot-brand">Centrum zarządzania życiem ×20</span>
+    </footer>
+
+  </div>
+</main>
+
+</body>
+</html>
