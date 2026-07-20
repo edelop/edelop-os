@@ -71,7 +71,7 @@ tylko pokazuje, dokąd może urosnąć."
 - Daj chwilę na oglądanie, bez gadania. Potem krótko oprowadź: liczby u góry to jej
   system policzony na dziś, taski można "odhaczać na niby" (przy odświeżeniu wróci stan
   z kart - prawdziwe odhaczanie jest w rozmowie), przyciemnione sekcje to śpiące moduły.
-- Nazwij rzecz: "To jest Twoje centrum zarządzania życiem w wersji wizualnej. Wszystko,
+- Nazwij rzecz: "To jest Twoje centrum zarządzania x20 w wersji wizualnej. Wszystko,
   co tu widzisz, przyszło z Twoich zwykłych plików tekstowych - i to Ty je zbudowałaś/eś
   przez ostatni tydzień."
 

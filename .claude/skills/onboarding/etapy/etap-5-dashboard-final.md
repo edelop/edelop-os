@@ -156,8 +156,8 @@ Po zgodzie:
 - CELEBRACJA. Policz konkretne liczby z systemu (strony w `projekty/`, `obszary/`, `cele/`,
   `kontakty/`, `decyzje/`; nieodhaczone taski; wpisy w `log.md`) i powiedz mniej więcej:
   "Zobacz, co zbudowałaś/eś przez ten tydzień: [N] stron wiki, [M] tasków na radarze,
-  [K] wpisów w dzienniku, dashboard i mapę połączeń. To jest Twoje centrum zarządzania
-  życiem - zbudowane Twoimi rękami, ze zwykłych plików, które są w 100% Twoje. Tydzień
+  [K] wpisów w dzienniku, dashboard i mapę połączeń. To jest Twoje centrum zarządzania x20 -
+  zbudowane Twoimi rękami, ze zwykłych plików, które są w 100% Twoje. Tydzień
   temu to był pusty folder. I najważniejsze: od dziś nie ma już lekcji. System działa bez
   skilla - otwierasz folder, wpisujesz `claude` i po prostu mówisz, czego potrzebujesz."
 

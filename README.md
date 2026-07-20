@@ -1,6 +1,6 @@
 # Twój system na pracę i życie. Budowany rozmową.
 
-To jest folder-starter, z którego zbudujesz WŁASNY system do ogarniania projektów, celów i codziennych spraw - nie klikając w żadnej aplikacji, tylko rozmawiając z AI. Claude poprowadzi Cię przez onboarding krok po kroku: Ty mówisz, co masz na głowie, a system rośnie razem z Tobą. Na końcu masz własne **centrum zarządzania życiem x20**: jeden widok na projekty, cele i codzienne sprawy - i system, który pamięta za Ciebie (x20, bo działa jak dźwignia: Ty myślisz o jednej rzeczy naraz, a system pilnuje dwudziestu).
+To jest folder-starter, z którego zbudujesz WŁASNY system do ogarniania projektów, celów i codziennych spraw - nie klikając w żadnej aplikacji, tylko rozmawiając z AI. Claude poprowadzi Cię przez onboarding krok po kroku: Ty mówisz, co masz na głowie, a system rośnie razem z Tobą. Na końcu masz własne **centrum zarządzania x20**: jeden widok na projekty, cele i codzienne sprawy - i system, który pamięta za Ciebie (x20, bo działa jak dźwignia: Ty myślisz o jednej rzeczy naraz, a system pilnuje dwudziestu).
 
 ## Dla kogo
 
