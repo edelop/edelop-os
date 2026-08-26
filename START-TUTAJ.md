@@ -52,8 +52,8 @@ Jeśli zobaczysz numer wersji - działa. Jeśli komputer mówi, że nie zna taki
 
 ## Krok 3: Pobierz ten folder
 
-1. Wróć na stronę tego repozytorium na GitHubie.
-2. Kliknij zielony przycisk **Code** (na górze listy plików) i wybierz **Download ZIP**.
+1. Wejdź na elevy.co do materiałów Akademii Edelop.
+2. Pobierz paczkę **Edelop OS - kit startowy** (plik ZIP) i zapisz ją na pulpicie.
 3. Rozpakuj pobrany plik ZIP tam, gdzie trzymasz dokumenty - na przykład do folderu **Dokumenty**. Powstanie folder z plikami tego startera. To będzie dom Twojego systemu, więc wybierz miejsce, które łatwo znajdziesz.
 
 ## Krok 4: Otwórz terminal W TYM folderze
