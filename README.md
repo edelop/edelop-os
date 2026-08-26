@@ -14,7 +14,7 @@ Nie musisz umieć programować. Serio. Jedyne, co będziesz robić, to pisać po
 
 Edelop OS działa tak samo z **Claude** i z **Codex**. Folder jest ten sam; różni się tylko plik, który Twój asystent czyta na starcie: Claude czyta `CLAUDE.md`, Codex czyta `AGENTS.md`, a treść w obu jest identyczna. Możesz zmienić zdanie później - folder zostaje.
 
-Ścieżka opisana krok po kroku w [START-TUTAJ.md](START-TUTAJ.md) to **Claude Code**. Instrukcja dla Codex jest w przygotowaniu; do czasu jej wydania zacznij od Claude.
+Obie ścieżki są opisane krok po kroku w [START-TUTAJ.md](START-TUTAJ.md). Instalujesz zwykłą aplikację - bez terminala.
 
 ## Jak to działa
 
