@@ -14,13 +14,15 @@ odpowiedź w jednym zdaniu i jedź dalej, bez egzaminowania.
 
 1. **"Jakie trzy idee zabraliśmy z Etapu 0?"**
    Odpowiedź, do której prowadzisz: (1) folder = projekt - Twój system to zwykły folder
-   z plikami, wszystko jest Twoje i czytelne; (2) CLAUDE.md = pamięć - Claude czyta ten plik
-   na starcie każdej sesji i dzięki niemu Cię zna; (3) skill = procedura - spisany przepis
+   z plikami, wszystko jest Twoje i czytelne; (2) plik zasad = pamięć - asystent czyta go
+   na starcie każdej sesji i dzięki niemu Cię zna (`CLAUDE.md` dla Claude, `AGENTS.md`
+   dla Codex - ta sama treść); (3) procedura = spisany przepis
    na typ zadania, jak Superpowers. Jeśli osoba odpowie innymi słowami, ale sensownie - uznaj.
 
 2. **"Po co zainstalowaliśmy Superpowers?"**
    Odpowiedź: to ceniona paczka dodatkowych umiejętności (skilli) z oficjalnego katalogu
-   pluginów Claude Code, dzięki której Claude pracuje według sprawdzonych sposobów -
+   pluginów Claude Code, dzięki której asystent pracuje według sprawdzonych sposobów -
+   (pytanie zadaj tylko, jeśli w Etapie 0 rzeczywiście instalowaliście Superpowers)
    np. porządnie planuje i robi burze mózgów zamiast rzucać się od razu do roboty.
 
 3. **"Co robi komenda /model?"**

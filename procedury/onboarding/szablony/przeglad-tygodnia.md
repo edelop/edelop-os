@@ -6,7 +6,7 @@ data: YYYY-MM-DD
 Przegląd tygodnia - jeden plik na jeden tydzień: przeglady/YYYY-MM-DD.md
 (data = dzień, w którym robicie przegląd).
 
-Rytuał prowadzi Claude, gdy osoba mówi "Przegląd tygodnia":
+Rytuał prowadzi asystent, gdy osoba mówi "Przegląd tygodnia":
 1. Utwórz plik z tego szablonu z dzisiejszą datą.
 2. Prowadź rozmowę sekcja po sekcji: jedno pytanie, wysłuchaj odpowiedzi, zapisz
    ją w sekcji, dopiero potem przejdź dalej. Nie zadawaj kilku pytań naraz.

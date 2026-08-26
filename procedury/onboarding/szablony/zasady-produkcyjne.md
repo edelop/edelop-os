@@ -1,5 +1,5 @@
 <!--
-PERSONALIZACJA (instrukcja dla Claude'a w Etapie 5 - wykonaj ją i USUŃ ten komentarz):
+PERSONALIZACJA (instrukcja dla asystenta w Etapie 5 - wykonaj ją i USUŃ ten komentarz):
 1. Wstaw imię osoby z `.onboarding/profil.md` w każde miejsce <IMIE>.
 2. Zostaw tylko to, co osoba faktycznie ma:
    - typy projekt i obszar zostają zawsze (rdzeń systemu),
@@ -15,13 +15,18 @@ PERSONALIZACJA (instrukcja dla Claude'a w Etapie 5 - wykonaj ją i USUŃ ten kom
    o "projektach zewnętrznych"). Przykłady w nawiasach dopasuj do jej branży.
 4. Usuń wszystkie komentarze HTML (łącznie z tym). W gotowym pliku nie może zostać
    żaden placeholder <...>.
-5. Gotową treścią NADPISZ `CLAUDE.md` w korzeniu folderu - dopiero po wyraźnej zgodzie osoby.
+5. Gotową treścią NADPISZ DWA pliki w korzeniu folderu: `CLAUDE.md` ORAZ `AGENTS.md` -
+   dopiero po wyraźnej zgodzie osoby. Ta sama treść, dwie nazwy: Claude czyta `CLAUDE.md`,
+   Codex czyta `AGENTS.md`. Osoba ma mieć folder, który działa u obu, także wtedy gdy
+   kiedyś zmieni asystenta. Nie personalizuj ich osobno - to jeden plik zapisany dwa razy.
 -->
 
 # System <IMIE> - schemat
 
+<!-- Ten sam plik jest zapisany jako CLAUDE.md i AGENTS.md. Edytujesz jeden - zaktualizuj drugi. -->
+
 Ten folder to osobisty system <IMIE> na pracę i życie, prowadzony metodą LLM Wiki.
-Trzy warstwy: surowe materiały w `zrodla/`, strony wiki, które utrzymujesz Ty (Claude),
+Trzy warstwy: surowe materiały w `zrodla/`, strony wiki, które utrzymujesz Ty (asystent),
 i ten plik - schemat. Czytasz go automatycznie na starcie każdej sesji, więc od pierwszej
 sekundy wiesz, jak ten system działa.
 
@@ -106,7 +111,7 @@ w rozmowie.
 
 1. Fraza "Zapisz gdzie skończyliśmy" = mini-Ingest stanu: dopisz bieżący stan pracy do
    właściwych kart i do `log.md`, po czym potwierdź jednym zdaniem, że można bezpiecznie
-   przerwać albo zacząć świeżą sesję (`/clear`).
+   przerwać albo zacząć świeżą sesję (w Claude Code: `/clear`; w Codex: nowa rozmowa).
 2. Po domknięciu większego bloku pracy (Ingest źródeł, przegląd, dłuższa rozmowa robocza)
    SAM zaproponuj zapis stanu i świeżą sesję na kolejny temat. Jedna sprawa = jedna sesja.
 3. Nigdy nie zakładaj, że następna sesja "będzie pamiętać" tę rozmowę. Co ma przetrwać,
@@ -117,7 +122,7 @@ w rozmowie.
 To skróty myślowe, nie komendy - rozpoznawaj intencję, nie dosłowne brzmienie
 ("dorzuć zadanie do X" znaczy to samo co "Dodaj taska do X").
 
-| Osoba mówi | Claude robi |
+| Osoba mówi | Asystent robi |
 |---|---|
 | "Nowy projekt: X" | tworzy `projekty/<slug>.md` z szablonu + wpis do index.md i log.md |
 | "Dopisz do projektu X: ..." | Ingest: aktualizuje kartę, index, log |
@@ -275,4 +280,5 @@ sekcją "Kokpit w przeglądarce" dopisywaną w trakcie tego etapu. -->
 
 W `.onboarding/postep.md` czeka bonusowy Etap 6: kokpit w przeglądarce (dashboard jako
 kolorowa, klikalna strona HTML). Gdy osoba wspomni o kokpicie, poprosi o dashboard
-w przeglądarce albo zapyta "co dalej w nauce" - uruchom skill `onboarding`, on poprowadzi.
+w przeglądarce albo zapyta "co dalej w nauce" - poprowadź ją według
+`procedury/onboarding/etapy/etap-6-kokpit.md`.

@@ -3,7 +3,7 @@
 ## Cel etapu
 
 Po tym etapie osoba zna magiczne frazy i rytm dnia z systemem: umie własnoręcznie dodać
-taska, dopisać update do projektu i zapytać o status - i rozumie, co Claude robi w plikach
+taska, dopisać update do projektu i zapytać o status - i rozumie, co asystent robi w plikach
 po każdej z tych fraz.
 
 ## Powtórka
@@ -16,11 +16,11 @@ odpowiedź i jedź dalej, to nie egzamin.
    które utrzymuje Claude: projekty, obszary, cele, kontakty, decyzje) i schemat
    (`CLAUDE.md` - spisane konwencje i workflowy).
 2. **Co to jest Ingest?**
-   Odpowiedź: workflow wchłaniania materiału. Claude czyta materiał, omawia z Tobą wnioski,
+   Odpowiedź: workflow wchłaniania materiału. Asystent czyta materiał, omawia z Tobą wnioski,
    pisze lub aktualizuje strony wiki, aktualizuje `index.md` i dopisuje wpis do `log.md`.
-3. **Czego Claude NIGDY nie robi w folderze `zrodla/`?**
+3. **Czego asystent NIGDY nie robi w folderze `zrodla/`?**
    Odpowiedź: nie edytuje i nie kasuje tam plików. Źródła są tylko do odczytu - to Twoje
-   surowe materiały, Claude z nich czyta, a pisze wyłącznie w stronach wiki.
+   surowe materiały, asystent z nich czyta, a pisze wyłącznie w stronach wiki.
 
 ## Materiał
 
@@ -28,9 +28,9 @@ Porcjuj na kroki. Po każdym kroku upewnij się jednym pytaniem, że osoba jest 
 zanim przejdziesz dalej. Wszystkie przykłady bierz z profilu osoby (`.onboarding/profil.md`) -
 jej projekt, jej branża, jej słownictwo.
 
-### Krok 1: jak mówić do Claude'a
+### Krok 1: jak mówić do asystenta
 
-Wyjaśnij, że do Claude'a mówi się normalnym językiem - nie ma składni do wykucia.
+Wyjaśnij, że do asystenta mówi się normalnym językiem - nie ma składni do wykucia.
 Powiedz mniej więcej: "Traktuj mnie jak bystrego współpracownika, który zna Twój system
 od podszewki, ale nie zna Twojej głowy. Im więcej kontekstu mi dasz, tym lepiej trafię.
 Zamiast 'dodaj task: zadzwonić' powiedz 'dodaj taska do projektu X: zadzwonić do Anny
@@ -41,10 +41,10 @@ mów, co masz w głowie."
 
 Pokaż osobie tę tabelę (możesz ją wypisać w rozmowie). Podkreśl: to są **skróty myślowe,
 nie komendy**. Nie trzeba ich wpisywać słowo w słowo - "dorzuć zadanie do X", "co tam
-u projektu X" czy "zanotuj przy X, że..." zadziałają tak samo, bo Claude rozumie intencję.
+u projektu X" czy "zanotuj przy X, że..." zadziałają tak samo, bo asystent rozumie intencję.
 Tabela istnieje po to, żeby osoba wiedziała, CO system potrafi na jedno zdanie.
 
-| Mówisz | Claude robi |
+| Mówisz | Asystent robi |
 |---|---|
 | "Nowy projekt: X" | tworzy `projekty/<slug>.md` z szablonu + wpis do index.md i log.md |
 | "Dopisz do projektu X: ..." | Ingest: aktualizuje kartę, index, log |
@@ -86,10 +86,10 @@ historię operacji**.
 
 ### Krok 5: sesje - czysta kartka, pamięć w plikach
 
-To najważniejsza lekcja o samym Claude Code w całym kursie - poświęć jej pełną uwagę.
+To najważniejsza lekcja o samej pracy z asystentem w całym kursie - poświęć jej pełną uwagę.
 Wyjaśnij obrazowo, mniej więcej tak:
 
-"Jeszcze jedna rzecz, która odróżnia ludzi, którym Claude 'działa świetnie', od tych,
+"Jeszcze jedna rzecz, która odróżnia ludzi, którym asystent 'działa świetnie', od tych,
 którym 'jakoś zgłupiał'. Nasza rozmowa to blat biurka: wszystko, o czym rozmawiamy,
 rozkładam na blacie. Blat jest duży, ale nie nieskończony - gdy rozmowa ciągnie się
 godzinami, robi się na nim ciasno: myślę wolniej i łatwiej mi coś umknąć. Twoje pliki to

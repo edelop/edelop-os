@@ -47,7 +47,7 @@ tylko pokazuje, dokąd może urosnąć."
 
 ### 1. Generacja kokpitu
 
-- Weź szablon `.claude/skills/onboarding/szablony/kokpit.html` i utwórz z niego
+- Weź szablon `procedury/onboarding/szablony/kokpit.html` i utwórz z niego
   `kokpit.html` w korzeniu folderu. Pełna instrukcja slotów jest w komentarzu na górze
   szablonu - trzymaj się jej. W skrócie:
   - podmieniasz WYŁĄCZNIE zawartość slotów (`SLOT:LOGO` z imieniem osoby,
@@ -95,7 +95,7 @@ Za zgodą osoby zaktualizuj oba pliki:
   `kokpit.html` w korzeniu to wizualny widok systemu - bliźniak `dashboard.md`,
   ta sama prawda z kart. Na frazę "Odśwież kokpit":
 
-  1. Przebuduj plik na bazie szablonu `.claude/skills/onboarding/szablony/kokpit.html`
+  1. Przebuduj plik na bazie szablonu `procedury/onboarding/szablony/kokpit.html`
      (instrukcja slotów w komentarzu na górze szablonu); dane jak przy "Odśwież
      dashboard" + data wygenerowania.
   2. Sekcje prowadzonych modułów wypełnij danymi; nieprowadzone zostaw jako
