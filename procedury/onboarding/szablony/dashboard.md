@@ -9,7 +9,7 @@ Taski odhaczamy na kartach projektów i obszarów, nie tutaj.
 
 Docelowa lokalizacja: dashboard.md w korzeniu folderu (powstaje w Etapie 5 z tego szablonu).
 
-Instrukcja przebudowy (dla Claude'a, na frazę "Odśwież dashboard"):
+Instrukcja przebudowy (dla asystenta, na frazę "Odśwież dashboard"):
 1. "## Taski na dzis" - zbierz wszystkie nieodhaczone checkboxy `- [ ]` z sekcji
    "## Nastepne kroki" kart w projekty/ i "## Aktualne taski" kart w obszary/.
    Przy każdym tasku daj wikilink [[slug]] do strony, z której pochodzi.

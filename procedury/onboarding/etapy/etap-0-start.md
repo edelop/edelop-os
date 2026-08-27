@@ -2,7 +2,7 @@
 
 ## Cel etapu
 
-Po tym etapie osoba rozumie, czym jest Claude Code i ten system, ma ustawiony najmocniejszy
+Po tym etapie osoba rozumie, czym jest jej asystent AI i ten system, ma ustawiony najmocniejszy
 dostępny model, zainstalowane Superpowers, wypełniony profil i spersonalizowaną mapę wdrożenia.
 
 ## Materiał
@@ -40,11 +40,16 @@ Uwaga dla Ciebie: dostępność Opusa zależy od planu (na Max jest na pewno, na
 ograniczona). NIE obiecuj Opusa - obiecuj "najmocniejszy dostępny u Ciebie". Cokolwiek osoba
 wybrała z górnej półki listy, pochwal i jedź dalej.
 
-### Krok 3 - Superpowers
+### Krok 3 - Superpowers (tylko Claude Code)
+
+> **Ten krok dotyczy wyłącznie Claude Code.** Superpowers to plugin Claude Code i nie ma
+> odpowiednika w Codex. Jeśli osoba pracuje w Codex - powiedz jedno zdanie: "ten krok jest
+> specyficzny dla Claude, u Ciebie go pomijamy, reszta jest identyczna" - i przejdź od razu
+> do Kroku 4. Nic dalszego w onboardingu od tego nie zależy.
 
 Najpierw wyjaśnienie, po ludzku. Powiedz mniej więcej:
 
-"Teraz jedna instalacja, która zmienia bardzo dużo. Claude Code umie korzystać ze 'skilli' -
+"Teraz jedna instalacja, która zmienia bardzo dużo. Umiem korzystać ze 'skilli' -
 to takie procedury-przepisy: spisane instrukcje, które mówią mi krok po kroku, jak wykonać
 konkretny typ zadania. Superpowers to ceniony zestaw skilli z oficjalnego katalogu pluginów
 Claude Code, który uczy mnie JAK pracować:
@@ -108,9 +113,10 @@ starcie każdej sesji. To dzięki niemu wiem, kim jesteś i jak z Tobą pracowa�
 i za miesiąc. Przed chwilą widziałaś/eś to na żywo: po restarcie od razu wiedziałem,
 że jesteśmy w środku Etapu 0.
 
-Idea 3: **skill = procedura.** Skill to spisany przepis na typ zadania. Właśnie
-zainstalowałaś/eś Superpowers - żywy przykład: dołożyłaś/eś mi zestaw procedur i od tej
-chwili pracuję inaczej. Ten onboarding też jest skillem, który leży w tym folderze."
+Idea 3: **procedura = spisany przepis.** Procedura to instrukcja na typ zadania, zapisana
+w zwykłym pliku. Ten onboarding też jest procedurą - leży w tym folderze, w `procedury/`,
+i możesz do niej zajrzeć. (Jeśli w Kroku 3 instalowaliśmy Superpowers: to był żywy przykład -
+dołożyłaś/eś mi zestaw procedur i od tej chwili pracuję inaczej.)"
 
 Poproś o krótkie potwierdzenie, że te trzy idee siedzą, zanim pójdziesz dalej.
 
@@ -187,7 +193,7 @@ Osoba wykonuje SAMA (Ty tylko instruujesz i sprawdzasz). Powiedz mniej więcej:
 
 "Na koniec małe ćwiczenie na oswojenie z komendami. Wpisz `/usage` i powiedz mi, co widzisz."
 
-`/usage` pokazuje zużycie limitu planu w Claude Code. Gdy osoba opisze, co widzi, wyjaśnij
+`/usage` pokazuje zużycie limitu planu w Claude Code (w Codex sprawdza się to w panelu konta - jeśli osoba pracuje w Codex, poproś o zajrzenie tam). Gdy osoba opisze, co widzi, wyjaśnij
 jednym-dwoma zdaniami: plany mają limity odnawiane cyklicznie, ta komenda pozwala trzymać
 rękę na pulsie, a przy naszym tempie (20-40 min dziennie) limit nie powinien być problemem.
 Weryfikacja: osoba potrafi powiedzieć własnymi słowami, do czego służy `/usage`.

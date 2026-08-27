@@ -4,7 +4,7 @@ type: kalendarz-tresci
 <!--
 Kalendarz treści - jeden plik na wszystkie kanały: kalendarz-tresci.md w korzeniu folderu.
 
-Obsługa (dla Claude'a):
+Obsługa (dla asystenta):
 - "Dopisz do kalendarza treści: ..." - jeśli osoba podała datę i kanał, dopisz wiersz do
   tabeli ze statusem `pomysl`; jeśli nie podała, dopisz do "## Pomysly na pozniej".
 - "Co mam opublikować w tym tygodniu?" - przeczytaj tabelę i wypisz pozycje z datami

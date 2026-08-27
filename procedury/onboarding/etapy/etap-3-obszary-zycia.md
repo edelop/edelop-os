@@ -17,7 +17,7 @@ przypomnij odpowiedź jednym zdaniem i jedź dalej.
    Odpowiedź: do log.md tylko dopisujemy nowe wpisy na końcu. Nic nie edytujemy, nic nie
    kasujemy. Dzięki temu log jest wiarygodną historią systemu.
 3. "Po co w ogóle jest index.md?"
-   Odpowiedź: to katalog wszystkich stron. Claude czyta go na starcie zamiast przeszukiwać
+   Odpowiedź: to katalog wszystkich stron. Asystent czyta go na starcie zamiast przeszukiwać
    cały folder - od razu wie, co istnieje i gdzie to leży.
 
 ## Materiał

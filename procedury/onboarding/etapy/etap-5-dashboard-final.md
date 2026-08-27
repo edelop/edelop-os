@@ -3,9 +3,10 @@
 ## Cel etapu
 
 Po tym etapie osoba ma dashboard - jedną stronę, na której widzi cały swój system na raz -
-i ogląda ten system jako sieć w Obsidianie. System dostaje docelowy schemat (nowy CLAUDE.md)
-i instrukcję obsługi (INSTRUKCJA.md). Onboarding się kończy: osoba wie, że od dziś system
-działa bez lekcji i bez tego skilla - wystarczy otworzyć folder i mówić.
+i - opcjonalnie - ogląda ten system jako sieć w Obsidianie. System dostaje docelowy schemat
+(nowe `CLAUDE.md` i `AGENTS.md`, ta sama treść) i instrukcję obsługi (INSTRUKCJA.md).
+Onboarding się kończy: osoba wie, że od dziś system działa bez lekcji i bez żadnej nakładki -
+wystarczy otworzyć folder i mówić.
 
 ## Powtórka
 
@@ -43,23 +44,25 @@ przebudowuje. Dlatego nie edytujesz go ręcznie - mówisz 'Odśwież dashboard' 
 świeży. Od dziś myśl o nim jak o swoim centrum dowodzenia: jedno spojrzenie i wiesz,
 co się dzieje w całym Twoim systemie."
 
-**Krok B - dlaczego na koniec przepisujemy CLAUDE.md.** Wyjaśnij warstwę schematu: "Pamiętasz
-trzy warstwy: źródła, wiki, schemat. Schemat to CLAUDE.md - plik, który Claude czyta
+**Krok B - dlaczego na koniec przepisujemy plik zasad.** Wyjaśnij warstwę schematu: "Pamiętasz
+trzy warstwy: źródła, wiki, schemat. Schemat to plik zasad - ten, który Twój asystent czyta
 automatycznie na starcie każdej sesji. Do tej pory mówił głównie jedno: 'prowadź
 onboarding' (plus podstawowe zasady systemu). Onboarding się kończy, więc dziś przepiszemy
 go na docelowy: pełny opis TWOJEGO systemu - jakie masz typy stron, jakie workflowy, jakie
-frazy. Od jutra każda sesja Claude'a zacznie się od wczytania tego schematu i Claude od
-pierwszej sekundy będzie wiedział, jak działa Twój system."
+frazy. Od jutra każda sesja zacznie się od wczytania tego schematu i asystent od
+pierwszej sekundy będzie wiedział, jak działa Twój system. Zapiszemy go pod dwiema nazwami -
+`CLAUDE.md` i `AGENTS.md` - żeby folder działał tak samo, gdybyś kiedyś zmieniła/zmienił
+asystenta."
 
-**Krok C - INSTRUKCJA.md, czyli ściąga dla człowieka.** Krótko: "CLAUDE.md to instrukcja
-dla Claude'a. INSTRUKCJA.md to instrukcja dla Ciebie: Twoje frazy, Twój rytm, co robić gdy
+**Krok C - INSTRUKCJA.md, czyli ściąga dla człowieka.** Krótko: "Plik zasad to instrukcja
+dla asystenta. INSTRUKCJA.md to instrukcja dla Ciebie: Twoje frazy, Twój rytm, co robić gdy
 coś nie działa. Jak wrócisz do systemu po dwóch tygodniach przerwy, zaczynasz od niej."
 
 ## Działanie
 
 ### 1. Dashboard
 
-- Weź szablon `.claude/skills/onboarding/szablony/dashboard.md` i utwórz z niego
+- Weź szablon `procedury/onboarding/szablony/dashboard.md` i utwórz z niego
   `dashboard.md` w korzeniu folderu.
 - Wypełnij go REALNYMI danymi osoby, nie przykładami (dokładnie wg instrukcji przebudowy
   z szablonu):
@@ -109,29 +112,32 @@ działa bez Obsidiana (to tylko podgląd, nie silnik) i że może wrócić do te
   będzie pilnował porządku za Ciebie. Wchodzi na stałe do przeglądu tygodnia - uruchamiasz
   go frazą: Sprawdź spójność."
 
-### 4. Przepisanie CLAUDE.md
+### 4. Przepisanie pliku zasad (CLAUDE.md i AGENTS.md)
 
 Najpierw wyjaśnij osobie, co zaraz zrobisz i CZEMU - to jej system, żadnych zmian
-po cichu. Powiedz mniej więcej: "Do tej pory CLAUDE.md w Twoim folderze mówił mi jedno:
+po cichu. Powiedz mniej więcej: "Do tej pory plik zasad w Twoim folderze mówił mi jedno:
 prowadź onboarding. Onboarding właśnie się kończy, więc za Twoją zgodą nadpiszę go
 docelowym schematem: opisem Twoich typów stron, workflowów i magicznych fraz. To ten plik
-sprawi, że każda przyszła sesja zacznie się od Claude'a, który już zna Twój system."
+sprawi, że każda przyszła sesja zacznie się od asystenta, który już zna Twój system.
+Zapiszę go pod dwiema nazwami - `CLAUDE.md` i `AGENTS.md` - to ta sama treść; jeden plik
+czyta Claude, drugi Codex, więc folder zadziała u obu."
 
 Po zgodzie:
 
-- Weź szablon `.claude/skills/onboarding/szablony/claude-md-produkcyjny.md`.
+- Weź szablon `procedury/onboarding/szablony/zasady-produkcyjne.md`.
 - Spersonalizuj go: zostaw TYLKO moduły, które osoba ma (bez sekcji o celach, jeśli ich
   nie prowadzi; bez kontaktów, jeśli je pominęła), i użyj jej słownictwa z
   `.onboarding/profil.md` (np. "klienci" zamiast "projekty zewnętrzne", jeśli tak mówi).
   Sekcję "Bonus do odebrania" zostaw - to furtka do Etapu 6.
-- NADPISZ plik `CLAUDE.md` w korzeniu folderu osoby.
+- NADPISZ **oba** pliki w korzeniu folderu osoby: `CLAUDE.md` i `AGENTS.md`, tą samą
+  spersonalizowaną treścią. Nie personalizuj ich osobno - to jeden plik zapisany dwa razy.
 - Pokaż osobie wynik w 2-3 zdaniach (co zawiera, nie czytaj całości) i dodaj: "Zmiana
-  zadziała w pełni od następnej sesji - CLAUDE.md ładuje się na starcie. W tej sesji
+  zadziała w pełni od następnej sesji - plik zasad ładuje się na starcie. W tej sesji
   i tak wszystko pamiętam."
 
 ### 5. INSTRUKCJA.md
 
-- Weź szablon `.claude/skills/onboarding/szablony/instrukcja.md` i wygeneruj z niego
+- Weź szablon `procedury/onboarding/szablony/instrukcja.md` i wygeneruj z niego
   `INSTRUKCJA.md` w korzeniu folderu.
 - Spersonalizuj:
   - frazy, których osoba FAKTYCZNIE używa (z ulubioną z powtórki na czele),
@@ -156,10 +162,10 @@ Po zgodzie:
 - CELEBRACJA. Policz konkretne liczby z systemu (strony w `projekty/`, `obszary/`, `cele/`,
   `kontakty/`, `decyzje/`; nieodhaczone taski; wpisy w `log.md`) i powiedz mniej więcej:
   "Zobacz, co zbudowałaś/eś przez ten tydzień: [N] stron wiki, [M] tasków na radarze,
-  [K] wpisów w dzienniku, dashboard i mapę połączeń. To jest Twoje centrum zarządzania x20 -
-  zbudowane Twoimi rękami, ze zwykłych plików, które są w 100% Twoje. Tydzień
+  [K] wpisów w dzienniku, dashboard i mapę połączeń. To jest Twój Edelop OS -
+  zbudowany Twoimi rękami, ze zwykłych plików, które są w 100% Twoje. Tydzień
   temu to był pusty folder. I najważniejsze: od dziś nie ma już lekcji. System działa bez
-  skilla - otwierasz folder, wpisujesz `claude` i po prostu mówisz, czego potrzebujesz."
+  żadnej nakładki - otwierasz folder w swoim asystencie i po prostu mówisz, czego potrzebujesz."
 
 ### 7. Co dalej
 
@@ -173,8 +179,7 @@ Krótko, bez przytłaczania - cztery rzeczy i jedna furtka:
   strona, którą otwierasz dwuklikiem, bez instalowania czegokolwiek. Jak najdzie Cię
   ochota, powiedz po prostu: pokaż mi kokpit."
 - "A gdy poczujesz, że czegoś brakuje - powiedz mi wprost: chcę, żeby system umiał X.
-  Albo zapytaj: jak w Claude Code zrobić X. Rozbudowa systemu to normalna rozmowa,
-  nie osobny kurs."
+  Rozbudowa systemu to normalna rozmowa, nie osobny kurs."
 
 ## Ćwiczenie
 

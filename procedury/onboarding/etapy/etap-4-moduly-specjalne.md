@@ -15,7 +15,7 @@ przypomnij odpowiedź i jedź dalej.
    Odpowiedź: projekt ma cel i koniec - da się go skończyć (karta w `projekty/`). Obszar to
    sfera życia bez deadline'u, którą się utrzymuje, np. zdrowie czy finanse (karta w `obszary/`).
 2. "Jak dodajesz nową stronę do systemu magiczną frazą?"
-   Odpowiedź: mówisz np. "Nowy projekt: X" albo "Dodaj kontakt: ...", a Claude tworzy plik
+   Odpowiedź: mówisz np. "Nowy projekt: X" albo "Dodaj kontakt: ...", a asystent tworzy plik
    z szablonu i od razu dopisuje go do `index.md` oraz robi wpis w `log.md`.
 3. "Co pokazuje wikilink, czyli `[[nazwa-strony]]`?"
    Odpowiedź: wskazuje inną stronę w systemie - łączy strony w sieć. Dzięki temu Claude
@@ -57,11 +57,11 @@ zaplanowaliście, przypomnij to. Używaj słownictwa osoby.
   bez otwierania Excela.
 - **Kalendarz treści** (szablon: `szablony/kalendarz-tresci.md`). Dla każdego, kto tworzy
   content: posty, newsletter, blog, wideo. Pomysły i terminy publikacji w jednym miejscu,
-  więc nic nie ginie w notatkach na telefonie, a Claude podpowiada, co jest do zrobienia
+  więc nic nie ginie w notatkach na telefonie, a asystent podpowiada, co jest do zrobienia
   w tym tygodniu.
 - **Mini-CRM** (rozbudowa istniejącego folderu `kontakty/`, bez nowego szablonu). Dla osób,
   u których relacje to praca: klienci, partnerzy, współprace. Karty kontaktów robią się
-  bogatsze (datowane notatki, o czym rozmawialiście, co obiecane), a Claude odpowiada na
+  bogatsze (datowane notatki, o czym rozmawialiście, co obiecane), a asystent odpowiada na
   pytanie "kogo dawno nie zagadałem?".
 - **Przegląd tygodnia** (szablon: `szablony/przeglad-tygodnia.md`). Ten polecaj domyślnie
   KAŻDEMU, niezależnie od profilu. Cotygodniowy rytuał na 10-15 minut: co się wydarzyło,

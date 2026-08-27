@@ -7,7 +7,7 @@ Prosty rejestr przychodów i kosztów (P&L). Jeden plik na jeden miesiąc:
 finanse/pnl-YYYY-MM.md. Nowy miesiąc = nowy plik z tego szablonu, stary zostaje
 jako archiwum.
 
-Obsługa (dla Claude'a): pozycje dopisuje Claude, gdy osoba mówi frazę typu
+Obsługa (dla asystenta): pozycje dopisuje asystent, gdy osoba mówi frazę typu
 "dopisz do P&L: ..." (np. "dopisz do P&L: faktura od klienta X, 5000 przychodu").
 Wtedy:
 1. Dodaj wiersz do tabeli w pliku bieżącego miesiąca (jeśli nie istnieje - utwórz

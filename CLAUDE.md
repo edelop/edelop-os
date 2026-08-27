@@ -1,55 +1,22 @@
-# Twój system - instrukcja dla Claude'a
+# Edelop OS - zasady pracy (Claude Code)
 
-Ten folder to osobisty system na pracę i życie, budowany podczas prowadzonego onboardingu.
-Właścicielem jest osoba, która właśnie z Tobą rozmawia. Prawdopodobnie pierwszy raz używa
-Claude Code - bądź życzliwym przewodnikiem, nie encyklopedią.
+Wspólne zasady tego folderu są w [`AGENTS.md`](AGENTS.md). Przeczytaj ten plik i stosuj
+go w całości - poniżej jest tylko to, co dotyczy wyłącznie Claude Code.
 
-## Na starcie KAŻDEJ sesji
+## Specyficzne dla Claude Code
 
-1. Przeczytaj `.onboarding/postep.md`.
-2. Jeśli NIE wszystkie etapy 0-5 mają status `ukonczony` lub `pominiety`:
-   - Przeczytaj też `.onboarding/profil.md`. Jeśli jest tam imię - przywitaj się nim.
-   - W jednym zdaniu przypomnij, gdzie skończyliście (sekcja "Gdzie skończyliśmy").
-   - Zaproponuj dwie opcje: kontynuować onboarding ALBO pomóc w czymś innym.
-     (Wyjątek: jeśli "Gdzie skończyliśmy" zawiera konkretną instrukcję na powrót -
-     np. po teście `/clear` w Etapie 2 - wykonaj ją od razu, bez pytania o opcje.)
-   - Do prowadzenia onboardingu użyj skilla `onboarding` (on wie, który etap wczytać).
-3. Jeśli wszystkie etapy 0-5 są ukończone, a ten plik nadal wygląda tak jak teraz - coś
-   poszło nie tak w Etapie 5 (ten plik miał zostać przepisany). Zaproponuj dokończenie
-   Etapu 5. (Etap 6 to opcjonalny bonus - jego status nie ma tu znaczenia.)
-
-## Zasady rozmowy
-
-- Mów po polsku, prosto i konkretnie, na "Ty". Zero żargonu bez wyjaśnienia.
-- Jedna rzecz na raz. Jedno pytanie na raz.
-- Nie używaj długich myślników, tylko krótkich "-".
-- Osoba może w każdej chwili poprosić o pomoc w czymkolwiek innym - onboarding wtedy
-  czeka, nie jest więzieniem.
-- Ćwiczenia z onboardingu wykonuje OSOBA własnoręcznie. Ty instruujesz i sprawdzasz,
-  nie wyręczasz.
-
-## Zasady systemu (obowiązują już teraz, także poza lekcjami)
-
-Osoba między etapami używa systemu w świeżych sesjach (praca domowa). Wtedy też
-przestrzegaj tych zasad:
-
-1. `zrodla/` jest TYLKO do odczytu - nigdy nie edytuj ani nie kasuj tam plików.
-2. `log.md` jest append-only: dopisuj wyłącznie na końcu, format wpisu
-   `## [YYYY-MM-DD] operacja | nazwa` plus 1-2 zdania.
-3. Ingest (frazy typu "Dopisz do projektu X: ...", "Wchłoń materiały z zrodla/X"):
-   przeczytaj materiał → omów wnioski z osobą PRZED zapisem → zaktualizuj stronę
-   (i pole `ostatnia_aktualizacja`) → nowa strona trafia do `index.md` → wpis do `log.md`.
-4. Query (pytania typu "Co mam dziś do zrobienia?", "Jaki jest status X?"):
-   odpowiadaj WYŁĄCZNIE z plików systemu, z cytatami `[[wikilink]]`; taski to
-   nieodhaczone checkboxy na kartach (`## Nastepne kroki` projektów,
-   `## Aktualne taski` obszarów).
-5. Jeśli w `.onboarding/postep.md` jest odnotowane, że migawki gita zostały włączone
-   w Etapie 2 - po większej operacji (nowa strona, Ingest źródeł) zrób commit.
-6. Fraza "Zapisz gdzie skończyliśmy" (uczona w Etapie 2): dopisz bieżący stan pracy
-   do właściwej karty i do `log.md`, po czym potwierdź jednym zdaniem, że można
-   bezpiecznie przerwać albo zacząć świeżą sesję.
+- Skill `onboarding` w `.claude/skills/onboarding/` to wygodna nakładka na procedury
+  z `procedury/onboarding/`. Robi dokładnie to samo co magiczne frazy - nie ma
+  własnej wiedzy i nie jest jedyną drogą. Gdy treść skilla i procedur się rozjedzie,
+  źródłem prawdy jest `procedury/`.
+- Migawki gita (zasada 5 w `AGENTS.md`) włączasz i robisz zwykłym `git` przez Bash.
+- Test świeżej rozmowy w Etapie 2 wykonuje się komendą `/clear`. W innych asystentach
+  to po prostu nowa rozmowa - efekt ma być ten sam: sprawdzić, czy system pamięta
+  za osobę.
+- Powrót do pracy: otwórz terminal w TYM folderze i wpisz `claude`.
 
 ## Uwaga
 
 Ten plik zostanie w Etapie 5 przepisany na docelowy schemat systemu (typy stron,
-workflowy, magiczne frazy). To normalne i zamierzone.
+workflowy, magiczne frazy). To normalne i zamierzone. Razem z nim powstanie
+`AGENTS.md` o tej samej treści - jeden plik dla Claude, drugi dla Codex.
