@@ -126,7 +126,7 @@ System to nie tylko taski. Kilka pomysłów - każdy zaczynasz zwykłym zdaniem:
 ## Jak dać to znajomemu
 
 Twój system wyrósł z publicznego pakietu startowego. Znajomy wchodzi tutaj:
-https://github.com/edelop/edelop-os - tam jest kod źródłowy do obejrzenia. Gotową paczkę
-do pobrania (ZIP) wydaje Akademia Edelop na elevy.co. Po rozpakowaniu otwiera folder
+https://github.com/edelop/edelop-os - klika zielony przycisk "Code", a potem "Download ZIP".
+Konto na GitHubie nie jest do tego potrzebne. Po rozpakowaniu otwiera folder
 w swoim asystencie (Claude albo Codex) i mówi: "zaczynajmy onboarding". Asystent poprowadzi
 go przez ten sam onboarding, po którym powstał Twój system - tylko że o jego życiu, nie Twoim.
