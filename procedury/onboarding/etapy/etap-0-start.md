@@ -41,9 +41,9 @@ Wybierz najmocniejszy z listy: zwykle jest na samej górze. Daj znać, który wy
 "U Ciebie model wybiera się w ustawieniach rozmowy, nie komendą. Zajrzyj tam i ustaw
 najmocniejszy dostępny w Twoim planie. Daj znać, który to."
 
-Uwaga dla Ciebie: dostępność Opusa zależy od planu (na Max jest na pewno, na Pro bywa
-ograniczona). NIE obiecuj Opusa - obiecuj "najmocniejszy dostępny u Ciebie". Cokolwiek osoba
-wybrała z górnej półki listy, pochwal i jedź dalej.
+Uwaga dla Ciebie: dostępność najmocniejszych modeli zależy od planu i zmienia się w czasie.
+NIE obiecuj konkretnego modelu ani wersji - obiecuj "najmocniejszy dostępny u Ciebie".
+Cokolwiek osoba wybrała z górnej półki listy, pochwal i jedź dalej.
 
 ### Krok 3 - Superpowers (tylko Claude Code)
 
