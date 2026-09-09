@@ -30,11 +30,16 @@ Poczekaj na potwierdzenie.
 Wyjaśnij jednym zdaniem, po co to: "Zanim ruszymy, upewnijmy się, że rozmawiasz z najmądrzejszą
 wersją mnie - im mocniejszy model, tym lepiej rozumiem kontekst i tym lepszym jestem przewodnikiem."
 
-Potem poproś, żeby osoba SAMA wpisała komendę (nie rób tego za nią). Powiedz mniej więcej:
+Potem poproś, żeby osoba SAMA ustawiła model (nie rób tego za nią).
+
+**W Claude Code** powiedz mniej więcej:
 
 "Wpisz teraz w okno rozmowy: `/model` - wyświetli się lista modeli dostępnych w Twoim planie.
-Jeśli widzisz na niej **Opus 4.8** - wybierz go. Jeśli nie widzisz, wybierz najwyższy z listy
-(np. Sonnet). Daj znać, który wybrałaś/wybrałeś."
+Wybierz najmocniejszy z listy: zwykle jest na samej górze. Daj znać, który wybrałaś/wybrałeś."
+
+**W Codex** komendy `/model` nie ma - wybór modelu siedzi w ustawieniach rozmowy. Powiedz:
+"U Ciebie model wybiera się w ustawieniach rozmowy, nie komendą. Zajrzyj tam i ustaw
+najmocniejszy dostępny w Twoim planie. Daj znać, który to."
 
 Uwaga dla Ciebie: dostępność Opusa zależy od planu (na Max jest na pewno, na Pro bywa
 ograniczona). NIE obiecuj Opusa - obiecuj "najmocniejszy dostępny u Ciebie". Cokolwiek osoba
