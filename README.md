@@ -37,13 +37,13 @@ Onboarding to około 5 dni po 20-40 minut dziennie. Nie musisz robić wszystkieg
 ## FAQ
 
 **Czy muszę umieć programować?**
-Nie. Wszystko dzieje się przez rozmowę po polsku. Terminal służy tylko do wpisania jednego słowa: `claude`.
+Nie. Wszystko dzieje się przez rozmowę po polsku, w zwykłej aplikacji - tak jak w każdym innym programie. Terminal jest opisany w START-TUTAJ jako droga alternatywna dla tych, którzy go lubią, i nie jest do niczego potrzebny.
 
 **Ile to kosztuje?**
-Sam ten starter jest darmowy. Claude Code wymaga płatnego planu na claude.ai: **Pro** (wystarcza na start) albo **Max** (większe limity). Darmowe konto claude.ai nie obejmuje Claude Code.
+Sam ten starter jest darmowy. Płatny jest asystent, którego wybierzesz: **Claude** wymaga planu Pro albo Max na claude.ai, **Codex** - planu Plus, Pro, Business, Enterprise albo Edu na koncie ChatGPT. Darmowe konta nie obejmują żadnego z nich.
 
 **Czy moje dane gdzieś lecą?**
-Twój system to zwykłe pliki tekstowe na Twoim dysku, w tym folderze - nie są nigdzie publikowane ani synchronizowane. Sama rozmowa z Claude działa jak każda rozmowa z AI: jej treść przetwarzają serwery Anthropic zgodnie z ich polityką prywatności.
+Twój system to zwykłe pliki tekstowe na Twoim dysku, w tym folderze - nie są nigdzie publikowane ani synchronizowane. Sama rozmowa z asystentem działa jak każda rozmowa z AI: jej treść przetwarza dostawca, którego wybrałaś/eś - Anthropic w przypadku Claude, OpenAI w przypadku Codeksa - zgodnie ze swoją polityką prywatności.
 
 **Co jeśli coś zepsuję?**
 Nic strasznego się nie stanie. To tylko pliki tekstowe, asystent pyta o zgodę przed każdą zmianą, a podczas onboardingu zaproponuje Ci automatyczne kopie zapasowe (migawki). W najgorszym razie poprosisz: "napraw to" - i naprawi.
