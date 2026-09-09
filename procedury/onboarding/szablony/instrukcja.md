@@ -26,12 +26,13 @@ jak coś się robiło, po prostu ją otwórz. Albo zapytaj asystenta, on też zn
 
 ## Twój system w 60 sekund
 
-1. Otwórz terminal (Mac: aplikacja Terminal, Windows: PowerShell).
-2. Przejdź do folderu systemu: wpisz `cd "<SCIEZKA-DO-FOLDERU>"` i wciśnij Enter
-   (cudzysłów jest ważny, gdy ścieżka ma spacje). Albo prościej - otwórz terminal
-   od razu w folderze, tak jak przy instalacji: przeciągnięciem folderu na Terminal (Mac)
-   lub wpisując `cmd` w pasku adresu Eksploratora (Windows).
-3. Uruchom swojego asystenta: `claude` (Claude Code) albo `codex` (Codex), Enter.
+1. Otwórz aplikację swojego asystenta (Claude - zakładka Code, albo Codex).
+2. Otwórz w niej folder swojego systemu - ten sam, który otwierałaś/eś przy instalacji.
+   Aplikacja zwykle pamięta ostatnio otwarte foldery, więc najczęściej wystarczy kliknąć.
+3. Napisz zwykłym zdaniem, czego potrzebujesz. To wszystko.
+
+Jeśli wolisz terminal - otwórz go w folderze systemu i uruchom `claude` albo `codex`.
+Efekt jest ten sam; aplikacja jest drogą domyślną.
 4. Powiedz normalnym zdaniem, czego potrzebujesz - np. "co mam dziś do zrobienia?"
    albo "dopisz do projektu X, że...". Resztę (pliki, indeks, dziennik) ogarnia asystent.
 

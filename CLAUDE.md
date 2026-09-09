@@ -11,7 +11,8 @@ go w całości - poniżej jest tylko to, co dotyczy wyłącznie Claude Code.
   źródłem prawdy jest `procedury/`.
 - Migawki gita (zasada 5 w `AGENTS.md`) włączasz i robisz zwykłym `git` przez Bash.
 - Świeża rozmowa (zasada 7 w `AGENTS.md`) to w Claude Code komenda `/clear`.
-- Powrót do pracy: otwórz terminal w TYM folderze i wpisz `claude`.
+- Powrót do pracy: otwórz ten folder w aplikacji Claude (zakładka Code). W terminalu
+  odpowiednikiem jest `claude` uruchomiony w tym folderze.
 
 ## Uwaga
 
