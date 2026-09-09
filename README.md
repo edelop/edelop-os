@@ -19,7 +19,7 @@ Obie ścieżki są opisane krok po kroku w [START-TUTAJ.md](START-TUTAJ.md). Ins
 ## Jak to działa
 
 1. **Zainstaluj asystenta** według instrukcji w [START-TUTAJ.md](START-TUTAJ.md) - zajmie Ci to kilka minut.
-2. **Pobierz kit startowy**: paczkę ZIP wydaje Akademia Edelop na elevy.co. Rozpakuj ją tam, gdzie trzymasz dokumenty. (To repozytorium jest źródłem kodu - możesz tu zaglądać, ale paczkę bierzesz z platformy.)
+2. **Pobierz kit startowy**: na [github.com/edelop/edelop-os](https://github.com/edelop/edelop-os) kliknij zielony przycisk **Code**, a potem **Download ZIP**. Rozpakuj paczkę tam, gdzie trzymasz dokumenty. (Konto na GitHubie nie jest potrzebne - repozytorium jest publiczne.)
 3. **Otwórz ten folder w swoim asystencie** i napisz: **zaczynajmy**. Od tego momentu prowadzi Cię asystent.
 
 ## Czego się spodziewać
@@ -53,4 +53,4 @@ Nic strasznego się nie stanie. To tylko pliki tekstowe, asystent pyta o zgodę 
 Metoda, na której stoi ten system, to **LLM Wiki** Andreja Karpathy'ego: Ty myślisz i decydujesz, a asystent przejmuje całą "księgowość" bazy wiedzy - indeksy, linki, spójność. Oryginalny opis: [gist Karpathy'ego](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f).
 
 Adres tego repozytorium (kod źródłowy): https://github.com/edelop/edelop-os
-Gotową paczkę dla znajomych wydaje Akademia Edelop na elevy.co.
+Gotową paczkę dla znajomych pobiera się stamtąd przyciskiem **Code** > **Download ZIP**.

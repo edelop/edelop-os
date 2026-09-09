@@ -38,9 +38,9 @@ Dalej instrukcja rozdziela się tylko na czas instalacji. Od Kroku 3 jest identy
 
 ## Krok 3: Pobierz folder Edelop OS
 
-1. Wejdź na elevy.co do materiałów Akademii Edelop.
-2. Pobierz paczkę **Edelop OS - kit startowy** (plik ZIP) i zapisz ją na pulpicie.
-3. Rozpakuj pobrany plik ZIP tam, gdzie trzymasz dokumenty - na przykład do folderu **Dokumenty**. Powstanie folder z plikami tego startera. To będzie dom Twojego systemu, więc wybierz miejsce, które łatwo znajdziesz.
+1. Wejdź na [github.com/edelop/edelop-os](https://github.com/edelop/edelop-os). Nie potrzebujesz tam konta ani logowania - strona jest publiczna.
+2. Kliknij zielony przycisk **Code** (u góry po prawej, nad listą plików), a potem **Download ZIP** z rozwiniętej listy. Plik zapisze się w Twoich Pobranych.
+3. Rozpakuj pobrany plik ZIP tam, gdzie trzymasz dokumenty - na przykład do folderu **Dokumenty**. Powstanie folder **edelop-os-main** z plikami tego startera. To będzie dom Twojego systemu, więc wybierz miejsce, które łatwo znajdziesz.
 
 Sprawdź, czy trafiłaś/eś we właściwy folder: powinny być w nim widoczne pliki **README.md** i **START-TUTAJ.md**. Jeśli widzisz w środku tylko jeden folder (tak bywa po rozpakowaniu ZIP-a, zwłaszcza na Windowsie) - to ten w środku jest właściwy.
 
