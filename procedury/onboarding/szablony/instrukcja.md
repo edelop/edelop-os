@@ -1,7 +1,6 @@
 <!--
 PERSONALIZACJA (instrukcja dla asystenta w Etapie 5 - wykonaj ją i USUŃ ten komentarz):
-1. Wstaw imię osoby w miejsce <IMIE>, a w "Twój system w 60 sekund" pełną ścieżkę
-   jej folderu w miejsce <SCIEZKA-DO-FOLDERU>.
+1. Wstaw imię osoby w miejsce <IMIE>.
 2. W ściądze fraz zostaw tylko wiersze dotyczące tego, co osoba ma (bez celów, jeśli
    ich nie prowadzi; bez kontaktów, jeśli je pominęła itd.). Jeśli w Etapie 4 wdrożono
    moduły, dopisz ich frazy na końcu tabeli (np. "Dopisz do P&L: ...",
@@ -13,10 +12,7 @@ PERSONALIZACJA (instrukcja dla asystenta w Etapie 5 - wykonaj ją i USUŃ ten ko
    umówioną porę; jeśli jej nie ma, usuń nawias.
 5. W "Co jeszcze możesz" możesz podmienić przykłady na branżę i życie osoby - ma czuć,
    że to ściąga o niej, nie ulotka.
-6. W "Twój system w 60 sekund" ścieżkę folderu ZAWSZE ujmij w cudzysłów
-   (np. cd "C:\Users\Jan Kowalski\Documents\moj-system") - ścieżki ze spacjami bez
-   cudzysłowów nie działają.
-7. Usuń wszystkie komentarze HTML i zapisz plik jako `INSTRUKCJA.md` w korzeniu folderu.
+6. Usuń wszystkie komentarze HTML i zapisz plik jako `INSTRUKCJA.md` w korzeniu folderu.
 -->
 
 # Twoja instrukcja obsługi
@@ -85,8 +81,9 @@ wszystko ważne i tak ląduje w plikach.
   sesji wystarczy: "kontynuujmy [temat]".
 - **Asystent po długiej rozmowie "zgłupiał"?** To nie awaria, tylko zawalony blat: "Zapisz
   gdzie skończyliśmy", potem `/clear`, potem "kontynuujmy". Trzy ruchy, zero strat.
-- **Terminal zamknął się w środku rozmowy?** Wpisz `claude --continue` - wróci ostatnia
-  rozmowa w tym folderze, dokładnie tam, gdzie się urwała.
+- **Rozmowa urwała się w środku pracy?** Otwórz folder systemu jeszcze raz i napisz
+  "kontynuujmy" - asystent czyta na starcie plik zasad i dziennik, więc wie, gdzie
+  skończyliście. (W terminalu Claude Code do ostatniej rozmowy wraca `claude --continue`.)
 
 ## Co jeszcze możesz
 

@@ -222,8 +222,9 @@ test pierwszego tygodnia. Narzędzia porzuca się nie dlatego, że są złe, tyl
 że przez tydzień nikt do nich nie zajrzał. Dlatego umawiamy się na tydzień próbny:
 7 dni, dwa momenty dziennie, w sumie jakieś 5 minut.
 
-- **Rano, zanim otworzysz cokolwiek innego:** wpisz `claude` i zapytaj: **Co mam dziś do
-  zrobienia?** Dostajesz plan z własnego systemu, zamiast układać go w głowie od zera.
+- **Rano, zanim otworzysz cokolwiek innego:** otwórz folder systemu w swojej aplikacji
+  i zapytaj: **Co mam dziś do zrobienia?** Dostajesz plan z własnego systemu, zamiast
+  układać go w głowie od zera.
 - **Wieczorem, na koniec pracy:** powiedz: **Podsumuj dzień** - i opowiedz mi w 2-3
   zdaniach, co zrobiłaś/eś, co zostało, co doszło w trakcie dnia. Ja odhaczam taski,
   dopisuję nowe, aktualizuję karty i domykam dzień wpisem w dzienniku. Ty nic nie klikasz.
