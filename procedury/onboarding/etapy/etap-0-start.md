@@ -205,7 +205,7 @@ Weryfikacja: osoba potrafi powiedzieć własnymi słowami, do czego służy `/us
 
 ## Kryterium ukończenia
 
-- [ ] Model ustawiony na najmocniejszy dostępny (osoba wybrała przez `/model`)
+- [ ] Model ustawiony na najmocniejszy dostępny (w Claude Code przez `/model`, w Codex w ustawieniach rozmowy)
 - [ ] Superpowers zainstalowane i sesja zrestartowana
 - [ ] `.onboarding/profil.md` wypełniony (frontmatter + notatki o preferencjach)
 - [ ] Mapa wdrożenia zapisana w `profil.md` i zaakceptowana przez osobę

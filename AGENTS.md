@@ -57,6 +57,9 @@ przestrzegaj tych zasad:
 6. Fraza "Zapisz gdzie skończyliśmy" (uczona w Etapie 2): dopisz bieżący stan pracy
    do właściwej karty i do `log.md`, po czym potwierdź jednym zdaniem, że można
    bezpiecznie przerwać albo zacząć świeżą sesję.
+7. Świeża rozmowa (test w Etapie 2, a potem zwykły nawyk "jedna sprawa = jedna sesja"):
+   w Claude Code robi to komenda `/clear`, w Codex - po prostu nowa rozmowa. Efekt ma być
+   ten sam: rozmowa znika, a system pamięta dalej, bo pamięć siedzi w plikach.
 
 ## Magiczne frazy
 
