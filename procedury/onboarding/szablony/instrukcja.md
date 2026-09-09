@@ -29,12 +29,11 @@ jak coś się robiło, po prostu ją otwórz. Albo zapytaj asystenta, on też zn
 1. Otwórz aplikację swojego asystenta (Claude - zakładka Code, albo Codex).
 2. Otwórz w niej folder swojego systemu - ten sam, który otwierałaś/eś przy instalacji.
    Aplikacja zwykle pamięta ostatnio otwarte foldery, więc najczęściej wystarczy kliknąć.
-3. Napisz zwykłym zdaniem, czego potrzebujesz. To wszystko.
+3. Powiedz normalnym zdaniem, czego potrzebujesz - np. "co mam dziś do zrobienia?"
+   albo "dopisz do projektu X, że...". Resztę (pliki, indeks, dziennik) ogarnia asystent.
 
 Jeśli wolisz terminal - otwórz go w folderze systemu i uruchom `claude` albo `codex`.
 Efekt jest ten sam; aplikacja jest drogą domyślną.
-4. Powiedz normalnym zdaniem, czego potrzebujesz - np. "co mam dziś do zrobienia?"
-   albo "dopisz do projektu X, że...". Resztę (pliki, indeks, dziennik) ogarnia asystent.
 
 ## Ściąga magicznych fraz
 
