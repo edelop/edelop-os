@@ -19,8 +19,8 @@ przypomnij i jedź dalej.
    Lint (przegląd spójności). Jeśli osoba robiła już przegląd tygodnia z mini-lintem
    (Etap 4) - przypomnij go i zapowiedz, że dziś pełna wersja Linta; w przeciwnym razie
    zapowiedz, że dziś będzie premiera.
-2. **"Gdzie w tym folderze Claude'owi NIE wolno nic zmieniać?"**
-   Odpowiedź: w `zrodla/`. To surowe materiały - Claude je czyta, ale nigdy nie edytuje.
+2. **"Gdzie w tym folderze asystentowi NIE wolno nic zmieniać?"**
+   Odpowiedź: w `zrodla/`. To surowe materiały - asystent je czyta, ale nigdy nie edytuje.
    Dzięki temu zawsze można wrócić do oryginału.
 3. **"A teraz pytanie osobiste: która magiczna fraza jest Twoją ulubioną? Której używasz
    najczęściej albo która najbardziej Cię zaskoczyła?"**

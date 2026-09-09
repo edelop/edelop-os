@@ -13,7 +13,7 @@ odpowiedź i jedź dalej, to nie egzamin.
 
 1. **Z jakich trzech warstw składa się Twój system?**
    Odpowiedź: źródła (`zrodla/` - surowe materiały, które tam wrzucasz), wiki (strony .md,
-   które utrzymuje Claude: projekty, obszary, cele, kontakty, decyzje) i schemat
+   które utrzymuje asystent: projekty, obszary, cele, kontakty, decyzje) i schemat
    (`CLAUDE.md` - spisane konwencje i workflowy).
 2. **Co to jest Ingest?**
    Odpowiedź: workflow wchłaniania materiału. Asystent czyta materiał, omawia z Tobą wnioski,

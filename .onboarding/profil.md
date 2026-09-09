@@ -10,7 +10,7 @@ preferencje:
 
 # Profil
 
-Ten plik wypełnia się podczas Etapu 0 (wywiad). Claude czyta go na początku każdego
+Ten plik wypełnia się podczas Etapu 0 (wywiad). Asystent czyta go na początku każdego
 etapu, żeby dopasować przykłady i tempo do Ciebie.
 
 ## Mapa wdrożenia

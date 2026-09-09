@@ -1,6 +1,6 @@
 # Postęp onboardingu
 
-Ten plik prowadzi Claude przez proces wdrożenia. Statusy: `do-zrobienia` / `w-trakcie` / `ukonczony` / `pominiety`.
+Ten plik prowadzi Twojego asystenta przez proces wdrożenia. Statusy: `do-zrobienia` / `w-trakcie` / `ukonczony` / `pominiety`.
 
 | Etap | Nazwa | Status | Data | Notatka |
 |---|---|---|---|---|
