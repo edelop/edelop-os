@@ -51,11 +51,11 @@ Przedstaw cztery moduły. Zacznij od tych, które pasują do profilu (`.onboardi
 czym się zajmuje, ból, mapa wdrożenia) - jeśli w mapie wdrożenia z Etapu 0 coś już
 zaplanowaliście, przypomnij to. Używaj słownictwa osoby.
 
-- **P&L / budżet** (szablon: `szablony/pnl.md`). Dla osób z własnym biznesem albo klientami,
+- **P&L / budżet** (szablon: `procedury/onboarding/szablony/pnl.md`). Dla osób z własnym biznesem albo klientami,
   ale działa też jako budżet domowy. Jedna strona z przychodami i kosztami miesiąca -
   dopisujesz pozycje na bieżąco jedną frazą, a wynik miesiąca widzisz w każdej chwili
   bez otwierania Excela.
-- **Kalendarz treści** (szablon: `szablony/kalendarz-tresci.md`). Dla każdego, kto tworzy
+- **Kalendarz treści** (szablon: `procedury/onboarding/szablony/kalendarz-tresci.md`). Dla każdego, kto tworzy
   content: posty, newsletter, blog, wideo. Pomysły i terminy publikacji w jednym miejscu,
   więc nic nie ginie w notatkach na telefonie, a asystent podpowiada, co jest do zrobienia
   w tym tygodniu.
@@ -63,7 +63,7 @@ zaplanowaliście, przypomnij to. Używaj słownictwa osoby.
   u których relacje to praca: klienci, partnerzy, współprace. Karty kontaktów robią się
   bogatsze (datowane notatki, o czym rozmawialiście, co obiecane), a asystent odpowiada na
   pytanie "kogo dawno nie zagadałem?".
-- **Przegląd tygodnia** (szablon: `szablony/przeglad-tygodnia.md`). Ten polecaj domyślnie
+- **Przegląd tygodnia** (szablon: `procedury/onboarding/szablony/przeglad-tygodnia.md`). Ten polecaj domyślnie
   KAŻDEMU, niezależnie od profilu. Cotygodniowy rytuał na 10-15 minut: co się wydarzyło,
   co odhaczyć, co planujesz na następny tydzień. To on sprawia, że system żyje tygodniami
   i latami, a nie umiera po miesiącu.
@@ -81,7 +81,7 @@ a na końcu pokaż magiczną frazę, którą moduł się obsługuje.
 
 ### Jeśli wybrano P&L / budżet
 
-1. Utwórz z szablonu `szablony/pnl.md` plik `finanse/pnl-YYYY-MM.md` (bieżący miesiąc;
+1. Utwórz z szablonu `procedury/onboarding/szablony/pnl.md` plik `finanse/pnl-YYYY-MM.md` (bieżący miesiąc;
    jeden plik na miesiąc, stare zostają jako archiwum) i dostosuj nagłówek do bieżącego
    miesiąca.
 2. Wypełnij rozmową: zapytaj o REALNE przychody bieżącego miesiąca (po jednym pytaniu),
@@ -97,7 +97,7 @@ a na końcu pokaż magiczną frazę, którą moduł się obsługuje.
 
 ### Jeśli wybrano kalendarz treści
 
-1. Skopiuj `szablony/kalendarz-tresci.md` do `kalendarz-tresci.md` w głównym folderze.
+1. Skopiuj `procedury/onboarding/szablony/kalendarz-tresci.md` do `kalendarz-tresci.md` w głównym folderze.
 2. Wypełnij rozmową: zapytaj o PRAWDZIWE pomysły na treści, które osoba nosi w głowie
    (po jednym), i o realne terminy lub rytm publikacji (np. "post co wtorek"). Wpisz
    pomysły do kalendarza z datami.
@@ -120,7 +120,7 @@ a na końcu pokaż magiczną frazę, którą moduł się obsługuje.
 
 ### Jeśli wybrano przegląd tygodnia
 
-1. Otwórz `szablony/przeglad-tygodnia.md` i streść osobie w 2-3 zdaniach, jak wygląda
+1. Otwórz `procedury/onboarding/szablony/przeglad-tygodnia.md` i streść osobie w 2-3 zdaniach, jak wygląda
    rytuał: przechodzicie po kartach projektów i obszarów, odhaczacie zrobione, spisujecie
    co się wydarzyło, planujecie następny tydzień, a Ty robisz wpis do `log.md`.
 2. Wyjaśnij, że ten moduł nie tworzy osobnej strony przy wdrożeniu - to workflow. Uruchamia

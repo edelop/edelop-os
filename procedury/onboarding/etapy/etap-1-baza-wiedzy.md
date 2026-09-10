@@ -87,7 +87,7 @@ Od niego zaczniemy" i dopisz odpowiedź do profilu.
    - "Opowiedz mi w 2-3 zdaniach, o co chodzi w tym projekcie i na jakim jest etapie."
    - "Jakie są 2-3 najbliższe kroki, które musisz zrobić?"
    - "Czy są jakieś ważne ustalenia, decyzje albo terminy, o których mam pamiętać?"
-3. Utwórz `projekty/<slug>.md` z szablonu `szablony/karta-projektu.md`, wypełniając go
+3. Utwórz `projekty/<slug>.md` z szablonu `procedury/onboarding/szablony/karta-projektu.md`, wypełniając go
    tym, co usłyszałeś. Frontmatter DOKŁADNIE w tym schemacie:
 
    ```yaml
