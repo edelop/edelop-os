@@ -261,6 +261,21 @@ pomysl / szkic / opublikowane; sortowana po dacie od najbliższej) oraz
 treści: ..." (Ingest; bez daty i kanału pomysł ląduje w `## Pomysly na pozniej`)
 oraz "Co mam opublikować w tym tygodniu?" (Query po `## Plan publikacji`).
 
+### Przegląd tygodnia - `40-Przeglady/YYYY-MM-DD.md`
+
+```yaml
+---
+type: przeglad
+data: YYYY-MM-DD
+---
+```
+
+Sekcje: `## Co sie udalo`, `## Co utknelo i dlaczego`, `## Mini-lint`,
+`## Plan na przyszly tydzien`. Jeden plik na jeden tydzień; data w nazwie i we
+frontmatterze to dzień, w którym przegląd był robiony. Powstaje z rytuału
+"Przegląd tygodnia" (wyżej) - szablon: `procedury/onboarding/szablony/przeglad-tygodnia.md`
+- a nie przy wdrożeniu modułu.
+
 ## Jak dodać nowy moduł
 
 System jest rozszerzalny - nowy moduł to zwykle jedna strona plus jedna fraza,

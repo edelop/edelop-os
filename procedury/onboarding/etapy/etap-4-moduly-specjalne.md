@@ -155,7 +155,7 @@ Etap jest `ukonczony`, gdy:
 - [ ] Osoba wybrała 1-2 moduły i każdy z nich istnieje z REALNYMI danymi (plik
       `30-Biznes/PnL/pnl-YYYY-MM.md` lub `30-Biznes/kalendarz-tresci.md` z prawdziwymi pozycjami,
       wzbogacone karty w `50-Ludzie/`, albo przeprowadzony pierwszy mini przegląd
-      tygodnia z wpisem w `90-System/log.md`).
+      tygodnia zapisany jako `40-Przeglady/YYYY-MM-DD.md`, z wpisem w `90-System/log.md`).
 - [ ] Każda nowa strona jest dopisana do `90-System/index.md`, a operacje mają wpisy w `90-System/log.md`.
 - [ ] Osoba użyła KAŻDEGO wdrożonego modułu co najmniej raz SAMA, własną frazą.
 - [ ] Osoba potrafi jednym zdaniem powiedzieć, do czego służy jej każdy wybrany moduł.
