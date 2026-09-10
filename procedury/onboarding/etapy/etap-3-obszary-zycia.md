@@ -99,26 +99,9 @@ więcej niż dwóch obszarów - lepiej mniej stron, które żyją, niż katalog 
 ### Krok 2: utwórz kartę obszaru
 
 Dopytaj o 2-4 bieżące taski w tym obszarze ("Co w tej sferze wisi Ci teraz nad głową?")
-i o 1-2 rzeczy warte zanotowania. Utwórz `60-Obszary/<slug>.md` dokładnie z tego szablonu:
-
-```markdown
----
-type: obszar
-ostatni_przeglad: YYYY-MM-DD
-tagi: []
----
-
-# <Nazwa obszaru>
-
-## Aktualne taski
-
-- [ ] <task z rozmowy>
-- [ ] <task z rozmowy>
-
-## Notatki
-
-**YYYY-MM-DD** - <notatka z rozmowy>
-```
+i o 1-2 rzeczy warte zanotowania. Utwórz `60-Obszary/<slug>.md` z szablonu
+`procedury/onboarding/szablony/obszar.md` - otwórz szablon i wypełnij go razem z osobą,
+pole po polu, danymi z rozmowy.
 
 Powtórz dla drugiego obszaru, jeśli osoba go wybrała. Przypomnij przy okazji: "Fraza
 'Dodaj taska do X: ...' działa też dla obszaru - task ląduje w sekcji Aktualne taski."
@@ -127,63 +110,16 @@ Powtórz dla drugiego obszaru, jeśli osoba go wybrała. Przypomnij przy okazji:
 
 Nie twórz na siłę. Jeśli w Kroku 3 Materiału typ okazał się trafiony - zaproponuj:
 
-Cel (`10-Cele/<slug>.md`) - dopytaj o termin, miarę i "po co", potem zapisz z szablonu:
+Cel (`10-Cele/<slug>.md`) - dopytaj o termin, miarę i "po co", potem zapisz z szablonu
+`procedury/onboarding/szablony/cel.md` - otwórz go i wypełnij pole po polu.
 
-```markdown
----
-type: cel
-horyzont: kwartal        # rok | kwartal | miesiac
-termin: YYYY-MM-DD
-miara: "<KPI>"
-status: w-trakcie        # w-trakcie | osiagniety | porzucony | zagrozony
-powiazane_projekty: []
----
-
-# <Nazwa celu>
-
-## Dlaczego ten cel
-
-<z rozmowy>
-
-## Jak mierzymy
-
-<z rozmowy>
-
-## Powiazane
-
-- [[<slug-projektu>]]
-
-## Ostatni update
-
-**YYYY-MM-DD** - cel założony
-```
-
-Kontakt (`50-Ludzie/<slug>.md`) - dopytaj kim jest ta osoba i co warto pamiętać:
-
-```markdown
----
-type: kontakt
-firma:
-rola:
-ostatni_kontakt: YYYY-MM-DD
-tagi: []
-projekty: []
----
-
-# <Imię i nazwisko>
-
-## Kim jest
-
-<3-5 zdań z rozmowy>
-
-## Notatki
-
-**YYYY-MM-DD** - <ustalenie / obserwacja>
-```
+Kontakt (`50-Ludzie/<slug>.md`) - dopytaj kim jest ta osoba i co warto pamiętać, potem
+zapisz z szablonu `procedury/onboarding/szablony/kontakt.md` - otwórz go i wypełnij
+pole po polu.
 
 Jeśli ani cel, ani kontakt nie pasują, a w rozmowie wypłynęła świeża decyzja - możesz
-zamiast tego założyć stronę decyzji (`70-Decyzje/YYYY-MM-DD-<slug>.md`, type: decyzja,
-sekcje: Kontekst, Opcje, Wybor, Oczekiwany rezultat, Faktyczny rezultat (do uzupelnienia)).
+zamiast tego założyć stronę decyzji (`70-Decyzje/YYYY-MM-DD-<slug>.md`) z szablonu
+`procedury/onboarding/szablony/decyzja.md`.
 
 ### Krok 4: pokaż wikilinki w akcji
 
