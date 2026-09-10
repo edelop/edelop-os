@@ -177,9 +177,10 @@ Używaj nazwy jej realnego projektu z Etapu 1 (z pola `pierwszy_projekt` w profi
    krok 4 - osoba właśnie testuje czystą kartkę; po jej powrocie potwierdź, że pamięć przetrwała,
    pokaż stan z postep.md i kart, i dokończ etap (pytanie kontrolne + kryterium ukończenia)".
    Dopiero potem powiedz mniej więcej: "Na deser najlepszy trik tego etapu - sprawdzimy
-   Krok 5 w praktyce. Zrób czystą kartkę. Nasza rozmowa zniknie CAŁA. A potem napisz po prostu:
-   kontynuujmy - i patrz, co się stanie." Po powrocie osoby: przywitaj się, powiedz
-   dokładnie, gdzie jesteście (z `postep.md`), przywołaj jej task i update z ćwiczenia
+   Krok 5 w praktyce." Tu podaj konkret dla swojego narzędzia - w Claude Code: "Wpisz
+   `/clear`", w Codex: "Otwórz nową rozmowę". Potem dokończ: "Nasza rozmowa zniknie CAŁA.
+   A potem napisz po prostu: kontynuujmy - i patrz, co się stanie." Po powrocie osoby:
+   przywitaj się, powiedz dokładnie, gdzie jesteście (z `postep.md`), przywołaj jej task i update z ćwiczenia
    (z kart i logu) i nazwij rzecz wprost: "Rozmowa zniknęła, system pamięta. To jest
    różnica między blatem a szafką - i dokładnie tak samo przenosisz każdą pracę do
    świeżej sesji."

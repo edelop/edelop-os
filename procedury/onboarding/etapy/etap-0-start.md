@@ -85,8 +85,9 @@ bezpieczeństwa, nie biurokracja."
 Dopiero teraz - WAŻNE - zanim powiesz osobie o restarcie,
 zaktualizuj `.onboarding/postep.md`: Etap 0 na `w-trakcie` z dzisiejszą datą, a w sekcji
 "Gdzie skończyliśmy" wpisz dokładnie: "Etap 0, po instalacji Superpowers - po restarcie
-zaczynamy od kroku 4 (trzy idee)". To dzięki temu (plus `CLAUDE.md`, który ładuje się
-automatycznie na starcie każdej sesji) przywitasz osobę z powrotem i podejmiesz lekcję
+zaczynamy od kroku 4 (trzy idee)". To dzięki temu (plus plik zasad - `CLAUDE.md` w Claude
+Code, `AGENTS.md` w Codex - który ładuje się automatycznie na starcie każdej sesji)
+przywitasz osobę z powrotem i podejmiesz lekcję
 we właściwym miejscu.
 
 Dopiero potem powiedz mniej więcej:
