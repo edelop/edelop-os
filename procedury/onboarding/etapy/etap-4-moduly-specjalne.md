@@ -97,7 +97,7 @@ a na końcu pokaż magiczną frazę, którą moduł się obsługuje.
 
 ### Jeśli wybrano kalendarz treści
 
-1. Skopiuj `procedury/onboarding/szablony/kalendarz-tresci.md` do `30-Biznes/kalendarz-tresci.md` (utwórz folder `30-Biznes/`, jeśli go jeszcze nie ma).
+1. Skopiuj `procedury/onboarding/szablony/kalendarz-tresci.md` do `30-Biznes/kalendarz-tresci.md`.
 2. Wypełnij rozmową: zapytaj o PRAWDZIWE pomysły na treści, które osoba nosi w głowie
    (po jednym), i o realne terminy lub rytm publikacji (np. "post co wtorek"). Wpisz
    pomysły do kalendarza z datami.

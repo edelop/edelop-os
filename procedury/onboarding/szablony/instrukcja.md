@@ -47,7 +47,7 @@ do X" zadziała tak samo jak "Dodaj taska do X", bo asystent rozumie intencję.
 | "Zapisz decyzję: ..." | powstaje strona decyzji: kontekst, opcje, wybór - do sprawdzenia po czasie |
 | "Dodaj kontakt: ..." | powstaje karta osoby: kim jest i notatki z rozmów |
 | "Dodaj cel: ..." | powstaje strona celu z miarą i terminem |
-| "Odśwież dashboard" | dashboard przebudowuje się ze świeżych danych całego systemu |
+| "Odśwież dashboard" | `HOME.md` - Twoja strona startowa - przebudowuje się ze świeżych danych całego systemu |
 | "Przegląd tygodnia" | cotygodniowy rytuał: co zrobione, co się wydarzyło, plan na nowy tydzień |
 | "Sprawdź spójność" | Asystent robi porządki: szuka sprzeczności, starych danych i zgubionych linków |
 | "Podsumuj dzień" | wieczorne domknięcie: odhaczone taski, nowe sprawy, czysty plan na jutro |

@@ -77,7 +77,8 @@ coś nie działa. Jak wrócisz do systemu po dwóch tygodniach przerwy, zaczynas
 - Uwzględnij TYLKO moduły, które osoba faktycznie ma. Jeśli pominęła np. cele, sekcja celów
   nie istnieje w jej dashboardzie.
 - Pokaż osobie gotowy plik i powiedz mniej więcej: "To zdjęcie Twojego systemu na dziś.
-  Kiedy chcesz świeże, mówisz po prostu: Odśwież dashboard. Za chwilę sam(a) to zrobisz."
+  Plik nazywa się HOME.md - to Twoja strona startowa. Kiedy chcesz świeże, mówisz po
+  prostu: Odśwież dashboard. Za chwilę sam(a) to zrobisz."
 
 ### 2. Obsidian - zobacz swój system jako sieć
 
