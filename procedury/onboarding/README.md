@@ -44,8 +44,8 @@ instalować ani wywoływać - wystarczy, że powie magiczną frazę ("zaczynajmy
   (zamknięty laptop, przerwa, wyczyszczona rozmowa) - a Ty masz podjąć wątek dokładnie
   w tym miejscu, nie od początku etapu.
 - **Koniec sesji = instrukcja powrotu.** Kończąc sesję zawsze podaj jedno zdanie,
-  jak wrócić, np.: "Jutro: otwórz terminal w TYM folderze (tak jak w START-TUTAJ,
-  Krok 4), uruchom swojego asystenta, a potem napisz po prostu: kontynuujmy."
+  jak wrócić, np.: "Jutro: otwórz TEN folder w swojej aplikacji (tak jak w START-TUTAJ,
+  Krok 4), a potem napisz po prostu: kontynuujmy."
 - **Początek etapu 1-5 = powtórka.** Zanim wejdziesz w nowy materiał, zadaj 2-3 krótkie
   pytania powtórkowe z poprzednich etapów (plik etapu je podaje). Ma być lekko, nie jak
   egzamin - jeśli osoba nie pamięta, po prostu przypomnij i jedź dalej.

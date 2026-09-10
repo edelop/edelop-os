@@ -10,10 +10,9 @@ go w całości - poniżej jest tylko to, co dotyczy wyłącznie Claude Code.
   własnej wiedzy i nie jest jedyną drogą. Gdy treść skilla i procedur się rozjedzie,
   źródłem prawdy jest `procedury/`.
 - Migawki gita (zasada 5 w `AGENTS.md`) włączasz i robisz zwykłym `git` przez Bash.
-- Test świeżej rozmowy w Etapie 2 wykonuje się komendą `/clear`. W innych asystentach
-  to po prostu nowa rozmowa - efekt ma być ten sam: sprawdzić, czy system pamięta
-  za osobę.
-- Powrót do pracy: otwórz terminal w TYM folderze i wpisz `claude`.
+- Świeża rozmowa (zasada 7 w `AGENTS.md`) to w Claude Code komenda `/clear`.
+- Powrót do pracy: otwórz ten folder w aplikacji Claude (zakładka Code). W terminalu
+  odpowiednikiem jest `claude` uruchomiony w tym folderze.
 
 ## Uwaga
 

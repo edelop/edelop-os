@@ -19,8 +19,8 @@ przypomnij i jedź dalej.
    Lint (przegląd spójności). Jeśli osoba robiła już przegląd tygodnia z mini-lintem
    (Etap 4) - przypomnij go i zapowiedz, że dziś pełna wersja Linta; w przeciwnym razie
    zapowiedz, że dziś będzie premiera.
-2. **"Gdzie w tym folderze Claude'owi NIE wolno nic zmieniać?"**
-   Odpowiedź: w `zrodla/`. To surowe materiały - Claude je czyta, ale nigdy nie edytuje.
+2. **"Gdzie w tym folderze asystentowi NIE wolno nic zmieniać?"**
+   Odpowiedź: w `zrodla/`. To surowe materiały - asystent je czyta, ale nigdy nie edytuje.
    Dzięki temu zawsze można wrócić do oryginału.
 3. **"A teraz pytanie osobiste: która magiczna fraza jest Twoją ulubioną? Której używasz
    najczęściej albo która najbardziej Cię zaskoczyła?"**
@@ -222,8 +222,9 @@ test pierwszego tygodnia. Narzędzia porzuca się nie dlatego, że są złe, tyl
 że przez tydzień nikt do nich nie zajrzał. Dlatego umawiamy się na tydzień próbny:
 7 dni, dwa momenty dziennie, w sumie jakieś 5 minut.
 
-- **Rano, zanim otworzysz cokolwiek innego:** wpisz `claude` i zapytaj: **Co mam dziś do
-  zrobienia?** Dostajesz plan z własnego systemu, zamiast układać go w głowie od zera.
+- **Rano, zanim otworzysz cokolwiek innego:** otwórz folder systemu w swojej aplikacji
+  i zapytaj: **Co mam dziś do zrobienia?** Dostajesz plan z własnego systemu, zamiast
+  układać go w głowie od zera.
 - **Wieczorem, na koniec pracy:** powiedz: **Podsumuj dzień** - i opowiedz mi w 2-3
   zdaniach, co zrobiłaś/eś, co zostało, co doszło w trakcie dnia. Ja odhaczam taski,
   dopisuję nowe, aktualizuję karty i domykam dzień wpisem w dzienniku. Ty nic nie klikasz.

@@ -243,7 +243,7 @@ Przekaż mniej więcej tak:
 2. "Pomyśl, czy masz w życiu powtarzalny rytuał albo potrzebę, którą warto zautomatyzować.
    W następnym etapie możemy dobudować moduł - do wyboru masz m.in.: P&L / budżet
    (pilnowanie pieniędzy), kalendarz treści (jeśli publikujesz), mini-CRM kontaktów
-   (jeśli żyjesz z relacji), przegląd tygodnia (cotygodniowe podsumowanie z Claude'em).
+   (jeśli żyjesz z relacji), przegląd tygodnia (cotygodniowe podsumowanie z asystentem).
    Nie musisz wybierać teraz - wystarczy, że przyjdziesz z przemyśleniem."
 
 ## Zapis postępu

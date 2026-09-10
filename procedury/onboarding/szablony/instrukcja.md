@@ -1,7 +1,6 @@
 <!--
 PERSONALIZACJA (instrukcja dla asystenta w Etapie 5 - wykonaj ją i USUŃ ten komentarz):
-1. Wstaw imię osoby w miejsce <IMIE>, a w "Twój system w 60 sekund" pełną ścieżkę
-   jej folderu w miejsce <SCIEZKA-DO-FOLDERU>.
+1. Wstaw imię osoby w miejsce <IMIE>.
 2. W ściądze fraz zostaw tylko wiersze dotyczące tego, co osoba ma (bez celów, jeśli
    ich nie prowadzi; bez kontaktów, jeśli je pominęła itd.). Jeśli w Etapie 4 wdrożono
    moduły, dopisz ich frazy na końcu tabeli (np. "Dopisz do P&L: ...",
@@ -13,10 +12,7 @@ PERSONALIZACJA (instrukcja dla asystenta w Etapie 5 - wykonaj ją i USUŃ ten ko
    umówioną porę; jeśli jej nie ma, usuń nawias.
 5. W "Co jeszcze możesz" możesz podmienić przykłady na branżę i życie osoby - ma czuć,
    że to ściąga o niej, nie ulotka.
-6. W "Twój system w 60 sekund" ścieżkę folderu ZAWSZE ujmij w cudzysłów
-   (np. cd "C:\Users\Jan Kowalski\Documents\moj-system") - ścieżki ze spacjami bez
-   cudzysłowów nie działają.
-7. Usuń wszystkie komentarze HTML i zapisz plik jako `INSTRUKCJA.md` w korzeniu folderu.
+6. Usuń wszystkie komentarze HTML i zapisz plik jako `INSTRUKCJA.md` w korzeniu folderu.
 -->
 
 # Twoja instrukcja obsługi
@@ -26,14 +22,14 @@ jak coś się robiło, po prostu ją otwórz. Albo zapytaj asystenta, on też zn
 
 ## Twój system w 60 sekund
 
-1. Otwórz terminal (Mac: aplikacja Terminal, Windows: PowerShell).
-2. Przejdź do folderu systemu: wpisz `cd "<SCIEZKA-DO-FOLDERU>"` i wciśnij Enter
-   (cudzysłów jest ważny, gdy ścieżka ma spacje). Albo prościej - otwórz terminal
-   od razu w folderze, tak jak przy instalacji: przeciągnięciem folderu na Terminal (Mac)
-   lub wpisując `cmd` w pasku adresu Eksploratora (Windows).
-3. Uruchom swojego asystenta: `claude` (Claude Code) albo `codex` (Codex), Enter.
-4. Powiedz normalnym zdaniem, czego potrzebujesz - np. "co mam dziś do zrobienia?"
+1. Otwórz aplikację swojego asystenta (Claude - zakładka Code, albo Codex).
+2. Otwórz w niej folder swojego systemu - ten sam, który otwierałaś/eś przy instalacji.
+   Aplikacja zwykle pamięta ostatnio otwarte foldery, więc najczęściej wystarczy kliknąć.
+3. Powiedz normalnym zdaniem, czego potrzebujesz - np. "co mam dziś do zrobienia?"
    albo "dopisz do projektu X, że...". Resztę (pliki, indeks, dziennik) ogarnia asystent.
+
+Jeśli wolisz terminal - otwórz go w folderze systemu i uruchom `claude` albo `codex`.
+Efekt jest ten sam; aplikacja jest drogą domyślną.
 
 ## Ściąga magicznych fraz
 
@@ -85,8 +81,9 @@ wszystko ważne i tak ląduje w plikach.
   sesji wystarczy: "kontynuujmy [temat]".
 - **Asystent po długiej rozmowie "zgłupiał"?** To nie awaria, tylko zawalony blat: "Zapisz
   gdzie skończyliśmy", potem `/clear`, potem "kontynuujmy". Trzy ruchy, zero strat.
-- **Terminal zamknął się w środku rozmowy?** Wpisz `claude --continue` - wróci ostatnia
-  rozmowa w tym folderze, dokładnie tam, gdzie się urwała.
+- **Rozmowa urwała się w środku pracy?** Otwórz folder systemu jeszcze raz i napisz
+  "kontynuujmy" - asystent czyta na starcie plik zasad i dziennik, więc wie, gdzie
+  skończyliście. (W terminalu Claude Code do ostatniej rozmowy wraca `claude --continue`.)
 
 ## Co jeszcze możesz
 

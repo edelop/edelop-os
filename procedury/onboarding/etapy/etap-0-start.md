@@ -3,7 +3,8 @@
 ## Cel etapu
 
 Po tym etapie osoba rozumie, czym jest jej asystent AI i ten system, ma ustawiony najmocniejszy
-dostępny model, zainstalowane Superpowers, wypełniony profil i spersonalizowaną mapę wdrożenia.
+dostępny model, w Claude Code zainstalowane Superpowers, wypełniony profil i spersonalizowaną
+mapę wdrożenia.
 
 ## Materiał
 
@@ -30,15 +31,21 @@ Poczekaj na potwierdzenie.
 Wyjaśnij jednym zdaniem, po co to: "Zanim ruszymy, upewnijmy się, że rozmawiasz z najmądrzejszą
 wersją mnie - im mocniejszy model, tym lepiej rozumiem kontekst i tym lepszym jestem przewodnikiem."
 
-Potem poproś, żeby osoba SAMA wpisała komendę (nie rób tego za nią). Powiedz mniej więcej:
+Potem poproś, żeby osoba SAMA ustawiła model (nie rób tego za nią).
+
+**W Claude Code** powiedz mniej więcej:
 
 "Wpisz teraz w okno rozmowy: `/model` - wyświetli się lista modeli dostępnych w Twoim planie.
-Jeśli widzisz na niej **Opus 4.8** - wybierz go. Jeśli nie widzisz, wybierz najwyższy z listy
-(np. Sonnet). Daj znać, który wybrałaś/wybrałeś."
+Wybierz najmocniejszy z listy: zwykle jest na samej górze. Daj znać, który wybrałaś/wybrałeś."
 
-Uwaga dla Ciebie: dostępność Opusa zależy od planu (na Max jest na pewno, na Pro bywa
-ograniczona). NIE obiecuj Opusa - obiecuj "najmocniejszy dostępny u Ciebie". Cokolwiek osoba
-wybrała z górnej półki listy, pochwal i jedź dalej.
+**W Codex** wybór modelu zwykle siedzi w ustawieniach przy oknie rozmowy, a nie w komendzie.
+Powiedz: "U Ciebie model wybiera się w ustawieniach przy oknie rozmowy. Zajrzyj tam i ustaw
+najmocniejszy dostępny w Twoim planie. Jeśli nie widzisz takiej opcji, spróbuj wpisać
+`/model`. Daj znać, który to."
+
+Uwaga dla Ciebie: dostępność najmocniejszych modeli zależy od planu i zmienia się w czasie.
+NIE obiecuj konkretnego modelu ani wersji - obiecuj "najmocniejszy dostępny u Ciebie".
+Cokolwiek osoba wybrała z górnej półki listy, pochwal i jedź dalej.
 
 ### Krok 3 - Superpowers (tylko Claude Code)
 
@@ -85,10 +92,10 @@ we właściwym miejscu.
 Dopiero potem powiedz mniej więcej:
 
 "Żeby nowe skille się załadowały, potrzebny jest restart sesji - a sesja to po prostu
-jedna ciągła rozmowa ze mną, od uruchomienia do zamknięcia. Zrób trzy rzeczy:
-1. Wpisz `exit` (albo naciśnij Ctrl+C).
-2. Uruchom mnie ponownie komendą `claude`.
-3. Ważne: po starcie napisz cokolwiek, np. **jestem z powrotem** - ja nie odzywam się
+jedna ciągła rozmowa ze mną, od uruchomienia do zamknięcia. Zrób dwie rzeczy:
+1. W aplikacji: zamknij tę rozmowę i otwórz nową w tym samym folderze.
+   (W terminalu: wpisz `exit`, a potem `claude`.)
+2. Ważne: po starcie napisz cokolwiek, np. **jestem z powrotem** - ja nie odzywam się
    pierwszy, czekam na Twoją wiadomość.
 Spokojnie - niczego nie stracimy, zapisałem, gdzie jesteśmy, i podejmę wątek dokładnie
 w tym miejscu."
@@ -108,10 +115,14 @@ Idea 1: **folder = projekt.** Ten folder, w którym teraz jesteśmy, to Twój sy
 co zbudujemy, to zwykłe pliki tekstowe w tym folderze - możesz je otworzyć, przeczytać,
 zabrać ze sobą. Zero magii, zero zamkniętych baz danych.
 
-Idea 2: **CLAUDE.md = pamięć.** W folderze leży plik CLAUDE.md - czytam go automatycznie na
-starcie każdej sesji. To dzięki niemu wiem, kim jesteś i jak z Tobą pracować, nawet jutro
-i za miesiąc. Przed chwilą widziałaś/eś to na żywo: po restarcie od razu wiedziałem,
-że jesteśmy w środku Etapu 0.
+Idea 2: **plik zasad = pamięć.** W folderze leży plik z zasadami - czytam go automatycznie
+na starcie każdej sesji. To dzięki niemu wiem, kim jesteś i jak z Tobą pracować, nawet
+jutro i za miesiąc.
+
+(Uwaga dla Ciebie: nazwij ten plik po imieniu - w Claude Code to `CLAUDE.md`, w Codex
+`AGENTS.md`. To ta sama treść pod dwiema nazwami, bo każdy asystent szuka swojej. Jeśli
+w Kroku 3 był restart, dorzuć zdanie: "Przed chwilą widziałaś/eś to na żywo: po restarcie
+od razu wiedziałem, że jesteśmy w środku Etapu 0.")
 
 Idea 3: **procedura = spisany przepis.** Procedura to instrukcja na typ zadania, zapisana
 w zwykłym pliku. Ten onboarding też jest procedurą - leży w tym folderze, w `procedury/`,
@@ -131,8 +142,8 @@ znanych badaczy AI. System ma trzy warstwy:
    `zrodla/`. Ja mam zakaz ich edytowania - to Twoja skrzynka wrzutowa.
 2. **Wiki** - strony, które ja utrzymuję na podstawie źródeł i naszych rozmów: projekty,
    obszary życia, cele, kontakty, decyzje. Wszystko połączone linkami.
-3. **Schemat** - plik CLAUDE.md z konwencjami: jak nazywamy pliki, co robię na Twoje hasła,
-   jakie mam workflowy.
+3. **Schemat** - plik zasad (`CLAUDE.md` w Claude Code, `AGENTS.md` w Codex, ta sama treść)
+   z konwencjami: jak nazywamy pliki, co robię na Twoje hasła, jakie mam workflowy.
 
 I najważniejsze: w prowadzeniu bazy wiedzy męczące nie jest czytanie ani myślenie, tylko
 księgowość - aktualizowanie indeksów, linków, spójności. Tę księgowość przejmuję ja.
@@ -191,20 +202,26 @@ bezpowrotnie, bo pliki zawsze można cofnąć albo poprawić).
 
 Osoba wykonuje SAMA (Ty tylko instruujesz i sprawdzasz). Powiedz mniej więcej:
 
+**W Claude Code** powiedz mniej więcej:
 "Na koniec małe ćwiczenie na oswojenie z komendami. Wpisz `/usage` i powiedz mi, co widzisz."
 
-`/usage` pokazuje zużycie limitu planu w Claude Code (w Codex sprawdza się to w panelu konta - jeśli osoba pracuje w Codex, poproś o zajrzenie tam). Gdy osoba opisze, co widzi, wyjaśnij
-jednym-dwoma zdaniami: plany mają limity odnawiane cyklicznie, ta komenda pozwala trzymać
-rękę na pulsie, a przy naszym tempie (20-40 min dziennie) limit nie powinien być problemem.
-Weryfikacja: osoba potrafi powiedzieć własnymi słowami, do czego służy `/usage`.
+**W Codex** komendy `/usage` nie ma. Powiedz mniej więcej:
+"Na koniec mała rzecz do sprawdzenia: zajrzyj w panel swojego konta i znajdź, ile zużycia
+planu Ci zostało. Powiedz mi, co widzisz."
+
+Gdy osoba opisze, co widzi, wyjaśnij jednym-dwoma zdaniami: plany mają limity odnawiane
+cyklicznie, warto trzymać rękę na pulsie, a przy naszym tempie (20-40 minut dziennie) limit
+nie powinien być problemem.
+
+Weryfikacja: osoba potrafi powiedzieć własnymi słowami, gdzie sprawdza zużycie swojego planu.
 
 ## Kryterium ukończenia
 
-- [ ] Model ustawiony na najmocniejszy dostępny (osoba wybrała przez `/model`)
-- [ ] Superpowers zainstalowane i sesja zrestartowana
+- [ ] Model ustawiony na najmocniejszy dostępny (w Claude Code przez `/model`, w Codex w ustawieniach rozmowy)
+- [ ] Superpowers zainstalowane i sesja zrestartowana (tylko Claude Code; w Codex ten punkt pomijasz)
 - [ ] `.onboarding/profil.md` wypełniony (frontmatter + notatki o preferencjach)
 - [ ] Mapa wdrożenia zapisana w `profil.md` i zaakceptowana przez osobę
-- [ ] Ćwiczenie `/usage` wykonane
+- [ ] Ćwiczenie ze zużyciem planu wykonane (Claude Code: `/usage`; Codex: panel konta)
 
 ## Praca domowa
 

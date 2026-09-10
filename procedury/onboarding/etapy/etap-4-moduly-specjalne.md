@@ -18,7 +18,7 @@ przypomnij odpowiedź i jedź dalej.
    Odpowiedź: mówisz np. "Nowy projekt: X" albo "Dodaj kontakt: ...", a asystent tworzy plik
    z szablonu i od razu dopisuje go do `index.md` oraz robi wpis w `log.md`.
 3. "Co pokazuje wikilink, czyli `[[nazwa-strony]]`?"
-   Odpowiedź: wskazuje inną stronę w systemie - łączy strony w sieć. Dzięki temu Claude
+   Odpowiedź: wskazuje inną stronę w systemie - łączy strony w sieć. Dzięki temu asystent
    przy odpowiedziach cytuje konkretne strony, a w Obsidianie widać graf połączeń.
 
 ## Materiał

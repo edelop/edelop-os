@@ -24,7 +24,7 @@ Dwa pytania, po jednym na raz, lekko:
    go ręcznie, tylko odświeża frazą. Prawda mieszka w kartach.
 2. **"Co robi `/clear` i czemu niczego wtedy nie tracisz?"**
    Odpowiedź: czyści rozmowę (blat biurka), a pamięć systemu mieszka w plikach (szafka),
-   które Claude czyta na starcie każdej sesji.
+   które asystent czyta na starcie każdej sesji.
 
 Obie odpowiedzi za chwilę zagrają: kokpit to drugi widok tej samej prawdy z kart.
 

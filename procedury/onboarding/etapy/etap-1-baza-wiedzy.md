@@ -27,7 +27,7 @@ odpowiedź w jednym zdaniu i jedź dalej, bez egzaminowania.
 
 3. **"Co robi komenda /model?"**
    Odpowiedź: pokazuje listę modeli dostępnych w Twoim planie i pozwala się przełączyć.
-   Zasada: wybieramy najmocniejszy dostępny (jeśli na liście jest Opus 4.8 - jego).
+   Zasada: wybieramy najmocniejszy dostępny w naszym planie - zwykle ten z góry listy.
 
 ## Materiał
 
