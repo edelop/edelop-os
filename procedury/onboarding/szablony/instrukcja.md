@@ -74,13 +74,14 @@ Cztery nawyki utrzymują system przy życiu:
 Rozmowa z asystentem to blat biurka, Twoje pliki to szafka. Blat się zapełnia, szafka nigdy -
 wszystko ważne i tak ląduje w plikach.
 
-- **Jedna sprawa = jedna sesja.** Kończysz temat, zaczynasz następny? Wpisz `/clear` -
-  rozmowa startuje od zera, a asystent i tak zna Twój system, bo na starcie każdej sesji
-  czyta jego schemat. Niczego nie tracisz.
+- **Jedna sprawa = jedna sesja.** Kończysz temat, zaczynasz następny? W Claude Code
+  wpisz `/clear`, w Codex zacznij po prostu nową rozmowę - rozmowa startuje od zera,
+  a asystent i tak zna Twój system, bo na starcie każdej sesji czyta jego schemat.
+  Niczego nie tracisz.
 - **Przerywasz w środku pracy?** Powiedz najpierw: "Zapisz gdzie skończyliśmy". W nowej
   sesji wystarczy: "kontynuujmy [temat]".
 - **Asystent po długiej rozmowie "zgłupiał"?** To nie awaria, tylko zawalony blat: "Zapisz
-  gdzie skończyliśmy", potem `/clear`, potem "kontynuujmy". Trzy ruchy, zero strat.
+  gdzie skończyliśmy", potem czysta kartka, potem "kontynuujmy". Trzy ruchy, zero strat.
 - **Rozmowa urwała się w środku pracy?** Otwórz folder systemu jeszcze raz i napisz
   "kontynuujmy" - asystent czyta na starcie plik zasad i dziennik, więc wie, gdzie
   skończyliście. (W terminalu Claude Code do ostatniej rozmowy wraca `claude --continue`.)

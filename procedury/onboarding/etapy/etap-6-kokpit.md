@@ -5,14 +5,16 @@
 Po tym etapie osoba ma `kokpit.html` - swoje centrum dowodzenia w wersji wizualnej:
 kolorową stronę otwieraną dwuklikiem, wygenerowaną z jej realnych danych. Umie ją
 odświeżać frazą "Odśwież kokpit", rozumie, że to widok (nie źródło prawdy), a sekcje-duchy
-pokazują jej, o co system może jeszcze urosnąć. `CLAUDE.md` i `INSTRUKCJA.md` znają kokpit.
+pokazują jej, o co system może jeszcze urosnąć. Plik zasad (`CLAUDE.md` i `AGENTS.md`)
+oraz `INSTRUKCJA.md` znają kokpit.
 
 ## Zanim zaczniesz
 
 Ten etap jest BONUSEM i uruchamiasz go wyłącznie, gdy osoba o niego poprosiła
 ("pokaż mi kokpit", "chcę ten dashboard w przeglądarce") albo wyraźnie zgodziła się na
 Twoją jednozdaniową propozycję. Wymaga ukończonego Etapu 5 (istnieje `HOME.md`
-i produkcyjny `CLAUDE.md`). Jeśli Etap 5 nie jest zamknięty - wróć najpierw do niego.
+i produkcyjne `CLAUDE.md` i `AGENTS.md`). Jeśli Etap 5 nie jest zamknięty - wróć
+najpierw do niego.
 Nigdy nie namawiaj na ten etap dwa razy: "nie" = status `pominiety` i koniec tematu.
 
 ## Powtórka
@@ -22,9 +24,10 @@ Dwa pytania, po jednym na raz, lekko:
 1. **"Czym jest HOME.md - i czego NIE wolno z nim robić?"**
    Odpowiedź: to widok wygenerowany z kart, niczego sam nie przechowuje; nie edytuje się
    go ręcznie, tylko odświeża frazą. Prawda mieszka w kartach.
-2. **"Co robi `/clear` i czemu niczego wtedy nie tracisz?"**
-   Odpowiedź: czyści rozmowę (blat biurka), a pamięć systemu mieszka w plikach (szafka),
-   które asystent czyta na starcie każdej sesji.
+2. **"Co czyści rozmowę i czemu niczego wtedy nie tracisz?"**
+   Odpowiedź: w Claude Code robi to komenda `/clear`, w Codex - po prostu nowa rozmowa;
+   rozmowa znika (blat biurka), a pamięć systemu mieszka w plikach (szafka), które
+   asystent czyta na starcie każdej sesji.
 
 Obie odpowiedzi za chwilę zagrają: kokpit to drugi widok tej samej prawdy z kart.
 
@@ -83,11 +86,13 @@ zamykasz i otwierasz plik ponownie) i widzisz świeży
 stan. Dobry rytm: odświeżaj przy przeglądzie tygodnia albo po większych zmianach -
 razem z dashboardem."
 
-### 4. Naucz system kokpitu (CLAUDE.md + INSTRUKCJA.md)
+### 4. Naucz system kokpitu (CLAUDE.md + AGENTS.md + INSTRUKCJA.md)
 
-Za zgodą osoby zaktualizuj oba pliki:
+Za zgodą osoby zaktualizuj plik zasad i INSTRUKCJA.md:
 
-- W `CLAUDE.md`: usuń sekcję "Bonus do odebrania" (jeśli jest) i dopisz na jej miejscu:
+- W pliku zasad (`CLAUDE.md` i `AGENTS.md` - to jeden plik zapisany dwa razy, edytujesz
+  jeden, zaktualizuj drugi): usuń sekcję "Bonus do odebrania" (jeśli jest) i dopisz w OBU
+  plikach na jej miejscu:
 
   ```markdown
   ## Kokpit w przeglądarce
@@ -105,7 +110,7 @@ Za zgodą osoby zaktualizuj oba pliki:
   4. Nie zmieniaj CSS ani struktury szablonu - tylko zawartość slotów.
   ```
 
-  Do tabeli magicznych fraz w `CLAUDE.md` dopisz wiersz:
+  Do tabeli magicznych fraz w OBU plikach (`CLAUDE.md` i `AGENTS.md`) dopisz wiersz:
   `| "Odśwież kokpit" | przebudowuje kokpit.html z aktualnych danych (sekcja "Kokpit w przeglądarce") |`
 
 - W `INSTRUKCJA.md` dopisz do ściągi fraz wiersz:
@@ -144,8 +149,8 @@ powiedz: "I to jest cała obsługa: mówisz do systemu, kokpit nadąża."
       moduły są żywe
 - [ ] Osoba samodzielnie przeszła pętlę: task frazą → "Odśwież kokpit" → odświeżenie
       strony → widzi task
-- [ ] `CLAUDE.md`: sekcja "Kokpit w przeglądarce" + fraza w tabeli (sekcja "Bonus do
-      odebrania" usunięta)
+- [ ] `CLAUDE.md` i `AGENTS.md`: w OBU sekcja "Kokpit w przeglądarce" + fraza w tabeli
+      (sekcja "Bonus do odebrania" usunięta w obu)
 - [ ] `INSTRUKCJA.md`: fraza "Odśwież kokpit" w ściądze
 - [ ] `.onboarding/postep.md`: Etap 6 `ukonczony`; wpis w `90-System/log.md`
 
@@ -158,7 +163,7 @@ zrobienia?' - zobaczysz, jak plan i widok zaczynają grać razem."
 ## Zapis postępu
 
 - W `.onboarding/postep.md`: Etap 6 → `ukonczony`, dzisiejsza data, notatka
-  (np. "kokpit wygenerowany, frazy dopisane do CLAUDE.md i INSTRUKCJA.md").
+  (np. "kokpit wygenerowany, frazy dopisane do CLAUDE.md, AGENTS.md i INSTRUKCJA.md").
   Przy przerwaniu w połowie: `w-trakcie` + dokładny krok w "Gdzie skończyliśmy".
 - Sekcja "Gdzie skończyliśmy": "Onboarding ukończony w całości, łącznie z bonusem.
   System działa samodzielnie."

@@ -25,9 +25,11 @@ odpowiedź w jednym zdaniu i jedź dalej, bez egzaminowania.
    (pytanie zadaj tylko, jeśli w Etapie 0 rzeczywiście instalowaliście Superpowers)
    np. porządnie planuje i robi burze mózgów zamiast rzucać się od razu do roboty.
 
-3. **"Co robi komenda /model?"**
-   Odpowiedź: pokazuje listę modeli dostępnych w Twoim planie i pozwala się przełączyć.
-   Zasada: wybieramy najmocniejszy dostępny w naszym planie - zwykle ten z góry listy.
+3. **"Jaki model ustawiliśmy wczoraj i dlaczego akurat taki?"**
+   Odpowiedź: najmocniejszy dostępny w Twoim planie - bo im mocniejszy model, tym lepiej
+   rozumie kontekst i tym lepszym jest przewodnikiem.
+   Zasada: zawsze wybieramy najmocniejszy dostępny w naszym planie - zwykle jest na
+   samej górze listy albo w ustawieniach.
 
 ## Materiał
 
@@ -52,7 +54,8 @@ Warstwa 2: **wiki** - strony, które ja piszę i utrzymuję na podstawie źróde
 rozmów. Na przykład karta projektu <projekt osoby>: co się dzieje, jakie są następne kroki,
 co ustaliliśmy. To warstwa robocza - ja ją aktualizuję, Ty z niej korzystasz.
 
-Warstwa 3: **schemat** - plik `CLAUDE.md`. To moja instrukcja obsługi Twojego systemu:
+Warstwa 3: **schemat** - plik zasad (`CLAUDE.md` w Claude Code albo `AGENTS.md` w Codex,
+ta sama treść). To moja instrukcja obsługi Twojego systemu:
 jakie są zasady, jakie typy stron, jak mam się zachowywać. Czytam go automatycznie na
 starcie każdej sesji.
 

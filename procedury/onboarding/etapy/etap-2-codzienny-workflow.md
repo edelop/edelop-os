@@ -100,9 +100,11 @@ Następny zaczynasz na czystym blacie - i nic nie tracisz, bo wszystko ważne le
 
 Potem trzy konkrety, jeden na raz, z krótkim potwierdzeniem po każdym:
 
-1. **Czysta kartka to `/clear`.** "Nie musisz zamykać terminala. Komenda `/clear` czyści
-   rozmowę i zaczyna świeżą - a ja na starcie każdej sesji czytam CLAUDE.md, więc od
-   pierwszej sekundy znam Twój system. To przetarcie blatu; szafka nietknięta."
+1. **Czysta kartka.** "W Claude Code czysta kartka to komenda `/clear` - czyści rozmowę
+   i zaczyna świeżą. W Codex to po prostu nowa rozmowa. Efekt jest ten sam: rozmowa znika,
+   a ja na starcie każdej sesji czytam plik zasad (`CLAUDE.md` w Claude Code, `AGENTS.md`
+   w Codex - ta sama treść), więc od pierwszej sekundy znam Twój system. To przetarcie
+   blatu; szafka nietknięta."
 2. **Przed przerwą: "Zapisz gdzie skończyliśmy".** "Jeśli przerywasz w środku czegoś,
    powiedz tę frazę - dopiszę stan do właściwej karty i do logu. W nowej sesji mówisz
    'kontynuujmy [temat]' i jedziemy dalej, jakby nic się nie stało. Ten onboarding działa
@@ -110,7 +112,7 @@ Potem trzy konkrety, jeden na raz, z krótkim potwierdzeniem po każdym:
    przerwie witam Cię we właściwym miejscu."
 3. **Po czym poznać zmęczoną sesję.** "Odpowiedzi przychodzą wolniej, dopytuję o rzeczy,
    które już padły, gubię wątek - to znak, że blat jest zawalony. Wtedy trzy ruchy:
-   'Zapisz gdzie skończyliśmy', potem `/clear`, potem 'kontynuujmy'. Zero strat."
+   'Zapisz gdzie skończyliśmy', potem czysta kartka, potem 'kontynuujmy'. Zero strat."
 
 Na koniec podkreśl: to nie jest wiedza awaryjna, tylko codzienna higiena - jak zamykanie
 zbędnych kart w przeglądarce. Narzędzie jest to samo, różnica siedzi w czystym blacie.
@@ -172,10 +174,10 @@ Używaj nazwy jej realnego projektu z Etapu 1 (z pola `pierwszy_projekt` w profi
    jest na liście - to jej moment "aha, to naprawdę działa".
 4. **Test czystej kartki.** Najpierw przygotuj grunt: zaktualizuj `.onboarding/postep.md` -
    Etap 2 na `w-trakcie`, a w "Gdzie skończyliśmy" wpisz dokładnie: "Etap 2, ćwiczenie,
-   krok 4 - osoba właśnie testuje /clear; po jej powrocie potwierdź, że pamięć przetrwała,
+   krok 4 - osoba właśnie testuje czystą kartkę; po jej powrocie potwierdź, że pamięć przetrwała,
    pokaż stan z postep.md i kart, i dokończ etap (pytanie kontrolne + kryterium ukończenia)".
    Dopiero potem powiedz mniej więcej: "Na deser najlepszy trik tego etapu - sprawdzimy
-   Krok 5 w praktyce. Wpisz `/clear`. Nasza rozmowa zniknie CAŁA. A potem napisz po prostu:
+   Krok 5 w praktyce. Zrób czystą kartkę. Nasza rozmowa zniknie CAŁA. A potem napisz po prostu:
    kontynuujmy - i patrz, co się stanie." Po powrocie osoby: przywitaj się, powiedz
    dokładnie, gdzie jesteście (z `postep.md`), przywołaj jej task i update z ćwiczenia
    (z kart i logu) i nazwij rzecz wprost: "Rozmowa zniknęła, system pamięta. To jest
@@ -194,7 +196,7 @@ nie kasuje. Jeśli osoba miesza pojęcia - wróć na chwilę do obrazu mapy i dz
 - [ ] Update z ćwiczenia jest widoczny na karcie, `ostatnia_aktualizacja` odświeżona,
       a w `90-System/log.md` jest wpis o tej operacji.
 - [ ] Odpowiedź na "Co mam dziś do zrobienia?" zawierała task z kroku 1 i osoba to potwierdziła.
-- [ ] Test czystej kartki: osoba wpisała `/clear`, wróciła słowem "kontynuujmy" i zobaczyła,
+- [ ] Test czystej kartki: osoba zrobiła czystą kartkę, wróciła słowem "kontynuujmy" i zobaczyła,
       że system pamięta stan (postęp, taski, log) mimo zniknięcia rozmowy.
 - [ ] Osoba własnymi słowami wyjaśniła różnicę między dopisaniem do karty a wpisem do logu.
 - [ ] Git: repozytorium zainicjowane i pierwszy commit zrobiony ALBO osoba świadomie
@@ -207,7 +209,7 @@ Przekaż osobie dwa zadania na najbliższe 2 dni, na jej realnych sprawach:
 1. **Używaj systemu naprawdę.** Codziennie minimum jeden update ("Dopisz do projektu...")
    i jedno pytanie ("Co mam dziś do zrobienia?", "Jaki jest status...?"). Nie na niby -
    na prawdziwych rzeczach z pracy i życia. I każdą nową sprawę zaczynaj od czystej
-   kartki (`/clear`) - niech nawyk z Kroku 5 wejdzie w krew od pierwszego dnia.
+   kartki - niech nawyk z Kroku 5 wejdzie w krew od pierwszego dnia.
 2. **Kartka obserwacji.** Zapisz na kartce (albo w notatkach w telefonie) JEDNĄ rzecz,
    która Cię w systemie wkurza albo której Ci brakuje. Nie naprawiaj jej - tylko zapisz.
    Omówimy ją na początku Etapu 3 i wtedy zdecydujemy, co z nią zrobić.

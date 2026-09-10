@@ -203,8 +203,8 @@ i odświeżenie widoku. Dokładnie tak wygląda codzienność od jutra.
       ostatnie wpisy logu, data wygenerowania)
 - [ ] Osoba samodzielnie odpaliła "Odśwież dashboard" i widziała efekt
 - [ ] Pierwszy Lint wykonany i omówiony (nawet jeśli nic nie znalazł)
-- [ ] `CLAUDE.md` w korzeniu NADPISANY wersją produkcyjną, spersonalizowaną (tylko moduły
-      osoby, jej słownictwo); nie ma w nim już instrukcji onboardingowych
+- [ ] `CLAUDE.md` i `AGENTS.md` w korzeniu NADPISANE wersją produkcyjną, spersonalizowaną
+      (tylko moduły osoby, jej słownictwo); nie ma w nich już instrukcji onboardingowych
 - [ ] `INSTRUKCJA.md` istnieje w korzeniu i jest spersonalizowana
 - [ ] `.onboarding/postep.md`: etapy 0-5 mają status `ukonczony` lub `pominiety`
       (Etap 6 - bonus - może zostać `do-zrobienia`)
@@ -248,7 +248,7 @@ To zapis FINALNY - zrób go starannie:
   że w etapach 0-5 nie został żaden status `do-zrobienia` ani `w-trakcie` (Etap 6 - bonus -
   może zostać `do-zrobienia`).
 - Sekcja "Gdzie skończyliśmy": wpisz "Onboarding ukończony w całości [YYYY-MM-DD]. System
-  działa samodzielnie - schemat w CLAUDE.md, ściąga w INSTRUKCJA.md. Bonusowy Etap 6
+  działa samodzielnie - schemat w CLAUDE.md i AGENTS.md, ściąga w INSTRUKCJA.md. Bonusowy Etap 6
   (kokpit w przeglądarce) czeka na życzenie."
 - Sekcja "Praca domowa": wpisz "Tydzień próbny do [data +7 dni]: rano 'Co mam dziś do
   zrobienia?', wieczorem 'Podsumuj dzień', 7. dnia 'Przegląd tygodnia'."
@@ -256,4 +256,4 @@ To zapis FINALNY - zrób go starannie:
   o preferencjach" w `.onboarding/profil.md` - przydadzą się w codziennej pracy.
 - Jeśli etap został przerwany w połowie: zostaw status `w-trakcie` i zapisz w "Gdzie
   skończyliśmy" dokładnie, na którym kroku Działania stanęliście (np. "skończyliśmy na
-  kroku 3 - Lint; zaczynamy od kroku 4 - przepisanie CLAUDE.md").
+  kroku 3 - Lint; zaczynamy od kroku 4 - przepisanie CLAUDE.md i AGENTS.md").
