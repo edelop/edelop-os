@@ -139,7 +139,7 @@ Wyjaśnij metodę, według której zbudujecie system. Powiedz mniej więcej:
 znanych badaczy AI. System ma trzy warstwy:
 
 1. **Źródła** - surowe materiały (notatki, dokumenty, maile), które wrzucasz do folderu
-   `zrodla/`. Ja mam zakaz ich edytowania - to Twoja skrzynka wrzutowa.
+   `00-Zrodla/`. Ja mam zakaz ich edytowania - to Twoja skrzynka wrzutowa.
 2. **Wiki** - strony, które ja utrzymuję na podstawie źródeł i naszych rozmów: projekty,
    obszary życia, cele, kontakty, decyzje. Wszystko połączone linkami.
 3. **Schemat** - plik zasad (`CLAUDE.md` w Claude Code, `AGENTS.md` w Codex, ta sama treść)
@@ -232,7 +232,7 @@ się jutro w Etapie 1. Wyjaśnij dokładnie, jak to zrobić. Powiedz mniej więc
 
 1. Otwórz ten folder w Finderze (Mac) albo Eksploratorze plików (Windows) - to ten sam folder,
    który rozpakowałaś/eś z ZIP-a.
-2. Wejdź do folderu `zrodla/` i utwórz w nim podfolder o nazwie `<slug>` - czyli krótkiej
+2. Wejdź do folderu `00-Zrodla/` i utwórz w nim podfolder o nazwie `<slug>` - czyli krótkiej
    nazwie projektu pisanej małymi literami, bez polskich znaków, ze spacjami zamienionymi
    na '-' (np. 'Remont łazienki' to folder `remont-lazienki`).
 3. Przeciągnij do niego wszystko, co masz o tym projekcie: notatki, dokumenty, PDF-y,
@@ -253,7 +253,7 @@ Na koniec pracy (także przy przerwaniu w połowie) zaktualizuj `.onboarding/pos
 - Sekcja "Gdzie skończyliśmy": konkretnie, np. "Ukończyliśmy Etap 0. Zaczynamy od Etapu 1 -
   pierwsza baza wiedzy wokół projektu <nazwa>."
 - Sekcja "Praca domowa": wpisz zadanie, np. "Zebrać materiały o projekcie <nazwa>
-  do `zrodla/<slug>/` albo przygotować się do opowiedzenia o nim."
+  do `00-Zrodla/<slug>/` albo przygotować się do opowiedzenia o nim."
 
 Jeśli w trakcie etapu wyszły nowe preferencje osoby, dopisz je do sekcji
 `## Notatki o preferencjach` w `.onboarding/profil.md`.

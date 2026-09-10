@@ -7,17 +7,17 @@ NIE EDYTUJ TEGO PLIKU RĘCZNIE. Ten plik jest przebudowywany W CAŁOŚCI, gdy os
 "Odśwież dashboard" - każda ręczna zmiana zniknie przy następnym odświeżeniu.
 Taski odhaczamy na kartach projektów i obszarów, nie tutaj.
 
-Docelowa lokalizacja: dashboard.md w korzeniu folderu (powstaje w Etapie 5 z tego szablonu).
+Docelowa lokalizacja: HOME.md w korzeniu folderu (powstaje w Etapie 5 z tego szablonu).
 
 Instrukcja przebudowy (dla asystenta, na frazę "Odśwież dashboard"):
 1. "## Taski na dzis" - zbierz wszystkie nieodhaczone checkboxy `- [ ]` z sekcji
-   "## Nastepne kroki" kart w projekty/ i "## Aktualne taski" kart w obszary/.
+   "## Nastepne kroki" kart w 20-Projekty/ i "## Aktualne taski" kart w 60-Obszary/.
    Przy każdym tasku daj wikilink [[slug]] do strony, z której pochodzi.
-2. "## Projekty" - tabela z frontmatteru wszystkich kart w projekty/: najpierw aktywne,
+2. "## Projekty" - tabela z frontmatteru wszystkich kart w 20-Projekty/: najpierw aktywne,
    w ramach aktywnych wysoki priorytet na górze; wstrzymane niżej, zakończone pomiń.
 3. "## Cele" - cele o statusie w-trakcie lub zagrozony, każdy z miarą i terminem
    z frontmatteru; zagrożone oznacz dopiskiem "(zagrozony)".
-4. "## Ostatnio w logu" - 5 ostatnich wpisów z log.md, od najnowszego.
+4. "## Ostatnio w logu" - 5 ostatnich wpisów z 90-System/log.md, od najnowszego.
 5. Ustaw `ostatnie_odswiezenie` w frontmatterze na dzisiejszą datę.
 -->
 

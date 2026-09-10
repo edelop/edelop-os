@@ -1,4 +1,4 @@
-<!-- Szablon kontaktu: użyj, gdy osoba mówi "Dodaj kontakt: ..." albo gdy w rozmowie lub źródłach pojawia się ważna dla niej osoba. Wypełnij realnymi danymi z rozmowy (dopytaj o firmę i rolę, jeśli ich brak), zapisz jako kontakty/<slug>.md (slug: kebab-case, ASCII, np. jan-kowalski.md), usuń ten komentarz i zaktualizuj index.md oraz log.md. -->
+<!-- Szablon kontaktu: użyj, gdy osoba mówi "Dodaj kontakt: ..." albo gdy w rozmowie lub źródłach pojawia się ważna dla niej osoba. Wypełnij realnymi danymi z rozmowy (dopytaj o firmę i rolę, jeśli ich brak), zapisz jako 50-Ludzie/<slug>.md (slug: kebab-case, ASCII, np. jan-kowalski.md), usuń ten komentarz i zaktualizuj 90-System/index.md oraz 90-System/log.md. -->
 ---
 type: kontakt
 firma: <firma lub organizacja>

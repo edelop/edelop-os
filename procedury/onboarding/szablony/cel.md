@@ -1,4 +1,4 @@
-<!-- Szablon celu: użyj, gdy osoba mówi "Dodaj cel: ...". Ustal z osobą mierzalną miarę i realny termin (dopytaj, jeśli ich nie poda), zapisz jako cele/<slug>.md (slug: kebab-case, ASCII bez polskich znaków), usuń ten komentarz i zaktualizuj index.md oraz log.md. -->
+<!-- Szablon celu: użyj, gdy osoba mówi "Dodaj cel: ...". Ustal z osobą mierzalną miarę i realny termin (dopytaj, jeśli ich nie poda), zapisz jako 10-Cele/<slug>.md (slug: kebab-case, ASCII bez polskich znaków), usuń ten komentarz i zaktualizuj 90-System/index.md oraz 90-System/log.md. -->
 ---
 type: cel
 horyzont: kwartal          # rok | kwartal | miesiac

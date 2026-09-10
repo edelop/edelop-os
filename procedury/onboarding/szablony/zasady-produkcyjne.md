@@ -26,7 +26,7 @@ PERSONALIZACJA (instrukcja dla asystenta w Etapie 5 - wykonaj ją i USUŃ ten ko
 <!-- Ten sam plik jest zapisany jako CLAUDE.md i AGENTS.md. Edytujesz jeden - zaktualizuj drugi. -->
 
 Ten folder to osobisty system <IMIE> na pracę i życie, prowadzony metodą LLM Wiki.
-Trzy warstwy: surowe materiały w `zrodla/`, strony wiki, które utrzymujesz Ty (asystent),
+Trzy warstwy: surowe materiały w `00-Zrodla/`, strony wiki, które utrzymujesz Ty (asystent),
 i ten plik - schemat. Czytasz go automatycznie na starcie każdej sesji, więc od pierwszej
 sekundy wiesz, jak ten system działa.
 
@@ -36,9 +36,9 @@ stronie. <IMIE> ma tylko mówić, co się dzieje.
 
 ## Zasady twarde
 
-1. `zrodla/` jest TYLKO do odczytu. Nigdy nie edytujesz ani nie kasujesz tam plików -
+1. `00-Zrodla/` jest TYLKO do odczytu. Nigdy nie edytujesz ani nie kasujesz tam plików -
    to surowe materiały, do których zawsze można wrócić.
-2. `log.md` jest append-only: wyłącznie dopisujesz na końcu, niczego nie zmieniasz
+2. `90-System/log.md` jest append-only: wyłącznie dopisujesz na końcu, niczego nie zmieniasz
    i nie kasujesz. Format wpisu: `## [YYYY-MM-DD] operacja | nazwa` plus 1-2 zdania opisu.
 3. Każda nowa strona dostaje frontmatter DOKŁADNIE według schematu swojego typu
    (sekcja "Schematy typów stron" niżej).
@@ -54,16 +54,16 @@ stronie. <IMIE> ma tylko mówić, co się dzieje.
 
 Uruchamiają go frazy typu "Nowy projekt: ...", "Dopisz do...", "Wchłoń materiały z...".
 
-1. Przeczytaj materiał (pliki ze `zrodla/`, wiadomość osoby, notatkę).
+1. Przeczytaj materiał (pliki ze `00-Zrodla/`, wiadomość osoby, notatkę).
 2. Omów z osobą wnioski: co jest ważne, co zapisać i na której stronie.
 3. Napisz lub zaktualizuj strony wiki; odśwież pole `ostatnia_aktualizacja`
    (lub jego odpowiednik w danym typie).
-4. Zaktualizuj `index.md`, jeśli przybyła nowa strona.
-5. Dopisz wpis do `log.md`.
+4. Zaktualizuj `90-System/index.md`, jeśli przybyła nowa strona.
+5. Dopisz wpis do `90-System/log.md`.
 
 ### Query - pytanie do bazy
 
-1. Znajdź właściwe strony - zacznij od `index.md`.
+1. Znajdź właściwe strony - zacznij od `90-System/index.md`.
 2. Przeczytaj tylko tyle, ile potrzeba do odpowiedzi.
 3. Odpowiedz konkretnie, z cytatami `[[wikilink]]` do stron, na których się opierasz.
 4. Jeśli odpowiedź jest wartościowa i przyda się ponownie - zaproponuj zapisanie jej
@@ -71,11 +71,11 @@ Uruchamiają go frazy typu "Nowy projekt: ...", "Dopisz do...", "Wchłoń materi
 
 ### Lint - przegląd spójności
 
-1. Przejdź wszystkie strony wiki oraz `index.md` (czy kataloguje wszystko, co istnieje).
+1. Przejdź wszystkie strony wiki oraz `90-System/index.md` (czy kataloguje wszystko, co istnieje).
 2. Szukaj czterech rzeczy: sprzeczności między stronami, nieaktualnych danych,
    stron-sierot bez żadnego linku i brakujących linków tam, gdzie strony o sobie wspominają.
 3. Zgłoś znaleziska listą - osoba decyduje, co poprawiać.
-4. Wprowadź zaakceptowane poprawki i dopisz wpis do `log.md`.
+4. Wprowadź zaakceptowane poprawki i dopisz wpis do `90-System/log.md`.
 
 ### Podsumowanie dnia - rytuał wieczorny
 
@@ -84,23 +84,23 @@ Uruchamia je fraza "Podsumuj dzień".
 1. Zapytaj jednym pytaniem: co dziś zrobione, co zostało, co doszło w trakcie dnia.
 2. Odhacz zrobione taski, dopisz nowe, zaktualizuj karty, których dotyczą zmiany
    (zwykły Ingest, z odświeżeniem `ostatnia_aktualizacja`).
-3. Dopisz do `log.md` jeden wpis: `## [YYYY-MM-DD] dzien | podsumowanie` z 1-2 zdaniami.
+3. Dopisz do `90-System/log.md` jeden wpis: `## [YYYY-MM-DD] dzien | podsumowanie` z 1-2 zdaniami.
 4. Pokaż krótko: co odhaczone, co czeka jutro, co nowego. Bez lania wody.
 
 ### Przegląd tygodnia - rytuał
 
-1. Utwórz `przeglady/YYYY-MM-DD.md` (frontmatter: `type: przeglad`, `data: YYYY-MM-DD`;
+1. Utwórz `40-Przeglady/YYYY-MM-DD.md` (frontmatter: `type: przeglad`, `data: YYYY-MM-DD`;
    sekcje: `## Co sie udalo`, `## Co utknelo i dlaczego`, `## Mini-lint`,
    `## Plan na przyszly tydzien`). Prowadź rozmowę sekcja po sekcji, jedno pytanie na raz.
-2. Przejdź z osobą karty w `projekty/` i `obszary/`: odhacz zrobione taski i zapytaj,
+2. Przejdź z osobą karty w `20-Projekty/` i `60-Obszary/`: odhacz zrobione taski i zapytaj,
    co się wydarzyło. Ustalenia zapisz na kartach (to zwykły Ingest, z wpisami do logu).
 3. Mini-lint robisz Ty: szybki przegląd kart (nieaktualne daty, sprzeczne statusy,
    projekty bez ruchu) - poprawki tylko za zgodą osoby.
 4. Zaplanuj następny tydzień: maksymalnie 3 najważniejsze rzeczy, jako checkboxy
    na właściwych kartach i w pliku przeglądu.
-5. Odśwież `dashboard.md` i dopisz do `log.md` wpis podsumowujący tydzień.
+5. Odśwież `HOME.md` i dopisz do `90-System/log.md` wpis podsumowujący tydzień.
 
-O dashboardzie: `dashboard.md` to wygenerowany widok, nie źródło prawdy. Prawda mieszka
+O dashboardzie: `HOME.md` to wygenerowany widok, nie źródło prawdy. Prawda mieszka
 w kartach - na frazę "Odśwież dashboard" przebudowujesz go z nich w całości, nigdy nie
 łatasz pojedynczych fragmentów ręcznie.
 
@@ -110,7 +110,7 @@ Rozmowa jest ulotna, pliki są trwałe. Nic, co warto zachować, nie może zosta
 w rozmowie.
 
 1. Fraza "Zapisz gdzie skończyliśmy" = mini-Ingest stanu: dopisz bieżący stan pracy do
-   właściwych kart i do `log.md`, po czym potwierdź jednym zdaniem, że można bezpiecznie
+   właściwych kart i do `90-System/log.md`, po czym potwierdź jednym zdaniem, że można bezpiecznie
    przerwać albo zacząć świeżą sesję (w Claude Code: `/clear`; w Codex: nowa rozmowa).
 2. Po domknięciu większego bloku pracy (Ingest źródeł, przegląd, dłuższa rozmowa robocza)
    SAM zaproponuj zapis stanu i świeżą sesję na kolejny temat. Jedna sprawa = jedna sesja.
@@ -124,23 +124,23 @@ To skróty myślowe, nie komendy - rozpoznawaj intencję, nie dosłowne brzmieni
 
 | Osoba mówi | Asystent robi |
 |---|---|
-| "Nowy projekt: X" | tworzy `projekty/<slug>.md` z szablonu + wpis do index.md i log.md |
+| "Nowy projekt: X" | tworzy `20-Projekty/<slug>.md` z szablonu + wpis do 90-System/index.md i 90-System/log.md |
 | "Dopisz do projektu X: ..." | Ingest: aktualizuje kartę, index, log |
-| "Wchłoń materiały z zrodla/X" | Ingest pełny: czyta źródła → strony wiki |
+| "Wchłoń materiały z 00-Zrodla/X" | Ingest pełny: czyta źródła → strony wiki |
 | "Dodaj taska do X: ..." | dopisuje checkbox w `## Nastepne kroki` karty projektu X (dla obszaru: w `## Aktualne taski`) |
 | "Co mam dziś do zrobienia?" | Query: zbiera nieodhaczone checkboxy ze wszystkich kart |
 | "Jaki jest status X?" / "Co się dzieje?" | Query: czyta index + karty, odpowiada z [[cytatami]] |
 | "Zapisz decyzję: ..." | tworzy stronę decyzji |
 | "Dodaj kontakt: ..." | tworzy stronę kontaktu |
 | "Dodaj cel: ..." | tworzy stronę celu |
-| "Odśwież dashboard" | przebudowuje dashboard.md z aktualnych danych |
+| "Odśwież dashboard" | przebudowuje HOME.md z aktualnych danych |
 | "Przegląd tygodnia" | rytuał tygodniowy (workflow "Przegląd tygodnia" wyżej) |
 | "Sprawdź spójność" | Lint |
 | "Podsumuj dzień" | rytuał wieczorny (workflow "Podsumowanie dnia" wyżej) |
 | "Zapisz gdzie skończyliśmy" | mini-Ingest stanu pracy przed przerwą lub świeżą sesją (sekcja "Sesje i pamięć") |
-| "Kogo dawno nie zagadałem?" | Query po polu `ostatni_kontakt` kart w `kontakty/`, lista od najdłużej zaniedbanych |
-| "Dopisz do P&L: ..." | Ingest do `finanse/pnl-YYYY-MM.md` (patrz moduł P&L niżej) |
-| "Dopisz do kalendarza treści: ..." / "Co mam opublikować w tym tygodniu?" | Ingest / Query po `kalendarz-tresci.md` (patrz moduł niżej) |
+| "Kogo dawno nie zagadałem?" | Query po polu `ostatni_kontakt` kart w `50-Ludzie/`, lista od najdłużej zaniedbanych |
+| "Dopisz do P&L: ..." | Ingest do `30-Biznes/PnL/pnl-YYYY-MM.md` (patrz moduł P&L niżej) |
+| "Dopisz do kalendarza treści: ..." / "Co mam opublikować w tym tygodniu?" | Ingest / Query po `30-Biznes/kalendarz-tresci.md` (patrz moduł niżej) |
 
 <!-- MODUŁ (git): zostaw tę sekcję tylko, jeśli git został włączony w Etapie 2. -->
 ## Migawki (git)
@@ -153,9 +153,9 @@ Ty pilnujesz.
 ## Schematy typów stron
 
 Każdy typ ma stały frontmatter (metryczkę YAML na górze pliku) i stałe sekcje.
-Nowa strona = dokładnie ten schemat + wpis do `index.md` + wpis do `log.md`.
+Nowa strona = dokładnie ten schemat + wpis do `90-System/index.md` + wpis do `90-System/log.md`.
 
-### Projekt - `projekty/<slug>.md`
+### Projekt - `20-Projekty/<slug>.md`
 
 ```yaml
 ---
@@ -171,7 +171,7 @@ kontakty: []
 Sekcje: `## Status`, `## Nastepne kroki` (checkboxy `- [ ]`), `## Notatki i decyzje`,
 `## Linki`.
 
-### Obszar - `obszary/<slug>.md`
+### Obszar - `60-Obszary/<slug>.md`
 
 ```yaml
 ---
@@ -183,7 +183,7 @@ tagi: []
 
 Sekcje: `## Aktualne taski` (checkboxy), `## Notatki`.
 
-### Cel - `cele/<slug>.md`
+### Cel - `10-Cele/<slug>.md`
 
 ```yaml
 ---
@@ -198,7 +198,7 @@ powiazane_projekty: []
 
 Sekcje: `## Dlaczego ten cel`, `## Jak mierzymy`, `## Powiazane`, `## Ostatni update`.
 
-### Kontakt - `kontakty/<slug>.md`
+### Kontakt - `50-Ludzie/<slug>.md`
 
 ```yaml
 ---
@@ -213,7 +213,7 @@ projekty: []
 
 Sekcje: `## Kim jest` (3-5 zdań), `## Notatki` (datowane wpisy).
 
-### Decyzja - `decyzje/YYYY-MM-DD-<slug>.md`
+### Decyzja - `70-Decyzje/YYYY-MM-DD-<slug>.md`
 
 ```yaml
 ---
@@ -229,7 +229,7 @@ Sekcje: `## Kontekst`, `## Opcje`, `## Wybor`, `## Oczekiwany rezultat`,
 `## Faktyczny rezultat (do uzupelnienia)`.
 
 <!-- MODUŁ (P&L): zostaw tę podsekcję tylko, jeśli osoba wdrożyła P&L w Etapie 4. -->
-### P&L / budżet - `finanse/pnl-YYYY-MM.md`
+### P&L / budżet - `30-Biznes/PnL/pnl-YYYY-MM.md`
 
 ```yaml
 ---
@@ -243,11 +243,11 @@ Sekcje: `## Pozycje` (tabela: Data | Opis | Projekt | Przychód | Koszt; kwota t
 do JEDNEJ kolumny, kolumna Projekt to wikilink albo "-") oraz `## Podsumowanie miesiaca`
 (suma przychodów, suma kosztów, wynik - przeliczaj po każdym wpisie).
 Fraza "Dopisz do P&L: ..." działa jak Ingest: pozycja trafia do tabeli bieżącego
-miesiąca, podsumowanie jest przeliczone, `log.md` dostaje wpis.
+miesiąca, podsumowanie jest przeliczone, `90-System/log.md` dostaje wpis.
 
 <!-- MODUŁ (kalendarz treści): zostaw tę podsekcję tylko, jeśli osoba wdrożyła
 kalendarz treści w Etapie 4. -->
-### Kalendarz treści - `kalendarz-tresci.md`
+### Kalendarz treści - `30-Biznes/kalendarz-tresci.md`
 
 ```yaml
 ---
@@ -271,7 +271,7 @@ nie przebudowa wszystkiego. Gdy osoba mówi, że czegoś jej brakuje
 2. Zaproponuj najprostszy działający kształt: typ strony (frontmatter + sekcje)
    i jedną magiczną frazę do obsługi. Pokaż propozycję, zanim cokolwiek utworzysz.
 3. Po akceptacji: utwórz stronę, dopisz schemat nowego typu do TEGO pliku
-   (do sekcji "Schematy typów stron"), zaktualizuj `index.md` i dopisz wpis do `log.md`.
+   (do sekcji "Schematy typów stron"), zaktualizuj `90-System/index.md` i dopisz wpis do `90-System/log.md`.
 
 <!-- MODUŁ (bonus - Etap 6): zostaw tę sekcję tylko, jeśli Etap 6 w .onboarding/postep.md
 ma nadal status do-zrobienia. Gdy osoba przejdzie Etap 6, ta sekcja zostanie zastąpiona

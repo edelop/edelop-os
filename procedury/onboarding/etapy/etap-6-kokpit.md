@@ -11,7 +11,7 @@ pokazują jej, o co system może jeszcze urosnąć. `CLAUDE.md` i `INSTRUKCJA.md
 
 Ten etap jest BONUSEM i uruchamiasz go wyłącznie, gdy osoba o niego poprosiła
 ("pokaż mi kokpit", "chcę ten dashboard w przeglądarce") albo wyraźnie zgodziła się na
-Twoją jednozdaniową propozycję. Wymaga ukończonego Etapu 5 (istnieje `dashboard.md`
+Twoją jednozdaniową propozycję. Wymaga ukończonego Etapu 5 (istnieje `HOME.md`
 i produkcyjny `CLAUDE.md`). Jeśli Etap 5 nie jest zamknięty - wróć najpierw do niego.
 Nigdy nie namawiaj na ten etap dwa razy: "nie" = status `pominiety` i koniec tematu.
 
@@ -19,7 +19,7 @@ Nigdy nie namawiaj na ten etap dwa razy: "nie" = status `pominiety` i koniec tem
 
 Dwa pytania, po jednym na raz, lekko:
 
-1. **"Czym jest dashboard.md - i czego NIE wolno z nim robić?"**
+1. **"Czym jest HOME.md - i czego NIE wolno z nim robić?"**
    Odpowiedź: to widok wygenerowany z kart, niczego sam nie przechowuje; nie edytuje się
    go ręcznie, tylko odświeża frazą. Prawda mieszka w kartach.
 2. **"Co robi `/clear` i czemu niczego wtedy nie tracisz?"**
@@ -30,7 +30,7 @@ Obie odpowiedzi za chwilę zagrają: kokpit to drugi widok tej samej prawdy z ka
 
 ## Materiał
 
-**Krok A - dwa widoki, jedna prawda.** Wyjaśnij mniej więcej: "Masz już dashboard.md -
+**Krok A - dwa widoki, jedna prawda.** Wyjaśnij mniej więcej: "Masz już HOME.md -
 tekstowy widok systemu. Teraz zrobimy jego wizualnego bliźniaka: kokpit.html. Ta sama
 prawda z tych samych kart, ale w formie, którą miło mieć otwartą na drugim monitorze:
 kolory, liczby, sekcje. To nadal tylko widok - niczego nie przechowuje, przebudowuje się
@@ -55,7 +55,7 @@ tylko pokazuje, dokąd może urosnąć."
     `SLOT:TASKI-META`, `SLOT:PROJEKTY`, `SLOT:OBSZARY`, `SLOT:DZIENNIK`,
     `SLOT:SIDEBAR-KARTA`, `SLOT:STOPKA-DATA`) - CSS i struktura zostają nietknięte,
   - dane bierzesz z tych samych miejsc co przy "Odśwież dashboard": nieodhaczone
-    checkboxy z kart, statusy i priorytety z frontmattera, 5 ostatnich wpisów z `log.md`,
+    checkboxy z kart, statusy i priorytety z frontmattera, 5 ostatnich wpisów z `90-System/log.md`,
   - moduły, które osoba PROWADZI (np. cele z Etapu 3, P&L z Etapu 4): ożyw ich sekcje -
     usuń `class="ghost"`, blok `.ghost-hint` i `class="nav-ghost"` w nawigacji, wypełnij
     realnymi danymi,
@@ -92,7 +92,7 @@ Za zgodą osoby zaktualizuj oba pliki:
   ```markdown
   ## Kokpit w przeglądarce
 
-  `kokpit.html` w korzeniu to wizualny widok systemu - bliźniak `dashboard.md`,
+  `kokpit.html` w korzeniu to wizualny widok systemu - bliźniak `HOME.md`,
   ta sama prawda z kart. Na frazę "Odśwież kokpit":
 
   1. Przebuduj plik na bazie szablonu `procedury/onboarding/szablony/kokpit.html`
@@ -114,7 +114,7 @@ Za zgodą osoby zaktualizuj oba pliki:
 ### 5. Zamknięcie i furtka dla ambitnych
 
 - Zaktualizuj `.onboarding/postep.md`: Etap 6 na `ukonczony` z dzisiejszą datą.
-- Dopisz do `log.md`: `## [YYYY-MM-DD] kokpit | uruchomiony` z jednym zdaniem.
+- Dopisz do `90-System/log.md`: `## [YYYY-MM-DD] kokpit | uruchomiony` z jednym zdaniem.
 - Jeśli migawki gita są włączone - zaproponuj commit, np.
   `git add -A && git commit -m "Etap 6 - kokpit w przeglądarce"`.
 - Na koniec zostaw furtkę, bez wciskania: "Kokpit, którego właśnie używasz, jest
@@ -147,7 +147,7 @@ powiedz: "I to jest cała obsługa: mówisz do systemu, kokpit nadąża."
 - [ ] `CLAUDE.md`: sekcja "Kokpit w przeglądarce" + fraza w tabeli (sekcja "Bonus do
       odebrania" usunięta)
 - [ ] `INSTRUKCJA.md`: fraza "Odśwież kokpit" w ściądze
-- [ ] `.onboarding/postep.md`: Etap 6 `ukonczony`; wpis w `log.md`
+- [ ] `.onboarding/postep.md`: Etap 6 `ukonczony`; wpis w `90-System/log.md`
 
 ## Praca domowa
 

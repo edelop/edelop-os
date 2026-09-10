@@ -12,14 +12,14 @@ Zadaj te pytania po kolei, jedno na raz, lekkim tonem. Jeśli osoba nie pamięta
 odpowiedź i jedź dalej, to nie egzamin.
 
 1. **Z jakich trzech warstw składa się Twój system?**
-   Odpowiedź: źródła (`zrodla/` - surowe materiały, które tam wrzucasz), wiki (strony .md,
+   Odpowiedź: źródła (`00-Zrodla/` - surowe materiały, które tam wrzucasz), wiki (strony .md,
    które utrzymuje asystent: projekty, obszary, cele, kontakty, decyzje) i schemat
    (plik zasad: `CLAUDE.md` w Claude Code albo `AGENTS.md` w Codex, ta sama treść -
    spisane konwencje i workflowy).
 2. **Co to jest Ingest?**
    Odpowiedź: workflow wchłaniania materiału. Asystent czyta materiał, omawia z Tobą wnioski,
-   pisze lub aktualizuje strony wiki, aktualizuje `index.md` i dopisuje wpis do `log.md`.
-3. **Czego asystent NIGDY nie robi w folderze `zrodla/`?**
+   pisze lub aktualizuje strony wiki, aktualizuje `90-System/index.md` i dopisuje wpis do `90-System/log.md`.
+3. **Czego asystent NIGDY nie robi w folderze `00-Zrodla/`?**
    Odpowiedź: nie edytuje i nie kasuje tam plików. Źródła są tylko do odczytu - to Twoje
    surowe materiały, asystent z nich czyta, a pisze wyłącznie w stronach wiki.
 
@@ -47,16 +47,16 @@ Tabela istnieje po to, żeby osoba wiedziała, CO system potrafi na jedno zdanie
 
 | Mówisz | Asystent robi |
 |---|---|
-| "Nowy projekt: X" | tworzy `projekty/<slug>.md` z szablonu + wpis do index.md i log.md |
+| "Nowy projekt: X" | tworzy `20-Projekty/<slug>.md` z szablonu + wpis do 90-System/index.md i 90-System/log.md |
 | "Dopisz do projektu X: ..." | Ingest: aktualizuje kartę, index, log |
-| "Wchłoń materiały z zrodla/X" | Ingest pełny: czyta źródła → strony wiki |
+| "Wchłoń materiały z 00-Zrodla/X" | Ingest pełny: czyta źródła → strony wiki |
 | "Dodaj taska do X: ..." | dopisuje checkbox w `## Nastepne kroki` karty projektu X (dla obszaru: w `## Aktualne taski`) |
 | "Co mam dziś do zrobienia?" | Query: zbiera nieodhaczone checkboxy ze wszystkich kart |
 | "Jaki jest status X?" / "Co się dzieje?" | Query: czyta index + karty, odpowiada z [[cytatami]] |
 | "Zapisz decyzję: ..." | tworzy stronę decyzji |
 | "Dodaj kontakt: ..." | tworzy stronę kontaktu |
 | "Dodaj cel: ..." | tworzy stronę celu |
-| "Odśwież dashboard" | przebudowuje dashboard.md z aktualnych danych |
+| "Odśwież dashboard" | przebudowuje HOME.md z aktualnych danych |
 | "Przegląd tygodnia" | rytuał tygodniowy (workflow z szablonu przeglad-tygodnia) |
 | "Sprawdź spójność" | Lint - przegląd porządków w systemie (poznasz go w Etapie 5) |
 | "Zapisz gdzie skończyliśmy" | zapisuje bieżący stan pracy na karty i do logu - przed przerwą albo świeżą sesją (poznasz za chwilę, w Kroku 5) |
@@ -74,10 +74,10 @@ przechodzę po wszystkich kartach i zbieram nieodhaczone checkboxy w jedną list
 zrobisz, mówisz mi - a ja odhaczam." Pokaż osobie sekcję `## Nastepne kroki` na jej
 własnej karcie projektu z Etapu 1, żeby zobaczyła to na żywo.
 
-### Krok 4: log.md to dziennik, index.md to mapa
+### Krok 4: 90-System/log.md to dziennik, 90-System/index.md to mapa
 
-Wyjaśnij różnicę na prostym obrazie. Powiedz mniej więcej: "`index.md` to mapa - katalog
-wszystkich stron, żebym zawsze wiedział, co istnieje i gdzie. `log.md` to dziennik pokładowy -
+Wyjaśnij różnicę na prostym obrazie. Powiedz mniej więcej: "`90-System/index.md` to mapa - katalog
+wszystkich stron, żebym zawsze wiedział, co istnieje i gdzie. `90-System/log.md` to dziennik pokładowy -
 po każdej operacji dopisuję na końcu jedną linijkę: data, co zrobiłem, czego dotyczyło.
 Do dziennika się tylko dopisuje, nigdy nic z niego nie kasujemy - dzięki temu zawsze możesz
 zapytać 'co się działo w systemie w zeszłym tygodniu' i dostać odpowiedź." Wprowadź słowo
@@ -164,7 +164,7 @@ Używaj nazwy jej realnego projektu z Etapu 1 (z pola `pierwszy_projekt` w profi
 2. **Update.** Poproś: "Teraz dopisz do projektu coś, co się ostatnio wydarzyło - jakiś
    realny postęp, ustalenie albo problem." Osoba pisze np. "Dopisz do projektu <projekt>: ...".
    Wykonaj Ingest: zaktualizuj kartę (i pole `ostatnia_aktualizacja`), dopisz wpis do
-   `log.md`. Pokaż osobie ten wpis w logu i nazwij to: "karta się zmieniła, a dziennik
+   `90-System/log.md`. Pokaż osobie ten wpis w logu i nazwij to: "karta się zmieniła, a dziennik
    zapamiętał, że się zmieniła".
 3. **Pytanie.** Poproś: "A teraz zapytaj mnie, co masz dziś do zrobienia." Osoba pisze
    np. "Co mam dziś do zrobienia?". Wykonaj Query: zbierz nieodhaczone checkboxy ze
@@ -183,7 +183,7 @@ Używaj nazwy jej realnego projektu z Etapu 1 (z pola `pierwszy_projekt` w profi
    świeżej sesji."
 
 Na koniec zadaj pytanie kontrolne: "Powiedz mi własnymi słowami: czym różni się to,
-co zrobiłem z kartą projektu, od tego, co dopisałem do log.md?" Dobra odpowiedź kręci się
+co zrobiłem z kartą projektu, od tego, co dopisałem do 90-System/log.md?" Dobra odpowiedź kręci się
 wokół: karta = aktualny stan projektu, log = historia tego, co się działo, nic się z niego
 nie kasuje. Jeśli osoba miesza pojęcia - wróć na chwilę do obrazu mapy i dziennika.
 
@@ -192,7 +192,7 @@ nie kasuje. Jeśli osoba miesza pojęcia - wróć na chwilę do obrazu mapy i dz
 - [ ] Osoba SAMA wpisała trzy frazy pełnego cyklu: task, update, pytanie o dzień.
 - [ ] Task z ćwiczenia istnieje jako checkbox `- [ ]` w `## Nastepne kroki` jej karty projektu.
 - [ ] Update z ćwiczenia jest widoczny na karcie, `ostatnia_aktualizacja` odświeżona,
-      a w `log.md` jest wpis o tej operacji.
+      a w `90-System/log.md` jest wpis o tej operacji.
 - [ ] Odpowiedź na "Co mam dziś do zrobienia?" zawierała task z kroku 1 i osoba to potwierdziła.
 - [ ] Test czystej kartki: osoba wpisała `/clear`, wróciła słowem "kontynuujmy" i zobaczyła,
       że system pamięta stan (postęp, taski, log) mimo zniknięcia rozmowy.

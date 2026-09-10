@@ -40,7 +40,7 @@ do X" zadziała tak samo jak "Dodaj taska do X", bo asystent rozumie intencję.
 |---|---|
 | "Nowy projekt: X" | powstaje karta projektu, od razu wpisana do indeksu i dziennika |
 | "Dopisz do projektu X: ..." | karta projektu się aktualizuje, a dziennik zapamiętuje zmianę |
-| "Wchłoń materiały z zrodla/X" | Asystent czyta surowe materiały i zamienia je w strony wiki |
+| "Wchłoń materiały z 00-Zrodla/X" | Asystent czyta surowe materiały i zamienia je w strony wiki |
 | "Dodaj taska do X: ..." | nowe zadanie ląduje na liście kroków projektu X (albo tasków obszaru X) |
 | "Co mam dziś do zrobienia?" | dostajesz listę wszystkich niezrobionych zadań ze wszystkich kart |
 | "Jaki jest status X?" / "Co się dzieje?" | dostajesz streszczenie z odnośnikami do konkretnych stron |
@@ -97,7 +97,7 @@ System to nie tylko taski. Kilka pomysłów - każdy zaczynasz zwykłym zdaniem:
   ostatnie ustalenia, obietnice, otwarte tematy.
 - **Planowanie wyjazdu.** "Nowy projekt: wyjazd do X" - rezerwacje, lista rzeczy
   do ogarnięcia i notatki w jednym miejscu zamiast w pięciu aplikacjach.
-- **Nauka nowego tematu.** Wrzuć artykuły i notatki do `zrodla/` i powiedz
+- **Nauka nowego tematu.** Wrzuć artykuły i notatki do `00-Zrodla/` i powiedz
   "Wchłoń materiały..." - powstanie Twoja strona wiedzy o temacie, która rośnie
   z każdym kolejnym materiałem.
 - **Automatyzacje i integracje.** Twój asystent umie dużo więcej, niż widać w codziennym

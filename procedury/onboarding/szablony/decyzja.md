@@ -1,4 +1,4 @@
-<!-- Szablon decyzji: użyj, gdy osoba mówi "Zapisz decyzję: ..." albo gdy w rozmowie zapada istotny wybór. Spisz realny kontekst i opcje z rozmowy, zapisz jako decyzje/YYYY-MM-DD-<slug>.md (data podjęcia decyzji w nazwie pliku; slug: kebab-case, ASCII), usuń ten komentarz i zaktualizuj index.md oraz log.md; sekcję "Faktyczny rezultat" zostaw pustą do daty z pola `wracamy`. -->
+<!-- Szablon decyzji: użyj, gdy osoba mówi "Zapisz decyzję: ..." albo gdy w rozmowie zapada istotny wybór. Spisz realny kontekst i opcje z rozmowy, zapisz jako 70-Decyzje/YYYY-MM-DD-<slug>.md (data podjęcia decyzji w nazwie pliku; slug: kebab-case, ASCII), usuń ten komentarz i zaktualizuj 90-System/index.md oraz 90-System/log.md; sekcję "Faktyczny rezultat" zostaw pustą do daty z pola `wracamy`. -->
 ---
 type: decyzja
 data: <YYYY-MM-DD>

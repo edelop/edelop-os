@@ -1,4 +1,4 @@
-<!-- Szablon karty projektu: użyj, gdy osoba mówi "Nowy projekt: X" albo gdy z rozmowy lub Ingestu wyłania się nowy projekt. Wypełnij realnymi danymi z rozmowy (brakujące rzeczy dopytaj, jedno pytanie na raz), zapisz jako projekty/<slug>.md (slug: kebab-case, ASCII bez polskich znaków), usuń ten komentarz i zaktualizuj index.md oraz log.md. -->
+<!-- Szablon karty projektu: użyj, gdy osoba mówi "Nowy projekt: X" albo gdy z rozmowy lub Ingestu wyłania się nowy projekt. Wypełnij realnymi danymi z rozmowy (brakujące rzeczy dopytaj, jedno pytanie na raz), zapisz jako 20-Projekty/<slug>.md (slug: kebab-case, ASCII bez polskich znaków), usuń ten komentarz i zaktualizuj 90-System/index.md oraz 90-System/log.md. -->
 ---
 type: projekt
 status: aktywny            # aktywny | wstrzymany | zakonczony
