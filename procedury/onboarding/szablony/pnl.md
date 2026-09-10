@@ -4,7 +4,7 @@ miesiac: YYYY-MM
 ---
 <!--
 Prosty rejestr przychodów i kosztów (P&L). Jeden plik na jeden miesiąc:
-finanse/pnl-YYYY-MM.md. Nowy miesiąc = nowy plik z tego szablonu, stary zostaje
+30-Biznes/PnL/pnl-YYYY-MM.md. Nowy miesiąc = nowy plik z tego szablonu, stary zostaje
 jako archiwum.
 
 Obsługa (dla asystenta): pozycje dopisuje asystent, gdy osoba mówi frazę typu
@@ -13,7 +13,7 @@ Wtedy:
 1. Dodaj wiersz do tabeli w pliku bieżącego miesiąca (jeśli nie istnieje - utwórz
    go z tego szablonu). Data = dziś, chyba że osoba poda inną.
 2. Przelicz "## Podsumowanie miesiaca" (suma przychodów, suma kosztów, wynik).
-3. Dopisz wpis do log.md.
+3. Dopisz wpis do 90-System/log.md.
 Zasady: jedna pozycja = jeden wiersz, kwota trafia do JEDNEJ kolumny (przychód
 albo koszt), druga zostaje pusta. Wszystko w jednej walucie osoby. Kolumna
 "Projekt" to wikilink do karty projektu albo "-" gdy pozycja ogólna.

@@ -25,9 +25,11 @@ odpowiedź w jednym zdaniu i jedź dalej, bez egzaminowania.
    (pytanie zadaj tylko, jeśli w Etapie 0 rzeczywiście instalowaliście Superpowers)
    np. porządnie planuje i robi burze mózgów zamiast rzucać się od razu do roboty.
 
-3. **"Co robi komenda /model?"**
-   Odpowiedź: pokazuje listę modeli dostępnych w Twoim planie i pozwala się przełączyć.
-   Zasada: wybieramy najmocniejszy dostępny w naszym planie - zwykle ten z góry listy.
+3. **"Jaki model ustawiliśmy wczoraj i dlaczego akurat taki?"**
+   Odpowiedź: najmocniejszy dostępny w Twoim planie - bo im mocniejszy model, tym lepiej
+   rozumie kontekst i tym lepszym jest przewodnikiem.
+   Zasada: zawsze wybieramy najmocniejszy dostępny w naszym planie - zwykle jest na
+   samej górze listy albo w ustawieniach.
 
 ## Materiał
 
@@ -44,7 +46,7 @@ czuła ciągłość, a nie powtórkę. Powiedz mniej więcej:
 "Wczoraj wspomniałem o trzech warstwach systemu - dziś zobaczysz je w praktyce,
 na przykładzie <projekt osoby>.
 
-Warstwa 1: **źródła** - folder `zrodla/`. Tu wrzucasz surowe materiały: notatki, pliki,
+Warstwa 1: **źródła** - folder `00-Zrodla/`. Tu wrzucasz surowe materiały: notatki, pliki,
 maile, PDF-y dotyczące <projekt osoby>. Ja mam ZAKAZ ich edytowania. Czytam je, ale
 oryginały zostają nietknięte - zawsze możesz sprawdzić, skąd wzięła się jakaś informacja.
 
@@ -52,7 +54,8 @@ Warstwa 2: **wiki** - strony, które ja piszę i utrzymuję na podstawie źróde
 rozmów. Na przykład karta projektu <projekt osoby>: co się dzieje, jakie są następne kroki,
 co ustaliliśmy. To warstwa robocza - ja ją aktualizuję, Ty z niej korzystasz.
 
-Warstwa 3: **schemat** - plik `CLAUDE.md`. To moja instrukcja obsługi Twojego systemu:
+Warstwa 3: **schemat** - plik zasad (`CLAUDE.md` w Claude Code albo `AGENTS.md` w Codex,
+ta sama treść). To moja instrukcja obsługi Twojego systemu:
 jakie są zasady, jakie typy stron, jak mam się zachowywać. Czytam go automatycznie na
 starcie każdej sesji.
 
@@ -87,7 +90,7 @@ Od niego zaczniemy" i dopisz odpowiedź do profilu.
    - "Opowiedz mi w 2-3 zdaniach, o co chodzi w tym projekcie i na jakim jest etapie."
    - "Jakie są 2-3 najbliższe kroki, które musisz zrobić?"
    - "Czy są jakieś ważne ustalenia, decyzje albo terminy, o których mam pamiętać?"
-3. Utwórz `projekty/<slug>.md` z szablonu `szablony/karta-projektu.md`, wypełniając go
+3. Utwórz `20-Projekty/<slug>.md` z szablonu `procedury/onboarding/szablony/karta-projektu.md`, wypełniając go
    tym, co usłyszałeś. Frontmatter DOKŁADNIE w tym schemacie:
 
    ```yaml
@@ -114,40 +117,40 @@ Zapytaj: "Masz jakieś materiały do tego projektu? Notatki, pliki, maile, cokol
 **Jeśli osoba MA materiały:**
 
 1. Poinstruuj: "Utwórz w Finderze (na Windows: w Eksploratorze) folder
-   `zrodla/<slug>/` i przeciągnij tam swoje pliki. Daj znać, jak będą na miejscu."
+   `00-Zrodla/<slug>/` i przeciągnij tam swoje pliki. Daj znać, jak będą na miejscu."
    Jeśli osoba woli, możesz utworzyć pusty folder za nią - ale pliki wrzuca sama.
 2. Gdy pliki są na miejscu, powiedz: "Teraz Ty wydajesz polecenie. Wpisz dokładnie:
-   **Wchłoń materiały z zrodla/<slug>**". Osoba wpisuje frazę WŁASNORĘCZNIE - to jej
+   **Wchłoń materiały z 00-Zrodla/<slug>**". Osoba wpisuje frazę WŁASNORĘCZNIE - to jej
    pierwsza magiczna fraza i ma wyjść z jej rąk.
 3. Przeprowadź pełny Ingest, w tej kolejności:
-   - przeczytaj wszystkie pliki w `zrodla/<slug>/` (niczego w nich nie zmieniaj - to
+   - przeczytaj wszystkie pliki w `00-Zrodla/<slug>/` (niczego w nich nie zmieniaj - to
      warstwa nietykalna),
    - **omów wnioski ZANIM cokolwiek zapiszesz**: powiedz mniej więcej "Z materiałów
      wyczytałem, że... Czy dobrze rozumiem? Coś się zdezaktualizowało?" i poczekaj
      na potwierdzenie lub korektę,
-   - dopiero po potwierdzeniu zaktualizuj kartę `projekty/<slug>.md` (status, kroki,
+   - dopiero po potwierdzeniu zaktualizuj kartę `20-Projekty/<slug>.md` (status, kroki,
      notatki, `ostatnia_aktualizacja`),
-   - zaktualizuj `index.md` (wpis w `## Projekty`: wikilink `[[<slug>]]` + jedno zdanie
+   - zaktualizuj `90-System/index.md` (wpis w `## Projekty`: wikilink `[[<slug>]]` + jedno zdanie
      opisu; usuń placeholder "jeszcze nic tu nie ma"),
-   - dopisz na końcu `log.md` wpis w formacie `## [YYYY-MM-DD] ingest | <slug>`
+   - dopisz na końcu `90-System/log.md` wpis w formacie `## [YYYY-MM-DD] ingest | <slug>`
      z 1-2 zdaniami, co wchłonąłeś. Wcześniej dopisz też wpis
      `## [YYYY-MM-DD] utworzenie karty | <slug>` za krok A, jeśli jeszcze go nie ma.
 
 **Jeśli osoba NIE MA plików:** zrób Ingest z opowieści. Powiedz: "Nie szkodzi - Twoja
 opowieść też jest materiałem". Dopytaj o 2-3 szczegóły, których jeszcze nie znasz
 (np. kto jest zaangażowany, co jest największym ryzykiem, co się ostatnio wydarzyło),
-omów wnioski tak samo jak wyżej, a potem zaktualizuj kartę, `index.md` i `log.md`
+omów wnioski tak samo jak wyżej, a potem zaktualizuj kartę, `90-System/index.md` i `90-System/log.md`
 według tych samych zasad.
 
 ### Krok C: pokaż, co powstało
 
 Pokaż osobie trzy rzeczy po kolei i wyjaśnij po jednym zdaniu na każdą:
 
-- **karta** `projekty/<slug>.md` - "to żywa pamięć projektu; zawsze aktualna, bo ja ją
+- **karta** `20-Projekty/<slug>.md` - "to żywa pamięć projektu; zawsze aktualna, bo ja ją
   aktualizuję po każdej rozmowie",
-- **wpis w `index.md`** - "to spis treści systemu; dzięki niemu ja i Ty widzimy jednym
+- **wpis w `90-System/index.md`** - "to spis treści systemu; dzięki niemu ja i Ty widzimy jednym
   rzutem oka, co w ogóle istnieje",
-- **wpis w `log.md`** - "to dziennik zmian; gdybyś za miesiąc zapytał 'kiedy to
+- **wpis w `90-System/log.md`** - "to dziennik zmian; gdybyś za miesiąc zapytał 'kiedy to
   ustaliliśmy?', tu jest odpowiedź".
 
 Zamknij klamrą: "I to jest ta księgowość, którą przejmuję ja. Ty opowiedziałeś o projekcie,
@@ -166,7 +169,7 @@ z własnych danych.
    napisz np. **Jaki jest status <projekt osoby>?** albo zapytaj o coś konkretnego
    z materiałów, które wchłonęliśmy." Osoba wpisuje pytanie własnoręcznie. Jeśli poprosi,
    żebyś zadał je za nią - odmów z uśmiechem.
-2. Odpowiedz workflowem Query: znajdź właściwe strony (zacznij od `index.md`, potem
+2. Odpowiedz workflowem Query: znajdź właściwe strony (zacznij od `90-System/index.md`, potem
    karta), odpowiedz konkretnie i przy każdym fakcie podaj cytat w formie wikilinka,
    czyli odnośnika do strony w podwójnych nawiasach, np. "najbliższy krok to X [[<slug>]]".
    Odpowiadaj WYŁĄCZNIE z plików systemu - jeśli czegoś w nich nie ma, powiedz to wprost.
@@ -177,18 +180,18 @@ z własnych danych.
    mądrzejsze będą odpowiedzi."
 4. Weryfikacja: odpowiedź zawierała co najmniej jeden wikilink, zgadzała się z treścią
    karty, a osoba potwierdziła, że odpowiedź jest zgodna z rzeczywistością. Jeśli osoba
-   wskaże błąd - potraktuj to jako mini-Ingest: popraw kartę, dopisz wpis do `log.md`
+   wskaże błąd - potraktuj to jako mini-Ingest: popraw kartę, dopisz wpis do `90-System/log.md`
    i pokaż, że baza właśnie się nauczyła.
 
 ## Kryterium ukończenia
 
 Etap jest ukończony, gdy WSZYSTKO poniżej jest prawdą:
 
-- [ ] Istnieje `projekty/<slug>.md` z poprawnym frontmatterem, sensownym `## Status`
+- [ ] Istnieje `20-Projekty/<slug>.md` z poprawnym frontmatterem, sensownym `## Status`
       i co najmniej 2 checkboxami w `## Nastepne kroki`.
-- [ ] `index.md` ma wpis o projekcie z wikilinkiem `[[<slug>]]`.
-- [ ] `log.md` ma co najmniej jeden nowy wpis z dzisiejszą datą dotyczący tego projektu.
-- [ ] Przeszedł co najmniej jeden Ingest (z plików w `zrodla/<slug>/` albo z opowieści),
+- [ ] `90-System/index.md` ma wpis o projekcie z wikilinkiem `[[<slug>]]`.
+- [ ] `90-System/log.md` ma co najmniej jeden nowy wpis z dzisiejszą datą dotyczący tego projektu.
+- [ ] Przeszedł co najmniej jeden Ingest (z plików w `00-Zrodla/<slug>/` albo z opowieści),
       a wnioski były omówione z osobą PRZED zapisem.
 - [ ] Osoba SAMA zadała pytanie bazie i dostała odpowiedź z cytatami [[wikilink]].
 - [ ] Osoba umie powiedzieć jednym zdaniem, co zbudowała i po co (zapytaj o to wprost
@@ -198,8 +201,8 @@ Etap jest ukończony, gdy WSZYSTKO poniżej jest prawdą:
 
 Podaj osobie dwa zadania na czas do następnej sesji, na jej realnych danych:
 
-1. "Dorzuć do `zrodla/<slug>/` kolejne materiały o projekcie - notatki, maile, pliki,
-   co masz pod ręką. Potem wpisz: **Wchłoń materiały z zrodla/<slug>**."
+1. "Dorzuć do `00-Zrodla/<slug>/` kolejne materiały o projekcie - notatki, maile, pliki,
+   co masz pod ręką. Potem wpisz: **Wchłoń materiały z 00-Zrodla/<slug>**."
 2. "Zadaj swojej bazie 2 pytania o projekt - jedno o status, jedno o konkret
    z materiałów. Sprawdź, czy odpowiedzi się zgadzają. Jeśli coś jest nie tak -
    powiedz mi, poprawimy razem."

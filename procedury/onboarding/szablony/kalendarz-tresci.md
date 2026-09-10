@@ -2,7 +2,7 @@
 type: kalendarz-tresci
 ---
 <!--
-Kalendarz treści - jeden plik na wszystkie kanały: kalendarz-tresci.md w korzeniu folderu.
+Kalendarz treści - jeden plik na wszystkie kanały: 30-Biznes/kalendarz-tresci.md
 
 Obsługa (dla asystenta):
 - "Dopisz do kalendarza treści: ..." - jeśli osoba podała datę i kanał, dopisz wiersz do
@@ -12,7 +12,7 @@ Obsługa (dla asystenta):
   trzeba dokończyć.
 Statusy pozycji: pomysl / szkic / opublikowane. Gdy osoba mówi, że coś opublikowała -
 zmień status na `opublikowane` i wklej link do publikacji. Każdą zmianę odnotuj
-w log.md. Tabelę trzymaj posortowaną po dacie, od najbliższej.
+w 90-System/log.md. Tabelę trzymaj posortowaną po dacie, od najbliższej.
 -->
 
 # Kalendarz treści

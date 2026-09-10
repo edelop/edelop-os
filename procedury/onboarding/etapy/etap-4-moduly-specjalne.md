@@ -12,11 +12,11 @@ Zadaj te trzy pytania, po jednym na raz. Lekko, bez egzaminowania - jeśli osoba
 przypomnij odpowiedź i jedź dalej.
 
 1. "Czym różni się projekt od obszaru?"
-   Odpowiedź: projekt ma cel i koniec - da się go skończyć (karta w `projekty/`). Obszar to
-   sfera życia bez deadline'u, którą się utrzymuje, np. zdrowie czy finanse (karta w `obszary/`).
+   Odpowiedź: projekt ma cel i koniec - da się go skończyć (karta w `20-Projekty/`). Obszar to
+   sfera życia bez deadline'u, którą się utrzymuje, np. zdrowie czy finanse (karta w `60-Obszary/`).
 2. "Jak dodajesz nową stronę do systemu magiczną frazą?"
    Odpowiedź: mówisz np. "Nowy projekt: X" albo "Dodaj kontakt: ...", a asystent tworzy plik
-   z szablonu i od razu dopisuje go do `index.md` oraz robi wpis w `log.md`.
+   z szablonu i od razu dopisuje go do `90-System/index.md` oraz robi wpis w `90-System/log.md`.
 3. "Co pokazuje wikilink, czyli `[[nazwa-strony]]`?"
    Odpowiedź: wskazuje inną stronę w systemie - łączy strony w sieć. Dzięki temu asystent
    przy odpowiedziach cytuje konkretne strony, a w Obsidianie widać graf połączeń.
@@ -51,19 +51,19 @@ Przedstaw cztery moduły. Zacznij od tych, które pasują do profilu (`.onboardi
 czym się zajmuje, ból, mapa wdrożenia) - jeśli w mapie wdrożenia z Etapu 0 coś już
 zaplanowaliście, przypomnij to. Używaj słownictwa osoby.
 
-- **P&L / budżet** (szablon: `szablony/pnl.md`). Dla osób z własnym biznesem albo klientami,
+- **P&L / budżet** (szablon: `procedury/onboarding/szablony/pnl.md`). Dla osób z własnym biznesem albo klientami,
   ale działa też jako budżet domowy. Jedna strona z przychodami i kosztami miesiąca -
   dopisujesz pozycje na bieżąco jedną frazą, a wynik miesiąca widzisz w każdej chwili
   bez otwierania Excela.
-- **Kalendarz treści** (szablon: `szablony/kalendarz-tresci.md`). Dla każdego, kto tworzy
+- **Kalendarz treści** (szablon: `procedury/onboarding/szablony/kalendarz-tresci.md`). Dla każdego, kto tworzy
   content: posty, newsletter, blog, wideo. Pomysły i terminy publikacji w jednym miejscu,
   więc nic nie ginie w notatkach na telefonie, a asystent podpowiada, co jest do zrobienia
   w tym tygodniu.
-- **Mini-CRM** (rozbudowa istniejącego folderu `kontakty/`, bez nowego szablonu). Dla osób,
+- **Mini-CRM** (rozbudowa istniejącego folderu `50-Ludzie/`, bez nowego szablonu). Dla osób,
   u których relacje to praca: klienci, partnerzy, współprace. Karty kontaktów robią się
   bogatsze (datowane notatki, o czym rozmawialiście, co obiecane), a asystent odpowiada na
   pytanie "kogo dawno nie zagadałem?".
-- **Przegląd tygodnia** (szablon: `szablony/przeglad-tygodnia.md`). Ten polecaj domyślnie
+- **Przegląd tygodnia** (szablon: `procedury/onboarding/szablony/przeglad-tygodnia.md`). Ten polecaj domyślnie
   KAŻDEMU, niezależnie od profilu. Cotygodniowy rytuał na 10-15 minut: co się wydarzyło,
   co odhaczyć, co planujesz na następny tydzień. To on sprawia, że system żyje tygodniami
   i latami, a nie umiera po miesiącu.
@@ -76,12 +76,12 @@ dwa naprawdę niż cztery na niby.
 
 Dla każdego wybranego modułu przejdźcie pełny cykl: utwórz stronę z szablonu (tam, gdzie
 moduł ma stronę), wypełnij ją ROZMOWĄ na realnych danych osoby (żadnych przykładowych
-kwot ani zmyślonych pomysłów), dopisz nową stronę do `index.md` i wpis do `log.md`,
+kwot ani zmyślonych pomysłów), dopisz nową stronę do `90-System/index.md` i wpis do `90-System/log.md`,
 a na końcu pokaż magiczną frazę, którą moduł się obsługuje.
 
 ### Jeśli wybrano P&L / budżet
 
-1. Utwórz z szablonu `szablony/pnl.md` plik `finanse/pnl-YYYY-MM.md` (bieżący miesiąc;
+1. Utwórz z szablonu `procedury/onboarding/szablony/pnl.md` plik `30-Biznes/PnL/pnl-YYYY-MM.md` (bieżący miesiąc;
    jeden plik na miesiąc, stare zostają jako archiwum) i dostosuj nagłówek do bieżącego
    miesiąca.
 2. Wypełnij rozmową: zapytaj o REALNE przychody bieżącego miesiąca (po jednym pytaniu),
@@ -90,39 +90,39 @@ a na końcu pokaż magiczną frazę, którą moduł się obsługuje.
 3. Policz i pokaż wynik miesiąca. To jest moment "wow" - powiedz mniej więcej: "I to
    jest cały myk: od teraz mówisz mi tylko 'Dopisz do P&L: ...', a bilans zawsze jest
    aktualny."
-4. Dopisz `[[pnl-YYYY-MM]]` do `index.md`, wpis do `log.md`.
+4. Dopisz `[[pnl-YYYY-MM]]` do `90-System/index.md`, wpis do `90-System/log.md`.
 5. Pokaż frazę: **"Dopisz do P&L: faktura od klienta X, 3500 zł"** (albo koszt:
    "Dopisz do P&L: hosting, 60 zł"). Wyjaśnij, że działa jak "Dopisz do projektu X" -
    Ty aktualizujesz stronę, indeks i log.
 
 ### Jeśli wybrano kalendarz treści
 
-1. Skopiuj `szablony/kalendarz-tresci.md` do `kalendarz-tresci.md` w głównym folderze.
+1. Skopiuj `procedury/onboarding/szablony/kalendarz-tresci.md` do `30-Biznes/kalendarz-tresci.md`.
 2. Wypełnij rozmową: zapytaj o PRAWDZIWE pomysły na treści, które osoba nosi w głowie
    (po jednym), i o realne terminy lub rytm publikacji (np. "post co wtorek"). Wpisz
    pomysły do kalendarza z datami.
-3. Dopisz `kalendarz-tresci` do `index.md`, wpis do `log.md`.
+3. Dopisz `kalendarz-tresci` do `90-System/index.md`, wpis do `90-System/log.md`.
 4. Pokaż frazy: **"Dopisz do kalendarza treści: pomysł na post o ..."** oraz pytanie
    **"Co mam opublikować w tym tygodniu?"** (Query po kalendarzu).
 
 ### Jeśli wybrano mini-CRM
 
-1. Nie tworzysz nowego pliku - rozbudowujecie istniejące karty w `kontakty/`. Jeśli osoba
+1. Nie tworzysz nowego pliku - rozbudowujecie istniejące karty w `50-Ludzie/`. Jeśli osoba
    ma mniej niż 2-3 kontakty, najpierw poproś, żeby SAMA dodała brakujące frazą
    "Dodaj kontakt: ...".
 2. Rozmową wzbogać 2-3 realne karty: uzupełnij `ostatni_kontakt` (kiedy faktycznie
    ostatnio rozmawiali), dopisz do `## Notatki` datowane wpisy - o czym była ostatnia
    rozmowa, co komu obiecane, co jest do domknięcia.
-3. Zaktualizuj `log.md` (i `index.md`, jeśli doszły nowe kontakty).
+3. Zaktualizuj `90-System/log.md` (i `90-System/index.md`, jeśli doszły nowe kontakty).
 4. Pokaż frazę: **"Kogo dawno nie zagadałem?"** - i od razu ją zademonstruj: przeskanuj
    pola `ostatni_kontakt` na kartach i pokaż listę od najdłużej zaniedbanych. To jest
    moment "wow" tego modułu.
 
 ### Jeśli wybrano przegląd tygodnia
 
-1. Otwórz `szablony/przeglad-tygodnia.md` i streść osobie w 2-3 zdaniach, jak wygląda
+1. Otwórz `procedury/onboarding/szablony/przeglad-tygodnia.md` i streść osobie w 2-3 zdaniach, jak wygląda
    rytuał: przechodzicie po kartach projektów i obszarów, odhaczacie zrobione, spisujecie
-   co się wydarzyło, planujecie następny tydzień, a Ty robisz wpis do `log.md`.
+   co się wydarzyło, planujecie następny tydzień, a Ty robisz wpis do `90-System/log.md`.
 2. Wyjaśnij, że ten moduł nie tworzy osobnej strony przy wdrożeniu - to workflow. Uruchamia
    go kanoniczna fraza **"Przegląd tygodnia"**, a Ty prowadzisz go według szablonu.
 3. Umów porę: zapytaj, kiedy w tygodniu osoba realnie ma 10-15 minut spokoju (np. niedziela
@@ -144,7 +144,7 @@ wykonuj za nią - ona wpisuje frazę własnymi rękami:
   przegląd - skróconą wersję na 5-10 minut (2-3 karty, plan na kilka dni), żeby poczuła
   rytm bez maratonu.
 
-Weryfikacja: po każdym użyciu sprawdź, że strona faktycznie się zmieniła i że w `log.md`
+Weryfikacja: po każdym użyciu sprawdź, że strona faktycznie się zmieniła i że w `90-System/log.md`
 jest wpis. Pokaż osobie różnicę ("zobacz, co dopisało się w pliku"). Na koniec poproś,
 żeby jednym zdaniem powiedziała, do czego jej ten moduł - jeśli umie, etap siedzi.
 
@@ -153,10 +153,10 @@ jest wpis. Pokaż osobie różnicę ("zobacz, co dopisało się w pliku"). Na ko
 Etap jest `ukonczony`, gdy:
 
 - [ ] Osoba wybrała 1-2 moduły i każdy z nich istnieje z REALNYMI danymi (plik
-      `finanse/pnl-YYYY-MM.md` lub `kalendarz-tresci.md` z prawdziwymi pozycjami,
-      wzbogacone karty w `kontakty/`, albo przeprowadzony pierwszy mini przegląd
-      tygodnia z wpisem w `log.md`).
-- [ ] Każda nowa strona jest dopisana do `index.md`, a operacje mają wpisy w `log.md`.
+      `30-Biznes/PnL/pnl-YYYY-MM.md` lub `30-Biznes/kalendarz-tresci.md` z prawdziwymi pozycjami,
+      wzbogacone karty w `50-Ludzie/`, albo przeprowadzony pierwszy mini przegląd
+      tygodnia zapisany jako `40-Przeglady/YYYY-MM-DD.md`, z wpisem w `90-System/log.md`).
+- [ ] Każda nowa strona jest dopisana do `90-System/index.md`, a operacje mają wpisy w `90-System/log.md`.
 - [ ] Osoba użyła KAŻDEGO wdrożonego modułu co najmniej raz SAMA, własną frazą.
 - [ ] Osoba potrafi jednym zdaniem powiedzieć, do czego służy jej każdy wybrany moduł.
 

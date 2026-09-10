@@ -40,14 +40,14 @@ do X" zadziała tak samo jak "Dodaj taska do X", bo asystent rozumie intencję.
 |---|---|
 | "Nowy projekt: X" | powstaje karta projektu, od razu wpisana do indeksu i dziennika |
 | "Dopisz do projektu X: ..." | karta projektu się aktualizuje, a dziennik zapamiętuje zmianę |
-| "Wchłoń materiały z zrodla/X" | Asystent czyta surowe materiały i zamienia je w strony wiki |
+| "Wchłoń materiały z 00-Zrodla/X" | Asystent czyta surowe materiały i zamienia je w strony wiki |
 | "Dodaj taska do X: ..." | nowe zadanie ląduje na liście kroków projektu X (albo tasków obszaru X) |
 | "Co mam dziś do zrobienia?" | dostajesz listę wszystkich niezrobionych zadań ze wszystkich kart |
 | "Jaki jest status X?" / "Co się dzieje?" | dostajesz streszczenie z odnośnikami do konkretnych stron |
 | "Zapisz decyzję: ..." | powstaje strona decyzji: kontekst, opcje, wybór - do sprawdzenia po czasie |
 | "Dodaj kontakt: ..." | powstaje karta osoby: kim jest i notatki z rozmów |
 | "Dodaj cel: ..." | powstaje strona celu z miarą i terminem |
-| "Odśwież dashboard" | dashboard przebudowuje się ze świeżych danych całego systemu |
+| "Odśwież dashboard" | `HOME.md` - Twoja strona startowa - przebudowuje się ze świeżych danych całego systemu |
 | "Przegląd tygodnia" | cotygodniowy rytuał: co zrobione, co się wydarzyło, plan na nowy tydzień |
 | "Sprawdź spójność" | Asystent robi porządki: szuka sprzeczności, starych danych i zgubionych linków |
 | "Podsumuj dzień" | wieczorne domknięcie: odhaczone taski, nowe sprawy, czysty plan na jutro |
@@ -74,13 +74,14 @@ Cztery nawyki utrzymują system przy życiu:
 Rozmowa z asystentem to blat biurka, Twoje pliki to szafka. Blat się zapełnia, szafka nigdy -
 wszystko ważne i tak ląduje w plikach.
 
-- **Jedna sprawa = jedna sesja.** Kończysz temat, zaczynasz następny? Wpisz `/clear` -
-  rozmowa startuje od zera, a asystent i tak zna Twój system, bo na starcie każdej sesji
-  czyta jego schemat. Niczego nie tracisz.
+- **Jedna sprawa = jedna sesja.** Kończysz temat, zaczynasz następny? W Claude Code
+  wpisz `/clear`, w Codex zacznij po prostu nową rozmowę - rozmowa startuje od zera,
+  a asystent i tak zna Twój system, bo na starcie każdej sesji czyta jego schemat.
+  Niczego nie tracisz.
 - **Przerywasz w środku pracy?** Powiedz najpierw: "Zapisz gdzie skończyliśmy". W nowej
   sesji wystarczy: "kontynuujmy [temat]".
 - **Asystent po długiej rozmowie "zgłupiał"?** To nie awaria, tylko zawalony blat: "Zapisz
-  gdzie skończyliśmy", potem `/clear`, potem "kontynuujmy". Trzy ruchy, zero strat.
+  gdzie skończyliśmy", potem czysta kartka, potem "kontynuujmy". Trzy ruchy, zero strat.
 - **Rozmowa urwała się w środku pracy?** Otwórz folder systemu jeszcze raz i napisz
   "kontynuujmy" - asystent czyta na starcie plik zasad i dziennik, więc wie, gdzie
   skończyliście. (W terminalu Claude Code do ostatniej rozmowy wraca `claude --continue`.)
@@ -97,7 +98,7 @@ System to nie tylko taski. Kilka pomysłów - każdy zaczynasz zwykłym zdaniem:
   ostatnie ustalenia, obietnice, otwarte tematy.
 - **Planowanie wyjazdu.** "Nowy projekt: wyjazd do X" - rezerwacje, lista rzeczy
   do ogarnięcia i notatki w jednym miejscu zamiast w pięciu aplikacjach.
-- **Nauka nowego tematu.** Wrzuć artykuły i notatki do `zrodla/` i powiedz
+- **Nauka nowego tematu.** Wrzuć artykuły i notatki do `00-Zrodla/` i powiedz
   "Wchłoń materiały..." - powstanie Twoja strona wiedzy o temacie, która rośnie
   z każdym kolejnym materiałem.
 - **Automatyzacje i integracje.** Twój asystent umie dużo więcej, niż widać w codziennym

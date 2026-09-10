@@ -10,9 +10,9 @@ Przy każdej regeneracji:
 1. NIE zmieniaj CSS ani struktury HTML - podmieniasz WYŁĄCZNIE zawartość
    między znacznikami <!- - SLOT:NAZWA - -> ... <!- - /SLOT:NAZWA - -> oraz
    liczby/teksty wyraźnie oznaczone w komentarzach slotów.
-2. Dane bierzesz z tych samych miejsc co dashboard.md: nieodhaczone checkboxy
+2. Dane bierzesz z tych samych miejsc co HOME.md: nieodhaczone checkboxy
    z kart (## Nastepne kroki projektów, ## Aktualne taski obszarów), statusy
-   i priorytety z frontmattera, 5 ostatnich wpisów z log.md, dzisiejsza data.
+   i priorytety z frontmattera, 5 ostatnich wpisów z 90-System/log.md, dzisiejsza data.
 3. Sekcje-duchy (class="ghost", z etykietą MODUŁ ŚPI) to moduły, których osoba
    NIE prowadzi. Zostawiasz je jako duchy - NIE usuwaj ich, to celowa wystawa
    możliwości. Gdy osoba wdroży moduł (np. cele): usuń class="ghost" i cały
@@ -287,7 +287,7 @@ Przy każdej regeneracji:
       </div>
       <!-- SLOT:STATY - przelicz: taski = nieodhaczone checkboxy ze wszystkich kart;
            projekty aktywne = karty ze status: aktywny; strony wiki = wszystkie strony
-           systemu; wpisy = liczba wpisów w log.md -->
+           systemu; wpisy = liczba wpisów w 90-System/log.md -->
       <div class="grid g4">
         <div class="tile glow stat rv d1" style="--c:var(--amber)">
           <div class="k">Taski na radarze</div><div class="n n-amber">7</div><div class="s">nieodhaczone, wszystkie karty</div>
@@ -347,7 +347,7 @@ Przy każdej regeneracji:
     <section id="projekty">
       <div class="sec-head rv d3" style="--c:var(--green)">
         <span class="kdot"></span><h2>Projekty</h2><span class="sec-line"></span>
-        <span class="sec-meta">z kart w projekty/</span>
+        <span class="sec-meta">z kart w 20-Projekty/</span>
       </div>
       <div class="grid g3">
         <!-- SLOT:PROJEKTY - jeden tile na projekt (bez zakończonych). Chipy statusu:
@@ -491,10 +491,10 @@ Przy każdej regeneracji:
     <section id="dziennik">
       <div class="sec-head rv d5" style="--c:var(--slate)">
         <span class="kdot"></span><h2>Dziennik</h2><span class="sec-line"></span>
-        <span class="sec-meta">5 ostatnich wpisów z log.md</span>
+        <span class="sec-meta">5 ostatnich wpisów z 90-System/log.md</span>
       </div>
       <div class="log rv d5">
-        <!-- SLOT:DZIENNIK - 5 ostatnich wpisów z log.md, najnowszy na górze -->
+        <!-- SLOT:DZIENNIK - 5 ostatnich wpisów z 90-System/log.md, najnowszy na górze -->
         <div class="log-row"><span class="log-date">2026-01-01</span><span class="log-op"><b>ingest</b> · Remont łazienki - termin glazurnika, nowy task pilny</span></div>
         <div class="log-row"><span class="log-date">2025-12-31</span><span class="log-op"><b>dzien</b> · podsumowanie - odhaczone 2 taski, doszła oferta</span></div>
         <div class="log-row"><span class="log-date">2025-12-30</span><span class="log-op"><b>ingest</b> · Klient: pracownia - notatka po rozmowie z Anną</span></div>

@@ -13,10 +13,10 @@ przypomnij odpowiedź jednym zdaniem i jedź dalej.
 
 1. "Jakimi dwiema magicznymi frazami tworzysz projekt i dopisujesz do niego zadanie?"
    Odpowiedź: "Nowy projekt: X" oraz "Dodaj taska do X: ...".
-2. "log.md jest append-only - co to znaczy w praktyce?"
-   Odpowiedź: do log.md tylko dopisujemy nowe wpisy na końcu. Nic nie edytujemy, nic nie
+2. "90-System/log.md jest append-only - co to znaczy w praktyce?"
+   Odpowiedź: do 90-System/log.md tylko dopisujemy nowe wpisy na końcu. Nic nie edytujemy, nic nie
    kasujemy. Dzięki temu log jest wiarygodną historią systemu.
-3. "Po co w ogóle jest index.md?"
+3. "Po co w ogóle jest 90-System/index.md?"
    Odpowiedź: to katalog wszystkich stron. Asystent czyta go na starcie zamiast przeszukiwać
    cały folder - od razu wie, co istnieje i gdzie to leży.
 
@@ -82,13 +82,13 @@ kartek robi się sieć - i właśnie dzięki tej sieci ja, odpowiadając na Twoj
 mogę skakać po powiązanych stronach zamiast zgadywać."
 
 Dodaj jedno zdanie o samym slugu: w [[...]] wpisujemy nazwę pliku bez .md, np. strona
-`kontakty/anna-nowak.md` to [[anna-nowak]].
+`50-Ludzie/anna-nowak.md` to [[anna-nowak]].
 
 ## Działanie
 
 Budujecie razem, na realnych danych osoby. Treść stron powstaje z rozmowy - Ty pytasz
 (jedno pytanie na raz), osoba opowiada, Ty piszesz pliki. Każdą nową stronę od razu
-dopisz do `index.md` i odnotuj w `log.md` (format: `## [YYYY-MM-DD] utworzono | <nazwa>`).
+dopisz do `90-System/index.md` i odnotuj w `90-System/log.md` (format: `## [YYYY-MM-DD] utworzono | <nazwa>`).
 
 ### Krok 1: wybierzcie 1-2 obszary
 
@@ -99,26 +99,9 @@ więcej niż dwóch obszarów - lepiej mniej stron, które żyją, niż katalog 
 ### Krok 2: utwórz kartę obszaru
 
 Dopytaj o 2-4 bieżące taski w tym obszarze ("Co w tej sferze wisi Ci teraz nad głową?")
-i o 1-2 rzeczy warte zanotowania. Utwórz `obszary/<slug>.md` dokładnie z tego szablonu:
-
-```markdown
----
-type: obszar
-ostatni_przeglad: YYYY-MM-DD
-tagi: []
----
-
-# <Nazwa obszaru>
-
-## Aktualne taski
-
-- [ ] <task z rozmowy>
-- [ ] <task z rozmowy>
-
-## Notatki
-
-**YYYY-MM-DD** - <notatka z rozmowy>
-```
+i o 1-2 rzeczy warte zanotowania. Utwórz `60-Obszary/<slug>.md` z szablonu
+`procedury/onboarding/szablony/obszar.md` - otwórz szablon i wypełnij go razem z osobą,
+pole po polu, danymi z rozmowy.
 
 Powtórz dla drugiego obszaru, jeśli osoba go wybrała. Przypomnij przy okazji: "Fraza
 'Dodaj taska do X: ...' działa też dla obszaru - task ląduje w sekcji Aktualne taski."
@@ -127,69 +110,22 @@ Powtórz dla drugiego obszaru, jeśli osoba go wybrała. Przypomnij przy okazji:
 
 Nie twórz na siłę. Jeśli w Kroku 3 Materiału typ okazał się trafiony - zaproponuj:
 
-Cel (`cele/<slug>.md`) - dopytaj o termin, miarę i "po co", potem zapisz z szablonu:
+Cel (`10-Cele/<slug>.md`) - dopytaj o termin, miarę i "po co", potem zapisz z szablonu
+`procedury/onboarding/szablony/cel.md` - otwórz go i wypełnij pole po polu.
 
-```markdown
----
-type: cel
-horyzont: kwartal        # rok | kwartal | miesiac
-termin: YYYY-MM-DD
-miara: "<KPI>"
-status: w-trakcie        # w-trakcie | osiagniety | porzucony | zagrozony
-powiazane_projekty: []
----
-
-# <Nazwa celu>
-
-## Dlaczego ten cel
-
-<z rozmowy>
-
-## Jak mierzymy
-
-<z rozmowy>
-
-## Powiazane
-
-- [[<slug-projektu>]]
-
-## Ostatni update
-
-**YYYY-MM-DD** - cel założony
-```
-
-Kontakt (`kontakty/<slug>.md`) - dopytaj kim jest ta osoba i co warto pamiętać:
-
-```markdown
----
-type: kontakt
-firma:
-rola:
-ostatni_kontakt: YYYY-MM-DD
-tagi: []
-projekty: []
----
-
-# <Imię i nazwisko>
-
-## Kim jest
-
-<3-5 zdań z rozmowy>
-
-## Notatki
-
-**YYYY-MM-DD** - <ustalenie / obserwacja>
-```
+Kontakt (`50-Ludzie/<slug>.md`) - dopytaj kim jest ta osoba i co warto pamiętać, potem
+zapisz z szablonu `procedury/onboarding/szablony/kontakt.md` - otwórz go i wypełnij
+pole po polu.
 
 Jeśli ani cel, ani kontakt nie pasują, a w rozmowie wypłynęła świeża decyzja - możesz
-zamiast tego założyć stronę decyzji (`decyzje/YYYY-MM-DD-<slug>.md`, type: decyzja,
-sekcje: Kontekst, Opcje, Wybor, Oczekiwany rezultat, Faktyczny rezultat (do uzupelnienia)).
+zamiast tego założyć stronę decyzji (`70-Decyzje/YYYY-MM-DD-<slug>.md`) z szablonu
+`procedury/onboarding/szablony/decyzja.md`.
 
 ### Krok 4: pokaż wikilinki w akcji
 
 Teraz połącz strony - rób to przy osobie i mów co robisz:
 
-- W karcie projektu z Etapu 1 (`projekty/<slug>.md`), w sekcji `## Linki`, dodaj link do
+- W karcie projektu z Etapu 1 (`20-Projekty/<slug>.md`), w sekcji `## Linki`, dodaj link do
   powiązanego obszaru [[<slug-obszaru>]] i - jeśli istnieje - do kontaktu [[<slug-kontaktu>]].
 - W stronie celu, w sekcji `## Powiazane`, dodaj [[<slug-projektu>]] i wpisz slug projektu
   do `powiazane_projekty`.
@@ -212,12 +148,12 @@ Osoba SAMA dodaje jedną stronę magiczną frazą. Ty tylko instruujesz i sprawd
    'Dodaj kontakt: ...' - z prawdziwą rzeczą z Twojego życia, nie wymyśloną." (Jeśli
    kontakty nie pasują do profilu, zaproponuj cel albo 'Zapisz decyzję: ...'.)
 2. Gdy osoba wpisze frazę - utwórz stronę z właściwego szablonu, dopytując najwyżej
-   o 1-2 brakujące rzeczy (np. termin celu). Zaktualizuj index.md i log.md.
-3. Poproś osobę, żeby SAMA sprawdziła efekt: niech otworzy nowy plik i `index.md`
-   (albo zapyta Cię "co jest w index.md?") i potwierdzi, że strona istnieje i figuruje
+   o 1-2 brakujące rzeczy (np. termin celu). Zaktualizuj 90-System/index.md i 90-System/log.md.
+3. Poproś osobę, żeby SAMA sprawdziła efekt: niech otworzy nowy plik i `90-System/index.md`
+   (albo zapyta Cię "co jest w 90-System/index.md?") i potwierdzi, że strona istnieje i figuruje
    w katalogu.
 4. Ty zweryfikuj po swojej stronie: plik jest we właściwym folderze, frontmatter zgodny
-   ze schematem, wpis w index.md i log.md obecny. Jeśli czegoś brakuje - napraw i powiedz
+   ze schematem, wpis w 90-System/index.md i 90-System/log.md obecny. Jeśli czegoś brakuje - napraw i powiedz
    co poprawiłeś.
 
 Na koniec poproś osobę, żeby jednym zdaniem powiedziała, co dziś zbudowała i po co.
@@ -226,12 +162,12 @@ a strony się łączą" - siedzi.
 
 ## Kryterium ukończenia
 
-- [ ] Istnieje co najmniej 1 plik w `obszary/` z poprawnym frontmatterem i taskami
+- [ ] Istnieje co najmniej 1 plik w `60-Obszary/` z poprawnym frontmatterem i taskami
       w `## Aktualne taski`.
 - [ ] Co najmniej 1 strona (cel, kontakt lub decyzja) została dodana SAMODZIELNIE
       przez osobę magiczną frazą.
 - [ ] W systemie są co najmniej 3 wikilinki [[...]] łączące różne strony.
-- [ ] Każda nowa strona ma wpis w `index.md` i w `log.md`.
+- [ ] Każda nowa strona ma wpis w `90-System/index.md` i w `90-System/log.md`.
 - [ ] Osoba potrafi jednym zdaniem powiedzieć, czym różni się projekt od obszaru.
 
 ## Praca domowa

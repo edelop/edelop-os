@@ -20,7 +20,7 @@ przypomnij i jedź dalej.
    (Etap 4) - przypomnij go i zapowiedz, że dziś pełna wersja Linta; w przeciwnym razie
    zapowiedz, że dziś będzie premiera.
 2. **"Gdzie w tym folderze asystentowi NIE wolno nic zmieniać?"**
-   Odpowiedź: w `zrodla/`. To surowe materiały - asystent je czyta, ale nigdy nie edytuje.
+   Odpowiedź: w `00-Zrodla/`. To surowe materiały - asystent je czyta, ale nigdy nie edytuje.
    Dzięki temu zawsze można wrócić do oryginału.
 3. **"A teraz pytanie osobiste: która magiczna fraza jest Twoją ulubioną? Której używasz
    najczęściej albo która najbardziej Cię zaskoczyła?"**
@@ -63,21 +63,22 @@ coś nie działa. Jak wrócisz do systemu po dwóch tygodniach przerwy, zaczynas
 ### 1. Dashboard
 
 - Weź szablon `procedury/onboarding/szablony/dashboard.md` i utwórz z niego
-  `dashboard.md` w korzeniu folderu.
+  `HOME.md` w korzeniu folderu.
 - Wypełnij go REALNYMI danymi osoby, nie przykładami (dokładnie wg instrukcji przebudowy
   z szablonu):
-  - wszystkie nieodhaczone checkboxy z `## Nastepne kroki` kart w `projekty/` i z
-    `## Aktualne taski` w `obszary/`, pogrupowane per strona, z wikilinkami do kart,
+  - wszystkie nieodhaczone checkboxy z `## Nastepne kroki` kart w `20-Projekty/` i z
+    `## Aktualne taski` w `60-Obszary/`, pogrupowane per strona, z wikilinkami do kart,
   - projekty: najpierw aktywne (wysoki priorytet na górze), potem wstrzymane;
     zakończone pomiń,
-  - cele z `cele/` tylko o statusie w-trakcie lub zagrozony, z miarą i terminem
+  - cele z `10-Cele/` tylko o statusie w-trakcie lub zagrozony, z miarą i terminem
     (jeśli osoba ma cele),
-  - 5 ostatnich wpisów z `log.md`,
+  - 5 ostatnich wpisów z `90-System/log.md`,
   - data wygenerowania.
 - Uwzględnij TYLKO moduły, które osoba faktycznie ma. Jeśli pominęła np. cele, sekcja celów
   nie istnieje w jej dashboardzie.
 - Pokaż osobie gotowy plik i powiedz mniej więcej: "To zdjęcie Twojego systemu na dziś.
-  Kiedy chcesz świeże, mówisz po prostu: Odśwież dashboard. Za chwilę sam(a) to zrobisz."
+  Plik nazywa się HOME.md - to Twoja strona startowa. Kiedy chcesz świeże, mówisz po
+  prostu: Odśwież dashboard. Za chwilę sam(a) to zrobisz."
 
 ### 2. Obsidian - zobacz swój system jako sieć
 
@@ -104,8 +105,8 @@ działa bez Obsidiana (to tylko podgląd, nie silnik) i że może wrócić do te
   czyli przegląd spójności. Ja przejrzę cały system i poszukam czterech rzeczy:
   sprzeczności między stronami, nieaktualnych danych, stron-sierot bez żadnego linku
   i brakujących linków tam, gdzie strony o sobie wspominają."
-- Wykonaj Lint naprawdę: przejdź strony w `projekty/`, `obszary/`, `cele/`, `kontakty/`,
-  `decyzje/`, sprawdź `index.md` (czy kataloguje wszystkie strony) i daty
+- Wykonaj Lint naprawdę: przejdź strony w `20-Projekty/`, `60-Obszary/`, `10-Cele/`, `50-Ludzie/`,
+  `70-Decyzje/`, sprawdź `90-System/index.md` (czy kataloguje wszystkie strony) i daty
   `ostatnia_aktualizacja`. Zgłoś znaleziska i zaproponuj poprawki - osoba decyduje.
 - Na tak młodym systemie znajdziesz mało albo nic. To dobrze - powiedz wprost: "System ma
   kilka dni, więc jest czysty. Lint to rytuał na przyszłość: gdy stron będzie 50, to on
@@ -152,15 +153,15 @@ Po zgodzie:
 - Zaktualizuj `.onboarding/postep.md`: Etap 5 na `ukonczony` z dzisiejszą datą - etapy 0-5
   mają być teraz `ukonczony` lub `pominiety`. (Wiersz Etapu 6 - bonusu - zostaje
   `do-zrobienia`; to normalne.)
-- Dopisz na końcu `log.md` wpis: `## [YYYY-MM-DD] onboarding | ukonczony` z jednym zdaniem
+- Dopisz na końcu `90-System/log.md` wpis: `## [YYYY-MM-DD] onboarding | ukonczony` z jednym zdaniem
   podsumowania (np. ile stron ma system na dziś).
 - Jeśli migawki gita są włączone (sprawdź najpierw notatkę o gicie w
   `.onboarding/postep.md` - jeśli osoba w Etapie 2 odmówiła, NIE proponuj, nawet gdy
   katalog `.git` istnieje), zaproponuj commit, czyli zapisanie migawki wszystkich zmian:
   np. `git add -A && git commit -m "Onboarding ukonczony - system gotowy"`. Osoba
   zatwierdza, Ty wykonujesz. Jeśli gita nie ma - pomiń bez komentarza.
-- CELEBRACJA. Policz konkretne liczby z systemu (strony w `projekty/`, `obszary/`, `cele/`,
-  `kontakty/`, `decyzje/`; nieodhaczone taski; wpisy w `log.md`) i powiedz mniej więcej:
+- CELEBRACJA. Policz konkretne liczby z systemu (strony w `20-Projekty/`, `60-Obszary/`, `10-Cele/`,
+  `50-Ludzie/`, `70-Decyzje/`; nieodhaczone taski; wpisy w `90-System/log.md`) i powiedz mniej więcej:
   "Zobacz, co zbudowałaś/eś przez ten tydzień: [N] stron wiki, [M] tasków na radarze,
   [K] wpisów w dzienniku, dashboard i mapę połączeń. To jest Twój Edelop OS -
   zbudowany Twoimi rękami, ze zwykłych plików, które są w 100% Twoje. Tydzień
@@ -187,9 +188,9 @@ Osoba wykonuje SAMA, Ty tylko instruujesz i sprawdzasz:
 
 1. Poproś, żeby osoba dopisała jeden drobny, prawdziwy task swoją frazą, np.
    "Dodaj taska do [jej projekt]: ...". Wykonaj.
-2. Potem osoba wpisuje: **"Odśwież dashboard"**. Przebuduj `dashboard.md` i pokaż różnicę -
+2. Potem osoba wpisuje: **"Odśwież dashboard"**. Przebuduj `HOME.md` i pokaż różnicę -
    nowy task ma być widoczny w dashboardzie.
-3. Jeśli osoba ma Obsidiana: poproś, żeby otworzyła `dashboard.md` i widok grafu i sama
+3. Jeśli osoba ma Obsidiana: poproś, żeby otworzyła `HOME.md` i widok grafu i sama
    zobaczyła, gdzie nowy element siedzi w sieci.
 
 Weryfikacja: dashboard zawiera świeżo dodany task i dzisiejszą datę wygenerowania. Jeśli
@@ -198,16 +199,16 @@ i odświeżenie widoku. Dokładnie tak wygląda codzienność od jutra.
 
 ## Kryterium ukończenia
 
-- [ ] `dashboard.md` istnieje w korzeniu i zawiera realne dane osoby (taski, projekty,
+- [ ] `HOME.md` istnieje w korzeniu i zawiera realne dane osoby (taski, projekty,
       ostatnie wpisy logu, data wygenerowania)
 - [ ] Osoba samodzielnie odpaliła "Odśwież dashboard" i widziała efekt
 - [ ] Pierwszy Lint wykonany i omówiony (nawet jeśli nic nie znalazł)
-- [ ] `CLAUDE.md` w korzeniu NADPISANY wersją produkcyjną, spersonalizowaną (tylko moduły
-      osoby, jej słownictwo); nie ma w nim już instrukcji onboardingowych
+- [ ] `CLAUDE.md` i `AGENTS.md` w korzeniu NADPISANE wersją produkcyjną, spersonalizowaną
+      (tylko moduły osoby, jej słownictwo); nie ma w nich już instrukcji onboardingowych
 - [ ] `INSTRUKCJA.md` istnieje w korzeniu i jest spersonalizowana
 - [ ] `.onboarding/postep.md`: etapy 0-5 mają status `ukonczony` lub `pominiety`
       (Etap 6 - bonus - może zostać `do-zrobienia`)
-- [ ] Wpis `## [YYYY-MM-DD] onboarding | ukonczony` na końcu `log.md`
+- [ ] Wpis `## [YYYY-MM-DD] onboarding | ukonczony` na końcu `90-System/log.md`
 - [ ] Tydzień próbny umówiony: osoba zna rytm rano ("Co mam dziś do zrobienia?")
       i wieczorem ("Podsumuj dzień")
 - [ ] Obsidian jest opcjonalny - jego brak NIE blokuje ukończenia etapu
@@ -247,7 +248,7 @@ To zapis FINALNY - zrób go starannie:
   że w etapach 0-5 nie został żaden status `do-zrobienia` ani `w-trakcie` (Etap 6 - bonus -
   może zostać `do-zrobienia`).
 - Sekcja "Gdzie skończyliśmy": wpisz "Onboarding ukończony w całości [YYYY-MM-DD]. System
-  działa samodzielnie - schemat w CLAUDE.md, ściąga w INSTRUKCJA.md. Bonusowy Etap 6
+  działa samodzielnie - schemat w CLAUDE.md i AGENTS.md, ściąga w INSTRUKCJA.md. Bonusowy Etap 6
   (kokpit w przeglądarce) czeka na życzenie."
 - Sekcja "Praca domowa": wpisz "Tydzień próbny do [data +7 dni]: rano 'Co mam dziś do
   zrobienia?', wieczorem 'Podsumuj dzień', 7. dnia 'Przegląd tygodnia'."
@@ -255,4 +256,4 @@ To zapis FINALNY - zrób go starannie:
   o preferencjach" w `.onboarding/profil.md` - przydadzą się w codziennej pracy.
 - Jeśli etap został przerwany w połowie: zostaw status `w-trakcie` i zapisz w "Gdzie
   skończyliśmy" dokładnie, na którym kroku Działania stanęliście (np. "skończyliśmy na
-  kroku 3 - Lint; zaczynamy od kroku 4 - przepisanie CLAUDE.md").
+  kroku 3 - Lint; zaczynamy od kroku 4 - przepisanie CLAUDE.md i AGENTS.md").

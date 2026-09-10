@@ -42,12 +42,12 @@ na każdym systemie i zostają z osobą, nawet gdy zmieni asystenta albo narzęd
 Osoba między etapami używa systemu w świeżych sesjach (praca domowa). Wtedy też
 przestrzegaj tych zasad:
 
-1. `zrodla/` jest TYLKO do odczytu - nigdy nie edytuj ani nie kasuj tam plików.
-2. `log.md` jest append-only: dopisuj wyłącznie na końcu, format wpisu
+1. `00-Zrodla/` jest TYLKO do odczytu - nigdy nie edytuj ani nie kasuj tam plików.
+2. `90-System/log.md` jest append-only: dopisuj wyłącznie na końcu, format wpisu
    `## [YYYY-MM-DD] operacja | nazwa` plus 1-2 zdania.
-3. Ingest (frazy typu "Dopisz do projektu X: ...", "Wchłoń materiały z zrodla/X"):
+3. Ingest (frazy typu "Dopisz do projektu X: ...", "Wchłoń materiały z 00-Zrodla/X"):
    przeczytaj materiał → omów wnioski z osobą PRZED zapisem → zaktualizuj stronę
-   (i pole `ostatnia_aktualizacja`) → nowa strona trafia do `index.md` → wpis do `log.md`.
+   (i pole `ostatnia_aktualizacja`) → nowa strona trafia do `90-System/index.md` → wpis do `90-System/log.md`.
 4. Query (pytania typu "Co mam dziś do zrobienia?", "Jaki jest status X?"):
    odpowiadaj WYŁĄCZNIE z plików systemu, z cytatami `[[wikilink]]`; taski to
    nieodhaczone checkboxy na kartach (`## Nastepne kroki` projektów,
@@ -55,7 +55,7 @@ przestrzegaj tych zasad:
 5. Jeśli w `.onboarding/postep.md` jest odnotowane, że migawki gita zostały włączone
    w Etapie 2 - po większej operacji (nowa strona, Ingest źródeł) zrób commit.
 6. Fraza "Zapisz gdzie skończyliśmy" (uczona w Etapie 2): dopisz bieżący stan pracy
-   do właściwej karty i do `log.md`, po czym potwierdź jednym zdaniem, że można
+   do właściwej karty i do `90-System/log.md`, po czym potwierdź jednym zdaniem, że można
    bezpiecznie przerwać albo zacząć świeżą sesję.
 7. Świeża rozmowa (test w Etapie 2, a potem zwykły nawyk "jedna sprawa = jedna sesja"):
    w Claude Code robi to komenda `/clear`, w Codex - po prostu nowa rozmowa. Efekt ma być
@@ -69,7 +69,7 @@ procedurę chodzi, i czytasz odpowiedni plik:
 | Osoba mówi mniej więcej | Ty czytasz i wykonujesz |
 |---|---|
 | "zaczynajmy onboarding", "kontynuujmy", "następny etap", "co dalej w nauce" | bieżący etap z `procedury/onboarding/etapy/` (patrz "Onboarding" niżej) |
-| "Dopisz do projektu X: ...", "Wchłoń materiały z zrodla/X" | procedura Ingest - zasada 3 wyżej |
+| "Dopisz do projektu X: ...", "Wchłoń materiały z 00-Zrodla/X" | procedura Ingest - zasada 3 wyżej |
 | "Co mam dziś do zrobienia?", "Jaki jest status X?" | procedura Query - zasada 4 wyżej |
 | "Zapisz gdzie skończyliśmy" | procedura zapisu stanu - zasada 6 wyżej |
 
@@ -91,7 +91,7 @@ jest bieżący, mówi `.onboarding/postep.md`.
 
 - Nie dotykaj niczego poza tym folderem. Jeśli osoba prosi o operację na plikach spoza
   folderu - upewnij się najpierw, że wie, co robi.
-- `zrodla/` i `log.md` mają swoje twarde zasady (wyżej): odczyt-only i append-only.
+- `00-Zrodla/` i `90-System/log.md` mają swoje twarde zasady (wyżej): odczyt-only i append-only.
 - Przed operacją, która kasuje albo nadpisuje istniejącą treść, powiedz wprost, co zniknie,
   i poczekaj na zgodę.
 - Jeśli migawki gita są włączone, commit po większej operacji jest siatką bezpieczeństwa -

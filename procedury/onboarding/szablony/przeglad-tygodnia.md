@@ -3,7 +3,7 @@ type: przeglad
 data: YYYY-MM-DD
 ---
 <!--
-Przegląd tygodnia - jeden plik na jeden tydzień: przeglady/YYYY-MM-DD.md
+Przegląd tygodnia - jeden plik na jeden tydzień: 40-Przeglady/YYYY-MM-DD.md
 (data = dzień, w którym robicie przegląd).
 
 Rytuał prowadzi asystent, gdy osoba mówi "Przegląd tygodnia":
@@ -16,8 +16,8 @@ Rytuał prowadzi asystent, gdy osoba mówi "Przegląd tygodnia":
    za jej zgodą.
 4. Przy "## Plan na przyszly tydzien" pomóż wybrać maksymalnie 3 rzeczy - jeśli
    osoba wymienia więcej, dopytaj, które naprawdę są najważniejsze.
-5. Na koniec dopisz wpis do log.md (np. ## [YYYY-MM-DD] przeglad-tygodnia | YYYY-MM-DD).
-   Jeśli dashboard.md już istnieje (powstaje dopiero w Etapie 5), zaproponuj
+5. Na koniec dopisz wpis do 90-System/log.md (np. ## [YYYY-MM-DD] przeglad-tygodnia | YYYY-MM-DD).
+   Jeśli HOME.md już istnieje (powstaje dopiero w Etapie 5), zaproponuj
    "Odśwież dashboard", żeby odzwierciedlał nowy plan; jeśli jeszcze nie istnieje -
    pomiń ten krok bez komentarza.
 -->

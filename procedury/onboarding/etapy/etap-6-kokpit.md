@@ -5,32 +5,35 @@
 Po tym etapie osoba ma `kokpit.html` - swoje centrum dowodzenia w wersji wizualnej:
 kolorową stronę otwieraną dwuklikiem, wygenerowaną z jej realnych danych. Umie ją
 odświeżać frazą "Odśwież kokpit", rozumie, że to widok (nie źródło prawdy), a sekcje-duchy
-pokazują jej, o co system może jeszcze urosnąć. `CLAUDE.md` i `INSTRUKCJA.md` znają kokpit.
+pokazują jej, o co system może jeszcze urosnąć. Plik zasad (`CLAUDE.md` i `AGENTS.md`)
+oraz `INSTRUKCJA.md` znają kokpit.
 
 ## Zanim zaczniesz
 
 Ten etap jest BONUSEM i uruchamiasz go wyłącznie, gdy osoba o niego poprosiła
 ("pokaż mi kokpit", "chcę ten dashboard w przeglądarce") albo wyraźnie zgodziła się na
-Twoją jednozdaniową propozycję. Wymaga ukończonego Etapu 5 (istnieje `dashboard.md`
-i produkcyjny `CLAUDE.md`). Jeśli Etap 5 nie jest zamknięty - wróć najpierw do niego.
+Twoją jednozdaniową propozycję. Wymaga ukończonego Etapu 5 (istnieje `HOME.md`
+i produkcyjne `CLAUDE.md` i `AGENTS.md`). Jeśli Etap 5 nie jest zamknięty - wróć
+najpierw do niego.
 Nigdy nie namawiaj na ten etap dwa razy: "nie" = status `pominiety` i koniec tematu.
 
 ## Powtórka
 
 Dwa pytania, po jednym na raz, lekko:
 
-1. **"Czym jest dashboard.md - i czego NIE wolno z nim robić?"**
+1. **"Czym jest HOME.md - i czego NIE wolno z nim robić?"**
    Odpowiedź: to widok wygenerowany z kart, niczego sam nie przechowuje; nie edytuje się
    go ręcznie, tylko odświeża frazą. Prawda mieszka w kartach.
-2. **"Co robi `/clear` i czemu niczego wtedy nie tracisz?"**
-   Odpowiedź: czyści rozmowę (blat biurka), a pamięć systemu mieszka w plikach (szafka),
-   które asystent czyta na starcie każdej sesji.
+2. **"Co czyści rozmowę i czemu niczego wtedy nie tracisz?"**
+   Odpowiedź: w Claude Code robi to komenda `/clear`, w Codex - po prostu nowa rozmowa;
+   rozmowa znika (blat biurka), a pamięć systemu mieszka w plikach (szafka), które
+   asystent czyta na starcie każdej sesji.
 
 Obie odpowiedzi za chwilę zagrają: kokpit to drugi widok tej samej prawdy z kart.
 
 ## Materiał
 
-**Krok A - dwa widoki, jedna prawda.** Wyjaśnij mniej więcej: "Masz już dashboard.md -
+**Krok A - dwa widoki, jedna prawda.** Wyjaśnij mniej więcej: "Masz już HOME.md -
 tekstowy widok systemu. Teraz zrobimy jego wizualnego bliźniaka: kokpit.html. Ta sama
 prawda z tych samych kart, ale w formie, którą miło mieć otwartą na drugim monitorze:
 kolory, liczby, sekcje. To nadal tylko widok - niczego nie przechowuje, przebudowuje się
@@ -55,7 +58,7 @@ tylko pokazuje, dokąd może urosnąć."
     `SLOT:TASKI-META`, `SLOT:PROJEKTY`, `SLOT:OBSZARY`, `SLOT:DZIENNIK`,
     `SLOT:SIDEBAR-KARTA`, `SLOT:STOPKA-DATA`) - CSS i struktura zostają nietknięte,
   - dane bierzesz z tych samych miejsc co przy "Odśwież dashboard": nieodhaczone
-    checkboxy z kart, statusy i priorytety z frontmattera, 5 ostatnich wpisów z `log.md`,
+    checkboxy z kart, statusy i priorytety z frontmattera, 5 ostatnich wpisów z `90-System/log.md`,
   - moduły, które osoba PROWADZI (np. cele z Etapu 3, P&L z Etapu 4): ożyw ich sekcje -
     usuń `class="ghost"`, blok `.ghost-hint` i `class="nav-ghost"` w nawigacji, wypełnij
     realnymi danymi,
@@ -83,16 +86,18 @@ zamykasz i otwierasz plik ponownie) i widzisz świeży
 stan. Dobry rytm: odświeżaj przy przeglądzie tygodnia albo po większych zmianach -
 razem z dashboardem."
 
-### 4. Naucz system kokpitu (CLAUDE.md + INSTRUKCJA.md)
+### 4. Naucz system kokpitu (CLAUDE.md + AGENTS.md + INSTRUKCJA.md)
 
-Za zgodą osoby zaktualizuj oba pliki:
+Za zgodą osoby zaktualizuj plik zasad i INSTRUKCJA.md:
 
-- W `CLAUDE.md`: usuń sekcję "Bonus do odebrania" (jeśli jest) i dopisz na jej miejscu:
+- W pliku zasad (`CLAUDE.md` i `AGENTS.md` - to jeden plik zapisany dwa razy, edytujesz
+  jeden, zaktualizuj drugi): usuń sekcję "Bonus do odebrania" (jeśli jest) i dopisz w OBU
+  plikach na jej miejscu:
 
   ```markdown
   ## Kokpit w przeglądarce
 
-  `kokpit.html` w korzeniu to wizualny widok systemu - bliźniak `dashboard.md`,
+  `kokpit.html` w korzeniu to wizualny widok systemu - bliźniak `HOME.md`,
   ta sama prawda z kart. Na frazę "Odśwież kokpit":
 
   1. Przebuduj plik na bazie szablonu `procedury/onboarding/szablony/kokpit.html`
@@ -105,7 +110,7 @@ Za zgodą osoby zaktualizuj oba pliki:
   4. Nie zmieniaj CSS ani struktury szablonu - tylko zawartość slotów.
   ```
 
-  Do tabeli magicznych fraz w `CLAUDE.md` dopisz wiersz:
+  Do tabeli magicznych fraz w OBU plikach (`CLAUDE.md` i `AGENTS.md`) dopisz wiersz:
   `| "Odśwież kokpit" | przebudowuje kokpit.html z aktualnych danych (sekcja "Kokpit w przeglądarce") |`
 
 - W `INSTRUKCJA.md` dopisz do ściągi fraz wiersz:
@@ -114,7 +119,7 @@ Za zgodą osoby zaktualizuj oba pliki:
 ### 5. Zamknięcie i furtka dla ambitnych
 
 - Zaktualizuj `.onboarding/postep.md`: Etap 6 na `ukonczony` z dzisiejszą datą.
-- Dopisz do `log.md`: `## [YYYY-MM-DD] kokpit | uruchomiony` z jednym zdaniem.
+- Dopisz do `90-System/log.md`: `## [YYYY-MM-DD] kokpit | uruchomiony` z jednym zdaniem.
 - Jeśli migawki gita są włączone - zaproponuj commit, np.
   `git add -A && git commit -m "Etap 6 - kokpit w przeglądarce"`.
 - Na koniec zostaw furtkę, bez wciskania: "Kokpit, którego właśnie używasz, jest
@@ -144,10 +149,10 @@ powiedz: "I to jest cała obsługa: mówisz do systemu, kokpit nadąża."
       moduły są żywe
 - [ ] Osoba samodzielnie przeszła pętlę: task frazą → "Odśwież kokpit" → odświeżenie
       strony → widzi task
-- [ ] `CLAUDE.md`: sekcja "Kokpit w przeglądarce" + fraza w tabeli (sekcja "Bonus do
-      odebrania" usunięta)
+- [ ] `CLAUDE.md` i `AGENTS.md`: w OBU sekcja "Kokpit w przeglądarce" + fraza w tabeli
+      (sekcja "Bonus do odebrania" usunięta w obu)
 - [ ] `INSTRUKCJA.md`: fraza "Odśwież kokpit" w ściądze
-- [ ] `.onboarding/postep.md`: Etap 6 `ukonczony`; wpis w `log.md`
+- [ ] `.onboarding/postep.md`: Etap 6 `ukonczony`; wpis w `90-System/log.md`
 
 ## Praca domowa
 
@@ -158,7 +163,7 @@ zrobienia?' - zobaczysz, jak plan i widok zaczynają grać razem."
 ## Zapis postępu
 
 - W `.onboarding/postep.md`: Etap 6 → `ukonczony`, dzisiejsza data, notatka
-  (np. "kokpit wygenerowany, frazy dopisane do CLAUDE.md i INSTRUKCJA.md").
+  (np. "kokpit wygenerowany, frazy dopisane do CLAUDE.md, AGENTS.md i INSTRUKCJA.md").
   Przy przerwaniu w połowie: `w-trakcie` + dokładny krok w "Gdzie skończyliśmy".
 - Sekcja "Gdzie skończyliśmy": "Onboarding ukończony w całości, łącznie z bonusem.
   System działa samodzielnie."
