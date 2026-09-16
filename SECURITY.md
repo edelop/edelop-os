@@ -1,6 +1,6 @@
 # Bezpieczeństwo
 
-Edelop OS to zestaw plików tekstowych - nie ma tu kodu, który się uruchamia, ani serwera.
+Edelop OS to zestaw plików tekstowych - nie ma tu kodu, który uruchamia się na Twoim komputerze, ani serwera.
 Mimo to są rzeczy, które warto zgłosić prywatnie, zanim trafią do publicznego issue.
 
 ## Co zgłaszać
