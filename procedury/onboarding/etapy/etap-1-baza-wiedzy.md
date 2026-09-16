@@ -25,11 +25,10 @@ odpowiedź w jednym zdaniu i jedź dalej, bez egzaminowania.
    (pytanie zadaj tylko, jeśli w Etapie 0 rzeczywiście instalowaliście Superpowers)
    np. porządnie planuje i robi burze mózgów zamiast rzucać się od razu do roboty.
 
-3. **"Jaki model ustawiliśmy wczoraj i dlaczego akurat taki?"**
-   Odpowiedź: najmocniejszy dostępny w Twoim planie - bo im mocniejszy model, tym lepiej
-   rozumie kontekst i tym lepszym jest przewodnikiem.
-   Zasada: zawsze wybieramy najmocniejszy dostępny w naszym planie - zwykle jest na
-   samej górze listy albo w ustawieniach.
+3. **"Gdzie sprawdzasz, z jakim modelem rozmawiasz, i który jest ustawiony?"**
+   Odpowiedź: na liście obok przycisku wysyłania (w Claude Code także `/model`; w Codex
+   w ustawieniach rozmowy). Zasada: zostajemy przy domyślnym - do bazy wiedzy wystarcza,
+   a modele z góry listy bywają rozliczane z płatnych kredytów.
 
 ## Materiał
 
@@ -119,6 +118,8 @@ Zapytaj: "Masz jakieś materiały do tego projektu? Notatki, pliki, maile, cokol
 1. Poinstruuj: "Utwórz w Finderze (na Windows: w Eksploratorze) folder
    `00-Zrodla/<slug>/` i przeciągnij tam swoje pliki. Daj znać, jak będą na miejscu."
    Jeśli osoba woli, możesz utworzyć pusty folder za nią - ale pliki wrzuca sama.
+   Uprzedź: pliki idą do folderu w Finderze, nie do okna rozmowy - załącznik wrzucony
+   do rozmowy jest jednorazowy i nie trafia do systemu.
 2. Gdy pliki są na miejscu, powiedz: "Teraz Ty wydajesz polecenie. Wpisz dokładnie:
    **Wchłoń materiały z 00-Zrodla/<slug>**". Osoba wpisuje frazę WŁASNORĘCZNIE - to jej
    pierwsza magiczna fraza i ma wyjść z jej rąk.
@@ -152,6 +153,10 @@ Pokaż osobie trzy rzeczy po kolei i wyjaśnij po jednym zdaniu na każdą:
   rzutem oka, co w ogóle istnieje",
 - **wpis w `90-System/log.md`** - "to dziennik zmian; gdybyś za miesiąc zapytał 'kiedy to
   ustaliliśmy?', tu jest odpowiedź".
+
+Jeśli osoba pracuje w aplikacji Claude, pokaż jej też, że każdą z tych zmian może obejrzeć
+bez otwierania plików: licznik zmian nad rozmową (np. `+12 -1`) otwiera panel z porównaniem
+"było / będzie", a kliknięcie ścieżki pliku w rozmowie otwiera go w panelu obok.
 
 Zamknij klamrą: "I to jest ta księgowość, którą przejmuję ja. Ty opowiedziałeś o projekcie,
 a karta, indeks i log zaktualizowały się same. W prowadzeniu bazy wiedzy męczące nie jest

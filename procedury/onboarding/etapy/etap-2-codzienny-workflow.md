@@ -101,7 +101,8 @@ Następny zaczynasz na czystym blacie - i nic nie tracisz, bo wszystko ważne le
 Potem trzy konkrety, jeden na raz, z krótkim potwierdzeniem po każdym:
 
 1. **Czysta kartka.** "W Claude Code czysta kartka to komenda `/clear` - czyści rozmowę
-   i zaczyna świeżą. W Codex to po prostu nowa rozmowa. Efekt jest ten sam: rozmowa znika,
+   i zaczyna świeżą; w aplikacji Claude możesz też kliknąć **+ New session** (Cmd+N) i wskazać
+   ten sam folder - stara rozmowa zostaje na pasku po lewej. W Codex to po prostu nowa rozmowa. Efekt jest ten sam: rozmowa znika,
    a ja na starcie każdej sesji czytam plik zasad (`CLAUDE.md` w Claude Code, `AGENTS.md`
    w Codex - ta sama treść), więc od pierwszej sekundy znam Twój system. To przetarcie
    blatu; szafka nietknięta."
@@ -178,7 +179,8 @@ Używaj nazwy jej realnego projektu z Etapu 1 (z pola `pierwszy_projekt` w profi
    pokaż stan z postep.md i kart, i dokończ etap (pytanie kontrolne + kryterium ukończenia)".
    Dopiero potem powiedz mniej więcej: "Na deser najlepszy trik tego etapu - sprawdzimy
    Krok 5 w praktyce." Tu podaj konkret dla swojego narzędzia - w Claude Code: "Wpisz
-   `/clear`", w Codex: "Otwórz nową rozmowę". Potem dokończ: "Nasza rozmowa zniknie CAŁA.
+   `/clear`" (w aplikacji Claude równie dobrze: "Kliknij + New session i wskaż ten sam
+   folder"), w Codex: "Otwórz nową rozmowę". Potem dokończ: "Nasza rozmowa zniknie CAŁA.
    A potem napisz po prostu: kontynuujmy - i patrz, co się stanie." Po powrocie osoby:
    przywitaj się, powiedz dokładnie, gdzie jesteście (z `postep.md`), przywołaj jej task i update z ćwiczenia
    (z kart i logu) i nazwij rzecz wprost: "Rozmowa zniknęła, system pamięta. To jest
