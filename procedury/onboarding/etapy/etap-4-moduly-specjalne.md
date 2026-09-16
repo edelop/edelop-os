@@ -94,6 +94,11 @@ a na końcu pokaż magiczną frazę, którą moduł się obsługuje.
 5. Pokaż frazę: **"Dopisz do P&L: faktura od klienta X, 3500 zł"** (albo koszt:
    "Dopisz do P&L: hosting, 60 zł"). Wyjaśnij, że działa jak "Dopisz do projektu X" -
    Ty aktualizujesz stronę, indeks i log.
+6. Zapowiedz rytuał miesięczny: **"Zamknij miesiąc"** - na początku nowego miesiąca domykasz
+   podsumowanie starego, zakładasz plik nowego i porównujesz wynik z celem, jeśli osoba go
+   ma. Powiedz też uczciwie, mniej więcej: "Ta strona jest dobra na start i na budżet domowy.
+   Jeśli prowadzisz prawdziwą firmę, kwoty i tak żyją w arkuszu albo u księgowej - wtedy ta
+   strona pilnuje rytmu i wniosków, a nie zastępuje księgowości."
 
 ### Jeśli wybrano kalendarz treści
 

@@ -5,7 +5,8 @@ PERSONALIZACJA (instrukcja dla asystenta w Etapie 5 - wykonaj ją i USUŃ ten ko
    - typy projekt i obszar zostają zawsze (rdzeń systemu),
    - cel, kontakt, decyzja: jeśli osoba nie prowadzi danego typu, usuń jego podsekcję
      w "Schematy typów stron" ORAZ odpowiadający wiersz w tabeli magicznych fraz
-     (dla kontaktów także wiersz "Kogo dawno nie zagadałem?"),
+     (dla kontaktów także wiersz "Kogo dawno nie zagadałem?"; decyzja i rozkmina idą
+     razem - usuwasz OBIE podsekcje i OBA wiersze: "Zapisz decyzję" i "Rozkmińmy X"),
    - podsekcje oznaczone komentarzem "MODUŁ" (P&L, kalendarz treści) zostaw tylko wtedy,
      gdy moduł został wdrożony w Etapie 4 - wraz z ich wierszami w tabeli magicznych fraz,
    - sekcję "Migawki (git)" zostaw tylko, jeśli git został włączony w Etapie 2,
@@ -42,11 +43,19 @@ stronie. <IMIE> ma tylko mówić, co się dzieje.
    i nie kasujesz. Format wpisu: `## [YYYY-MM-DD] operacja | nazwa` plus 1-2 zdania opisu.
 3. Każda nowa strona dostaje frontmatter DOKŁADNIE według schematu swojego typu
    (sekcja "Schematy typów stron" niżej).
-4. Strony łączysz wikilinkami `[[slug]]` (slug = nazwa pliku bez `.md`), nigdy ścieżkami plików.
+4. Strony łączysz wikilinkami `[[slug]]` (slug = nazwa pliku bez `.md`), nigdy ścieżkami plików -
+   w treści strony; frontmatter rządzi się zasadą 8.
 5. Slugi plików: kebab-case, ASCII bez polskich znaków (ł→l, ą→a, ś→s, spacja→-).
 6. Wszystkie daty w formacie ISO: YYYY-MM-DD.
 7. Przed nadpisaniem czegokolwiek dużego (całej strony, tego pliku, zmian w wielu plikach
    naraz) - zapytaj o zgodę i powiedz, co dokładnie zamierzasz zrobić.
+8. We frontmatterze (metryczce YAML) trzymasz zwykłe slugi w listach, np.
+   `powiazane_projekty: [remont-lazienki]`. Wikilinki `[[...]]` tylko w treści strony -
+   w metryczce psują odczyt (dashboard, kokpit).
+9. Termin przy tasku dostają TYLKO realne zobowiązania: spotkanie, faktura, obietnica komuś.
+   Nie wymyślasz terminów "dla porządku". Martwy termin zdejmujesz, zamiast przesuwać go
+   w nieskończoność: task zostaje, a stara data ląduje w jego treści jako
+   "termin pierwotny: YYYY-MM-DD".
 
 ## Workflowy
 
@@ -69,11 +78,23 @@ Uruchamiają go frazy typu "Nowy projekt: ...", "Dopisz do...", "Wchłoń materi
 4. Jeśli odpowiedź jest wartościowa i przyda się ponownie - zaproponuj zapisanie jej
    jako strony wiki.
 
+### Taski i terminy
+
+Task to checkbox `- [ ]` na karcie (`## Nastepne kroki` projektu, `## Aktualne taski` obszaru).
+Termin zapisujesz w treści taska jako `[termin:: YYYY-MM-DD]`, pilność prefiksem `**PILNE**`
+na początku treści. Przykład: `- [ ] **PILNE** wysłać wycenę Annie [termin:: 2026-10-03]`.
+Na pytanie "Co mam dziś do zrobienia?" (i w `HOME.md`) grupujesz nieodhaczone taski ze
+wszystkich kart w tej kolejności, pod tymi nagłówkami: `Pilne` (wszystkie z PILNE, niezależnie
+od terminu), `Zalegle` (termin minął), `Dzis`, `Ten tydzien`, `Bez terminu`. Pustą grupę
+pomijasz. Jeśli żaden task nie ma terminu ani PILNE, grupujesz po prostu per strona.
+Obowiązuje zasada 9: terminy tylko realne, martwe zdejmujesz.
+
 ### Lint - przegląd spójności
 
 1. Przejdź wszystkie strony wiki oraz `90-System/index.md` (czy kataloguje wszystko, co istnieje).
-2. Szukaj czterech rzeczy: sprzeczności między stronami, nieaktualnych danych,
-   stron-sierot bez żadnego linku i brakujących linków tam, gdzie strony o sobie wspominają.
+2. Szukaj czterech rzeczy: sprzeczności między stronami, nieaktualnych danych (w tym
+   martwych terminów przy taskach - zasada 9), stron-sierot bez żadnego linku i brakujących
+   linków tam, gdzie strony o sobie wspominają.
 3. Zgłoś znaleziska listą - osoba decyduje, co poprawiać.
 4. Wprowadź zaakceptowane poprawki i dopisz wpis do `90-System/log.md`.
 
@@ -95,7 +116,8 @@ Uruchamia je fraza "Podsumuj dzień".
 2. Przejdź z osobą karty w `20-Projekty/` i `60-Obszary/`: odhacz zrobione taski i zapytaj,
    co się wydarzyło. Ustalenia zapisz na kartach (to zwykły Ingest, z wpisami do logu).
 3. Mini-lint robisz Ty: szybki przegląd kart (nieaktualne daty, sprzeczne statusy,
-   projekty bez ruchu) - poprawki tylko za zgodą osoby.
+   projekty bez ruchu, martwe terminy przy taskach - zdejmujesz je wg zasady 9) -
+   poprawki tylko za zgodą osoby.
 4. Zaplanuj następny tydzień: maksymalnie 3 najważniejsze rzeczy, jako checkboxy
    na właściwych kartach i w pliku przeglądu.
 5. Odśwież `HOME.md` i dopisz do `90-System/log.md` wpis podsumowujący tydzień.
@@ -128,9 +150,10 @@ To skróty myślowe, nie komendy - rozpoznawaj intencję, nie dosłowne brzmieni
 | "Dopisz do projektu X: ..." | Ingest: aktualizuje kartę, index, log |
 | "Wchłoń materiały z 00-Zrodla/X" | Ingest pełny: czyta źródła → strony wiki |
 | "Dodaj taska do X: ..." | dopisuje checkbox w `## Nastepne kroki` karty projektu X (dla obszaru: w `## Aktualne taski`) |
-| "Co mam dziś do zrobienia?" | Query: zbiera nieodhaczone checkboxy ze wszystkich kart |
+| "Co mam dziś do zrobienia?" | Query: zbiera nieodhaczone checkboxy ze wszystkich kart, pogrupowane: Pilne / Zalegle / Dzis / Ten tydzien / Bez terminu (sekcja "Taski i terminy") |
 | "Jaki jest status X?" / "Co się dzieje?" | Query: czyta index + karty, odpowiada z [[cytatami]] |
 | "Zapisz decyzję: ..." | tworzy stronę decyzji |
+| "Rozkmińmy X" / "Pomóż mi przemyśleć X" | tworzy stronę rozkminy w `70-Decyzje/` i prowadzi rozmowę (typ "Rozkmina" niżej) |
 | "Dodaj kontakt: ..." | tworzy stronę kontaktu |
 | "Dodaj cel: ..." | tworzy stronę celu |
 | "Odśwież dashboard" | przebudowuje HOME.md z aktualnych danych |
@@ -140,6 +163,7 @@ To skróty myślowe, nie komendy - rozpoznawaj intencję, nie dosłowne brzmieni
 | "Zapisz gdzie skończyliśmy" | mini-Ingest stanu pracy przed przerwą lub świeżą sesją (sekcja "Sesje i pamięć") |
 | "Kogo dawno nie zagadałem?" | Query po polu `ostatni_kontakt` kart w `50-Ludzie/`, lista od najdłużej zaniedbanych |
 | "Dopisz do P&L: ..." | Ingest do `30-Biznes/PnL/pnl-YYYY-MM.md` (patrz moduł P&L niżej) |
+| "Zamknij miesiąc" | rytuał miesięczny modułu P&L (patrz moduł P&L niżej) |
 | "Dopisz do kalendarza treści: ..." / "Co mam opublikować w tym tygodniu?" | Ingest / Query po `30-Biznes/kalendarz-tresci.md` (patrz moduł niżej) |
 
 <!-- MODUŁ (git): zostaw tę sekcję tylko, jeśli git został włączony w Etapie 2. -->
@@ -228,6 +252,26 @@ powiazane: []
 Sekcje: `## Kontekst`, `## Opcje`, `## Wybor`, `## Oczekiwany rezultat`,
 `## Faktyczny rezultat (do uzupelnienia)`.
 
+### Rozkmina - `70-Decyzje/rozkmina-YYYY-MM-DD-<slug>.md`
+
+```yaml
+---
+type: rozkmina
+data: YYYY-MM-DD
+temat: "<temat jednym zdaniem>"
+wynik: w-toku          # w-toku | decyzja | porzucona
+powiazane: []
+---
+```
+
+Sekcje: `## Pytanie`, `## Co ja mysle`, `## Co przemyslelismy`, `## Wnioski`, `## Co dalej`.
+Rozkmina to myślenie na głos z asystentem, zanim zapadnie decyzja. Na "Rozkmińmy X":
+utwórz stronę, zapytaj najpierw, co osoba SAMA myśli, potem dokładaj pytania i opcje -
+jedno pytanie na raz. Na końcu zapytaj: decyzja czy odkładamy? Jeśli decyzja - utwórz
+stronę decyzji (typ wyżej), tu ustaw `wynik: decyzja` i podlinkuj obie strony w treści.
+Rozkmina bez decyzji też ma wartość: zostaje jako ślad myślenia. W `90-System/index.md`
+rozkminy wpisuj w sekcji `## Decyzje`, razem z decyzjami, z dopiskiem "(rozkmina)".
+
 <!-- MODUŁ (P&L): zostaw tę podsekcję tylko, jeśli osoba wdrożyła P&L w Etapie 4. -->
 ### P&L / budżet - `30-Biznes/PnL/pnl-YYYY-MM.md`
 
@@ -244,6 +288,14 @@ do JEDNEJ kolumny, kolumna Projekt to wikilink albo "-") oraz `## Podsumowanie m
 (suma przychodów, suma kosztów, wynik - przeliczaj po każdym wpisie).
 Fraza "Dopisz do P&L: ..." działa jak Ingest: pozycja trafia do tabeli bieżącego
 miesiąca, podsumowanie jest przeliczone, `90-System/log.md` dostaje wpis.
+Fraza "Zamknij miesiąc" (rytuał, 1-3 dnia nowego miesiąca): domknij `## Podsumowanie
+miesiaca` w pliku kończącego się miesiąca, utwórz plik nowego miesiąca z szablonu, porównaj
+wynik z celem finansowym w `10-Cele/` (jeśli istnieje - to ten, którego `miara` jest w pieniądzach) i dopisz jedno zdanie wniosku,
+a do `90-System/log.md` wpis `## [YYYY-MM-DD] zamkniecie miesiaca | YYYY-MM`.
+Uczciwie: przy prawdziwej firmie księgą główną jest arkusz kalkulacyjny albo program
+księgowy - tam żyją wszystkie kwoty. Ta strona pilnuje rytmu i wniosków, nie zastępuje
+księgowości; gdy pozycji robi się za dużo, zaproponuj przeniesienie liczb do arkusza,
+a w wiki zostaw podsumowanie miesiąca i taski.
 
 <!-- MODUŁ (kalendarz treści): zostaw tę podsekcję tylko, jeśli osoba wdrożyła
 kalendarz treści w Etapie 4. -->

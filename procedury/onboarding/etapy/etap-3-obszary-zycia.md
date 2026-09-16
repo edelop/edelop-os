@@ -69,6 +69,10 @@ TYLKO te typy, które mają sens w życiu tej osoby. Nie wykładaj całego katal
 - **decyzja** - przedstaw krótko, jeśli w rozmowie padło "podjąłem decyzję" albo osoba
   narzeka, że zapomina dlaczego coś wybrała. Jedno zdanie: "Strona decyzji to notatka
   'co wybrałem i czemu' z datą powrotu - żeby za pół roku nie zgadywać."
+- **rozkmina** - przedstaw razem z decyzją, jednym zdaniem: "A zanim decyzja zapadnie,
+  jest rozkmina: mówisz 'Rozkmińmy X', ja dopytuję i rozpisuję opcje, a wynik zostaje na
+  stronie. Rozkmina, która dojrzeje, zamienia się w decyzję; ta, która nie dojrzeje, też
+  zostaje - jako ślad myślenia."
 
 Każdy typ opisuj jednym ludzkim zdaniem, bez pokazywania YAML-a na tym etapie - szablony
 wejdą w Działaniu, na realnych danych osoby.
@@ -121,6 +125,12 @@ Jeśli ani cel, ani kontakt nie pasują, a w rozmowie wypłynęła świeża decy
 zamiast tego założyć stronę decyzji (`70-Decyzje/YYYY-MM-DD-<slug>.md`) z szablonu
 `procedury/onboarding/szablony/decyzja.md`.
 
+Jeśli osoba ma temat, nad którym się waha, zamiast decyzji załóż rozkminę
+(`70-Decyzje/rozkmina-YYYY-MM-DD-<slug>.md`) z szablonu
+`procedury/onboarding/szablony/rozkmina.md` i poprowadź krótką rozmowę: najpierw "co Ty
+o tym myślisz?", potem jedno pytanie na raz, maksymalnie 10 minut. Wynik zapisz
+w `## Wnioski` i `## Co dalej`; decyzji nie wymuszaj.
+
 ### Krok 4: pokaż wikilinki w akcji
 
 Teraz połącz strony - rób to przy osobie i mów co robisz:
@@ -146,7 +156,7 @@ Osoba SAMA dodaje jedną stronę magiczną frazą. Ty tylko instruujesz i sprawd
 
 1. Powiedz mniej więcej: "Twoja kolej. Wpisz jedną z fraz: 'Dodaj cel: ...' albo
    'Dodaj kontakt: ...' - z prawdziwą rzeczą z Twojego życia, nie wymyśloną." (Jeśli
-   kontakty nie pasują do profilu, zaproponuj cel albo 'Zapisz decyzję: ...'.)
+   kontakty nie pasują do profilu, zaproponuj cel, 'Zapisz decyzję: ...' albo 'Rozkmińmy ...'.)
 2. Gdy osoba wpisze frazę - utwórz stronę z właściwego szablonu, dopytując najwyżej
    o 1-2 brakujące rzeczy (np. termin celu). Zaktualizuj 90-System/index.md i 90-System/log.md.
 3. Poproś osobę, żeby SAMA sprawdziła efekt: niech otworzy nowy plik i `90-System/index.md`
@@ -164,7 +174,7 @@ a strony się łączą" - siedzi.
 
 - [ ] Istnieje co najmniej 1 plik w `60-Obszary/` z poprawnym frontmatterem i taskami
       w `## Aktualne taski`.
-- [ ] Co najmniej 1 strona (cel, kontakt lub decyzja) została dodana SAMODZIELNIE
+- [ ] Co najmniej 1 strona (cel, kontakt, decyzja lub rozkmina) została dodana SAMODZIELNIE
       przez osobę magiczną frazą.
 - [ ] W systemie są co najmniej 3 wikilinki [[...]] łączące różne strony.
 - [ ] Każda nowa strona ma wpis w `90-System/index.md` i w `90-System/log.md`.

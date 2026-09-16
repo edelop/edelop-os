@@ -74,6 +74,17 @@ przechodzę po wszystkich kartach i zbieram nieodhaczone checkboxy w jedną list
 zrobisz, mówisz mi - a ja odhaczam." Pokaż osobie sekcję `## Nastepne kroki` na jej
 własnej karcie projektu z Etapu 1, żeby zobaczyła to na żywo.
 
+Dodaj dwie rzeczy o terminach. Powiedz mniej więcej: "Jeśli task ma prawdziwy termin -
+spotkanie, faktura, obietnica komuś - powiedz mi datę, a dopiszę ją przy tasku w formie
+`[termin:: 2026-10-03]`. Wtedy
+na pytanie o dzień dostaniesz listę w stałej kolejności: pilne, zaległe, dzisiejsze, ten
+tydzień, bez terminu. Ale dwie zasady, które uratowały niejeden system: po pierwsze, terminy dostają
+TYLKO prawdziwe zobowiązania - nie wymyślamy dat 'dla porządku', bo wymyślone terminy szybko
+stają się fikcją i przestajesz je czytać. Po drugie, martwy termin zdejmujemy, zamiast
+przesuwać go w nieskończoność - task zostaje, stara data trafia do jego treści jako 'termin
+pierwotny'. A jeśli coś naprawdę się pali, powiedz 'to pilne' - dopiszę PILNE na początku
+i będzie zawsze na górze listy."
+
 ### Krok 4: 90-System/log.md to dziennik, 90-System/index.md to mapa
 
 Wyjaśnij różnicę na prostym obrazie. Powiedz mniej więcej: "`90-System/index.md` to mapa - katalog

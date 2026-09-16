@@ -2,9 +2,11 @@
 PERSONALIZACJA (instrukcja dla asystenta w Etapie 5 - wykonaj ją i USUŃ ten komentarz):
 1. Wstaw imię osoby w miejsce <IMIE>.
 2. W ściądze fraz zostaw tylko wiersze dotyczące tego, co osoba ma (bez celów, jeśli
-   ich nie prowadzi; bez kontaktów, jeśli je pominęła itd.). Jeśli w Etapie 4 wdrożono
-   moduły, dopisz ich frazy na końcu tabeli (np. "Dopisz do P&L: ...",
-   "Kogo dawno nie zagadałem?").
+   ich nie prowadzi; bez kontaktów, jeśli je pominęła; wiersz "Rozkmińmy X" idzie razem
+   z decyzjami itd.). Jeśli w Etapie 4 wdrożono
+   moduły, dopisz ich frazy na końcu tabeli (np. "Dopisz do P&L: ...", "Zamknij miesiąc",
+   "Kogo dawno nie zagadałem?"); punkt o zamknięciu miesiąca w sekcji "Rytm" zostaw
+   tylko przy wdrożonym P&L.
 3. Ulubioną frazę osoby (z powtórki Etapu 5) przenieś na górę tabeli i dopisz przy niej
    "(Twoja ulubiona)".
 4. Dopasuj sekcję "Rytm" do realiów osoby: porę dzienną i dzień przeglądu tygodnia weź
@@ -43,9 +45,10 @@ do X" zadziała tak samo jak "Dodaj taska do X", bo asystent rozumie intencję.
 | "Dopisz do projektu X: ..." | karta projektu się aktualizuje, a dziennik zapamiętuje zmianę |
 | "Wchłoń materiały z 00-Zrodla/X" | Asystent czyta surowe materiały i zamienia je w strony wiki |
 | "Dodaj taska do X: ..." | nowe zadanie ląduje na liście kroków projektu X (albo tasków obszaru X) |
-| "Co mam dziś do zrobienia?" | dostajesz listę wszystkich niezrobionych zadań ze wszystkich kart |
+| "Co mam dziś do zrobienia?" | dostajesz listę wszystkich niezrobionych zadań ze wszystkich kart, w kolejności: pilne, zaległe, dzisiejsze, ten tydzień, bez terminu |
 | "Jaki jest status X?" / "Co się dzieje?" | dostajesz streszczenie z odnośnikami do konkretnych stron |
 | "Zapisz decyzję: ..." | powstaje strona decyzji: kontekst, opcje, wybór - do sprawdzenia po czasie |
+| "Rozkmińmy X" / "Pomóż mi przemyśleć X" | myślicie na głos: asystent dopytuje i rozpisuje opcje, a wynik zostaje na stronie rozkminy - dojrzała rozkmina zamienia się w decyzję |
 | "Dodaj kontakt: ..." | powstaje karta osoby: kim jest i notatki z rozmów |
 | "Dodaj cel: ..." | powstaje strona celu z miarą i terminem |
 | "Odśwież dashboard" | `HOME.md` - Twoja strona startowa - przebudowuje się ze świeżych danych całego systemu |
@@ -69,6 +72,9 @@ Cztery nawyki utrzymują system przy życiu:
   a nie umiera po miesiącu.
 - **Raz na miesiąc, 5 minut.** Powiedz: "Sprawdź spójność". Asystent posprząta to,
   co się rozjechało: stare daty, zgubione linki, sprzeczności.
+<!-- MODUŁ (P&L): zostaw ten punkt tylko, jeśli osoba wdrożyła P&L w Etapie 4. -->
+- **Raz na miesiąc, jeśli masz P&L: "Zamknij miesiąc".** Podsumowanie starego miesiąca
+  domknięte, nowy plik założony, wynik porównany z celem - jedno zdanie wniosku.
 
 ## Sesje - kiedy zacząć od czystej kartki
 
@@ -107,8 +113,9 @@ System to nie tylko taski. Kilka pomysłów - każdy zaczynasz zwykłym zdaniem:
 - **Automatyzacje i integracje.** Twój asystent umie dużo więcej, niż widać w codziennym
   użyciu: potrafi łączyć się z innymi narzędziami (mechanizm MCP), a społeczność tworzy
   gotowe rozszerzenia. Zapytaj go: "jak podpiąć X do mojego systemu".
-- **Burza mózgów nad decyzją.** "Pomóż mi przemyśleć, czy..." - asystent zada pytania,
-  rozpisze opcje z plusami i minusami, a końcowy wybór trafi na stronę decyzji.
+- **Myślenie na głos.** "Rozkmińmy, czy..." albo "Pomóż mi przemyśleć, czy..." - asystent
+  najpierw pyta, co Ty myślisz, potem dopytuje i rozpisuje opcje z plusami i minusami.
+  Wszystko zostaje na stronie rozkminy, a jeśli zapadnie decyzja - trafia na stronę decyzji.
 
 ## Gdy coś nie działa
 

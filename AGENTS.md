@@ -51,7 +51,8 @@ przestrzegaj tych zasad:
 4. Query (pytania typu "Co mam dziś do zrobienia?", "Jaki jest status X?"):
    odpowiadaj WYŁĄCZNIE z plików systemu, z cytatami `[[wikilink]]`; taski to
    nieodhaczone checkboxy na kartach (`## Nastepne kroki` projektów,
-   `## Aktualne taski` obszarów).
+   `## Aktualne taski` obszarów). Jeśli taski mają `[termin:: YYYY-MM-DD]` albo PILNE, grupuj
+   w kolejności: Pilne, Zalegle, Dzis, Ten tydzien, Bez terminu (puste grupy pomijasz).
 5. Jeśli w `.onboarding/postep.md` jest odnotowane, że migawki gita zostały włączone
    w Etapie 2 - po większej operacji (nowa strona, Ingest źródeł) zrób commit.
 6. Fraza "Zapisz gdzie skończyliśmy" (uczona w Etapie 2): dopisz bieżący stan pracy
