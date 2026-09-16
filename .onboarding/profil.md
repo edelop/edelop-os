@@ -1,6 +1,6 @@
 ---
 type: profil
-imie:
+imie: Test
 czym_sie_zajmuje:
 obszary: []
 pierwszy_projekt:
