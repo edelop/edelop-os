@@ -1,0 +1,23 @@
+# Sprawdza przy kazdym PR i pushu na main, ze kit jest w stanie startowym.
+# Szczegoly: .github/scripts/kit-clean.sh
+name: kit-clean
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  kit-clean:
+    name: kit-clean
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Testy skryptu sprawdzajacego
+        run: bash .github/scripts/kit-clean.test.sh
+      - name: Kit w stanie startowym
+        run: bash .github/scripts/kit-clean.sh
