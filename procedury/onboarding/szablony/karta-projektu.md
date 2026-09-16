@@ -16,9 +16,10 @@ kontakty: []
 
 ## Nastepne kroki
 
-(checkboxy `- [ ]`, jedna konkretna rzecz do zrobienia na linię; zrobione odhaczaj `- [x]`, nie kasuj)
+(checkboxy `- [ ]`, jedna konkretna rzecz do zrobienia na linię; zrobione odhaczaj `- [x]`, nie kasuj; realny termin dopisz na końcu linii jako `[termin:: YYYY-MM-DD]`, pilne oznacz `**PILNE**` na początku)
 
 - [ ] <pierwszy konkretny krok>
+- [ ] <krok z realnym terminem> [termin:: YYYY-MM-DD]
 
 ## Notatki i decyzje
 

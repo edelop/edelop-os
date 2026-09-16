@@ -13,6 +13,10 @@ Przy każdej regeneracji:
 2. Dane bierzesz z tych samych miejsc co HOME.md: nieodhaczone checkboxy
    z kart (## Nastepne kroki projektów, ## Aktualne taski obszarów), statusy
    i priorytety z frontmattera, 5 ostatnich wpisów z 90-System/log.md, dzisiejsza data.
+   Terminy tasków ([termin:: YYYY-MM-DD]) pokazujesz w task-date (szczegóły w slocie TASKI).
+   Kokpit NIE ma sekcji "Decyzje do sprawdzenia" - ta żyje tylko w HOME.md; jeśli osoba
+   o nią zapyta, odeślij ją do HOME.md albo zaproponuj dobudowanie ("chcę, żeby kokpit
+   umiał X").
 3. Sekcje-duchy (class="ghost", z etykietą MODUŁ ŚPI) to moduły, których osoba
    NIE prowadzi. Zostawiasz je jako duchy - NIE usuwaj ich, to celowa wystawa
    możliwości. Gdy osoba wdroży moduł (np. cele): usuń class="ghost" i cały
@@ -316,7 +320,9 @@ Przy każdej regeneracji:
       <div class="tasks rv d3">
         <!-- SLOT:TASKI - jeden label.task na każdy nieodhaczony checkbox z kart.
              badge = nazwa karty (uppercase); badge.pilne tylko przy oznaczeniu PILNE;
-             task-date = ostatnia_aktualizacja karty. Kolejność: najpierw PILNE, potem wg kart. -->
+             task-date = termin z zapisu [termin:: YYYY-MM-DD], a gdy go nie ma - ostatnia_aktualizacja
+             karty. Sam zapis [termin:: ...] usuń z task-title (w tytule zostaje czysta treść).
+             Kolejność: najpierw PILNE, potem taski z terminem od najstarszego, potem reszta wg kart. -->
         <label class="task"><input type="checkbox"><span class="box"></span>
           <span class="task-body"><span class="task-title">Zadzwonić do wykonawcy w sprawie terminu glazurnika</span>
           <span class="task-meta"><span class="badge pilne">Pilne</span><span class="badge">Remont łazienki</span><span class="task-date">2026-01-01</span></span></span>
@@ -447,7 +453,7 @@ Przy każdej regeneracji:
       </div>
       <div class="ghost-hint"><div class="ghost-pill">
         <div class="gk">Moduł śpi</div>
-        <div class="gt">Moduł z Etapu 4. Obudź go: <code>Dopisz do P&amp;L: ...</code> - a tu pojawi się Twój wynik miesiąca.</div>
+        <div class="gt">Moduł z Etapu 4. Obudź go: <code>Dopisz do P&amp;L: ...</code> - a tu pojawi się Twój wynik miesiąca; <code>Zamknij miesiąc</code> domknie go na koniec.</div>
       </div></div>
     </section>
 

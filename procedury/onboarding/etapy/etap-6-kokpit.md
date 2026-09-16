@@ -40,6 +40,11 @@ kolory, liczby, sekcje. To nadal tylko widok - niczego nie przechowuje, przebudo
 na żądanie. I nadal zero chmury: jeden plik HTML na Twoim dysku, otwierany w przeglądarce,
 bez internetu i bez instalowania czegokolwiek."
 
+Uwaga dla Ciebie: kokpit pokazuje taski (z terminami z zapisu `[termin::]`), projekty,
+obszary i dziennik. Sekcji "Decyzje do sprawdzenia" z HOME.md w kokpicie nie ma - jeśli
+osoba o nią zapyta, powiedz wprost, że ten widok ma tylko HOME.md, i zaproponuj dobudowanie
+sekcji później ("chcę, żeby kokpit umiał X").
+
 **Krok B - sekcje-duchy, czyli wystawa możliwości.** Uprzedź: "W kokpicie zobaczysz też
 przyciemnione sekcje z napisem MODUŁ ŚPI - na przykład Cele albo Finanse, jeśli ich nie
 prowadzisz. To nie błąd, to zajawka: każda z nich pokazuje, jak wyglądałaby na żywo,

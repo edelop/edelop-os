@@ -12,7 +12,8 @@ Rytuał prowadzi asystent, gdy osoba mówi "Przegląd tygodnia":
    ją w sekcji, dopiero potem przejdź dalej. Nie zadawaj kilku pytań naraz.
 3. "## Mini-lint" robisz TY, nie osoba: przejrzyj szybko karty i frontmattery
    (nieaktualne daty, sprzeczne statusy, projekty bez ruchu od tygodni, taski
-   które wiszą od dawna) i pokaż osobie, co znalazłeś. Poprawki wprowadzaj tylko
+   które wiszą od dawna, martwe terminy przy taskach - te zdejmujesz, data zostaje
+   w treści jako "termin pierwotny") i pokaż osobie, co znalazłeś. Poprawki wprowadzaj tylko
    za jej zgodą.
 4. Przy "## Plan na przyszly tydzien" pomóż wybrać maksymalnie 3 rzeczy - jeśli
    osoba wymienia więcej, dopytaj, które naprawdę są najważniejsze.

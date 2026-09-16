@@ -67,11 +67,16 @@ coś nie działa. Jak wrócisz do systemu po dwóch tygodniach przerwy, zaczynas
 - Wypełnij go REALNYMI danymi osoby, nie przykładami (dokładnie wg instrukcji przebudowy
   z szablonu):
   - wszystkie nieodhaczone checkboxy z `## Nastepne kroki` kart w `20-Projekty/` i z
-    `## Aktualne taski` w `60-Obszary/`, pogrupowane per strona, z wikilinkami do kart,
+    `## Aktualne taski` w `60-Obszary/`, z wikilinkami do kart; jeśli osoba używa terminów
+    `[termin::]` albo PILNE - pogrupowane: Pilne / Zalegle / Dzis / Ten tydzien / Bez terminu, a jeśli nie -
+    per strona,
   - projekty: najpierw aktywne (wysoki priorytet na górze), potem wstrzymane;
     zakończone pomiń,
   - cele z `10-Cele/` tylko o statusie w-trakcie lub zagrozony, z miarą i terminem
     (jeśli osoba ma cele),
+  - decyzje do sprawdzenia: decyzje o statusie `wybrana` z `70-Decyzje/`, których data
+    `wracamy` minęła albo wypada w ciągu 7 dni (tylko jeśli osoba prowadzi decyzje i któraś
+    czeka),
   - 5 ostatnich wpisów z `90-System/log.md`,
   - data wygenerowania.
 - Uwzględnij TYLKO moduły, które osoba faktycznie ma. Jeśli pominęła np. cele, sekcja celów
