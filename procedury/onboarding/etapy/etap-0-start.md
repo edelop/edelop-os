@@ -2,9 +2,9 @@
 
 ## Cel etapu
 
-Po tym etapie osoba rozumie, czym jest jej asystent AI i ten system, ma ustawiony najmocniejszy
-dostępny model, w Claude Code zainstalowane Superpowers, wypełniony profil i spersonalizowaną
-mapę wdrożenia.
+Po tym etapie osoba rozumie, czym jest jej asystent AI i ten system, wie, gdzie sprawdza
+i zmienia model (i dlaczego domyślny wystarcza), w Claude Code ma zainstalowane Superpowers,
+wypełniony profil i spersonalizowaną mapę wdrożenia.
 
 ## Materiał
 
@@ -26,33 +26,37 @@ narzędzia i ułożę plan wdrożenia specjalnie pod Ciebie. Gotowa/gotowy?"
 
 Poczekaj na potwierdzenie.
 
-### Krok 2 - Najmocniejszy model
+### Krok 2 - Model: sprawdź, z kim rozmawiasz
 
-Wyjaśnij jednym zdaniem, po co to: "Zanim ruszymy, upewnijmy się, że rozmawiasz z najmądrzejszą
-wersją mnie - im mocniejszy model, tym lepiej rozumiem kontekst i tym lepszym jestem przewodnikiem."
+Wyjaśnij jednym zdaniem, po co to: "Zanim ruszymy, pokażę Ci, gdzie sprawdzasz, z którą wersją
+mnie rozmawiasz - żeby to był Twój świadomy wybór, a nie przypadek."
 
-Potem poproś, żeby osoba SAMA ustawiła model (nie rób tego za nią).
+Potem poproś, żeby osoba SAMA zajrzała do wyboru modelu (nie rób tego za nią).
 
 **W Claude Code** powiedz mniej więcej:
 
-"Wpisz teraz w okno rozmowy: `/model` - wyświetli się lista modeli dostępnych w Twoim planie.
-Wybierz najmocniejszy z listy: zwykle jest na samej górze. Daj znać, który wybrałaś/wybrałeś."
+"Obok przycisku wysyłania wiadomości jest lista modeli - kliknij ją (albo wpisz `/model`).
+Zobaczysz nazwę tego, który jest ustawiony, i kilka innych. Zostaw ten domyślny: do prowadzenia
+bazy wiedzy w zupełności wystarcza. Modele z samej góry listy bywają rozliczane z dodatkowych,
+płatnych kredytów - aplikacja uprzedza o tym osobnym pytaniem, więc jeśli je kiedyś zobaczysz,
+będziesz wiedzieć, skąd się wzięło. Daj znać, jaki model jest u Ciebie ustawiony."
 
 **W Codex** wybór modelu zwykle siedzi w ustawieniach przy oknie rozmowy, a nie w komendzie.
-Powiedz: "U Ciebie model wybiera się w ustawieniach przy oknie rozmowy. Zajrzyj tam i ustaw
-najmocniejszy dostępny w Twoim planie. Jeśli nie widzisz takiej opcji, spróbuj wpisać
-`/model`. Daj znać, który to."
+Powiedz: "U Ciebie model wybiera się w ustawieniach przy oknie rozmowy. Zajrzyj tam i powiedz
+mi, który jest ustawiony - domyślny w zupełności wystarcza."
 
-Uwaga dla Ciebie: dostępność najmocniejszych modeli zależy od planu i zmienia się w czasie.
-NIE obiecuj konkretnego modelu ani wersji - obiecuj "najmocniejszy dostępny u Ciebie".
-Cokolwiek osoba wybrała z górnej półki listy, pochwal i jedź dalej.
+Uwaga dla Ciebie: nazwy i dostępność modeli zależą od planu i zmieniają się w czasie.
+NIE obiecuj konkretnego modelu ani wersji i NIE namawiaj na "najmocniejszy" - liczy się to,
+że osoba wie, gdzie to sprawdzić. Cokolwiek jest ustawione, potwierdź i jedź dalej.
 
 ### Krok 3 - Superpowers (tylko Claude Code)
 
-> **Ten krok dotyczy wyłącznie Claude Code.** Superpowers to plugin Claude Code i nie ma
-> odpowiednika w Codex. Jeśli osoba pracuje w Codex - powiedz jedno zdanie: "ten krok jest
-> specyficzny dla Claude, u Ciebie go pomijamy, reszta jest identyczna" - i przejdź od razu
-> do Kroku 4. Nic dalszego w onboardingu od tego nie zależy.
+> **Instalacja z tego kroku dotyczy wyłącznie Claude Code.** Superpowers to plugin Claude
+> Code i nie ma odpowiednika w Codex. Jeśli osoba pracuje w Codex - powiedz jedno zdanie:
+> "instalacja z tego kroku jest specyficzna dla Claude, u Ciebie ją pomijamy, reszta jest
+> identyczna", potem powiedz jej krótko, jak widać zmiany w plikach (akapit "W Codex" na
+> końcu tego kroku), i przejdź do Kroku 4 bez restartu. Nic dalszego w onboardingu od tego
+> nie zależy.
 
 Najpierw wyjaśnienie, po ludzku. Powiedz mniej więcej:
 
@@ -67,20 +71,32 @@ strzelać na oślep."
 Potem instalacja - osoba wpisuje SAMA. Powiedz mniej więcej:
 
 "Wpisz teraz: `/plugin install superpowers@claude-plugins-official`
-(Jeśli wolisz klikać: wpisz `/plugin`, wejdź w zakładkę Discover, znajdź 'superpowers'
-i zainstaluj - to ta sama droga.)"
+(Jeśli wolisz klikać: przycisk **+** obok pola wiadomości, potem **Plugins** i **Add plugin**,
+znajdź 'superpowers' w oficjalnym katalogu i zainstaluj - to ta sama droga.)"
 
 Po potwierdzeniu instalacji przygotuj restart. Najpierw jednak jedna ważna lekcja przy
-okazji: za chwilę pierwszy raz coś zapiszesz w plikach osoby (postęp poniżej) i osoba
-pierwszy raz zobaczy okienko zgody. Uprzedź ją, mniej więcej tak:
+okazji: za chwilę pierwszy raz coś zapiszesz w plikach osoby (postęp poniżej), więc
+wytłumacz, jak w ogóle dochodzi do zmian w jej plikach. Uprzedź ją, mniej więcej tak:
 
-"Zanim zrestartujemy, zapiszę nasz postęp do pliku - i tu ważna rzecz. Zobaczysz za chwilę
-okienko z pytaniem o zgodę. Tak wygląda KAŻDA moja zmiana w Twoich plikach i każda komenda,
-którą chcę uruchomić: w okienku widzisz, co dokładnie chcę zrobić i gdzie, a Ty zatwierdzasz
-Enterem albo odmawiasz. Nic nie dzieje się bez Twojego 'tak'. Jedna rada na przyszłość:
-opcje w stylu 'always allow' / 'nie pytaj ponownie' zaznaczaj tylko wtedy, gdy rozumiesz,
-na co się zgadzasz - na początku najbezpieczniej zatwierdzać pojedynczo. To Twój pas
-bezpieczeństwa, nie biurokracja."
+"Zanim zrestartujemy, zapiszę nasz postęp do pliku - i tu ważna rzecz o tym, jak pracuję
+z Twoimi plikami. Aplikacja ma przełącznik trybu obok przycisku wysyłania. Na planach Pro,
+Max i Team startuje w trybie **Auto**: zapisuję pliki i uruchamiam potrzebne komendy sam,
+a osobny mechanizm bezpieczeństwa blokuje ryzykowne akcje. Każdą moją zmianę widzisz potem
+w panelu zmian - licznik w stylu `+12 -1` nad rozmową; kliknij go, a zobaczysz, co dokładnie
+się zmieniło i gdzie. Jeśli wolisz zatwierdzać każdą zmianę osobiście, przełącz tryb na
+**Manual**: wtedy przed każdą zmianą pokażę porównanie 'było / będzie' i przyciski
+Accept / Reject. Oba tryby są w porządku, to kwestia Twojego komfortu. I niezależnie od
+trybu: przed skasowaniem albo nadpisaniem czegoś dużego zawsze pytam wprost w rozmowie -
+to zasada z mojego pliku zasad. Chcesz zostać przy Auto czy przełączyć na Manual?"
+
+Uszanuj wybór. Jeśli osoba przełączy na Manual, uprzedź, że w trakcie lekcji zobaczy kilka
+takich pytań (zapisuję postęp po każdym kroku) - to normalne, nie awaria. Aplikacja pamięta
+wybrany tryb dla tego folderu.
+
+**W Codex** (osoba trafia tu z ramki na górze kroku, bez instalacji i restartu) powiedz tylko
+jedno zdanie: "Każdą moją zmianę w Twoich plikach widzisz w aplikacji, a ile z nich chcesz
+zatwierdzać ręcznie, ustawiasz w jej opcjach - na początku zostaw ustawienia domyślne."
+Nie wchodź w szczegóły, których nie znasz, i przejdź do Kroku 4.
 
 Dopiero teraz - WAŻNE - zanim powiesz osobie o restarcie,
 zaktualizuj `.onboarding/postep.md`: Etap 0 na `w-trakcie` z dzisiejszą datą, a w sekcji
@@ -94,8 +110,9 @@ Dopiero potem powiedz mniej więcej:
 
 "Żeby nowe skille się załadowały, potrzebny jest restart sesji - a sesja to po prostu
 jedna ciągła rozmowa ze mną, od uruchomienia do zamknięcia. Zrób dwie rzeczy:
-1. W aplikacji: zamknij tę rozmowę i otwórz nową w tym samym folderze.
-   (W terminalu: wpisz `exit`, a potem `claude`.)
+1. W aplikacji Claude: kliknij **+ New session** (albo Cmd+N na Macu, Ctrl+N na Windowsie),
+   zostaw **Local** i wskaż ten sam folder. Stara rozmowa zostaje na pasku po lewej - nie
+   musisz jej kasować. (W terminalu: wpisz `exit`, a potem `claude`.)
 2. Ważne: po starcie napisz cokolwiek, np. **jestem z powrotem** - ja nie odzywam się
    pierwszy, czekam na Twoją wiadomość.
 Spokojnie - niczego nie stracimy, zapisałem, gdzie jesteśmy, i podejmę wątek dokładnie
@@ -179,8 +196,9 @@ odpowiedziała na coś przy okazji wcześniej, nie pytaj drugi raz. Pytania i pr
    narzędziach? Obawa o dane, strach że coś zepsujesz, cokolwiek - powiedz szczerze."
 
 Przy pytaniu 7: jeśli coś stresuje, rozbrój to konkretnie i krótko (np. wszystko to lokalne
-pliki w Twoim folderze; ja pytam o zgodę, zanim cokolwiek zmienię; nic nie da się zepsuć
-bezpowrotnie, bo pliki zawsze można cofnąć albo poprawić).
+pliki w Twoim folderze; każdą moją zmianę widzisz w aplikacji, a przed skasowaniem albo
+nadpisaniem czegoś dużego zawsze pytam wprost; nic nie da się zepsuć bezpowrotnie, bo pliki
+zawsze można poprawić, a od Etapu 2 dojdą migawki).
 
 ### Krok 7 - Zapis profilu i mapa wdrożenia
 
@@ -218,7 +236,7 @@ Weryfikacja: osoba potrafi powiedzieć własnymi słowami, gdzie sprawdza zużyc
 
 ## Kryterium ukończenia
 
-- [ ] Model ustawiony na najmocniejszy dostępny (w Claude Code przez `/model`, w Codex w ustawieniach rozmowy)
+- [ ] Osoba wie, gdzie sprawdza i zmienia model (Claude Code: lista obok przycisku wysyłania lub `/model`; Codex: ustawienia rozmowy) i zostawiła domyślny
 - [ ] Superpowers zainstalowane i sesja zrestartowana (tylko Claude Code; w Codex ten punkt pomijasz)
 - [ ] `.onboarding/profil.md` wypełniony (frontmatter + notatki o preferencjach)
 - [ ] Mapa wdrożenia zapisana w `profil.md` i zaakceptowana przez osobę
@@ -238,6 +256,8 @@ się jutro w Etapie 1. Wyjaśnij dokładnie, jak to zrobić. Powiedz mniej więc
    na '-' (np. 'Remont łazienki' to folder `remont-lazienki`).
 3. Przeciągnij do niego wszystko, co masz o tym projekcie: notatki, dokumenty, PDF-y,
    arkusze, maile zapisane jako pliki. Może być bałagan - od tego jestem ja.
+   Uwaga: przeciągaj do folderu w Finderze, nie do okna rozmowy ze mną - plik wrzucony
+   do rozmowy jest tylko jednorazowym załącznikiem, a nie częścią Twojego systemu.
 
 A jeśli nie masz żadnych plików - też dobrze. Zamiast zbierać, przemyśl, co mi jutro
 o tym projekcie opowiesz: co to jest, na jakim jest etapie, co jest do zrobienia."

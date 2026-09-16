@@ -11,7 +11,7 @@ Edelop OS działa tak samo z dwoma asystentami. Wybierz jednego - możesz zmieni
 | | **Claude** | **Codex** |
 |---|---|---|
 | Aplikacja | Claude (zakładka **Code**) | Codex / ChatGPT |
-| Czego potrzebujesz | konto na [claude.ai](https://claude.ai) z planem **Pro** albo **Max** | konto ChatGPT z planem **Plus**, **Pro**, **Business**, **Enterprise** albo **Edu** |
+| Czego potrzebujesz | konto na [claude.ai](https://claude.ai) z planem **Pro**, **Max**, **Team** albo **Enterprise** | konto ChatGPT z planem **Plus**, **Pro**, **Business**, **Enterprise** albo **Edu** |
 | Magiczna fraza na start | "przeczytaj CLAUDE.md i zacznij onboarding" | "przeczytaj AGENTS.md i zacznij onboarding" |
 
 Darmowe konta nie obejmują żadnego z tych narzędzi - potrzebny jest płatny plan. Jeśli nie masz jeszcze żadnego, Claude Pro i ChatGPT Plus są tańszymi progami wejścia.
@@ -24,8 +24,8 @@ Dalej instrukcja rozdziela się tylko na czas instalacji. Od Kroku 3 jest identy
    - **Mac:** [pobierz wersję na macOS](https://claude.ai/api/desktop/darwin/universal/dmg/latest/redirect) (jedna wersja działa na Intelu i Apple Silicon).
    - **Windows:** [pobierz wersję na Windows](https://claude.ai/api/desktop/win32/x64/setup/latest/redirect). Jeśli masz nowszego laptopa z procesorem ARM, weź [wersję ARM64](https://claude.ai/api/desktop/win32/arm64/setup/latest/redirect).
 2. Zainstaluj: na Macu otwórz pobrany plik DMG i przeciągnij Claude do folderu **Aplikacje**; na Windowsie uruchom pobrany instalator i przeklikaj kreator.
-3. Uruchom aplikację i zaloguj się na swoje konto claude.ai (to z planem Pro lub Max).
-4. Przejdź na zakładkę **Code** (na górze okna). To w niej pracujesz z plikami.
+3. Uruchom aplikację i zaloguj się na swoje konto claude.ai (to z planem Pro, Max, Team albo Enterprise).
+4. Kliknij zakładkę **Code** (zakładki **Chat**, **Cowork** i **Code** siedzą u góry okna, pośrodku). To w niej pracujesz z plikami. Jeśli po kliknięciu widzisz prośbę o wykupienie planu, Twoje konto jest na planie darmowym - patrz "Problemy?" na dole.
 5. **Tylko Windows, tylko za pierwszym razem:** przy pierwszym otwarciu zakładki Code aplikacja poprosi o [Git for Windows](https://git-scm.com/downloads/win). Zainstaluj go (kreator next-next-finish, niczego nie zmieniaj) i **uruchom Claude ponownie**.
 
 ## Krok 2B: Instalacja - Codex
@@ -40,15 +40,17 @@ Dalej instrukcja rozdziela się tylko na czas instalacji. Od Kroku 3 jest identy
 
 1. Wejdź na [github.com/edelop/edelop-os](https://github.com/edelop/edelop-os). Nie potrzebujesz tam konta ani logowania - strona jest publiczna.
 2. Kliknij zielony przycisk **Code** (u góry po prawej, nad listą plików), a potem **Download ZIP** z rozwiniętej listy. Plik zapisze się w Twoich Pobranych.
-3. Rozpakuj pobrany plik ZIP tam, gdzie trzymasz dokumenty - na przykład do folderu **Dokumenty**. Powstanie folder **edelop-os-main** z plikami tego startera. To będzie dom Twojego systemu, więc wybierz miejsce, które łatwo znajdziesz.
+3. Rozpakuj pobrany plik ZIP. Na Macu: Safari zwykle rozpakowuje go sam w Pobranych, a jeśli widzisz plik `edelop-os-main.zip`, kliknij go dwa razy. Na Windowsie: prawy przycisk na pliku ZIP i **Wyodrębnij wszystko**. Powstanie folder **edelop-os-main** z plikami tego startera. Przenieś go tam, gdzie trzymasz dokumenty - na przykład do folderu **Dokumenty**. To będzie dom Twojego systemu, więc wybierz miejsce, które łatwo znajdziesz.
 
 Sprawdź, czy trafiłaś/eś we właściwy folder: powinny być w nim widoczne pliki **README.md** i **START-TUTAJ.md**. Jeśli widzisz w środku tylko jeden folder (tak bywa po rozpakowaniu ZIP-a, zwłaszcza na Windowsie) - to ten w środku jest właściwy.
 
 ## Krok 4: Otwórz ten folder w aplikacji
 
-W aplikacji poszukaj opcji otwarcia folderu albo dodania projektu - **Open folder** / **Otwórz folder** / **Add new project** (w aplikacji Claude: zakładka **Code**; na Windowsie w Codex działa też skrót `Ctrl+O`). Wskaż folder rozpakowany w Kroku 3.
+**W Claude:** w zakładce **Code** zobaczysz pole do wpisania wiadomości (jeśli nie, kliknij **+ New session** na pasku po lewej albo naciśnij Cmd+N na Macu, Ctrl+N na Windowsie). W polu wiadomości ustawiasz dwie rzeczy: środowisko - zostaw **Local**; folder - kliknij **Select folder** i wskaż folder rozpakowany w Kroku 3. Obok przycisku wysyłania są jeszcze lista modeli (zostaw ten, który jest ustawiony) i przełącznik trybu pracy (na razie go nie ruszaj - wyjaśnienie w Kroku 5).
 
-Aplikacja może zapytać, czy ufasz temu folderowi - zatwierdź. To standardowe zabezpieczenie przy pierwszym otwarciu nowego miejsca.
+**W Codex:** poszukaj opcji otwarcia folderu albo dodania projektu - **Open folder** / **Otwórz folder** / **Add new project** (na Windowsie działa też skrót `Ctrl+O`). Wskaż folder rozpakowany w Kroku 3.
+
+Jeśli aplikacja zapyta, czy ufasz temu folderowi - zatwierdź. Jeśli nie zapyta, to też w porządku.
 
 ## Krok 5: Start
 
@@ -61,7 +63,7 @@ Napisz w oknie rozmowy:
 
 Od tej chwili prowadzi Cię asystent - przywita się, zada kilka pytań i krok po kroku zbuduje z Tobą Twój system.
 
-Jeszcze jedno: asystent będzie pytał o zgodę, zanim cokolwiek zmieni w plikach albo uruchomi komendę. To normalne i celowe - czytasz, co proponuje, i zatwierdzasz.
+Jeszcze jedno, ważne. W Claude na planach Pro, Max i Team aplikacja startuje w trybie **Auto**: asystent sam zapisuje pliki, a każdą zmianę widzisz potem w panelu zmian (licznik w stylu `+12 -1` nad rozmową). Przed skasowaniem albo nadpisaniem czegoś dużego i tak pyta wprost. Jeśli wolisz zatwierdzać każdą zmianę osobiście, przełącz tryb na **Manual** przełącznikiem obok przycisku wysyłania - asystent wytłumaczy oba tryby w Etapie 0. Twój system to zwykłe pliki tekstowe, które zawsze da się poprawić. W Codex działa podobnie: aplikacja pokazuje zmiany, a ile zatwierdzasz ręcznie, ustawiasz w jej opcjach.
 
 ## Dla lubiących terminal (opcjonalnie)
 
@@ -84,8 +86,9 @@ Potem otwierasz terminal w folderze z Kroku 3 i uruchamiasz `claude` albo `codex
 
 ## Problemy?
 
-- **Nie widzę zakładki Code w Claude** - upewnij się, że zalogowałaś/eś się na konto z planem Pro albo Max. Darmowe konto nie ma tej zakładki.
+- **Zakładka Code w Claude prosi o zalogowanie w przeglądarce** - dokończ logowanie w przeglądarce i uruchom aplikację ponownie.
+- **Asystent nie pyta mnie o zgodę i sam zmienia pliki** - to tryb Auto, domyślny w Claude (patrz Krok 5). Jeśli chcesz zatwierdzać każdą zmianę, przełącz tryb na Manual przełącznikiem obok przycisku wysyłania.
 - **Windows: zakładka Code prosi o Git** - to normalne przy pierwszym uruchomieniu. Zainstaluj [Git for Windows](https://git-scm.com/downloads/win) i uruchom aplikację ponownie.
 - **Napisałaś/eś "zaczynajmy", a asystent nie zaczyna onboardingu** - najpewniej otwarty jest folder o jeden poziom za wysoko (patrz uwaga w Kroku 3). Zamknij go i otwórz ten, w którym widać README.md i START-TUTAJ.md.
-- **Aplikacja mówi, że potrzebujesz planu** - Twoje konto jest na planie darmowym. W Claude: [claude.ai/upgrade](https://claude.ai/upgrade), wybierz Pro albo Max. W ChatGPT: wybierz Plus albo wyżej. Potem zaloguj się jeszcze raz.
+- **Aplikacja mówi, że potrzebujesz planu** (w Claude: zakładka Code prosi o wykupienie planu) - Twoje konto jest na planie darmowym. W Claude: [claude.ai/upgrade](https://claude.ai/upgrade), wybierz Pro, Max albo Team. W ChatGPT: wybierz Plus albo wyżej. Potem zaloguj się jeszcze raz.
 - **Coś innego nie gra** - po prostu opisz problem asystentowi po polsku. Zwykle sam podpowie, co poprawić.

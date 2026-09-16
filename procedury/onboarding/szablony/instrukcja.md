@@ -23,8 +23,9 @@ jak coś się robiło, po prostu ją otwórz. Albo zapytaj asystenta, on też zn
 ## Twój system w 60 sekund
 
 1. Otwórz aplikację swojego asystenta (Claude - zakładka Code, albo Codex).
-2. Otwórz w niej folder swojego systemu - ten sam, który otwierałaś/eś przy instalacji.
-   Aplikacja zwykle pamięta ostatnio otwarte foldery, więc najczęściej wystarczy kliknąć.
+2. W Claude: kliknij poprzednią sesję na pasku po lewej albo zacznij nową (**+ New session**,
+   Cmd+N na Macu) i wskaż folder swojego systemu - ten sam, który otwierałaś/eś przy
+   instalacji. W Codex: otwórz ten folder tak jak przy instalacji.
 3. Powiedz normalnym zdaniem, czego potrzebujesz - np. "co mam dziś do zrobienia?"
    albo "dopisz do projektu X, że...". Resztę (pliki, indeks, dziennik) ogarnia asystent.
 
@@ -75,16 +76,18 @@ Rozmowa z asystentem to blat biurka, Twoje pliki to szafka. Blat się zapełnia,
 wszystko ważne i tak ląduje w plikach.
 
 - **Jedna sprawa = jedna sesja.** Kończysz temat, zaczynasz następny? W Claude Code
-  wpisz `/clear`, w Codex zacznij po prostu nową rozmowę - rozmowa startuje od zera,
+  wpisz `/clear` (w aplikacji możesz też kliknąć + New session i wskazać ten sam folder),
+  w Codex zacznij po prostu nową rozmowę - rozmowa startuje od zera,
   a asystent i tak zna Twój system, bo na starcie każdej sesji czyta jego schemat.
   Niczego nie tracisz.
 - **Przerywasz w środku pracy?** Powiedz najpierw: "Zapisz gdzie skończyliśmy". W nowej
   sesji wystarczy: "kontynuujmy [temat]".
 - **Asystent po długiej rozmowie "zgłupiał"?** To nie awaria, tylko zawalony blat: "Zapisz
   gdzie skończyliśmy", potem czysta kartka, potem "kontynuujmy". Trzy ruchy, zero strat.
-- **Rozmowa urwała się w środku pracy?** Otwórz folder systemu jeszcze raz i napisz
-  "kontynuujmy" - asystent czyta na starcie plik zasad i dziennik, więc wie, gdzie
-  skończyliście. (W terminalu Claude Code do ostatniej rozmowy wraca `claude --continue`.)
+- **Rozmowa urwała się w środku pracy?** W aplikacji Claude kliknij tę sesję na pasku po
+  lewej i pisz dalej, albo zacznij nową w tym samym folderze i napisz "kontynuujmy" -
+  asystent czyta na starcie plik zasad i dziennik, więc wie, gdzie skończyliście.
+  (W terminalu Claude Code do ostatniej rozmowy wraca `claude --continue`.)
 
 ## Co jeszcze możesz
 
@@ -116,10 +119,12 @@ System to nie tylko taski. Kilka pomysłów - każdy zaczynasz zwykłym zdaniem:
 - **Sesja dziwnie się zachowuje?** Zamknij ją i uruchom asystenta jeszcze raz. Nowa sesja sama wczyta schemat Twojego systemu - niczego nie
   tracisz. A jeśli po prostu długo rozmawialiście, to nie awaria - zajrzyj do sekcji
   "Sesje" wyżej.
-- **Okienko zgody.** Zanim asystent zmieni cokolwiek w plikach albo uruchomi komendę, pyta
-  Cię o zgodę - w okienku widzisz, co dokładnie i gdzie. Czytasz, zatwierdzasz Enterem
-  albo odmawiasz. Opcje "always allow" / "nie pytaj ponownie" zaznaczaj tylko wtedy,
-  gdy rozumiesz, na co się zgadzasz.
+- **Tryb pracy asystenta.** W aplikacji Claude przełącznik obok przycisku wysyłania ma
+  dwa tryby, które Cię dotyczą: **Auto** (domyślny - asystent zapisuje pliki sam, a Ty
+  oglądasz zmiany w panelu zmian) i **Manual** (przed każdą zmianą widzisz porównanie
+  "było / będzie" i przyciski Accept / Reject). Aplikacja pamięta wybrany tryb dla tego
+  folderu. Niezależnie od trybu, przed skasowaniem albo nadpisaniem czegoś dużego
+  asystent pyta wprost w rozmowie.
 
 ## Jak dać to znajomemu
 
