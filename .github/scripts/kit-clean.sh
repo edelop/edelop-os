@@ -55,7 +55,7 @@ fi
 plik=.onboarding/postep.md
 if [[ -f $plik ]]; then
   tresc="$(czytaj "$plik")"
-  wiersze="$(printf '%s\n' "$tresc" | grep -E '^\| [0-6] \|' || true)"
+  wiersze="$(printf '%s\n' "$tresc" | grep -E '^\| [0-9]+ \|' || true)"
   liczba="$(printf '%s\n' "$wiersze" | grep -c . || true)"
   [[ $liczba -eq 7 ]] || blad "$plik: oczekiwano 7 wierszy etapow (0-6), jest $liczba"
   zle="$(printf '%s\n' "$wiersze" | grep -vE '\| do-zrobienia \| - \| - \|$' || true)"

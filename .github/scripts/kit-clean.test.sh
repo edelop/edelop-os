@@ -73,6 +73,10 @@ k="$(kopia_kitu postep-domowa)"
 sed -i 's/^(brak)/Dopisac trzy taski./' "$k/.onboarding/postep.md"
 oczekuj_blad "postep: praca domowa" "$k" "Praca domowa"
 
+k="$(kopia_kitu postep-dodatkowy-etap)"
+sed -i '/^| 6 | Bonus/a | 7 | Nowy etap | ukonczony | 2026-09-16 | - |' "$k/.onboarding/postep.md"
+oczekuj_blad "postep: dodatkowy etap" "$k" "oczekiwano 7"
+
 # --- 3. log.md ---
 k="$(kopia_kitu log-wpis)"
 printf '\n## [2026-09-16] nowa strona | projekt-x\n\nZalozono karte.\n' >> "$k/90-System/log.md"
