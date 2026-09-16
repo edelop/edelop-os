@@ -39,6 +39,9 @@ oczekuj_blad() {
   if wynik="$(bash "$SKRYPT" "$kat" 2>&1)"; then
     padl=1
     printf 'FAIL %s - oczekiwano bledu, skrypt przeszedl\n' "$nazwa"
+  elif ! printf '%s\n' "$wynik" | grep -q '^BLAD:'; then
+    padl=1
+    printf 'FAIL %s - brak naglowka BLAD: w:\n%s\n' "$nazwa" "$wynik"
   elif ! printf '%s' "$wynik" | grep -qF -- "$fragment"; then
     padl=1
     printf 'FAIL %s - brak fragmentu "%s" w:\n%s\n' "$nazwa" "$fragment" "$wynik"
@@ -52,9 +55,11 @@ k="$(kopia_kitu czysty)"
 oczekuj_ok "czysty kit" "$k"
 
 # --- 1. profil.md ---
-k="$(kopia_kitu profil-imie)"
-sed -i 's/^imie:.*/imie: Marcin/' "$k/.onboarding/profil.md"
-oczekuj_blad "profil: wypelnione imie" "$k" "pole 'imie'"
+for pole in imie czym_sie_zajmuje pierwszy_projekt bol preferencje; do
+  k="$(kopia_kitu "profil-$pole")"
+  sed -i "s/^$pole:.*/$pole: cos/" "$k/.onboarding/profil.md"
+  oczekuj_blad "profil: wypelnione $pole" "$k" "pole '$pole'"
+done
 
 k="$(kopia_kitu profil-obszary)"
 sed -i 's/^obszary:.*/obszary: [zdrowie]/' "$k/.onboarding/profil.md"
@@ -63,7 +68,7 @@ oczekuj_blad "profil: wypelnione obszary" "$k" "pole 'obszary'"
 # --- 2. postep.md ---
 k="$(kopia_kitu postep-status)"
 sed -i 's/^| 0 | Start: poznajmy się | do-zrobienia | - | - |/| 0 | Start: poznajmy się | w-trakcie | 2026-09-16 | - |/' "$k/.onboarding/postep.md"
-oczekuj_blad "postep: etap w trakcie" "$k" "etap"
+oczekuj_blad "postep: etap w trakcie" "$k" "do-zrobienia"
 
 k="$(kopia_kitu postep-gdzie)"
 sed -i 's/^(jeszcze nie zaczęliśmy)/Skonczylismy na etapie 1./' "$k/.onboarding/postep.md"
@@ -83,9 +88,13 @@ printf '\n## [2026-09-16] nowa strona | projekt-x\n\nZalozono karte.\n' >> "$k/9
 oczekuj_blad "log: dodatkowy wpis" "$k" "log.md"
 
 # --- 4. index.md ---
+k="$(kopia_kitu index-link)"
+printf '\n- [[projekt-x]] - pierwszy projekt\n' >> "$k/90-System/index.md"
+oczekuj_blad "index: link [[...]] przy zachowanym placeholderze" "$k" "[["
+
 k="$(kopia_kitu index-projekt)"
-sed -i 's/^(jeszcze nic tu nie ma)/- [[projekt-x]] - pierwszy projekt/' "$k/90-System/index.md"
-oczekuj_blad "index: wpis projektu" "$k" "index.md"
+sed -i 's/^(jeszcze nic tu nie ma)/- projekt-x - pierwszy projekt/' "$k/90-System/index.md"
+oczekuj_blad "index: wpis projektu bez linku" "$k" "Projekty"
 
 # --- 5. zawartosc katalogow ---
 k="$(kopia_kitu zrodla-plik)"

@@ -18,7 +18,7 @@ cd "$ROOT"
 bledy=()
 blad() { bledy+=("$1"); }
 
-# czytaj <plik> - tresc bez \r (repo trzyma CRLF)
+# czytaj <plik> - tresc bez \r (checkout na Windows ma CRLF)
 czytaj() { tr -d '\r' < "$1"; }
 
 # frontmatter <tresc> - linie miedzy pierwsza para '---'
@@ -35,7 +35,7 @@ katalog_dokladnie() {
   oczekiwane="$(printf '%s\n' "$@" | sort)"
   jest="$( (cd "$kat" && find . -mindepth 1 | sed 's|^\./||' | sort) )"
   if [[ "$jest" != "$oczekiwane" ]]; then
-    blad "$kat: ma zawierac tylko: $(printf '%s ' "$@")- a zawiera: $(printf '%s ' $jest)"
+    blad "$kat: ma zawierac tylko: $(printf '%s ' "$@")- a zawiera: ${jest//$'\n'/ }"
   fi
 }
 
