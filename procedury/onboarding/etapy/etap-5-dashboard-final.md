@@ -2,11 +2,10 @@
 
 ## Cel etapu
 
-Po tym etapie osoba ma dashboard - jedną stronę, na której widzi cały swój system na raz -
-i - opcjonalnie - ogląda ten system jako sieć w Obsidianie. System dostaje docelowy schemat
-(nowe `CLAUDE.md` i `AGENTS.md`, ta sama treść) i instrukcję obsługi (INSTRUKCJA.md).
-Onboarding się kończy: osoba wie, że od dziś system działa bez lekcji i bez żadnej nakładki -
-wystarczy otworzyć folder i mówić.
+The learner has a dashboard covering the whole system and may view its links in
+Obsidian. Personalized shared rules live in `AGENTS.md`; `CLAUDE.md` remains an adapter.
+`INSTRUKCJA.md` explains everyday use. Onboarding ends, and the learner can continue
+by opening the folder and talking to the assistant without a lesson or extra plugin.
 
 ## Powtórka
 
@@ -50,9 +49,9 @@ automatycznie na starcie każdej sesji. Do tej pory mówił głównie jedno: 'pr
 onboarding' (plus podstawowe zasady systemu). Onboarding się kończy, więc dziś przepiszemy
 go na docelowy: pełny opis TWOJEGO systemu - jakie masz typy stron, jakie workflowy, jakie
 frazy. Od jutra każda sesja zacznie się od wczytania tego schematu i asystent od
-pierwszej sekundy będzie wiedział, jak działa Twój system. Zapiszemy go pod dwiema nazwami -
-`CLAUDE.md` i `AGENTS.md` - żeby folder działał tak samo, gdybyś kiedyś zmieniła/zmienił
-asystenta."
+pierwszej sekundy będzie wiedział, jak działa Twój system."
+Explain in Polish that shared rules stay in `AGENTS.md`, while `CLAUDE.md` continues
+to direct Claude to those rules.
 
 **Krok C - INSTRUKCJA.md, czyli ściąga dla człowieka.** Krótko: "Plik zasad to instrukcja
 dla asystenta. INSTRUKCJA.md to instrukcja dla Ciebie: Twoje frazy, Twój rytm, co robić gdy
@@ -118,15 +117,12 @@ działa bez Obsidiana (to tylko podgląd, nie silnik) i że może wrócić do te
   będzie pilnował porządku za Ciebie. Wchodzi na stałe do przeglądu tygodnia - uruchamiasz
   go frazą: Sprawdź spójność."
 
-### 4. Przepisanie pliku zasad (CLAUDE.md i AGENTS.md)
+### 4. Replace shared rules in AGENTS.md and preserve the adapter
 
-Najpierw wyjaśnij osobie, co zaraz zrobisz i CZEMU - to jej system, żadnych zmian
-po cichu. Powiedz mniej więcej: "Do tej pory plik zasad w Twoim folderze mówił mi jedno:
-prowadź onboarding. Onboarding właśnie się kończy, więc za Twoją zgodą nadpiszę go
-docelowym schematem: opisem Twoich typów stron, workflowów i magicznych fraz. To ten plik
-sprawi, że każda przyszła sesja zacznie się od asystenta, który już zna Twój system.
-Zapiszę go pod dwiema nazwami - `CLAUDE.md` i `AGENTS.md` - to ta sama treść; jeden plik
-czyta Claude, drugi Codex, więc folder zadziała u obu."
+Before writing, explain in Polish what will be replaced and why. The onboarding
+rules in `AGENTS.md` will become a personalized description of page types, workflows,
+and user phrases for future sessions. `CLAUDE.md` will continue to direct Claude to
+those rules and retain its tool-specific additions. Wait for explicit consent.
 
 Po zgodzie:
 
@@ -135,8 +131,11 @@ Po zgodzie:
   nie prowadzi; bez kontaktów, jeśli je pominęła), i użyj jej słownictwa z
   `.onboarding/profil.md` (np. "klienci" zamiast "projekty zewnętrzne", jeśli tak mówi).
   Sekcję "Bonus do odebrania" zostaw - to furtka do Etapu 6.
-- NADPISZ **oba** pliki w korzeniu folderu osoby: `CLAUDE.md` i `AGENTS.md`, tą samą
-  spersonalizowaną treścią. Nie personalizuj ich osobno - to jeden plik zapisany dwa razy.
+- The assistant shall replace the shared rules in `AGENTS.md` with the personalized
+  schema after consent. The assistant shall preserve the `CLAUDE.md` adapter and its
+  tool-specific additions, updating only its obsolete onboarding note.
+  If the adapter is missing or no longer directs Claude to `AGENTS.md`, then the
+  assistant shall explain the repair and obtain consent before replacing its content.
 - Pokaż osobie wynik w 2-3 zdaniach (co zawiera, nie czytaj całości) i dodaj: "Zmiana
   zadziała w pełni od następnej sesji - plik zasad ładuje się na starcie. W tej sesji
   i tak wszystko pamiętam."
@@ -160,11 +159,12 @@ Po zgodzie:
   `do-zrobienia`; to normalne.)
 - Dopisz na końcu `90-System/log.md` wpis: `## [YYYY-MM-DD] onboarding | ukonczony` z jednym zdaniem
   podsumowania (np. ile stron ma system na dziś).
-- Jeśli migawki gita są włączone (sprawdź najpierw notatkę o gicie w
-  `.onboarding/postep.md` - jeśli osoba w Etapie 2 odmówiła, NIE proponuj, nawet gdy
-  katalog `.git` istnieje), zaproponuj commit, czyli zapisanie migawki wszystkich zmian:
-  np. `git add -A && git commit -m "Onboarding ukonczony - system gotowy"`. Osoba
-  zatwierdza, Ty wykonujesz. Jeśli gita nie ma - pomiń bez komentarza.
+- When `.onboarding/postep.md` records snapshot consent, the assistant shall propose
+  a final snapshot and obtain approval. The assistant shall inspect `git status --short`,
+  stage only intended files with `git add -- <path>...`, and inspect
+  `git diff --cached --stat` before committing with the resolved identity.
+  If snapshot consent is absent, then the assistant shall skip this step, even when
+  `.git` exists. Preserve remotes and hooks as described in stage 2.
 - CELEBRACJA. Policz konkretne liczby z systemu (strony w `20-Projekty/`, `60-Obszary/`, `10-Cele/`,
   `50-Ludzie/`, `70-Decyzje/`; nieodhaczone taski; wpisy w `90-System/log.md`) i powiedz mniej więcej:
   "Zobacz, co zbudowałaś/eś przez ten tydzień: [N] stron wiki, [M] tasków na radarze,
@@ -208,7 +208,7 @@ i odświeżenie widoku. Dokładnie tak wygląda codzienność od jutra.
       ostatnie wpisy logu, data wygenerowania)
 - [ ] Osoba samodzielnie odpaliła "Odśwież dashboard" i widziała efekt
 - [ ] Pierwszy Lint wykonany i omówiony (nawet jeśli nic nie znalazł)
-- [ ] `CLAUDE.md` i `AGENTS.md` w korzeniu NADPISANE wersją produkcyjną, spersonalizowaną
+- [ ] `AGENTS.md` shall contain personalized production rules, and `CLAUDE.md` shall retain its reference and tool-specific additions.
       (tylko moduły osoby, jej słownictwo); nie ma w nich już instrukcji onboardingowych
 - [ ] `INSTRUKCJA.md` istnieje w korzeniu i jest spersonalizowana
 - [ ] `.onboarding/postep.md`: etapy 0-5 mają status `ukonczony` lub `pominiety`
@@ -252,13 +252,13 @@ To zapis FINALNY - zrób go starannie:
 - W `.onboarding/postep.md` ustaw Etap 5 na `ukonczony` z dzisiejszą datą. Upewnij się,
   że w etapach 0-5 nie został żaden status `do-zrobienia` ani `w-trakcie` (Etap 6 - bonus -
   może zostać `do-zrobienia`).
-- Sekcja "Gdzie skończyliśmy": wpisz "Onboarding ukończony w całości [YYYY-MM-DD]. System
-  działa samodzielnie - schemat w CLAUDE.md i AGENTS.md, ściąga w INSTRUKCJA.md. Bonusowy Etap 6
-  (kokpit w przeglądarce) czeka na życzenie."
+- In "Gdzie skończyliśmy", record completion with today's date: the system works
+  independently, shared rules are in `AGENTS.md`, `CLAUDE.md` remains an adapter,
+  `INSTRUKCJA.md` is the user guide, and optional stage 6 remains available on request.
 - Sekcja "Praca domowa": wpisz "Tydzień próbny do [data +7 dni]: rano 'Co mam dziś do
   zrobienia?', wieczorem 'Podsumuj dzień', 7. dnia 'Przegląd tygodnia'."
 - Jeśli w trakcie etapu zauważyłeś nowe preferencje osoby, dopisz je do sekcji "Notatki
   o preferencjach" w `.onboarding/profil.md` - przydadzą się w codziennej pracy.
-- Jeśli etap został przerwany w połowie: zostaw status `w-trakcie` i zapisz w "Gdzie
-  skończyliśmy" dokładnie, na którym kroku Działania stanęliście (np. "skończyliśmy na
-  kroku 3 - Lint; zaczynamy od kroku 4 - przepisanie CLAUDE.md i AGENTS.md").
+- If the stage stops midway, keep `w-trakcie` and record the exact completed and
+  next steps in "Gdzie skończyliśmy", such as finishing the consistency check before
+  personalizing `AGENTS.md` and preserving the `CLAUDE.md` adapter.

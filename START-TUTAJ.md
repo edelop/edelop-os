@@ -78,6 +78,12 @@ irm https://claude.ai/install.ps1 | iex            # Windows (PowerShell)
 
 **Codex CLI**
 
+For Windows CLI installation, select Windows in the [official CLI installation guide](https://learn.chatgpt.com/docs/codex/cli).
+The app route above does not require installing the CLI.
+If Codex was installed through npm and PowerShell blocks `codex.ps1`, run
+`codex.cmd` from the same folder. Check the installation with `codex.cmd --version`.
+This does not require changing PowerShell execution policy.
+
 ```
 curl -fsSL https://chatgpt.com/codex/install.sh | sh    # Mac
 ```

@@ -12,11 +12,28 @@ permissions:
 
 jobs:
   kit-clean:
-    name: kit-clean
-    runs-on: ubuntu-latest
+    name: ${{ matrix.check }}
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            check: kit-clean
+          - os: windows-latest
+            check: kit-clean-windows
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: bash
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test guidance validation
+        run: python .github/scripts/check-guidance.test.py
+      - name: Check shared guidance and references
+        run: python .github/scripts/check-guidance.py
       - name: Testy skryptu sprawdzajacego
         run: bash .github/scripts/kit-clean.test.sh
       - name: Kit w stanie startowym

@@ -116,10 +116,8 @@ oczekuj_blad ".onboarding: brak profil.md" "$k" "profil.md"
 # --- 6. sledzone pliki (tylko w repo git) ---
 k="$(kopia_kitu git-local)"
 ( cd "$k" && git init -q && git add -A \
-  && git -c user.email=t@t -c user.name=t commit -qm init \
   && mkdir -p .claude && printf '{}\n' > .claude/settings.local.json \
-  && git add -f .claude/settings.local.json \
-  && git -c user.email=t@t -c user.name=t commit -qm leak )
+  && git add -f .claude/settings.local.json )
 oczekuj_blad "git: settings.local.json sledzony" "$k" "settings.local.json"
 
 # --- CRLF nie psuje sprawdzenia ---

@@ -1,8 +1,10 @@
 # Edelop OS - zasady pracy
 
-Ten plik czyta Twój asystent AI, zanim cokolwiek zrobi. Działa tak samo w Claude Code
-i w Codex. Jeśli używasz Claude, ten sam zestaw reguł znajdziesz w `CLAUDE.md` -
-to jedna treść pod dwiema nazwami, bo każdy asystent szuka swojego pliku.
+This file contains the shared rules. Codex reads `AGENTS.md` directly.
+`CLAUDE.md` directs Claude Code here and contains only Claude-specific guidance.
+The assistant shall keep shared rules in `AGENTS.md`, including after onboarding.
+If shared rules change, then the assistant shall preserve the adapter in `CLAUDE.md`
+instead of copying the shared rules into it.
 
 ## Czym jest ten folder
 

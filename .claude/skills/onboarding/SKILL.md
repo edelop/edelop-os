@@ -1,6 +1,6 @@
 ---
 name: onboarding
-description: Prowadzi wieloetapowy onboarding do osobistego systemu (LLM Wiki) w tym folderze. Użyj gdy osoba chce zacząć lub kontynuować wdrożenie ("zaczynajmy onboarding", "kontynuujmy", "następny etap", "co dalej w nauce"), gdy .onboarding/postep.md ma etapy nieukończone, albo gdy osoba pyta o swój postęp we wdrożeniu.
+description: Start or continue Edelop OS onboarding, explain onboarding progress, or resume a lesson when the user asks to do so. Do not start lessons during unrelated work solely because onboarding is incomplete.
 ---
 
 Ten skill jest nakładką. Cała treść onboardingu mieszka w `procedury/onboarding/`
