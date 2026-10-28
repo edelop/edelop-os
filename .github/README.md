@@ -13,6 +13,7 @@ bash .github/scripts/kit-clean.sh
 The workflow runs the same commands on Linux and Windows. The Linux check retains
 the `kit-clean` name; the additional Windows check is named `kit-clean-windows`.
 Test fixtures use disposable copies and do not require commits or an author identity.
+Shell scripts use LF line endings on both platforms through `.gitattributes`.
 
 The guidance checker shall reject missing or empty entry points, a Claude adapter
 without its link to `AGENTS.md`, invalid onboarding skill metadata, and missing
