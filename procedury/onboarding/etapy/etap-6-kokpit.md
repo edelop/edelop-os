@@ -5,16 +5,16 @@
 Po tym etapie osoba ma `kokpit.html` - swoje centrum dowodzenia w wersji wizualnej:
 kolorową stronę otwieraną dwuklikiem, wygenerowaną z jej realnych danych. Umie ją
 odświeżać frazą "Odśwież kokpit", rozumie, że to widok (nie źródło prawdy), a sekcje-duchy
-pokazują jej, o co system może jeszcze urosnąć. Plik zasad (`CLAUDE.md` i `AGENTS.md`)
-oraz `INSTRUKCJA.md` znają kokpit.
+pokazują jej, o co system może jeszcze urosnąć.
+The shared rules in `AGENTS.md` and the user guide in `INSTRUKCJA.md` describe the
+cockpit. `CLAUDE.md` retains its reference to the shared rules.
 
 ## Zanim zaczniesz
 
-Ten etap jest BONUSEM i uruchamiasz go wyłącznie, gdy osoba o niego poprosiła
-("pokaż mi kokpit", "chcę ten dashboard w przeglądarce") albo wyraźnie zgodziła się na
-Twoją jednozdaniową propozycję. Wymaga ukończonego Etapu 5 (istnieje `HOME.md`
-i produkcyjne `CLAUDE.md` i `AGENTS.md`). Jeśli Etap 5 nie jest zamknięty - wróć
-najpierw do niego.
+The assistant shall start this optional stage only at the learner's request or after
+explicit consent to a one-sentence invitation. Stage 5 must be complete: `HOME.md`
+and production rules in `AGENTS.md` exist, and `CLAUDE.md` still references them.
+If stage 5 is incomplete, then the assistant shall return to that stage first.
 Nigdy nie namawiaj na ten etap dwa razy: "nie" = status `pominiety` i koniec tematu.
 
 ## Powtórka
@@ -91,13 +91,15 @@ zamykasz i otwierasz plik ponownie) i widzisz świeży
 stan. Dobry rytm: odświeżaj przy przeglądzie tygodnia albo po większych zmianach -
 razem z dashboardem."
 
-### 4. Naucz system kokpitu (CLAUDE.md + AGENTS.md + INSTRUKCJA.md)
+### 4. Add cockpit guidance to AGENTS.md and INSTRUKCJA.md
 
 Za zgodą osoby zaktualizuj plik zasad i INSTRUKCJA.md:
 
-- W pliku zasad (`CLAUDE.md` i `AGENTS.md` - to jeden plik zapisany dwa razy, edytujesz
-  jeden, zaktualizuj drugi): usuń sekcję "Bonus do odebrania" (jeśli jest) i dopisz w OBU
-  plikach na jej miejscu:
+- The assistant shall replace the "Bonus do odebrania" section in `AGENTS.md`
+  with the cockpit guidance below after consent. The assistant shall preserve the
+  `CLAUDE.md` adapter and its tool-specific guidance.
+  If the adapter is broken, then the assistant shall obtain consent to repair its
+  reference instead of copying shared cockpit rules into it.
 
   ```markdown
   ## Kokpit w przeglądarce
@@ -115,7 +117,7 @@ Za zgodą osoby zaktualizuj plik zasad i INSTRUKCJA.md:
   4. Nie zmieniaj CSS ani struktury szablonu - tylko zawartość slotów.
   ```
 
-  Do tabeli magicznych fraz w OBU plikach (`CLAUDE.md` i `AGENTS.md`) dopisz wiersz:
+  Add the following row to the magic phrase table in `AGENTS.md` only:
   `| "Odśwież kokpit" | przebudowuje kokpit.html z aktualnych danych (sekcja "Kokpit w przeglądarce") |`
 
 - W `INSTRUKCJA.md` dopisz do ściągi fraz wiersz:
@@ -125,8 +127,10 @@ Za zgodą osoby zaktualizuj plik zasad i INSTRUKCJA.md:
 
 - Zaktualizuj `.onboarding/postep.md`: Etap 6 na `ukonczony` z dzisiejszą datą.
 - Dopisz do `90-System/log.md`: `## [YYYY-MM-DD] kokpit | uruchomiony` z jednym zdaniem.
-- Jeśli migawki gita są włączone - zaproponuj commit, np.
-  `git add -A && git commit -m "Etap 6 - kokpit w przeglądarce"`.
+- When snapshots are enabled, the assistant shall propose a commit, review
+  `git status --short`, stage only intended files with `git add -- <path>...`, and
+  inspect `git diff --cached --stat` before committing. If a hook rejects the commit,
+  then the assistant shall stop without overriding identity or bypassing the hook.
 - Na koniec zostaw furtkę, bez wciskania: "Kokpit, którego właśnie używasz, jest
   statyczny - odświeża go rozmowa. Da się pójść dalej: wersja na żywo, w której
   odhaczasz taski kliknięciem prosto do plików. To już mała aplikacja - większa
@@ -154,8 +158,8 @@ powiedz: "I to jest cała obsługa: mówisz do systemu, kokpit nadąża."
       moduły są żywe
 - [ ] Osoba samodzielnie przeszła pętlę: task frazą → "Odśwież kokpit" → odświeżenie
       strony → widzi task
-- [ ] `CLAUDE.md` i `AGENTS.md`: w OBU sekcja "Kokpit w przeglądarce" + fraza w tabeli
-      (sekcja "Bonus do odebrania" usunięta w obu)
+- [ ] `AGENTS.md` shall contain the cockpit section and phrase in place of "Bonus do odebrania".
+- [ ] `CLAUDE.md` shall reference `AGENTS.md` without duplicating shared cockpit rules.
 - [ ] `INSTRUKCJA.md`: fraza "Odśwież kokpit" w ściądze
 - [ ] `.onboarding/postep.md`: Etap 6 `ukonczony`; wpis w `90-System/log.md`
 
@@ -168,7 +172,7 @@ zrobienia?' - zobaczysz, jak plan i widok zaczynają grać razem."
 ## Zapis postępu
 
 - W `.onboarding/postep.md`: Etap 6 → `ukonczony`, dzisiejsza data, notatka
-  (np. "kokpit wygenerowany, frazy dopisane do CLAUDE.md, AGENTS.md i INSTRUKCJA.md").
+  (e.g. "cockpit generated; phrases added to AGENTS.md and INSTRUKCJA.md; CLAUDE.md adapter preserved").
   Przy przerwaniu w połowie: `w-trakcie` + dokładny krok w "Gdzie skończyliśmy".
 - Sekcja "Gdzie skończyliśmy": "Onboarding ukończony w całości, łącznie z bonusem.
   System działa samodzielnie."

@@ -12,10 +12,9 @@ Zadaj te pytania po kolei, jedno na raz, lekkim tonem. Jeśli osoba nie pamięta
 odpowiedź i jedź dalej, to nie egzamin.
 
 1. **Z jakich trzech warstw składa się Twój system?**
-   Odpowiedź: źródła (`00-Zrodla/` - surowe materiały, które tam wrzucasz), wiki (strony .md,
-   które utrzymuje asystent: projekty, obszary, cele, kontakty, decyzje) i schemat
-   (plik zasad: `CLAUDE.md` w Claude Code albo `AGENTS.md` w Codex, ta sama treść -
-   spisane konwencje i workflowy).
+   Expected answer, explained in Polish: sources in `00-Zrodla/`, wiki pages maintained
+   from those sources, and shared schema rules in `AGENTS.md`. `CLAUDE.md` directs
+   Claude Code to the same shared rules.
 2. **Co to jest Ingest?**
    Odpowiedź: workflow wchłaniania materiału. Asystent czyta materiał, omawia z Tobą wnioski,
    pisze lub aktualizuje strony wiki, aktualizuje `90-System/index.md` i dopisuje wpis do `90-System/log.md`.
@@ -111,12 +110,12 @@ Następny zaczynasz na czystym blacie - i nic nie tracisz, bo wszystko ważne le
 
 Potem trzy konkrety, jeden na raz, z krótkim potwierdzeniem po każdym:
 
-1. **Czysta kartka.** "W Claude Code czysta kartka to komenda `/clear` - czyści rozmowę
-   i zaczyna świeżą; w aplikacji Claude możesz też kliknąć **+ New session** (Cmd+N) i wskazać
-   ten sam folder - stara rozmowa zostaje na pasku po lewej. W Codex to po prostu nowa rozmowa. Efekt jest ten sam: rozmowa znika,
-   a ja na starcie każdej sesji czytam plik zasad (`CLAUDE.md` w Claude Code, `AGENTS.md`
-   w Codex - ta sama treść), więc od pierwszej sekundy znam Twój system. To przetarcie
-   blatu; szafka nietknięta."
+1. **Fresh conversation.** Explain in Polish: Claude Code uses `/clear`, while the
+   Claude app also offers **+ New session** (Cmd+N) in the same folder. In Codex, open
+   a new conversation in that folder. The previous conversation remains separate;
+   saved files provide continuity. Shared rules are in `AGENTS.md`, reached through
+   `CLAUDE.md` for Claude Code. Return to the clean-desk metaphor: clear the desk,
+   keep the filing cabinet.
 2. **Przed przerwą: "Zapisz gdzie skończyliśmy".** "Jeśli przerywasz w środku czegoś,
    powiedz tę frazę - dopiszę stan do właściwej karty i do logu. W nowej sesji mówisz
    'kontynuujmy [temat]' i jedziemy dalej, jakby nic się nie stało. Ten onboarding działa
@@ -148,17 +147,29 @@ w tym etapie wykonujesz Ty sam - i tylko za wyraźną zgodą osoby.
      "narzędzi deweloperskich" (kilka-kilkanaście minut) - może zainstalować teraz albo
      odłożyć migawki na później (zanotuj w `postep.md` i przejdź do Ćwiczenia).
      Na Windowsie po prostu `git --version`.
-   - Sprawdź, czy folder już jest repozytorium (istnieje katalog `.git` - tak będzie,
-     jeśli osoba pobrała starter przez `git clone` zamiast ZIP-a). Jeśli tak: NIE rób
-     `git init`; odepnij cudzy adres zdalny (`git remote remove origin`, jeśli istnieje)
-     i przejdź od razu do commita.
-   - Przed pierwszym commitem sprawdź `git config user.name` i `git config user.email`.
-     Jeśli puste: zapytaj osobę o imię i adres e-mail i ustaw je LOKALNIE dla tego
-     folderu (`git config user.name "..."`, `git config user.email "..."`, bez --global),
-     wyjaśniając jednym zdaniem: "to tylko podpis migawek, nigdzie się nie wysyła".
-   - Wykonaj w folderze systemu: `git init` (tylko jeśli repozytorium nie istniało),
-     potem dodaj wszystkie pliki i zrób pierwszy commit z opisem w stylu
-     "Pierwsza migawka systemu".
+   - The snapshot setup shall detect an existing repository with
+     `git rev-parse --is-inside-work-tree`, including linked worktrees where `.git`
+     is a file. For a folder outside any repository, initialize Git only in that
+     folder after snapshot consent. If the folder belongs to a parent repository,
+     then the setup shall stop and explain the boundary before making changes.
+   - When a repository already exists, the setup shall preserve its remotes and
+     resolved author identity. Inspect `git remote -v` locally without publishing
+     identifying output. Explain the difference between a learner's private copy
+     and the maintained starter repository. Never remove `origin` automatically;
+     a requested remote change requires a separate explanation and approval.
+   - Before the first commit, inspect `git config user.name` and
+     `git config user.email` locally. Explain that both become part of each commit
+     and become visible to repository readers if those commits are shared.
+     If either value is missing or a hook rejects the identity, then the setup shall
+     stop the commit and ask the owner to configure an approved identity through
+     their normal process. Do not override identity through config, environment
+     variables, or command flags, and do not bypass hooks.
+   - The setup shall review `git status --short` and stage only intended system
+     files before committing. In the maintained starter repository, work shall use
+     a dedicated branch and worktree with a pull request; onboarding shall not
+     detach its remote or commit learner data to the starter's default branch.
+     In a learner's standalone private copy, create the first snapshot only after
+     the identity and staged files have been checked.
    - Pokaż osobie, że commit się udał, i powiedz mniej więcej: "Od teraz po każdej
      większej zmianie - nowy projekt, wchłonięcie materiałów, przegląd - będę robił
      migawkę automatycznie. Ty nie musisz nic pamiętać."

@@ -12,7 +12,7 @@ Nie musisz umieć programować. Serio. Jedyne, co będziesz robić, to pisać po
 
 ## Który asystent
 
-Edelop OS działa tak samo z **Claude** i z **Codex**. Folder jest ten sam; różni się tylko plik, który Twój asystent czyta na starcie: Claude czyta `CLAUDE.md`, Codex czyta `AGENTS.md`, a treść w obu jest identyczna. Możesz zmienić zdanie później - folder zostaje.
+Edelop OS supports **Claude** and **Codex** through shared rules in `AGENTS.md`. Codex reads that file directly; `CLAUDE.md` directs Claude to it and adds only Claude-specific guidance. The folder and shared rules stay the same when you change assistants.
 
 Obie ścieżki są opisane krok po kroku w [START-TUTAJ.md](START-TUTAJ.md). Instalujesz zwykłą aplikację - bez terminala.
 

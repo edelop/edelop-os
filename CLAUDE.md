@@ -18,6 +18,7 @@ go w całości - poniżej jest tylko to, co dotyczy wyłącznie Claude Code.
 
 ## Uwaga
 
-Ten plik zostanie w Etapie 5 przepisany na docelowy schemat systemu (typy stron,
-workflowy, magiczne frazy). To normalne i zamierzone. Razem z nim powstanie
-`AGENTS.md` o tej samej treści - jeden plik dla Claude, drugi dla Codex.
+Stage 5 replaces the shared onboarding rules in `AGENTS.md` with the personalized
+system schema. This adapter shall continue to direct Claude Code to `AGENTS.md`.
+If shared rules change, then this adapter shall keep the reference instead of
+duplicating the schema or workflow tables.

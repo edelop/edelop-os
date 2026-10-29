@@ -5,6 +5,6 @@
 ## Checklista
 
 - [ ] Nie zmienia stanu startowego plików w `.onboarding/`, `90-System/` i `00-Zrodla/` (check `kit-clean` jest zielony).
-- [ ] Tekst dla osoby uczącej się jest po polsku, na "Ty", z krótkimi "-" zamiast długich myślników.
-- [ ] Jeśli zmieniam wspólną treść `AGENTS.md`, ta sama zmiana jest w `CLAUDE.md` (i odwrotnie).
+- [ ] New text follows the applicable language rules and contains no em dashes; conversation with the learner remains in Polish.
+- [ ] Shared guidance stays in `AGENTS.md`; `CLAUDE.md` retains its reference and Claude-specific guidance.
 - [ ] Sprawdziłam/em zmianę z perspektywy osoby, która otwiera pobrany ZIP w aplikacji Claude albo Codex - bez terminala.

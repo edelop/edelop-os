@@ -137,10 +137,9 @@ Idea 2: **plik zasad = pamięć.** W folderze leży plik z zasadami - czytam go 
 na starcie każdej sesji. To dzięki niemu wiem, kim jesteś i jak z Tobą pracować, nawet
 jutro i za miesiąc.
 
-(Uwaga dla Ciebie: nazwij ten plik po imieniu - w Claude Code to `CLAUDE.md`, w Codex
-`AGENTS.md`. To ta sama treść pod dwiema nazwami, bo każdy asystent szuka swojej. Jeśli
-w Kroku 3 był restart, dorzuć zdanie: "Przed chwilą widziałaś/eś to na żywo: po restarcie
-od razu wiedziałem, że jesteśmy w środku Etapu 0.")
+(Guide note: shared rules live in `AGENTS.md`; `CLAUDE.md` directs Claude Code there.
+Explain this distinction in Polish. If step 3 involved a restart, point out that
+the assistant resumed stage 0 from the files rather than starting again.)
 
 Idea 3: **procedura = spisany przepis.** Procedura to instrukcja na typ zadania, zapisana
 w zwykłym pliku. Ten onboarding też jest procedurą - leży w tym folderze, w `procedury/`,
@@ -160,8 +159,8 @@ znanych badaczy AI. System ma trzy warstwy:
    `00-Zrodla/`. Ja mam zakaz ich edytowania - to Twoja skrzynka wrzutowa.
 2. **Wiki** - strony, które ja utrzymuję na podstawie źródeł i naszych rozmów: projekty,
    obszary życia, cele, kontakty, decyzje. Wszystko połączone linkami.
-3. **Schemat** - plik zasad (`CLAUDE.md` w Claude Code, `AGENTS.md` w Codex, ta sama treść)
-   z konwencjami: jak nazywamy pliki, co robię na Twoje hasła, jakie mam workflowy.
+3. **Schema:** shared rules in `AGENTS.md`, reached through `CLAUDE.md` for Claude Code,
+   covering file names, user phrases, and workflows. Explain this in Polish.
 
 I najważniejsze: w prowadzeniu bazy wiedzy męczące nie jest czytanie ani myślenie, tylko
 księgowość - aktualizowanie indeksów, linków, spójności. Tę księgowość przejmuję ja.

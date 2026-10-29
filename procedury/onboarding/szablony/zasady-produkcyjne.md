@@ -16,15 +16,16 @@ PERSONALIZACJA (instrukcja dla asystenta w Etapie 5 - wykonaj ją i USUŃ ten ko
    o "projektach zewnętrznych"). Przykłady w nawiasach dopasuj do jej branży.
 4. Usuń wszystkie komentarze HTML (łącznie z tym). W gotowym pliku nie może zostać
    żaden placeholder <...>.
-5. Gotową treścią NADPISZ DWA pliki w korzeniu folderu: `CLAUDE.md` ORAZ `AGENTS.md` -
-   dopiero po wyraźnej zgodzie osoby. Ta sama treść, dwie nazwy: Claude czyta `CLAUDE.md`,
-   Codex czyta `AGENTS.md`. Osoba ma mieć folder, który działa u obu, także wtedy gdy
-   kiedyś zmieni asystenta. Nie personalizuj ich osobno - to jeden plik zapisany dwa razy.
+5. The assistant shall write personalized shared rules to `AGENTS.md` only after
+   explicit consent. The assistant shall preserve `CLAUDE.md` as an adapter referencing
+   `AGENTS.md`, including its tool-specific additions.
+   If the adapter requires repair, then the assistant shall explain the change and
+   obtain consent before replacing its content. Do not duplicate the shared schema.
 -->
 
 # System <IMIE> - schemat
 
-<!-- Ten sam plik jest zapisany jako CLAUDE.md i AGENTS.md. Edytujesz jeden - zaktualizuj drugi. -->
+<!-- Shared schema for AGENTS.md. CLAUDE.md remains an adapter. -->
 
 Ten folder to osobisty system <IMIE> na pracę i życie, prowadzony metodą LLM Wiki.
 Trzy warstwy: surowe materiały w `00-Zrodla/`, strony wiki, które utrzymujesz Ty (asystent),
@@ -169,10 +170,15 @@ To skróty myślowe, nie komendy - rozpoznawaj intencję, nie dosłowne brzmieni
 <!-- MODUŁ (git): zostaw tę sekcję tylko, jeśli git został włączony w Etapie 2. -->
 ## Migawki (git)
 
-Folder jest repozytorium gita. Po każdej większej operacji (nowy projekt, wchłonięcie
-źródeł, przegląd tygodnia, Lint z poprawkami) zrób migawkę:
-`git add -A && git commit -m "<krótki opis operacji>"`. Osoba nie musi o tym pamiętać -
-Ty pilnujesz.
+When snapshots are enabled, the assistant shall create a snapshot after a major
+operation such as a new project, source ingestion, weekly review, or consistency fix.
+The assistant shall inspect `git status --short`, stage only the intended files with
+`git add -- <path>...`, and inspect `git diff --cached --stat` before committing.
+The assistant shall preserve configured remotes and the resolved author identity.
+If identity is missing or a hook rejects the commit, then the assistant shall stop
+the commit and explain the required owner action without overriding identity or hooks.
+Work on the maintained starter shall use a dedicated branch and worktree with a PR.
+These snapshots remain local unless the owner separately requests sharing them.
 
 ## Schematy typów stron
 

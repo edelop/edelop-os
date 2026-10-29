@@ -13,11 +13,10 @@ Zadaj te pytania po kolei, jedno na raz, lekkim tonem. Jeśli osoba nie pamięta
 odpowiedź w jednym zdaniu i jedź dalej, bez egzaminowania.
 
 1. **"Jakie trzy idee zabraliśmy z Etapu 0?"**
-   Odpowiedź, do której prowadzisz: (1) folder = projekt - Twój system to zwykły folder
-   z plikami, wszystko jest Twoje i czytelne; (2) plik zasad = pamięć - asystent czyta go
-   na starcie każdej sesji i dzięki niemu Cię zna (`CLAUDE.md` dla Claude, `AGENTS.md`
-   dla Codex - ta sama treść); (3) procedura = spisany przepis
-   na typ zadania, jak Superpowers. Jeśli osoba odpowie innymi słowami, ale sensownie - uznaj.
+   Guide the learner toward three ideas: a project is an ordinary folder they own;
+   shared rules in `AGENTS.md` provide continuity between sessions (`CLAUDE.md` directs
+   Claude Code there); and a procedure is a written recipe for a task. Explain in
+   Polish and accept an accurate answer in the learner's own words.
 
 2. **"Po co zainstalowaliśmy Superpowers?"**
    Odpowiedź: to ceniona paczka dodatkowych umiejętności (skilli) z oficjalnego katalogu
@@ -53,10 +52,9 @@ Warstwa 2: **wiki** - strony, które ja piszę i utrzymuję na podstawie źróde
 rozmów. Na przykład karta projektu <projekt osoby>: co się dzieje, jakie są następne kroki,
 co ustaliliśmy. To warstwa robocza - ja ją aktualizuję, Ty z niej korzystasz.
 
-Warstwa 3: **schemat** - plik zasad (`CLAUDE.md` w Claude Code albo `AGENTS.md` w Codex,
-ta sama treść). To moja instrukcja obsługi Twojego systemu:
-jakie są zasady, jakie typy stron, jak mam się zachowywać. Czytam go automatycznie na
-starcie każdej sesji.
+Layer 3 is the schema: shared rules in `AGENTS.md`, reached through `CLAUDE.md` for
+Claude Code. These rules describe page types, conventions, and assistant behavior
+and are read at session startup. Explain this in Polish.
 
 Krótko: źródła to surowiec, wiki to wiedza, schemat to zasady gry."
 
